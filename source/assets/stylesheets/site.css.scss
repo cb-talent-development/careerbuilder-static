@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+//-----------  External Libraries  -----------//
+
+@import 'normalize-scss/normalize';                 // Normalizations (http://necolas.github.io/normalize.css)
+@import 'bourbon/app/assets/stylesheets/bourbon';   // Bourbon mixin library (http://bourbon.io)
+@import 'neat/app/assets/stylesheets/neat-helpers'; // Bourbon grid framework (http://neat.bourbon.io)
+@import 'employer-style-base/sass/base';            // CareerBuilder baseline styles (https://github.com/cb-talent-development/employer-style-base)
+@import 'employer-style-grid/sass/grid';            // CareerBuilder baseline grid (https://github.com/cb-talent-development/employer-style-grid)
+@import 'neat/app/assets/stylesheets/neat';         // Bourbon grid framework (http://neat.bourbon.io)
+
+//-----------  Template Settings  -----------//
+
+@import 'settings/variables'; // Global Variables & Settings
+@import 'settings/mixins';    // Site-Specific Custom Mixins
+@import 'settings/fonts';     // Custom Font & Typeface Settings & Mixins
+
+//-----------  Page Layouts  -----------//
+
+@import 'layouts/common';     // Common Layout Blocks
+@import 'layouts/document';   // Document Layouts
+@import 'layouts/pages/*';    // Page-Specific Layouts
