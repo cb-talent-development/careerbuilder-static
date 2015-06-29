@@ -35,6 +35,18 @@ $ bower install
   http://localhost:4567
   ```
 
+## Deployment
+
+1. Publish the build to Githubg pages
+  ``` shell
+  $ rake publish
+  ```
+  
+2. You can view the build here
+  ```
+  http://teampolymathic.github.io/careerbuilder-static
+  ```
+
 ---
 
 That's it! [Team Polymathic](http://teampolymathic.com)

@@ -39,13 +39,15 @@ end
 
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
+
   activate :minify_css
-
-  # Minify Javascript on build
   activate :minify_javascript
-end
+  activate :asset_hash
 
+  activate :relative_assets
+  set :relative_links, true
+
+end
 # Add bower's directory to sprockets asset path
 after_configuration do
   sprockets.append_path File.join root, 'bower_components'

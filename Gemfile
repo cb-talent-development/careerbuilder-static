@@ -16,4 +16,4 @@ gem 'middleman-core', '~> 3.3.12'
 gem 'middleman-cli', '~> 4.0.0.beta2'
 gem 'middleman-sprockets', '~> 3.4.2'
 gem 'middleman-livereload', '~> 3.4.2'
-
+gem 'middleman-gh-pages', '~> 0.0.3'
