@@ -9,11 +9,9 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Sass
-gem 'sass', '~> 3.4.14'
+gem 'sass', '~> 3.4.15'
 
 # Middleman Gems
-gem 'middleman-core', '~> 3.3.12'
-gem 'middleman-cli', '~> 4.0.0.beta2'
-gem 'middleman-sprockets', '~> 3.4.2'
-gem 'middleman-livereload', '~> 3.4.2'
+gem 'middleman', '~> 3.1.5'
+gem 'middleman-livereload', '~> 3.1.0'
 gem 'middleman-gh-pages', '~> 0.0.3'
