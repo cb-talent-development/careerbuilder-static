@@ -37,14 +37,14 @@ $ bower install
 
 ## Deployment
 
-1. Publish the build to Githubg pages
+1. Publish the build to GitHub pages
   ``` shell
   $ rake publish
   ```
   
 2. You can view the build here
   ```
-  http://teampolymathic.github.io/careerbuilder-static
+  http://teampolymathic.github.io/careerbuilder-static/
   ```
 
 ---
