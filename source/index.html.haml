@@ -1,0 +1,25 @@
+---
+title: Styleguide
+---
+
+%h1 Styleguide
+
+.tutorial.hidden
+  %h2 HAML Basics
+  / The basics - http://haml.info/tutorial.html
+  
+  %p See the source for some basic help writing HAML. 
+
+  / HTML tags are prefaced with a % and not closed
+
+  / ATTRIBUTES IN TAGS
+
+  / Attributes inside a tag are added with a Ruby hash, like so. 
+  / %link{ :href => '//fonts.googleapis.com/css?family=Lato:300,400,700', :rel => 'stylesheet', :type => 'text/css' }
+  / Compiles to <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  / Multiline hash is fine, but remember the commas: it's a Ruby hash. 
+  / Keys are :symbols, or "strings" (use string if you have funky chars in key)
+  / There is an alternate syntax with parens that looks more like HTML. 
+
+
+

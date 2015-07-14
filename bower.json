@@ -5,7 +5,7 @@
     "polymattic <matt@polymathic.me>"
   ],
   "description": "Static templates for CareerBuilder",
-  "main": "index.erb",
+  "main": "index.haml",
   "homepage": "careerbuilder.com",
   "ignore": [
     "**/.*",
