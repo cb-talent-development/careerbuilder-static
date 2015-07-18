@@ -29,12 +29,13 @@
 // END COMMENTS - START ACTUAL CODE
 
 
+
 // TOP BAR
 
 .top-bar
-  +fill-parent
   height: $top-bar--height
-  background-color: $primary-darker
+  background-color: $primary-darker  
+  border-bottom: 1px solid $grey-darkest
 
 .top-bar__logo
   float: left
@@ -57,14 +58,16 @@
 .top-bar__links li
   list-style: none
   border-right: 0
-  border-left: 1px solid $primary-lighter
+  border-left: 1px solid $primary-light
   height: $top-bar--height
-  padding: 20px 30px
+  padding: 22px 30px
 
 .text--white, .text--white a
   color: $white
 
 .text--top-bar-nav, .text--top-bar-nav a
-  font-weight: 100
-  font-size: 10pt
+  font-family: $Lato
+  font-weight: 300
+  font-size: 9pt
   text-decoration: none
+
