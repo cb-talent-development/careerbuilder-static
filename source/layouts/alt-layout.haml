@@ -14,8 +14,8 @@
     = stylesheet_link_tag :site 
 
   %body{ class: page_classes }
-    
-    %p alt layout
+  
+    = partial 'partials/top-bar' 
 
     = yield 
 
