@@ -3,13 +3,13 @@
 
 // Quickstart for Sass syntax:
 
-// Take everything in your CSS inside the {}, delete the {} and indent it. 
-// Delete the closing ; and instead user a newline. 
-// @include, $blue, etc are instructions to the Sass precompiler. 
-// Coments are full line. /* this passes through to CSS */ but // doesn't. 
-// Otherwise, it's just CSS. 
+// Take everything in your CSS inside the {}, delete the {} and indent it.
+// Delete the closing ; and instead user a newline.
+// @include foo (alt syntax is +foo), $blue, etc are instructions to the Sass precompiler.
+// Coments are full line. /* this passes through to CSS */ but // doesn't.
+// Otherwise, it's just CSS.
 
-// Quickstart for Block__Element--Modifier class naming: 
+// Quickstart for Block__Element--Modifier class naming:
 
 // .block is the higher level of an abstraction or component.
 // .block__element is a descendent of .block that helps form .block as a whole.
@@ -17,22 +17,54 @@
 // This works best when applied to layout concerns.
 // http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 
-// Quickstart for modular CSS: 
+// Quickstart for modular CSS:
 
-// Use small-scope classes, rather than mega class + nesting, to keep definitions reusable. 
+// Use small-scope classes, rather than mega class + nesting, to keep definitions reusable.
 // Never blend presentation (".subhead"), layout (".popover"), and meaning (".alert-red")
-// Even in BEM, that's a ".popover" with a ".subhead .alert-red" inside it. 
+// Even in BEM, that's a ".popover" with a ".subhead .alert-red" inside it.
 // Don't use .popover__subhead or .subhead--alert-red unless these are locked to that element layout.
 // https://vimeo.com/70115794
 
-section 
-  @include outer-container
-  background-color: $grey-lightest
 
-  .sidebar 
-    @include span-columns(3)
-    background-color: $secondary
+// END COMMENTS - START ACTUAL CODE
 
-  .main-area
-    @include span-columns(9)
-    background-color: $accent-warning
+
+// TOP BAR
+
+.top-bar
+  +fill-parent
+  height: $top-bar--height
+  background-color: $primary-darker
+
+.top-bar__logo
+  float: left
+
+.top-bar__links
+  float: right
+
+.top-bar__links ul
+  margin-top: 0px
+  height: $top-bar--height
+  display: flex
+
+.top-bar__links a
+  display: inline-block
+  height: $top-bar--height
+
+.top-bar__links a:hover
+  background-color: $primary-light
+
+.top-bar__links li
+  list-style: none
+  border-right: 0
+  border-left: 1px solid $primary-lighter
+  height: $top-bar--height
+  padding: 20px 30px
+
+.text--white, .text--white a
+  color: $white
+
+.text--top-bar-nav, .text--top-bar-nav a
+  font-weight: 100
+  font-size: 10pt
+  text-decoration: none

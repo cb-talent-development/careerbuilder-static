@@ -1,0 +1,19 @@
+%header{class: "top-bar"}
+
+  %div{class: "top-bar__logo"}
+    %a{href: "/"}
+
+      // low-fi image of logo for positioning, needs to be updated  
+      %img{src: "assets/images/placeholder-logo.png"}
+
+  %nav{class: "top-bar__links text--white text--top-bar-nav"}
+    %ul 
+      %a{href: "#account"}
+        %li 
+          (@) My Account
+      %a{href: "#cart"} 
+        %li 
+          (#) $1337.00 Cart
+      %a{href: "#contact"}
+        %li 
+          Contact Us
