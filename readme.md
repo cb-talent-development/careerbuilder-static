@@ -8,6 +8,8 @@ Stylsheets are using [SASS](http://sass-lang.com/) as the pre-processeing engine
 It also utilizes the iternal CareerBuilder SASS libraries:
 * Base Styles: [https://github.com/cb-talent-development/employer-style-base](https://github.com/cb-talent-development/employer-style-base)
 * Grid System: [https://github.com/cb-talent-development/employer-style-grid](https://github.com/cb-talent-development/employer-style-grid)
+* Widgets [https://github.com/cb-talent-development/employer-style-widgets](https://github.com/cb-talent-development/employer-style-widgets)
+* Styleguide [https://github.com/cb-talent-development/employer-style-guide](https://github.com/cb-talent-development/employer-style-guide)
 
 ## Initial Setup
 
