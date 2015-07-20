@@ -24,8 +24,26 @@ layout: checkout
     %h1{class: "header__headline text--headline text--white"}
       Your Cart
     
-    / header__status-icons
-
+    / header__progress-bar
+    %div{class: "header__progress-bar box--progress-bar text--white"}
+      %ul 
+        %div{class: "box--progress-bar__line"}  
+        %li{class: "completed"}
+          // STEP NUMBER 
+          1
+          // STEP LABEL
+          %label Summary 
+        %li 
+          2  
+          %label Sign In
+        %li 
+          3
+          %label Payment
+        %li 
+          4
+          %label Confirmation
+        // Displays line behind     
+   
 
 %div{class: "container text--body"}
 

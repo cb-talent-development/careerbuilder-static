@@ -114,6 +114,46 @@
   border-right: 1px solid $grey-lighter
   // ^ This is not working as expected. 
 
+.box--progress-bar li
+  position: relative 
+  z-index: 1001
+  display: inline-block
+  width: 24px
+  height: 24px 
+  +border-top-radius(12px)
+  +border-bottom-radius(12px)
+  background-color: $primary-darker
+  font-size: 9pt
+  text-align: center
+  padding-top: 5px
+  margin-right: 80px 
+
+.box--progress-bar li label
+  position: relative
+  display: block
+  top: 20px
+  left: -26px
+  text-align: center
+  width: 80px
+
+.box--progress-bar li.completed
+  background-color: $accent-active
+
+.box--progress-bar li.completed label
+  color: $accent-active
+
+.box--progress-bar__line
+  z-index: 1000
+  position: relative
+  background-color: $primary-darker
+  height: 5px
+  // adjust width for numbers of steps 
+  // 20px + (100 * (steps - 1)) 
+  width: 320px
+  top: 15px
+  margin-left: 12px
+  margin-right: 70px
+
 // BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS) 
 
 .button  
@@ -212,7 +252,7 @@
   margin: 20px 25px 10px 0px
 
 .header__headline
-  +span-columns(8) 
+  +span-columns(6) 
   margin-top: 0px 
 
 .header__subnav ul
@@ -220,6 +260,13 @@
   padding: 0
   margin: 0px
   height: 40px  
+
+.header__progress-bar ul
+  margin-top: 0
+  float: right
+
+.header--progress-bar li
+ 
 
 // FOOTER 
 
