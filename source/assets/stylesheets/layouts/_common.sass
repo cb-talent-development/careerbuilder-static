@@ -28,39 +28,8 @@
 
 // END COMMENTS - START ACTUAL CODE
 
-
-
-// TOP BAR
-
-.top-bar
-  height: $top-bar--height
-  background-color: $primary-darker  
-  border-bottom: 1px solid $grey-darkest
-
-.top-bar__logo
-  float: left
-
-.top-bar__links
-  float: right
-
-.top-bar__links ul
-  margin-top: 0px
-  height: $top-bar--height
-  display: flex
-
-.top-bar__links a
-  display: inline-block
-  height: $top-bar--height
-
-.top-bar__links a:hover
-  background-color: $primary-light
-
-.top-bar__links li
-  list-style: none
-  border-right: 0
-  border-left: 1px solid $primary-light
-  height: $top-bar--height
-  padding: 22px 30px
+body
+  background-color: $base-background-color
 
 // TEXT 
 // display only, no positioning
@@ -107,6 +76,66 @@
 .text--smaller
   font-size: 80%
 
+// BOXES
+// display only, no positioning
+
+.box--header-row
+  display: block
+  background-color: $grey-lighter
+
+.box--pop-out  
+  display: block 
+  background-color: $panel-primary
+
+// BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS) 
+
+.button  
+  display: inline-block
+  padding: 5px 20px 10px 20px
+
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+
+.button--secondary
+  border: 1px solid $accent-primary
+  background-color: transparent
+
+.button--secondary:hover  
+  background-color: $accent-primary
+  color: $white
+
+// TOP BAR
+
+.top-bar
+  height: $top-bar--height
+  background-color: $primary-darker  
+  border-bottom: 1px solid $grey-darkest
+
+.top-bar__logo
+  float: left
+
+.top-bar__links
+  float: right
+
+.top-bar__links ul
+  margin-top: 0px
+  height: $top-bar--height
+  display: flex
+
+.top-bar__links a
+  display: inline-block
+  height: $top-bar--height
+
+.top-bar__links a:hover
+  background-color: $primary-light
+
+.top-bar__links li
+  list-style: none
+  border-right: 0
+  border-left: 1px solid $primary-light
+  height: $top-bar--height
+  padding: 22px 30px
+
 // HEADER 
 
 .container
@@ -137,28 +166,3 @@
 .header__headline
   +span-columns(8) 
   margin-top: 0px 
-
-
-// SECTIONS
-
-.box--header-row
-  display: block
-  background-color: $grey-lightest
-
-// BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS) 
-
-.button  
-  display: inline-block
-  padding: 5px 20px 10px 20px
-
-  +border-top-radius(5px)
-  +border-bottom-radius(5px)
-
-.button--secondary
-  border: 1px solid $accent-primary
-  background-color: transparent
-
-.button--secondary:hover  
-  background-color: $accent-primary
-  color: $white
-
