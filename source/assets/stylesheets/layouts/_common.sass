@@ -62,12 +62,74 @@
   height: $top-bar--height
   padding: 22px 30px
 
+// TEXT FORMATTING
+
+
+.text--body
+  font-family: $Lato
+  font-weight: 400
+
+.text--body a, a.text--body
+  text-decoration: none
+  color: $blue
+
 .text--white, .text--white a
   color: $white
 
-.text--top-bar-nav, .text--top-bar-nav a
+.text--top-bar-link, .text--top-bar-link a
   font-family: $Lato
   font-weight: 300
   font-size: 9pt
   text-decoration: none
+
+.text--subnav, .text--subnav a
+  font-family: $Lato
+  font-weight: 300
+  font-size: 11pt
+  text-decoration: none
+
+.text--headline, .text--headline a
+  font-family: $Lato
+  font-weight: 400
+  font-size: 26pt
+  text-decoration: none
+
+
+// HEADER 
+
+.container
+  +outer-container 
+
+.header 
+  height: 220px
+  background-color: $primary
+  margin-bottom: 30px
+
+.header__subnav
+  +span-columns(12)
+  display: block
+  margin-bottom: 60px
+
+.header__subnav ul
+  display: block
+  padding: 0
+  margin: 0px
+  height: 40px
+
+.header__subnav li
+  display: inline-block
+  list-style: none
+  padding: 0
+  margin: 20px 25px 10px 0px
+
+.header__headline
+  +span-columns(8) 
+  margin-top: 0px 
+
+
+// SECTIONS
+
+.box--header-row
+  display: block
+  background-color: $grey-lightest
 

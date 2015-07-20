@@ -1,5 +1,56 @@
 ---
 title: Shopping Cart
+layout: checkout
 ---
 
-<h1>Shopping Cart</h1>
+/ header 
+%header{class: "header"}
+  %div{class: "container"}
+
+    / header__subnav
+    %nav{class: "header__subnav text--white text--subnav"}
+      %ul 
+        %a{href: "#products"}
+          %li 
+            Products
+        %a{href: "#cart"} 
+          %li 
+            Resources
+        %a{href: "#contact"}
+          %li 
+            About Us
+    
+    / header__headline 
+    %h1{class: "header__headline text--headline text--white"} Your Cart
+    
+    / header__status-icons
+
+
+%div{class: "container text--body"}
+
+  / Rescue prompt
+  %P{class: "helper-text"} 
+    Need help? Call 
+    %A{href: "#unknown-link"}800-891-8880 
+    or 
+    %A{href: "#email-us-link"}Email Us. 
+
+  / cart  
+  %section{class: "cart"} 
+    / cart__header-row
+    %div{class: "cart__row box--header-row"}
+      %div{class: "cart__cell cart__cell--title"}
+        Items in your cart 
+      %div{class: "cart__cell cart__cell--quantity"}
+        Quantity 
+      %div{class: "cart__cell cart__cell--price"}
+        Price
+      %div{class: "cart__cell cart__cell--total"}
+        Total
+
+
+
+
+  / Recommended for you
+
+  / Help
