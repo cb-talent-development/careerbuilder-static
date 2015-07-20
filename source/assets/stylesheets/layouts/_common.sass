@@ -38,9 +38,12 @@ body
   font-family: $Lato
   font-weight: 400
 
-.text--body a, a.text--body
+.text--body a
   text-decoration: none
-  color: $blue
+  color: $base-link-color
+
+.text--body a:hover
+  color: $hover-link-color
 
 .text--white, .text--white a
   color: $white
@@ -76,33 +79,58 @@ body
 .text--smaller
   font-size: 80%
 
+.text--larger
+  font-size: 120%  
+
 // BOXES
 // display only, no positioning
 
 .box--header-row
   display: block
   background-color: $grey-lighter
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
 
 .box--pop-out  
   display: block 
   background-color: $panel-primary
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  border: 1px solid $grey-lighter
+  padding: 20px
+
+.box--bottom-divider
+  border-bottom: 1px solid $grey-lighter
 
 // BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS) 
 
 .button  
   display: inline-block
   padding: 5px 20px 10px 20px
-
   +border-top-radius(5px)
   +border-bottom-radius(5px)
+  text-align: center  
 
-.button--secondary
+.button.button--primary 
+  background-color: $accent-primary
+  color: $white
+
+.button.button--primary:hover  
+  backgrdiveround-color: $accent-primary
+  color: $white
+
+.button.button--secondary
   border: 1px solid $accent-primary
   background-color: transparent
 
-.button--secondary:hover  
+.button.button--secondary:hover  
   background-color: $accent-primary
   color: $white
+
+.button--large 
+  width: 100%
+  padding: 12px
+  font-size: 110% 
 
 // TOP BAR
 

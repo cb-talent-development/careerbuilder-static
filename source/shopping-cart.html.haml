@@ -51,7 +51,7 @@ layout: checkout
       %div{class: "cart__cell cart__cell--total"}
         Total
     / cart__row 
-    %div{class: "cart__row"}
+    %div{class: "cart__row box--bottom-divider"}
 
       %div{class: "cart__cell cart__cell--title"}
         %a{href: "#item-title-link"} 
@@ -78,7 +78,7 @@ layout: checkout
 
     / cart__row 
     / SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED
-    %div{class: "cart__row"}
+    %div{class: "cart__row box--bottom-divider"}
 
       %div{class: "cart__cell cart__cell--title"}
         %a{class: "cart__item-title", href: "#item-title-link"}  
@@ -155,9 +155,21 @@ layout: checkout
 
   / Checkout
   %section{class: "checkout box--pop-out"}
-    %p 
-      foo
+    %div{class: "cart__row checkout__subtotal text--smaller"} 
+      %div{class: "cart__cell checkout__item--left"}
+        Subtotal:
+      %div{class: "cart__cell checkout__item--right"}
+        $99.99
+    %div{class: "cart__row checkout__subtotal text--smaller"} 
+      %div{class: "cart__cell checkout__item--left"}
+        Tax:
+      %div{class: "cart__cell checkout__item--right"}
+        $9.99
+    %div{class: "cart__row checkout__total text--larger"} 
+      %div{class: "cart__cell checkout__item--left"}
+        Order Total:
+      %div{class: "cart__cell checkout__item--right"}
+        $109.98
+    %a{class: "button button--primary button--large", href: "#checkout"}
+      Checkout
 
-
-
-         
