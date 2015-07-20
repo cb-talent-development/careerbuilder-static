@@ -62,8 +62,8 @@
   height: $top-bar--height
   padding: 22px 30px
 
-// TEXT FORMATTING
-
+// TEXT 
+// display only, no positioning
 
 .text--body
   font-family: $Lato
@@ -104,6 +104,9 @@
   font-family: $Lato
   font-weight: 400
 
+.text--smaller
+  font-size: 80%
+
 // HEADER 
 
 .container
@@ -141,4 +144,21 @@
 .box--header-row
   display: block
   background-color: $grey-lightest
+
+// BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS) 
+
+.button  
+  display: inline-block
+  padding: 5px 20px 10px 20px
+
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+
+.button--secondary
+  border: 1px solid $accent-primary
+  background-color: transparent
+
+.button--secondary:hover  
+  background-color: $accent-primary
+  color: $white
 

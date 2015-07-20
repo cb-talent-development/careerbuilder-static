@@ -21,7 +21,8 @@ layout: checkout
             About Us
     
     / header__headline 
-    %h1{class: "header__headline text--headline text--white"} Your Cart
+    %h1{class: "header__headline text--headline text--white"}
+      Your Cart
     
     / header__status-icons
 
@@ -36,7 +37,7 @@ layout: checkout
     %A{href: "#email-us-link"}Email Us. 
 
   / cart  
-  %section{class: "cart"} 
+  %section{class: "cart items-in-cart"} 
     / cart__header-row
     %div{class: "cart__row box--header-row"}
       %div{class: "cart__cell cart__cell--title"}
@@ -53,9 +54,11 @@ layout: checkout
     %div{class: "cart__row"}
 
       %div{class: "cart__cell cart__cell--title"}
-        %a{href: "#item-title-link"}  
+        %a{href: "#item-title-link"} 
+          /  ITEM TITLE 
           US Priority Job Posting 
-        %p{class: "text--caption"}   
+        %p{class: "text--caption cart__caption"}  
+          / ITEM DESCRIPTION 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
 
       %div{class: "cart__cell cart__cell--quantity"} 
@@ -78,7 +81,7 @@ layout: checkout
     %div{class: "cart__row"}
 
       %div{class: "cart__cell cart__cell--title"}
-        %a{href: "#item-title-link"}  
+        %a{class: "cart__item-title", href: "#item-title-link"}  
           Second Job Posting 
         %p{class: "text--caption"}   
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
@@ -101,6 +104,57 @@ layout: checkout
     %div{class: "cart__row"}
       %a{class: "cart__cell text--caption", href: "#apply-promo-code"}
         Have a promo code? Click here to apply it to your order.
-  / Recommended for you
 
-  / Help
+  / Recommended for you
+  %section{class: "cart recommended-items"} 
+
+    %div{class: "cart__row box--header-row"}
+
+      %div{class: "cart__cell cart__cell--recommended"}
+        Recommended for you
+
+      %div{class: "cart__cell cart__cell--product-link text--smaller"}
+        %a{href: "#all-products"} 
+          View All Products
+
+    %div{class: "cart__row"}
+      %div{class: "cart__cell recommended-items__block"}
+        %a{href: "#item-link"}
+          / ITEM TITLE
+          Dynamic Emails
+        %p{class: "text--caption cart__caption"}  
+          / ITEM DESCRIPTION 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+        %p{class: "cart--item-price"}
+          / ITEM PRICE 
+          $39.90
+        %a{class: "button button--secondary", href: "#apply-action"}
+          Apply    
+
+      / REPEATED FOR STATIC DEMO, CAN BE REMOVED    
+      %div{class: "cart__cell recommended-items__block"}
+        %a{href: "#item-link"}
+          Company Profile 
+        %p{class: "text--caption cart__caption"}   
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+        %p{class: "cart--item-price"}
+          $10.00
+        %a{class: "button button--secondary", href: "#apply-action"}
+          Apply  
+
+      / REPEATED FOR STATIC DEMO, CAN BE REMOVED 
+      %div{class: "cart__cell recommended-items__block"}
+        %a{href: "#item-link"}
+          Dynamic Emails 
+        %p{class: "text--caption cart__caption"}   
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+        %p{class: "cart--item-price"}
+          $99.99
+        %a{class: "button button--secondary", href: "#apply-action"}
+          Apply  
+
+/ Checkout
+
+
+
+         
