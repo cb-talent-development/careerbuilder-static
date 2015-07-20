@@ -97,7 +97,6 @@
   display: block
   background-color: $grey-lighter
   +border-top-radius(5px)
-  +border-bottom-radius(5px)
 
 .box--pop-out  
   display: block 
@@ -105,10 +104,15 @@
   +border-top-radius(5px)
   +border-bottom-radius(5px)
   border: 1px solid $grey-lighter
+  border-bottom: 3px solid $grey-lighter
   padding: 20px
 
-.box--bottom-divider
+.box--divider-bottom
   border-bottom: 1px solid $grey-lighter
+
+.box--divider-right
+  border-right: 1px solid $grey-lighter
+  // ^ This is not working as expected. 
 
 // BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS) 
 
@@ -132,11 +136,12 @@
   color: $primary-active-button-text-color
 
 .button.button--secondary
-  border: 1px solid $accent-primary
+  border: 2px solid $accent-primary
   background-color: $secondary-button-color
   color: $secondary-button-text-color
 
 .button.button--secondary:hover  
+  border: 2px solid $primary-hover-button-color
   background-color: $primary-hover-button-color
   color: $primary-hover-button-text-color
 
@@ -186,6 +191,7 @@
 .header 
   height: 220px
   background-color: $header-background-color
+  background-image: url('/assets/images/placeholder-background-facets.png')
   margin-bottom: 30px
 
 .header__subnav

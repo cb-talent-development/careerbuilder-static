@@ -51,7 +51,7 @@ layout: checkout
       %div{class: "cart__cell cart__cell--total"}
         Total
     / cart__row 
-    %div{class: "cart__row box--bottom-divider"}
+    %div{class: "cart__row box--divider-bottom"}
 
       %div{class: "cart__cell cart__cell--title"}
         %a{href: "#item-title-link"} 
@@ -64,7 +64,7 @@ layout: checkout
       %div{class: "cart__cell cart__cell--quantity"} 
         %input{type: "number", value: 2}  
 
-      %div{class: "cart__cell cart__cell--remove"} 
+      %div{class: "cart__cell cart__cell--remove text--smaller"} 
         %a{href: "#remove-from-cart"} 
           Remove
 
@@ -78,7 +78,7 @@ layout: checkout
 
     / cart__row 
     / SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED
-    %div{class: "cart__row box--bottom-divider"}
+    %div{class: "cart__row box--divider-bottom"}
 
       %div{class: "cart__cell cart__cell--title"}
         %a{class: "cart__item-title", href: "#item-title-link"}  
@@ -89,7 +89,7 @@ layout: checkout
       %div{class: "cart__cell cart__cell--quantity"} 
         %input{type: "number", value: 1}  
 
-      %div{class: "cart__cell cart__cell--remove"} 
+      %div{class: "cart__cell cart__cell--remove text--smaller"} 
         %a{href: "#remove-from-cart"} 
           Remove
 
@@ -118,7 +118,7 @@ layout: checkout
           View All Products
 
     %div{class: "cart__row"}
-      %div{class: "cart__cell recommended-items__block"}
+      %div{class: "cart__cell recommended-items__block .box--divider-right"}
         %a{href: "#item-link"}
           / ITEM TITLE
           Dynamic Emails
@@ -132,7 +132,7 @@ layout: checkout
           Apply    
 
       / REPEATED FOR STATIC DEMO, CAN BE REMOVED    
-      %div{class: "cart__cell recommended-items__block"}
+      %div{class: "cart__cell recommended-items__block .box--divider-right"}
         %a{href: "#item-link"}
           Company Profile 
         %p{class: "text--caption cart__caption"}   
@@ -143,7 +143,7 @@ layout: checkout
           Apply  
 
       / REPEATED FOR STATIC DEMO, CAN BE REMOVED 
-      %div{class: "cart__cell recommended-items__block"}
+      %div{class: "cart__cell recommended-items__block .box--divider-right"}
         %a{href: "#item-link"}
           Dynamic Emails 
         %p{class: "text--caption cart__caption"}   
@@ -175,7 +175,7 @@ layout: checkout
 
 / footer     
 
-%footer{class: "footer container text--body"}
+%footer{class: "footer container text--body large-screen-only"}
   %div{class: "footer__subnav text--subnav"}
     %ul 
       %li 
