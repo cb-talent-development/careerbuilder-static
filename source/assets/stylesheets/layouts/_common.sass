@@ -36,6 +36,21 @@
 .container
   +outer-container 
 
+// MOBILE DISPLAY RULES 
+
+.large-screen-only 
+  display: block 
+
+.small-screen-only   
+  display: none
+
+@media (max-width: $small-screen)
+  .small-screen-only   
+    display: block
+
+  .large-screen-only   
+    display: none    
+
 // TEXT 
 // display only, no positioning
 
