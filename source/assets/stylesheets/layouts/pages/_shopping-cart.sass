@@ -8,6 +8,7 @@
   
 .cart__row
   +span-columns(12)  
+  margin-bottom: 20px
 
 .cart__cell 
   padding: 10px
@@ -16,7 +17,15 @@
   +span-columns(5)
 
 .cart__cell--quantity
-  +span-columns(3)
+  +span-columns(1)
+
+.cart__cell--quantity input
+  width: 100%
+
+
+.cart__cell--remove
+  +span-columns(2)
+
 
 .cart__cell--price
   +span-columns(2)  

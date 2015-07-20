@@ -43,14 +43,64 @@ layout: checkout
         Items in your cart 
       %div{class: "cart__cell cart__cell--quantity"}
         Quantity 
+      %div{class: "cart__cell cart__cell--remove"}
+
       %div{class: "cart__cell cart__cell--price"}
         Price
       %div{class: "cart__cell cart__cell--total"}
         Total
+    / cart__row 
+    %div{class: "cart__row"}
 
+      %div{class: "cart__cell cart__cell--title"}
+        %a{href: "#item-title-link"}  
+          US Priority Job Posting 
+        %p{class: "text--caption"}   
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
 
+      %div{class: "cart__cell cart__cell--quantity"} 
+        %input{type: "number", value: 2}  
 
+      %div{class: "cart__cell cart__cell--remove"} 
+        %a{href: "#remove-from-cart"} 
+          Remove
 
+      %div{class: "cart__cell cart__cell--price"} 
+        / SINGLE UNIT PRICE   
+        $250.00
+
+      %div{class: "cart__cell cart__cell--total"}   
+        / UNIT PRICE * QUANTITY  
+        $500.00
+
+    / cart__row 
+    / SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED
+    %div{class: "cart__row"}
+
+      %div{class: "cart__cell cart__cell--title"}
+        %a{href: "#item-title-link"}  
+          Second Job Posting 
+        %p{class: "text--caption"}   
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+
+      %div{class: "cart__cell cart__cell--quantity"} 
+        %input{type: "number", value: 1}  
+
+      %div{class: "cart__cell cart__cell--remove"} 
+        %a{href: "#remove-from-cart"} 
+          Remove
+
+      %div{class: "cart__cell cart__cell--price"} 
+        / SINGLE PRICE HERE  
+        $300.00
+
+      %div{class: "cart__cell cart__cell--total"}   
+        / PRICE * QUANTITY HERE 
+        $300.00
+
+    %div{class: "cart__row"}
+      %a{class: "cart__cell text--caption", href: "#apply-promo-code"}
+        Have a promo code? Click here to apply it to your order.
   / Recommended for you
 
   / Help
