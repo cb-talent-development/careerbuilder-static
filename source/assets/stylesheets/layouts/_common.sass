@@ -28,8 +28,13 @@
 
 // END COMMENTS - START ACTUAL CODE
 
-body
+// UTILITY
+
+.base-background
   background-color: $base-background-color
+
+.container
+  +outer-container 
 
 // TEXT 
 // display only, no positioning
@@ -47,6 +52,9 @@ body
 
 .text--white, .text--white a
   color: $white
+
+.text--white a:hover
+  color: $white  
 
 .text--top-bar-link, .text--top-bar-link a
   font-family: $Lato
@@ -112,20 +120,29 @@ body
   text-align: center  
 
 .button.button--primary 
-  background-color: $accent-primary
-  color: $white
+  background-color: $primary-button-color
+  color: $primary-button-text-color
 
 .button.button--primary:hover  
-  backgrdiveround-color: $accent-primary
-  color: $white
+  background-color: $primary-hover-button-color
+  color: $primary-hover-button-text-color
+
+.button.button--primary:active
+  background-color: $primary-active-button-color
+  color: $primary-active-button-text-color
 
 .button.button--secondary
   border: 1px solid $accent-primary
-  background-color: transparent
+  background-color: $secondary-button-color
+  color: $secondary-button-text-color
 
 .button.button--secondary:hover  
-  background-color: $accent-primary
-  color: $white
+  background-color: $primary-hover-button-color
+  color: $primary-hover-button-text-color
+
+.button.button--secondary:active
+  background-color: $secondary-active-button-color
+  color: $secondary-active-button-text-color
 
 .button--large 
   width: 100%
@@ -166,12 +183,9 @@ body
 
 // HEADER 
 
-.container
-  +outer-container 
-
 .header 
   height: 220px
-  background-color: $primary
+  background-color: $header-background-color
   margin-bottom: 30px
 
 .header__subnav
@@ -194,3 +208,37 @@ body
 .header__headline
   +span-columns(8) 
   margin-top: 0px 
+
+.header__subnav ul
+  display: block
+  padding: 0
+  margin: 0px
+  height: 40px  
+
+// FOOTER 
+
+.footer
+  margin-top: 200px
+
+.footer__subnav
+  +span-columns(12)
+  margin-bottom: 40px  
+
+.footer__subnav ul
+  display: block
+  padding: 0
+  margin: 0px
+  height: 40px
+
+.footer__subnav li
+  display: inline-block
+  list-style: none
+  padding: 0
+  margin: 20px 25px 10px 0px  
+
+.footer__logo  
+  +span-columns(6)
+
+.footer__share-links  
+  +span-columns(6)
+  text-align: right
