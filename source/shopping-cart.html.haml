@@ -25,7 +25,7 @@ layout: checkout
       Your Cart
     
     / header__progress-bar
-    %div{class: "header__progress-bar box--progress-bar text--white"}
+    %div{class: "header__progress-bar box--progress-bar text--white large-screen-only"}
       %ul 
         // Displays line behind circles
         %div{class: "box--progress-bar__line"}  
@@ -49,7 +49,7 @@ layout: checkout
 
 %div{class: "container text--body"}
 
-  / Rescue prompt
+  / Rescue prompt 
   %P{class: "helper-text"} 
     Need help? Call 
     %A{href: "#unknown-link"}800-891-8880 
@@ -194,39 +194,4 @@ layout: checkout
         $109.98
     %a{class: "button button--primary button--large", href: "#checkout"}
       Checkout
-
-/ footer     
-
-%footer{class: "footer container text--body large-screen-only"}
-  %div{class: "footer__subnav text--subnav"}
-    %ul 
-      %li 
-        %a{href:"#subnav"}
-          Help 
-      %li   
-        %a{href:"#subnav"}
-          Terms & Conditions 
-      %li 
-        %a{href:"#subnav"}
-          Security & Privacy 
-      %li  
-        %a{href:"#subnav"}
-          Advertise With Us 
-      %li
-        %a{href:"#subnav"}
-          Partners & Affiliates 
-  %div{class: "footer__logo-row"}   
-    %div{class: "footer__logo"}
-      LOGO
-    %div{class: "footer__share-links footer__subnav text--subnav"}  
-      %ul
-        %li 
-          %a{href:"#share-logo"}
-            Sharelink
-        %li 
-          %a{href:"#share-logo"}
-            Sharelink
-        %li 
-          %a{href:"#share-logo"}
-            Sharelink     
 
