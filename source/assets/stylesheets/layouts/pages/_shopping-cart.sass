@@ -1,0 +1,105 @@
+.header__status-icons
+
+.helper-text 
+  +span-columns(12)
+  margin-bottom: 20px
+
+.items-in-cart
+  +span-columns(12)
+
+//
+
+.cart 
+  margin-bottom: 20px
+  
+.cart__row
+  +span-columns(12)  
+  margin-bottom: 20px
+
+.cart__cell 
+  padding: 10px
+
+.cart__item-title
+  line-height: 120%  
+
+.cart__caption
+  margin-top: 5px
+
+.cart__cell--title
+  +span-columns(5)
+
+@media (min-width: $small-screen-max) and (max-width: $medium-screen-max)
+  .cart__cell--title
+    +span-columns(7)  
+
+@media (max-width: $small-screen-max)
+  .cart__cell--title
+    +span-columns(6)  
+
+.cart__cell--quantity
+  +span-columns(1)
+
+.cart__cell--quantity input
+  width: 100%
+  min-width: 30px
+
+.cart__cell--remove
+  +span-columns(2)
+
+.cart__cell--price
+  +span-columns(2)  
+
+.cart__cell--total
+  +span-columns(2)    
+
+.cart__cell--recommended
+  +span-columns(9)
+
+.cart__cell--product-link
+  +span-columns(3) 
+
+.cart__apply-discount-link  
+
+// 
+
+.recommended-items
+  +span-columns(8) 
+
+.recommended-items__block
+  +span-columns(4)
+
+//
+
+.apply-discount
+  +span-columns(8)
+  +shift(2)
+
+// 
+
+.checkout 
+  +span-columns(4)
+  margin-bottom: 20px
+
+@media (min-width: $small-screen-max) and (max-width: $medium-screen-max)
+  .checkout 
+    +span-columns(6)
+    +shift(3)
+
+@media (max-width: $small-screen-max)
+  .checkout 
+    +span-columns(12)        
+
+.checkout__subtotal
+  margin-bottom: 0
+
+.checkout__item--left
+  +span-columns(8)
+
+.checkout__item--right
+  +span-columns(4)
+  text-align: right
+
+.checkout__security-image
+
+.checkout__security-image img 
+  width: 120px  

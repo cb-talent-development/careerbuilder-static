@@ -1,5 +1,213 @@
 ---
 title: Shopping Cart
+layout: checkout
 ---
 
-<h1>Shopping Cart</h1>
+/ header 
+%header{class: "header"}
+  %div{class: "container"}
+
+    / header__subnav
+    %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
+      %ul 
+        %a{href: "#products"}
+          %li 
+            Products
+        %a{href: "#cart"} 
+          %li 
+            Resources
+        %a{href: "#contact"}
+          %li 
+            About Us
+    
+    / header__headline 
+    %h1{class: "header__headline text--headline text--white"}
+      Your Cart
+    
+    / header__progress-bar
+    %div{class: "header__progress-bar box--progress-bar text--white large-screen-only"}
+      %ul 
+        // Displays line behind circles
+        %div{class: "box--progress-bar__line"}  
+
+        %li{class: "completed"}
+          // STEP NUMBER 
+          1
+          // STEP LABEL
+          %label Summary 
+        %li 
+          2  
+          %label Sign In
+        %li 
+          3
+          %label Payment
+        %li 
+          4
+          %label Confirmation
+
+%div{class: "container text--body"}
+
+  / Rescue prompt 
+  %p{class: "helper-text"} 
+    Need help? Call 
+    %a{href: "#unknown-link"}800-891-8880 
+    or 
+    %a{href: "#email-us-link"}Email Us. 
+
+  / cart  
+  %section{class: "cart items-in-cart"} 
+    / cart__header-row
+    %div{class: "cart__row box--header-row"}
+      %div{class: "cart__cell cart__cell--title"}
+        Items in your cart 
+      %div{class: "cart__cell cart__cell--quantity"}
+        Quantity 
+      %div{class: "cart__cell cart__cell--remove"}
+
+      %div{class: "cart__cell cart__cell--price large-screen-only"}
+        Price
+      %div{class: "cart__cell cart__cell--total"}
+        Total
+    / cart__row 
+    %div{class: "cart__row box--divider-bottom"}
+
+      %div{class: "cart__cell cart__cell--title"}
+        %a{href: "#item-title-link"} 
+          /  ITEM TITLE 
+          US Priority Job Posting 
+        %p{class: "text--caption cart__caption medium-screen-up"}  
+          / ITEM DESCRIPTION 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+
+      %div{class: "cart__cell cart__cell--quantity"} 
+
+        / Input type Number falls back to text field in IE8, IE9
+        / http://html5please.com/#number
+
+        / ITEM QUANTITY IN VALUE FIELD
+        %input{type: "number", value: 2}  
+
+      %div{class: "cart__cell cart__cell--remove text--smaller"} 
+        %a{href: "#remove-from-cart", class: "medium-screen-up" } 
+          Remove
+
+      %div{class: "cart__cell cart__cell--price large-screen-only"} 
+        / SINGLE UNIT PRICE   
+        $250.00
+
+      %div{class: "cart__cell cart__cell--total"}   
+        / UNIT PRICE * QUANTITY  
+        $500.00
+
+    / cart__row 
+    / SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED
+    %div{class: "cart__row box--divider-bottom"}
+
+      %div{class: "cart__cell cart__cell--title"}
+        %a{class: "cart__item-title", href: "#item-title-link"}
+          Second Job Posting 
+        %p{class: "text--caption medium-screen-up"}   
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+
+      %div{class: "cart__cell cart__cell--quantity"} 
+        %input{type: "number", value: 1}  
+
+      %div{class: "cart__cell cart__cell--remove text--smaller"} 
+        %a{href: "#remove-from-cart", class: "medium-screen-up"} 
+          Remove
+
+      %div{class: "cart__cell cart__cell--price large-screen-only"} 
+        / SINGLE PRICE HERE  
+        $300.00
+
+      %div{class: "cart__cell cart__cell--total"}   
+        / PRICE * QUANTITY HERE 
+        $300.00
+
+    %div{class: "cart__row medium-screen-up"}
+      %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
+        Have a promo code? Click here to apply it to your order.
+
+    %div{class: "cart__row small-screen-only"}
+      %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
+        Apply promo code.
+
+        / placeholder: should start hidden
+    %div{id: "apply-discount", class: "cart__row box--pop-out apply-discount" }
+      %p Enter your discount code here.
+
+      / SHOULD VALIDATE DISCOUNT, ETC  
+      %input{type: "text"}
+      %button{class: "button button--primary"}
+        Apply Discount
+
+  / Recommended for you
+  %section{class: "cart recommended-items large-screen-only"} 
+
+    %div{class: "cart__row box--header-row"}
+
+      %div{class: "cart__cell cart__cell--recommended"}
+        Recommended for you
+
+      %div{class: "cart__cell cart__cell--product-link text--smaller"}
+        %a{href: "#all-products"} 
+          View All Products
+
+    %div{class: "cart__row"}
+      %div{class: "cart__cell recommended-items__block .box--divider-right"}
+        %a{href: "#item-link"}
+          / ITEM TITLE
+          Dynamic Emails
+        %p{class: "text--caption cart__caption"}  
+          / ITEM DESCRIPTION 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+        %p{class: "cart--item-price"}
+          / ITEM PRICE 
+          $39.90
+        %a{class: "button button--secondary", href: "#apply-action"}
+          Apply    
+
+      / REPEATED FOR STATIC DEMO, CAN BE REMOVED    
+      %div{class: "cart__cell recommended-items__block .box--divider-right"}
+        %a{href: "#item-link"}
+          Company Profile 
+        %p{class: "text--caption cart__caption"}   
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+        %p{class: "cart--item-price"}
+          $10.00
+        %a{class: "button button--secondary", href: "#apply-action"}
+          Apply  
+
+      / REPEATED FOR STATIC DEMO, CAN BE REMOVED 
+      %div{class: "cart__cell recommended-items__block .box--divider-right"}
+        %a{href: "#item-link"}
+          Dynamic Emails 
+        %p{class: "text--caption cart__caption"}   
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+        %p{class: "cart--item-price"}
+          $99.99
+        %a{class: "button button--secondary", href: "#apply-action"}
+          Apply  
+
+  / Checkout
+  %section{class: "checkout"}
+    %div{class: "box--pop-out"}
+      %div{class: "cart__row checkout__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Subtotal:
+        %div{class: "cart__cell checkout__item--right"}
+          $99.99
+      %div{class: "cart__row checkout__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Tax:
+        %div{class: "cart__cell checkout__item--right"}
+          $9.99
+      %div{class: "cart__row checkout__total text--larger"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Order Total:
+        %div{class: "cart__cell checkout__item--right"}
+          $109.98
+      %a{class: "button button--primary button--large", href: "#checkout"}
+        Checkout
+    %div{class: "checkout__security-image"}
+      %img{src: "assets/images/placeholder--security-image.png"}      
