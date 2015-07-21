@@ -82,6 +82,8 @@ layout: checkout
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
 
       %div{class: "cart__cell cart__cell--quantity"} 
+
+        // NOT SUPPORTED IN IE8, needs js Modernizer or older input field
         %input{type: "number", value: 2}  
 
       %div{class: "cart__cell cart__cell--remove text--smaller"} 
