@@ -81,7 +81,10 @@ layout: checkout
 
       %div{class: "cart__cell cart__cell--quantity"} 
 
-        // NOT SUPPORTED IN IE8, needs fallback or simpler input
+        / Input type Number falls back to text field in IE8, IE9
+        / http://html5please.com/#number
+
+        / ITEM QUANTITY IN VALUE FIELD
         %input{type: "number", value: 2}  
 
       %div{class: "cart__cell cart__cell--remove text--smaller"} 
