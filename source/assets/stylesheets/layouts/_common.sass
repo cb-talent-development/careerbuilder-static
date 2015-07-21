@@ -33,15 +33,14 @@
 .base-background
   background-color: $base-background-color
 
-.container
+.container 
   +outer-container
+  padding-left: 20px
+  padding-right: 20px
 
-@media (max-width: $medium-screen-max)
-  .container 
-    +outer-container
-    padding-left: 20px
-    padding-right: 20px
-
+.clearfix
+  clear: both
+  background: pink
 
 // MOBILE DISPLAY RULES
 
@@ -67,7 +66,7 @@
     display: none !important
 
 // small screen
-@media (max-width: $small-screen-max)
+@media only screen and (max-width: $small-screen-max)
   .small-screen-only
     display: block !important
 
@@ -77,6 +76,8 @@
   .large-screen-only
     display: none !important
 
+.hidden 
+  display: none !important
 
 // TEXT
 // display only, no positioning
@@ -148,6 +149,7 @@
   border: 1px solid $grey-lighter
   border-bottom: 3px solid $grey-lighter
   padding: 20px
+  margin-bottom: 20px  
 
 .box--divider-bottom
   border-bottom: 1px solid $grey-lighter
@@ -246,6 +248,9 @@
 .top-bar__logo
   float: left
 
+.top-bar__logo a
+  display: block
+
 .top-bar__links
   float: right
 
@@ -268,9 +273,37 @@
   height: $top-bar--height
   padding: 22px 30px
 
-.top-bar__links img
+.top-bar__links img, .top-bar__mobile-menu img
   padding-right: 5px
   height: 12px
+
+.top-bar__mobile-menu-link
+  padding: 15px
+
+.top-bar__mobile-menu-link img
+  height: 30px
+
+.top-bar__mobile-menu
+  +outer_container
+  background-color: $primary
+
+.top-bar__mobile-menu ul 
+  padding: 0
+  margin: 0
+  // border-bottom: 3px solid $white
+
+.top-bar__mobile-menu a
+  margin-top: 0
+  +span-columns(12)
+  padding: 15px 20px
+  border-bottom: 1px solid $primary-light
+  background-color: $primary-darkest
+  text-decoration: none
+  
+.top-bar__mobile-menu li
+  display: block
+  list-style: none
+  
 
 // HEADER
 
@@ -278,7 +311,12 @@
   height: 220px
   background-color: $header-background-color
   background-image: url('/assets/images/placeholder-background-facets.png')
-  margin-bottom: 30px
+  margin-bottom: 30px 
+
+@media (max-width: $small-screen-max)  
+  .header
+    height: 120px
+    background-image: none
 
 .header__subnav
   +span-columns(12)
@@ -301,6 +339,12 @@
   +span-columns(6)
   margin-top: 0px
 
+@media (max-width: $small-screen-max)  
+  .header__headline
+    +span-columns(12)
+    margin-top: 0px
+    padding-top: 30px
+
 .header__subnav ul
   display: block
   padding: 0
@@ -312,7 +356,6 @@
   float: right
 
 .header--progress-bar li
-
 
 // FOOTER
 

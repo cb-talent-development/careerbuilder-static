@@ -8,7 +8,7 @@ layout: checkout
   %div{class: "container"}
 
     / header__subnav
-    %nav{class: "header__subnav text--white text--subnav"}
+    %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
       %ul 
         %a{href: "#products"}
           %li 
@@ -48,11 +48,11 @@ layout: checkout
 %div{class: "container text--body"}
 
   / Rescue prompt 
-  %P{class: "helper-text"} 
+  %p{class: "helper-text"} 
     Need help? Call 
-    %A{href: "#unknown-link"}800-891-8880 
+    %a{href: "#unknown-link"}800-891-8880 
     or 
-    %A{href: "#email-us-link"}Email Us. 
+    %a{href: "#email-us-link"}Email Us. 
 
   / cart  
   %section{class: "cart items-in-cart"} 
@@ -75,17 +75,17 @@ layout: checkout
         %a{href: "#item-title-link"} 
           /  ITEM TITLE 
           US Priority Job Posting 
-        %p{class: "text--caption cart__caption"}  
+        %p{class: "text--caption cart__caption medium-screen-up"}  
           / ITEM DESCRIPTION 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
 
       %div{class: "cart__cell cart__cell--quantity"} 
 
-        // NOT SUPPORTED IN IE8, needs js Modernizer or older input field
+        // NOT SUPPORTED IN IE8, needs fallback or simpler input
         %input{type: "number", value: 2}  
 
       %div{class: "cart__cell cart__cell--remove text--smaller"} 
-        %a{href: "#remove-from-cart"} 
+        %a{href: "#remove-from-cart", class: "medium-screen-up" } 
           Remove
 
       %div{class: "cart__cell cart__cell--price large-screen-only"} 
@@ -101,16 +101,16 @@ layout: checkout
     %div{class: "cart__row box--divider-bottom"}
 
       %div{class: "cart__cell cart__cell--title"}
-        %a{class: "cart__item-title", href: "#item-title-link"}  
+        %a{class: "cart__item-title", href: "#item-title-link"}
           Second Job Posting 
-        %p{class: "text--caption"}   
+        %p{class: "text--caption medium-screen-up"}   
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
 
       %div{class: "cart__cell cart__cell--quantity"} 
         %input{type: "number", value: 1}  
 
       %div{class: "cart__cell cart__cell--remove text--smaller"} 
-        %a{href: "#remove-from-cart"} 
+        %a{href: "#remove-from-cart", class: "medium-screen-up"} 
           Remove
 
       %div{class: "cart__cell cart__cell--price large-screen-only"} 
@@ -178,22 +178,24 @@ layout: checkout
           Apply  
 
   / Checkout
-  %section{class: "checkout box--pop-out"}
-    %div{class: "cart__row checkout__subtotal text--smaller"} 
-      %div{class: "cart__cell checkout__item--left"}
-        Subtotal:
-      %div{class: "cart__cell checkout__item--right"}
-        $99.99
-    %div{class: "cart__row checkout__subtotal text--smaller"} 
-      %div{class: "cart__cell checkout__item--left"}
-        Tax:
-      %div{class: "cart__cell checkout__item--right"}
-        $9.99
-    %div{class: "cart__row checkout__total text--larger"} 
-      %div{class: "cart__cell checkout__item--left"}
-        Order Total:
-      %div{class: "cart__cell checkout__item--right"}
-        $109.98
-    %a{class: "button button--primary button--large", href: "#checkout"}
-      Checkout
-
+  %section{class: "checkout"}
+    %div{class: "box--pop-out"}
+      %div{class: "cart__row checkout__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Subtotal:
+        %div{class: "cart__cell checkout__item--right"}
+          $99.99
+      %div{class: "cart__row checkout__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Tax:
+        %div{class: "cart__cell checkout__item--right"}
+          $9.99
+      %div{class: "cart__row checkout__total text--larger"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Order Total:
+        %div{class: "cart__cell checkout__item--right"}
+          $109.98
+      %a{class: "button button--primary button--large", href: "#checkout"}
+        Checkout
+    %div{class: "checkout__security-image"}
+      %img{src: "assets/images/placeholder--security-image.png"}      

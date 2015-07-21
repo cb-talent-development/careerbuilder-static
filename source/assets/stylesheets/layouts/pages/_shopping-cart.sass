@@ -28,6 +28,14 @@
 .cart__cell--title
   +span-columns(5)
 
+@media (min-width: $small-screen-max) and (max-width: $medium-screen-max)
+  .cart__cell--title
+    +span-columns(7)  
+
+@media (max-width: $small-screen-max)
+  .cart__cell--title
+    +span-columns(6)  
+
 .cart__cell--quantity
   +span-columns(1)
 
@@ -62,6 +70,7 @@
 
 .checkout 
   +span-columns(4)
+  margin-bottom: 20px
 
 @media (min-width: $small-screen-max) and (max-width: $medium-screen-max)
   .checkout 
@@ -81,3 +90,9 @@
 .checkout__item--right
   +span-columns(4)
   text-align: right
+
+.checkout__security-image
+
+.checkout__security-image img 
+  width: 120px  
+  
