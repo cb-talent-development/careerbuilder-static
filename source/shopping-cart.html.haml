@@ -125,12 +125,21 @@ layout: checkout
         $300.00
 
     %div{class: "cart__row medium-screen-up"}
-      %a{class: "cart__cell text--caption", href: "#apply-promo-code"}
+      %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Have a promo code? Click here to apply it to your order.
 
     %div{class: "cart__row small-screen-only"}
-      %a{class: "cart__cell text--caption", href: "#apply-promo-code"}
-        Apply promo code.    
+      %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
+        Apply promo code.
+
+        / placeholder: should start hidden
+    %div{id: "apply-discount", class: "cart__row box--pop-out apply-discount" }
+      %p Enter your discount code here.
+
+      / SHOULD VALIDATE DISCOUNT, ETC  
+      %input{type: "text"}
+      %button{class: "button button--primary"}
+        Apply Discount
 
   / Recommended for you
   %section{class: "cart recommended-items large-screen-only"} 
