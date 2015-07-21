@@ -20,11 +20,11 @@
 // Quickstart for modular CSS:
 
 // Use small-scope classes, rather than mega class + nesting, to keep definitions reusable.
-// Never blend presentation (".subhead"), layout (".popover"), and meaning (".alert-red")
-// Even in BEM, that's a ".popover" with a ".subhead .alert-red" inside it.
-// Don't use .popover__subhead or .subhead--alert-red unless these are locked to that element layout.
+// The namespaces "text--" and "box--" handle presentation of words and rectangles.
+// Never blend presentation (".text--subhead"), layout (".popover"), and meaning (".box--alert-red")
+// Even in BEM, that's a ".popover" with a ".text--subhead .box--alert-red" inside it.
+// Avoid .popover__subhead or .subhead--alert-red unless it's a werid, non-resusable layout.
 // https://vimeo.com/70115794
-
 
 // END COMMENTS - START ACTUAL CODE
 
@@ -34,40 +34,51 @@
   background-color: $base-background-color
 
 .container
-  +outer-container 
+  +outer-container
 
-// MOBILE DISPLAY RULES 
+@media (max-width: $medium-screen-max)
+  .container 
+    +outer-container
+    padding-left: 20px
+    padding-right: 20px
 
-.small-screen-only   
-  display: none
 
-.large-screen-only 
-  display: block 
+// MOBILE DISPLAY RULES
+
+// large screen rules
+.small-screen-only
+  display: none !important
+
+.large-screen-only
+  display: block !important
 
 .medium-screen-up
-  display: block 
+  display: block !important
 
+// medium and up 
 @media only screen and (min-width: $medium-screen-min) and (max-width: $medium-screen-max)
-  .small-screen-only   
-    display: none
+  .small-screen-only
+    display: none !important
 
   .medium-screen-up
-    display: block
+    display: block !important
 
-  .large-screen-only   
-    display: none  
+  .large-screen-only
+    display: none !important
 
+// small screen
 @media (max-width: $small-screen-max)
-  .small-screen-only   
-    display: block
+  .small-screen-only
+    display: block !important
 
   .medium-screen-up
-    display: none
+    display: none !important
 
-  .large-screen-only   
-    display: none    
+  .large-screen-only
+    display: none !important
 
-// TEXT 
+
+// TEXT
 // display only, no positioning
 
 .text--body
@@ -85,7 +96,7 @@
   color: $white
 
 .text--white a:hover
-  color: $white  
+  color: $white
 
 .text--top-bar-link, .text--top-bar-link a
   font-family: $Lato
@@ -105,7 +116,7 @@
   font-size: 26pt
   text-decoration: none
 
-.text--caption 
+.text--caption
   font-family: $Lato
   font-weight: 300
   font-size: 10pt
@@ -119,7 +130,7 @@
   font-size: 80%
 
 .text--larger
-  font-size: 120%  
+  font-size: 120%
 
 // BOXES
 // display only, no positioning
@@ -129,8 +140,8 @@
   background-color: $grey-lighter
   +border-top-radius(5px)
 
-.box--pop-out  
-  display: block 
+.box--pop-out
+  display: block
   background-color: $panel-primary
   +border-top-radius(5px)
   +border-bottom-radius(5px)
@@ -143,21 +154,21 @@
 
 .box--divider-right
   border-right: 1px solid $grey-lighter
-  // ^ This is not working as expected. 
+  // ^ This is not working as expected.
 
 .box--progress-bar li
-  position: relative 
+  position: relative
   z-index: 1001
   display: inline-block
   width: 24px
-  height: 24px 
+  height: 24px
   +border-top-radius(12px)
   +border-bottom-radius(12px)
   background-color: $primary-darker
   font-size: 9pt
   text-align: center
   padding-top: 5px
-  margin-right: 80px 
+  margin-right: 80px
 
 .box--progress-bar li label
   position: relative
@@ -178,27 +189,27 @@
   position: relative
   background-color: $primary-darker
   height: 5px
-  // adjust width for numbers of steps 
-  // 20px + (100 * (steps - 1)) 
+  // adjust width for numbers of steps
+  // 20px + (100 * (steps - 1))
   width: 320px
   top: 15px
   margin-left: 12px
   margin-right: 70px
 
-// BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS) 
+// BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS)
 
-.button  
+.button
   display: inline-block
   padding: 5px 20px 10px 20px
   +border-top-radius(5px)
   +border-bottom-radius(5px)
-  text-align: center  
+  text-align: center
 
-.button.button--primary 
+.button.button--primary
   background-color: $primary-button-color
   color: $primary-button-text-color
 
-.button.button--primary:hover  
+.button.button--primary:hover
   background-color: $primary-hover-button-color
   color: $primary-hover-button-text-color
 
@@ -211,7 +222,7 @@
   background-color: $secondary-button-color
   color: $secondary-button-text-color
 
-.button.button--secondary:hover  
+.button.button--secondary:hover
   border: 2px solid $primary-hover-button-color
   background-color: $primary-hover-button-color
   color: $primary-hover-button-text-color
@@ -220,16 +231,16 @@
   background-color: $secondary-active-button-color
   color: $secondary-active-button-text-color
 
-.button--large 
+.button--large
   width: 100%
   padding: 12px
-  font-size: 110% 
+  font-size: 110%
 
 // TOP BAR
 
 .top-bar
   height: $top-bar--height
-  background-color: $primary-darker  
+  background-color: $primary-darker
   border-bottom: 1px solid $grey-darkest
 
 .top-bar__logo
@@ -261,9 +272,9 @@
   padding-right: 5px
   height: 12px
 
-// HEADER 
+// HEADER
 
-.header 
+.header
   height: 220px
   background-color: $header-background-color
   background-image: url('/assets/images/placeholder-background-facets.png')
@@ -287,30 +298,30 @@
   margin: 20px 25px 10px 0px
 
 .header__headline
-  +span-columns(6) 
-  margin-top: 0px 
+  +span-columns(6)
+  margin-top: 0px
 
 .header__subnav ul
   display: block
   padding: 0
   margin: 0px
-  height: 40px  
+  height: 40px
 
 .header__progress-bar ul
   margin-top: 0
   float: right
 
 .header--progress-bar li
- 
 
-// FOOTER 
+
+// FOOTER
 
 .footer
   margin-top: 200px
 
 .footer__subnav
   +span-columns(12)
-  margin-bottom: 40px  
+  margin-bottom: 40px
 
 .footer__subnav ul
   display: block
@@ -322,11 +333,12 @@
   display: inline-block
   list-style: none
   padding: 0
-  margin: 20px 25px 10px 0px  
+  margin: 20px 25px 10px 0px
 
-.footer__logo  
+.footer__logo
   +span-columns(6)
 
-.footer__share-links  
+.footer__share-links
   +span-columns(6)
   text-align: right
+
