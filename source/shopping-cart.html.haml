@@ -48,11 +48,8 @@ layout: checkout
 %div{class: "container text--body"}
 
   / Rescue prompt 
-  %p{class: "helper-text"} 
-    Need help? Call 
-    %a{href: "#unknown-link"}800-891-8880 
-    or 
-    %a{href: "#email-us-link"}Email Us. 
+  %div{class: "helper-text"} 
+    = partial 'partials/email-us-link' 
 
   / cart  
   %section{class: "cart items-in-cart"} 

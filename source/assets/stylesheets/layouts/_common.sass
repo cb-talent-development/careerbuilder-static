@@ -40,7 +40,6 @@
 
 .clearfix
   clear: both
-  background: pink
 
 // MOBILE DISPLAY RULES
 
@@ -104,6 +103,20 @@
   font-weight: 300
   font-size: 9pt
   text-decoration: none
+
+.text--top-bar-helper 
+  font-family: $Lato
+  font-weight: 300
+  font-size: 11pt
+
+.text--top-bar-helper a  
+  color: $accent-primary 
+  font-weight: 400
+  text-decoration: none 
+
+.text--top-bar-helper a:hover
+  text-decoration: underline
+  color: $accent-primary  
 
 .text--subnav, .text--subnav a
   font-family: $Lato
@@ -348,7 +361,12 @@ button:action
 .top-bar__mobile-menu li
   display: block
   list-style: none
-  
+
+.top-bar__helper-text
+  padding-top: 20px
+  padding-right: 30px
+  float: right  
+
 
 // HEADER
 
