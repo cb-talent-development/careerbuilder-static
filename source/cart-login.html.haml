@@ -32,7 +32,12 @@ layout: simple
           %label Confirmation    
 
 / main content
+
 %div{class: "container text--body"} 
+  %div{class: "small-screen-only"}
+    = partial 'partials/email-us-link' 
+
+
   %section{class: "half-page-medium-up"}  
     %h2{class:"text--headline-2 text--accent"}
       Registered Users
@@ -52,5 +57,24 @@ layout: simple
         %span{class: "text--thin"} Remember Me   
       %submit{class: "button button--primary" }
         Sign In  
-      %a{href: "#forgot-password"}Forgot Password?                 
+      %a{href: "#forgot-password"}Forgot Password?        
+
+  %section{class: "half-page-medium-up"}  
+    %h2{class:"text--headline-2 text--accent"}
+      New Customer
+
+
+    %form{class: "form--large"}
+      %label{class: "omega"}
+        Sign up now to enjoy all the benefits of Careerbuilder.com, including 
+        %strong job posting
+        optimizations,
+        %strong search management
+        tools, and 
+        %strong candidate recommendations!
+
+      %submit{class: "button button--primary" }
+        Sign Up  
+            
+
 
