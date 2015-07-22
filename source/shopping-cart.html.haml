@@ -4,7 +4,7 @@ layout: checkout
 ---
 
 / header 
-%header{class: "header"}
+%header{class: "header header--large"}
   %div{class: "container"}
 
     / header__subnav
@@ -30,15 +30,15 @@ layout: checkout
         // Displays line behind circles
         %div{class: "box--progress-bar__line"}  
 
-        %li{class: "completed"}
+        %li{class: "box--progress-bar--current"}
           // STEP NUMBER 
           1
           // STEP LABEL
           %label Summary 
-        %li 
+        %li
           2  
           %label Sign In
-        %li 
+        %li
           3
           %label Payment
         %li 

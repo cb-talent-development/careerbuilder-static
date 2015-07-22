@@ -115,8 +115,11 @@
   text-decoration: none 
 
 .text--top-bar-helper a:hover
-  text-decoration: underline
+  text-decoration: none
   color: $accent-primary  
+
+.text--top-bar-helper a:active
+  color: $accent-primary-dark 
 
 .text--subnav, .text--subnav a
   font-family: $Lato
@@ -126,8 +129,8 @@
 
 .text--headline, .text--headline a
   font-family: $Lato
-  font-weight: 400
-  font-size: 26pt
+  font-weight: 800
+  font-size: 40px
   text-decoration: none
 
 .text--caption
@@ -200,11 +203,17 @@
   text-align: center
   width: 80px
 
-.box--progress-bar li.completed
-  background-color: $accent-active
+.box--progress-bar--current
+  background-color: $accent-active !important
 
-.box--progress-bar li.completed label
+.box--progress-bar--current label
   color: $accent-active
+
+.box--progress-bar--completed
+  background-color: $grey-darker !important
+
+.box--progress-bar--completed label
+  color: $grey-dark  
 
 .box--progress-bar__line
   z-index: 1000
@@ -370,16 +379,22 @@ button:action
 
 // HEADER
 
-.header
-  height: 220px
+.header 
   background-color: $header-background-color
   background-image: url('/assets/images/placeholder-background-facets.png')
   margin-bottom: 30px 
 
+.header--large
+  height: 220px
+
+.header--medium
+  height: 168px
+
 @media (max-width: $small-screen-max)  
-  .header
+  .header--large, .header--medium
     height: 120px
     background-image: none
+
 
 .header__subnav
   +span-columns(12)
@@ -418,7 +433,7 @@ button:action
   margin-top: 0
   float: right
 
-.header--progress-bar li
+.header__progress-bar li
 
 // FOOTER
 
