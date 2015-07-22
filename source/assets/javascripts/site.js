@@ -32,7 +32,7 @@ window.interact.watchMobileMenu = function() {
       mobileMenu.hide();
     }
     else {
-      mobileMenu.slideDown(150)
+      mobileMenu.show()
     };
   });
 }; 

@@ -124,6 +124,9 @@ layout: checkout
         / PRICE * QUANTITY HERE 
         $300.00
 
+
+
+    / Promo code link     
     %div{class: "cart__row medium-screen-up"}
       %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Have a promo code? Click here to apply it to your order.
@@ -132,14 +135,13 @@ layout: checkout
       %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Apply promo code.
 
-        / placeholder: should start hidden
-    %div{id: "apply-discount", class: "cart__row box--pop-out apply-discount" }
-      %p Enter your discount code here.
+    / Promo code modal  
+    %div{id: "apply-discount", class: "box--pop-out box--quick-submit box--yellow apply-discount" }
 
-      / SHOULD VALIDATE DISCOUNT, ETC  
-      %input{type: "text"}
-      %button{class: "button button--primary"}
-        Apply Discount
+      / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
+      %input{type: "text", class: "box--quick-submit__input"}
+      %button{class: "button button--primary box--quick-submit__button"}
+        Apply Promo
 
   / Recommended for you
   %section{class: "cart recommended-items large-screen-only"} 
@@ -192,16 +194,30 @@ layout: checkout
   / Checkout
   %section{class: "checkout"}
     %div{class: "box--pop-out"}
+
+      /subtotal
       %div{class: "cart__row checkout__subtotal text--smaller"} 
         %div{class: "cart__cell checkout__item--left"}
           Subtotal:
         %div{class: "cart__cell checkout__item--right"}
           $99.99
+    
+      /promo code (if applied)
+      %div{class: "cart__row checkout__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Promo code: 
+          %br TROGDOR -- (10% off)
+        %div{class: "cart__cell checkout__item--right text--success"}
+          \-$9.99     
+      
+      /tax
       %div{class: "cart__row checkout__subtotal text--smaller"} 
         %div{class: "cart__cell checkout__item--left"}
           Tax:
         %div{class: "cart__cell checkout__item--right"}
-          $9.99
+          $8.99
+      
+      /total     
       %div{class: "cart__row checkout__total text--larger"} 
         %div{class: "cart__cell checkout__item--left"}
           Order Total:
@@ -209,5 +225,6 @@ layout: checkout
           $109.98
       %a{class: "button button--primary button--large", href: "#checkout"}
         Checkout
+
     %div{class: "checkout__security-image"}
       %img{src: "assets/images/placeholder--security-image.png"}      

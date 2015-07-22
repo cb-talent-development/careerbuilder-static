@@ -133,8 +133,14 @@
 .text--larger
   font-size: 120%
 
+.text--success
+  color: $accent-success  
+
 // BOXES
 // display only, no positioning
+
+.box--pop-out.box--yellow
+  background-color: $light-yellow
 
 .box--header-row
   display: block
@@ -158,6 +164,7 @@
   border-right: 1px solid $grey-lighter
   // ^ This is not working as expected.
 
+// Progress Bar 
 .box--progress-bar li
   position: relative
   z-index: 1001
@@ -192,11 +199,32 @@
   background-color: $primary-darker
   height: 5px
   // adjust width for numbers of steps
-  // 20px + (100 * (steps - 1))
+  // ~ 20px + (100 * (steps - 1))
   width: 320px
   top: 15px
   margin-left: 12px
   margin-right: 70px
+
+
+// Quick Submit
+.box--quick-submit 
+  +span-columns(8)
+  +shift(2)
+
+.box--quick-submit__input 
+  height: 30px 
+  font-size: 18px
+  margin-top: 8px
+  +span-columns(8)
+
+.box--quick-submit__button
+  margin-top: 5px 
+  +span-columns(4)  
+
+@media only screen and (max-width: $medium-screen-max)
+  .box--quick-submit
+    +span-columns(12)
+    +shift(0) 
 
 // BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS)
 
@@ -243,13 +271,6 @@ button:action
   width: 100%
   padding: 12px
   font-size: 110%
-
-// ANIMATE
-
-.animate--in
-
-  
-
 
 // TOP BAR
 
