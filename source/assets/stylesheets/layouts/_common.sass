@@ -78,6 +78,15 @@
 .hidden 
   display: none !important
 
+// LAYOUT UTILITIES
+
+.half-page-medium-up
+  +span-columns(6)
+
+@media only screen and (max-width: $small-screen-max)
+  .half-page-medium-up
+    +span-columns(12)
+
 // TEXT
 // display only, no positioning
 
@@ -92,11 +101,11 @@
 .text--body a:hover
   color: $hover-link-color
 
-.text--white, .text--white a
+.text--white, .text--white a, .text--white a:hover
   color: $white
 
-.text--white a:hover
-  color: $white
+.text--accent, .text--accent a, .text--accent a:hover
+  color: $accent-primary
 
 .text--top-bar-link, .text--top-bar-link a
   font-family: $Lato
@@ -133,6 +142,12 @@
   font-size: 40px
   text-decoration: none
 
+.text--headline-2, .text--headline a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 26px
+  text-decoration: none
+
 .text--caption
   font-family: $Lato
   font-weight: 300
@@ -151,6 +166,9 @@
 
 .text--success
   color: $accent-success  
+
+.text--thin
+  font-weight: 100  
 
 // BOXES
 // display only, no positioning
@@ -462,4 +480,28 @@ button:action
 .footer__share-links
   +span-columns(6)
   text-align: right
+
+// FORMS
+
+.form--large 
+  +span-columns(10)
+
+.form--large label
+  +span-columns(12)
+  margin-bottom: 24px
+
+.form--large label.omega 
+  margin-bottom: 32px 
+
+.form--large input 
+  width: 100%
+  font-size: 24px
+
+.form--large__trailing-label input
+  width: 20px
+
+.form--large submit, .form--large button, .form--large .button 
+  font-size: 16px
+  padding: 10px 40px
+  margin-right: 20px
 

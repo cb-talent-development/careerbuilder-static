@@ -32,4 +32,25 @@ layout: simple
           %label Confirmation    
 
 / main content
-%div{class: "container text--body"}      
+%div{class: "container text--body"} 
+  %section{class: "half-page-medium-up"}  
+    %h2{class:"text--headline-2 text--accent"}
+      Registered Users
+    %form{class: "form--large"}
+      %label 
+        Email Address
+        %br 
+        %input{type: "text"}
+
+      %label 
+        Password
+        %br 
+        %input{type: "password"}
+
+      %label{class: "form--large__trailing-label omega"}
+        %input{type: "checkbox"} 
+        %span{class: "text--thin"} Remember Me   
+      %submit{class: "button button--primary" }
+        Sign In  
+      %a{href: "#forgot-password"}Forgot Password?                 
+
