@@ -1,0 +1,40 @@
+/ summary box 
+%div{class: "box--pop-out box--pop-out__top"}
+  %h2{class:"text--headline-2 alpha"}
+    Summary 
+%div{class: "box--pop-out box--pop-out__bottom"}
+
+  /item
+  %div{class: "cart__row cart__row--tight"} 
+    %div{class: "cart__cell columns-8 alpha"}
+      US City Priority Job Posting 
+    %div{class: "cart__cell columns-1"}
+      2
+    %div{class: "cart__cell columns-3 omega"}
+      $99.98
+
+  /item
+  // ADD DIVIDER CLASS TO LAST ITEM IN LIST 
+  %div{class: "cart__row cart__row--tight box--divider-bottom"} 
+    %div{class: "cart__cell columns-8 alpha"}
+      Money Jobs Posting  
+    %div{class: "cart__cell columns-1"}
+      1
+    %div{class: "cart__cell columns-3 omega"}
+      $9,999.99
+
+  /subtotals
+  %div{class: "cart__row cart__row--tight checkout-summary__subtotal-box"} 
+    %div{class: "cart__cell columns-6 alpha"}
+      Subtotal:
+      %br Estimated Tax:   
+    %div{class: "cart__cell columns-6 omega"}
+      $99,999.98
+      %br   $99.99    
+
+  /tax
+  %div{class: "cart__row cart__row--tight text--larger"} 
+    %div{class: "cart__cell columns-6 alpha"}
+      Order Total:   
+    %div{class: "cart__cell columns-6 omega"}
+      $999,999.99    
