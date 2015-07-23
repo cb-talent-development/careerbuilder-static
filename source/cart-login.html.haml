@@ -1,5 +1,80 @@
 ---
 title: Cart Login
+layout: simple
 ---
 
-<h1>Cart Login</h1>
+/ header 
+%header{class: "header header--medium"}
+  %div{class: "container"}
+    %div{class: "header__subnav medium-screen-up"}
+    %h1{class: "header__headline text--headline text--white"}
+      Sign in
+
+    / header__progress-bar
+    %div{class: "header__progress-bar box--progress-bar text--white large-screen-only"}
+      %ul 
+        // Displays line behind circles
+        %div{class: "box--progress-bar__line"}  
+
+        %li{class: "box--progress-bar--completed"}
+          // STEP NUMBER 
+          1
+          // STEP LABEL
+          %label Summary 
+        %li{class: "box--progress-bar--current"}
+          2  
+          %label Sign In
+        %li
+          3
+          %label Payment
+        %li 
+          4
+          %label Confirmation    
+
+/ main content
+
+%div{class: "container text--body"} 
+  %div{class: "small-screen-only"}
+    = partial 'partials/email-us-link' 
+
+
+  %section{class: "half-page-medium-up"}  
+    %h2{class:"text--headline-2 text--accent"}
+      Registered Users
+    %form{class: "form--large"}
+      %label 
+        Email Address
+        %br 
+        %input{type: "text"}
+
+      %label 
+        Password
+        %br 
+        %input{type: "password"}
+
+      %label{class: "form--large__trailing-label omega"}
+        %input{type: "checkbox"} 
+        %span{class: "text--thin"} Remember Me   
+      %submit{class: "button button--primary" }
+        Sign In  
+      %a{href: "#forgot-password"}Forgot Password?        
+
+  %section{class: "half-page-medium-up"}  
+    %h2{class:"text--headline-2 text--accent"}
+      New Customer
+
+
+    %form{class: "form--large"}
+      %label{class: "omega"}
+        Sign up now to enjoy all the benefits of Careerbuilder.com, including 
+        %strong job posting
+        optimizations,
+        %strong search management
+        tools, and 
+        %strong candidate recommendations!
+
+      %submit{class: "button button--primary" }
+        Sign Up  
+            
+
+

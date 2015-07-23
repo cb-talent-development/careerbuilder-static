@@ -40,11 +40,10 @@
 
 .clearfix
   clear: both
-  background: pink
 
 // MOBILE DISPLAY RULES
 
-// large screen rules
+// large screen 
 .small-screen-only
   display: none !important
 
@@ -54,7 +53,10 @@
 .medium-screen-up
   display: block !important
 
-// medium and up 
+.medium-screen-down
+  display: none !important
+
+// medium screen
 @media only screen and (min-width: $medium-screen-min) and (max-width: $medium-screen-max)
   .small-screen-only
     display: none !important
@@ -64,6 +66,9 @@
 
   .large-screen-only
     display: none !important
+
+  .medium-screen-down
+    display: block !important
 
 // small screen
 @media only screen and (max-width: $small-screen-max)
@@ -76,8 +81,21 @@
   .large-screen-only
     display: none !important
 
+  .medium-screen-down
+    display: block !important 
+
 .hidden 
   display: none !important
+
+// LAYOUT UTILITIES
+
+.half-page-medium-up
+  +span-columns(6)
+
+@media only screen and (max-width: $small-screen-max)
+  .half-page-medium-up
+    +span-columns(12)
+    margin-bottom: 32px
 
 // TEXT
 // display only, no positioning
@@ -85,6 +103,7 @@
 .text--body
   font-family: $Lato
   font-weight: 400
+  line-height: 175%
 
 .text--body a
   text-decoration: none
@@ -93,17 +112,34 @@
 .text--body a:hover
   color: $hover-link-color
 
-.text--white, .text--white a
+.text--white, .text--white a, .text--white a:hover
   color: $white
 
-.text--white a:hover
-  color: $white
+.text--accent, .text--accent a, .text--accent a:hover
+  color: $accent-primary
 
 .text--top-bar-link, .text--top-bar-link a
   font-family: $Lato
   font-weight: 300
   font-size: 9pt
   text-decoration: none
+
+.text--top-bar-helper 
+  font-family: $Lato
+  font-weight: 300
+  font-size: 11pt
+
+.text--top-bar-helper a  
+  color: $accent-primary 
+  font-weight: 400
+  text-decoration: none 
+
+.text--top-bar-helper a:hover
+  text-decoration: none
+  color: $accent-primary  
+
+.text--top-bar-helper a:active
+  color: $accent-primary-dark 
 
 .text--subnav, .text--subnav a
   font-family: $Lato
@@ -113,8 +149,14 @@
 
 .text--headline, .text--headline a
   font-family: $Lato
-  font-weight: 400
-  font-size: 26pt
+  font-weight: 800
+  font-size: 40px
+  text-decoration: none
+
+.text--headline-2, .text--headline a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 26px
   text-decoration: none
 
 .text--caption
@@ -133,8 +175,17 @@
 .text--larger
   font-size: 120%
 
+.text--success
+  color: $accent-success  
+
+.text--thin
+  font-weight: 100  
+
 // BOXES
 // display only, no positioning
+
+.box--pop-out.box--yellow
+  background-color: $light-yellow
 
 .box--header-row
   display: block
@@ -158,6 +209,7 @@
   border-right: 1px solid $grey-lighter
   // ^ This is not working as expected.
 
+// Progress Bar 
 .box--progress-bar li
   position: relative
   z-index: 1001
@@ -180,11 +232,17 @@
   text-align: center
   width: 80px
 
-.box--progress-bar li.completed
-  background-color: $accent-active
+.box--progress-bar--current
+  background-color: $accent-active !important
 
-.box--progress-bar li.completed label
+.box--progress-bar--current label
   color: $accent-active
+
+.box--progress-bar--completed
+  background-color: $grey-darker !important
+
+.box--progress-bar--completed label
+  color: $grey-dark  
 
 .box--progress-bar__line
   z-index: 1000
@@ -192,11 +250,32 @@
   background-color: $primary-darker
   height: 5px
   // adjust width for numbers of steps
-  // 20px + (100 * (steps - 1))
+  // ~ 20px + (100 * (steps - 1))
   width: 320px
   top: 15px
   margin-left: 12px
   margin-right: 70px
+
+
+// Quick Submit
+.box--quick-submit 
+  +span-columns(8)
+  +shift(2)
+
+.box--quick-submit__input 
+  height: 30px 
+  font-size: 18px
+  margin-top: 8px
+  +span-columns(8)
+
+.box--quick-submit__button
+  margin-top: 5px 
+  +span-columns(4)  
+
+@media only screen and (max-width: $medium-screen-max)
+  .box--quick-submit
+    +span-columns(12)
+    +shift(0) 
 
 // BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS)
 
@@ -243,13 +322,6 @@ button:action
   width: 100%
   padding: 12px
   font-size: 110%
-
-// ANIMATE
-
-.animate--in
-
-  
-
 
 // TOP BAR
 
@@ -327,20 +399,31 @@ button:action
 .top-bar__mobile-menu li
   display: block
   list-style: none
-  
+
+.top-bar__helper-text
+  padding-top: 20px
+  padding-right: 30px
+  float: right  
+
 
 // HEADER
 
-.header
-  height: 220px
+.header 
   background-color: $header-background-color
   background-image: url('/assets/images/placeholder-background-facets.png')
   margin-bottom: 30px 
 
+.header--large
+  height: 220px
+
+.header--medium
+  height: 168px
+
 @media (max-width: $small-screen-max)  
-  .header
+  .header--large, .header--medium
     height: 120px
     background-image: none
+
 
 .header__subnav
   +span-columns(12)
@@ -379,7 +462,7 @@ button:action
   margin-top: 0
   float: right
 
-.header--progress-bar li
+.header__progress-bar li
 
 // FOOTER
 
@@ -408,4 +491,28 @@ button:action
 .footer__share-links
   +span-columns(6)
   text-align: right
+
+// FORMS
+
+.form--large 
+  +span-columns(10)
+
+.form--large label
+  +span-columns(12)
+  margin-bottom: 24px
+
+.form--large label.omega 
+  margin-bottom: 32px 
+
+.form--large input 
+  width: 100%
+  font-size: 24px
+
+.form--large__trailing-label input
+  width: 20px
+
+.form--large submit, .form--large button, .form--large .button 
+  font-size: 16px
+  padding: 10px 40px
+  margin-right: 20px
 
