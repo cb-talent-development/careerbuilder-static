@@ -8,12 +8,12 @@ layout: simple
 %div{class: "container text--body"} 
   
   / small-medium page order
-  %section{class: "columns-12 medium-screen-down"} 
+  %section{class: "columns-12 medium-screen-down checkout-summary"} 
     = partial '/partials/checkout-summary' 
 
   %section{class: "half-page-large"}  
     = partial '/partials/payment-form'
   
   / large screen page order
-  %section{class: "half-page-large large-screen-only"} 
+  %section{class: "half-page-large large-screen-only checkout-summary"} 
     = partial '/partials/checkout-summary' 

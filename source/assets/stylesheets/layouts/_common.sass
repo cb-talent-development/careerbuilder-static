@@ -142,6 +142,39 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .columns-12
   +span-columns(12)
 
+.shift-1
+  +shift(1)
+
+.shift-2
+  +shift(2)
+
+.shift-3
+  +shift(3)
+
+.shift-4
+  +shift(4)
+
+.shift-5
+  +shift(5)      
+
+.shift-6
+  +shift(6)
+
+.shift-7
+  +shift(7)
+
+.shift-8
+  +shift(8)
+
+.shift-9
+  +shift(9)
+
+.shift-10
+  +shift(10)
+
+.shift-11
+  +shift(11)
+
 // TEXT
 // display only, no positioning
 
@@ -198,7 +231,7 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   font-size: 40px
   text-decoration: none
 
-.text--headline-2, .text--headline a
+.text--headline-2, .text--headline-2 a
   font-family: $Lato
   font-weight: 800
   font-size: 26px
@@ -225,6 +258,16 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 
 .text--thin
   font-weight: 100  
+
+.text--ghost
+  font-weight: 100
+  font-style: italic
+  font-size: 90%
+  color: $grey-darker  
+
+.text--white .text--ghost
+  color: $grey-lighter
+
 
 // BOXES
 // display only, no positioning
@@ -316,6 +359,24 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   margin-left: 12px
   margin-right: 70px
 
+.box--circle-text
+  display: inline-block
+  font-size: 12px
+  font-weight: 400 
+  width: 24px
+  height: 24px
+  text-align: center
+  vertical-align: middle
+  margin-bottom: 5px
+  margin-right: 10px
+  +border-top-radius(12px)
+  +border-bottom-radius(12px)
+  background-color: $accent-primary
+  color: $base-background-color
+
+.box--circle-text span
+  position: relative 
+  top: -.15em
 
 // Quick Submit
 .box--quick-submit 
@@ -471,7 +532,7 @@ button:action
 .header 
   background-color: $header-background-color
   background-image: url('/assets/images/placeholder-background-facets.png')
-  margin-bottom: 30px 
+  margin-bottom: 64px 
 
 .header--large
   height: 220px
@@ -483,7 +544,6 @@ button:action
   .header--large, .header--medium
     height: 120px
     background-image: none
-
 
 .header__subnav
   +span-columns(12)
@@ -555,18 +615,21 @@ button:action
 // FORMS
 
 .form--large 
-  +span-columns(10)
+  +span-columns(11)
 
 .form--large label
-  +span-columns(12)
+  display: block
   margin-bottom: 24px
 
-.form--large label.omega 
-  margin-bottom: 32px 
+.form--large label.omega, .form--large div.omega
+  margin-bottom: 64px 
 
-.form--large input 
-  width: 100%
+.form--large input, .form--large select
+  +fill-parent
   font-size: 24px
+
+.form--large h2.middle
+  margin-top: 64px
 
 .form--large__trailing-label input
   width: 20px

@@ -1,1 +1,130 @@
-Foo form
+%form{class: "form--large"}
+
+  // Use div to indicate new row 
+  %div
+    %h2{class: "text--accent text--headline-2 alpha"}
+      %span{class: "box--circle-text"} 
+        %span 1
+      User Information
+
+  %div 
+    %label{class: "columns-5"}
+      First Name
+      %br 
+      %input{type: "text"}
+
+    %label{class: "columns-6 shift-1"}
+      Last Name
+      %br 
+      %input{type: "text"}
+  
+  %div
+    %label
+      Email Address
+      %br 
+      %input{type: "text"}
+
+  %div    
+    %label{class: "columns-12 omega"}
+      Your role in hiring process 
+      %span{class: "text--ghost"}
+        (optional)
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        
+        // allows non-answer after click
+        %option{value: ""} 
+        %option{value: "recruiter"}Recruiter
+
+  %div 
+    %h2{class: "text--accent text--headline-2"}
+      %span{class: "box--circle-text"} 
+        %span 2
+      Company Information    
+
+  %div
+    %label
+      Company Name
+      %br 
+      %input{type: "text"}   
+
+  %div     
+    %label
+      Company Address
+      %br 
+      %input{type: "text"}  
+
+  %div     
+    %label
+      Country
+      %br 
+      %input{type: "text"} 
+
+  %div
+    %label{class: "columns-6"}
+      City
+      %br 
+      %input{type: "text"} 
+
+    %label{class: "columns-3"}
+      State
+      %br 
+      %select
+
+    %label{class: "columns-3"}
+      Zip code
+      %br 
+      %input{type: "text"} 
+
+  %div{class: "box--divider-bottom columns-12", style: "margin-bottom: 32px;"}
+
+  %div    
+    %label{class: "columns-12 alpha"}
+      Industry
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "recruiter"}Online Advertising
+
+  %div 
+    %label{class: "columns-5"}
+      Number of Employees
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "recruiter"}100
+
+    %label{class: "columns-6 shift-1"}
+      Annual Revenue
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "recruiter"}100
+
+  %div{class: "columns-12 omega"}
+    %label{class: "columns-5"}
+      \# of Locations
+      %span{class: "text--ghost"}Optional
+      %br 
+      %input{type: "text"}
+
+    %label{class: "columns-6 shift-1"}
+      Company Phone 
+      %br 
+      %input{type: "text"}      
+
+  %div
+    %h2{class: "text--accent text--headline-2 alpha"}
+      %span{class: "box--circle-text"} 
+        %span 3
+      Payment Information
+
+    %div 
+      %select{class: "columns-4"}
+
+         
