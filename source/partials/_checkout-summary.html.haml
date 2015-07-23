@@ -1,10 +1,14 @@
 / summary box 
+
+/ headline
 %div{class: "box--pop-out box--pop-out__top"}
   %h2{class:"text--headline-2 alpha"}
     Summary 
+
 %div{class: "box--pop-out box--pop-out__bottom"}
 
   /item
+  // THIS ITEM FOR STATIC DEMO, CAN BE REMOVED 
   %div{class: "cart__row cart__row--tight"} 
     %div{class: "cart__cell columns-8 alpha"}
       US City Priority Job Posting 
@@ -14,13 +18,16 @@
       $99.98
 
   /item
-  // ADD DIVIDER CLASS TO LAST ITEM IN LIST 
+  // ADD DIVIDER CLASS box--divider-bottom TO LAST cart__row IN LIST 
   %div{class: "cart__row cart__row--tight box--divider-bottom"} 
     %div{class: "cart__cell columns-8 alpha"}
+      // ITEM TITLE
       Money Jobs Posting  
     %div{class: "cart__cell columns-1"}
+      // ITEM COUNT #
       1
     %div{class: "cart__cell columns-3 omega"}
+      // ITEM COUNT * PRICE
       $9,999.99
 
   /subtotals
@@ -29,12 +36,15 @@
       Subtotal:
       %br Estimated Tax:   
     %div{class: "cart__cell columns-6 omega"}
+      // SUBTOTAL #
       $99,999.98
-      %br   $99.99    
+      // TAX #
+      %br $99.99    
 
-  /tax
+  /total
   %div{class: "cart__row cart__row--tight text--larger"} 
     %div{class: "cart__cell columns-6 alpha"}
       Order Total:   
     %div{class: "cart__cell columns-6 omega"}
+      // ORDER TOTAL #
       $999,999.99    
