@@ -37,7 +37,7 @@ layout: simple
   %div{class: "small-screen-only"}
     = partial 'partials/email-us-link' 
 
-
+  / registered users form
   %section{class: "half-page-medium-up"}  
     %h2{class:"text--headline-2 text--accent"}
       Registered Users
@@ -55,16 +55,18 @@ layout: simple
       %label{class: "form--large__trailing-label omega"}
         %input{type: "checkbox"} 
         %span{class: "text--thin"} Remember Me   
+
       %submit{class: "button button--primary" }
         Sign In  
       %a{href: "#forgot-password"}Forgot Password?        
 
+  / new users form
   %section{class: "half-page-medium-up"}  
     %h2{class:"text--headline-2 text--accent"}
       New Customer
 
-
     %form{class: "form--large"}
+
       %label{class: "omega"}
         Sign up now to enjoy all the benefits of Careerbuilder.com, including 
         %strong job posting
