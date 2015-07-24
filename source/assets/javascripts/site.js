@@ -9,6 +9,7 @@ window.interact.watchApplyDiscount = function() {
   links = $('.cart__apply-discount-link')
   panel.hidden = true;
   panel.hide();
+  panel.removeClass('hidden');
   links.click( function() {
     panel.hidden = !panel.hidden
     if (panel.hidden == true) {
@@ -26,6 +27,7 @@ window.interact.watchMobileMenu = function() {
   mobileMenu = $('#mobile-menu');
   mobileMenu.hidden = true;
   mobileMenu.hide();
+  mobileMenu.removeClass('hidden');
   mobileMenuLink.click(function() { 
     mobileMenu.hidden = !mobileMenu.hidden
     if (mobileMenu.hidden == true) {
