@@ -115,7 +115,7 @@ layout: layout
         Apply promo code.
 
     / Promo code modal  
-    %div{id: "apply-discount hidden", class: "box--pop-out box--quick-submit box--yellow apply-discount" }
+    %div{id: "apply-discount", class: "box--pop-out box--quick-submit box--yellow apply-discount hidden" }
 
       / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
       %input{type: "text", class: "box--quick-submit__input"}
@@ -123,52 +123,8 @@ layout: layout
         Apply Promo
 
   / Recommended for you
-  %section{class: "cart recommended-items large-screen-only"} 
-
-    %div{class: "cart__row box--header-row"}
-
-      %div{class: "cart__cell cart__cell--recommended"}
-        Recommended for you
-
-      %div{class: "cart__cell cart__cell--product-link text--smaller"}
-        %a{href: "#all-products"} 
-          View All Products
-
-    %div{class: "cart__row"}
-      %div{class: "cart__cell recommended-items__block .box--divider-right"}
-        %a{href: "#item-link"}
-          / ITEM TITLE
-          Dynamic Emails
-        %p{class: "text--caption cart__caption"}  
-          / ITEM DESCRIPTION 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-        %p{class: "cart--item-price"}
-          / ITEM PRICE 
-          $39.90
-        %a{class: "button button--secondary", href: "#apply-action"}
-          Apply    
-
-      / REPEATED FOR STATIC DEMO, CAN BE REMOVED    
-      %div{class: "cart__cell recommended-items__block .box--divider-right"}
-        %a{href: "#item-link"}
-          Company Profile 
-        %p{class: "text--caption cart__caption"}   
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-        %p{class: "cart--item-price"}
-          $10.00
-        %a{class: "button button--secondary", href: "#apply-action"}
-          Apply  
-
-      / REPEATED FOR STATIC DEMO, CAN BE REMOVED 
-      %div{class: "cart__cell recommended-items__block .box--divider-right"}
-        %a{href: "#item-link"}
-          Dynamic Emails 
-        %p{class: "text--caption cart__caption"}   
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-        %p{class: "cart--item-price"}
-          $99.99
-        %a{class: "button button--secondary", href: "#apply-action"}
-          Apply  
+  %section{class: "large-screen-only columns-8"}
+    = partial 'partials/recommended-items'
 
   / Checkout
   %section{class: "checkout"}
