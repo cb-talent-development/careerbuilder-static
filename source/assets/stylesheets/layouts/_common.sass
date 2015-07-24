@@ -634,8 +634,17 @@ button:action
 .form--large__trailing-label input
   width: 20px
 
+.form--large__trailing-label span
+  position: relative
+  top: 1px  
+
 .form--large submit, .form--large button, .form--large .button 
   font-size: 16px
   padding: 10px 40px
   margin-right: 20px
+
+.form--large__divider-line
+  // use on div with .box--divider-bottom  
+  +span-columns(12)
+  margin-bottom: 32px  
 
