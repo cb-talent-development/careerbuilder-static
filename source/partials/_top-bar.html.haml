@@ -6,14 +6,43 @@
       // low-fi image of logo for positioning, needs to be updated  
       %img{src: "assets/images/placeholder-logo.png"}
 
-  %nav{class: "top-bar__links text--white text--top-bar-link"}
+  %nav{class: "top-bar__links text--white text--top-bar-link medium-screen-up"}
     %ul 
       %a{href: "#account"}
         %li 
-          (@) My Account
+          %img{src: "assets/images/icon--account.png"}
+          My Account
       %a{href: "#cart"} 
         %li 
-          (#) $1337.00 Cart
+          %img{src: "assets/images/icon--cart.png"}
+          $1337.00 Cart
       %a{href: "#contact"}
         %li 
           Contact Us
+
+  %nav{class: "top-bar__links small-screen-only top-bar__mobile-menu-link", id: "mobile-menu-link" }  
+    %img{src: "assets/images/icon--mobile-menu.png"}
+
+%nav{class: "top-bar__mobile-menu text--white text--subnav hidden", id: "mobile-menu"}
+  %ul
+    %li 
+      %a{href: "#menu"}
+        Products
+    %li 
+      %a{href: "#menu"}
+        Resources
+    %li 
+      %a{href: "#menu"}
+        About Us    
+    %li 
+      %a{href: "#menu"}
+        %img{src: "assets/images/icon--account.png"}
+        My Account
+    %li  
+      %a{href: "#menu"}
+        %img{src: "assets/images/icon--cart.png"}
+        $1337.00 Cart  
+    %li
+      %a{href: "#menu"} 
+        Contact Us   
+
