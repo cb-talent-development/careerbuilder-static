@@ -240,6 +240,12 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   font-size: 26px
   text-decoration: none
 
+.text--subhead, .text--subhead a
+  font-family: $Lato
+  font-weight: 100
+  font-size: 24px
+  text-decoration: none
+
 .text--caption
   font-family: $Lato
   font-weight: 300
@@ -442,6 +448,20 @@ button:action
   background-color: $secondary-active-button-color
   color: $secondary-active-button-text-color
 
+.button.button--secondary.text--white 
+  border: 2px solid $white
+  background: none
+  color: $white
+
+.button.button--secondary:hover
+  border: 2px solid $primary-hover-button-color
+  background-color: $primary-hover-button-color
+  color: $primary-hover-button-text-color
+
+.button.button--secondary:active
+  background-color: $secondary-active-button-color
+  color: $secondary-active-button-text-color
+
 .button--large
   width: 100%
   padding: 12px
@@ -537,14 +557,14 @@ button:action
   background-image: url('/assets/images/placeholder-background-facets.png')
   margin-bottom: 64px 
 
-.header--large
+.header--medium
   height: 220px
 
-.header--medium
+.header--thin
   height: 168px
 
 @media (max-width: $small-screen-max)  
-  .header--large, .header--medium
+  .header--medium, .header--thin
     height: 120px
     background-image: none
 
@@ -565,18 +585,39 @@ button:action
   padding: 0
   margin: 20px 25px 10px 0px
 
-.header__headline
+.header__headline, .header__subhead
   +span-columns(6)
   margin-top: 0px
 
 @media (max-width: $medium-screen-max)  
-  .header__headline
+  .header__headline, .header__subhead
     +span-columns(12)
 
 @media (max-width: $small-screen-max)  
   .header__headline
     margin-top: 0px
     padding-top: 30px
+
+.header--large__image
+  +span-columns(6)
+  text-align: center
+  vertical-align: bottom
+
+.header--large__image img
+  display: block  
+
+.header--large__headline
+  +span-columns(6)
+  padding-right: 64px
+  padding-top: 64px
+  padding-bottom: 64px
+
+@media (max-width: $medium-screen-max)
+  .header--large__headline
+    +span-columns(12)
+    padding-right: 0
+    padding-top: 32px
+    padding-bottom: 32px
 
 .header__subnav ul
   display: block

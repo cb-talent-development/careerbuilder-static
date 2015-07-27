@@ -1,0 +1,21 @@
+/ header-large 
+%header{class: "header header--large"}
+  %div{class: "container"}
+
+    = partial 'partials/header-subnav'
+
+    / header__headline 
+    %div{class: "header--large__headline"}
+
+      %h1{class: "text--headline text--white"}
+        = headline
+
+      %h2{class: "text--subhead text--white"}
+        = subhead
+
+    / product image 
+    %div{class: "header--large__image large-screen-only"}  
+      %img{src: image_path}
+
+
+

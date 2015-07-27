@@ -1,0 +1,13 @@
+/ header-medium 
+%header{class: "header header--medium"}
+  %div{class: "container"}
+
+    / header__subnav
+    = partial 'partials/header-subnav'
+    
+    / header__headline 
+    %h1{class: "header__headline text--headline text--white"}
+      = headline
+    
+    / header__progress-bar
+    = partial 'partials/progress-bar'
