@@ -1,0 +1,43 @@
+%div{class: "cart recommended-items--vertical"} 
+
+  %div{class: "cart__row box--header-row container"}
+
+    %div{class: "recommended-items--vertical__header cart__cell"}
+      Recommended for you
+
+  %div{class: "cart__row container"}
+    %div{class: "cart__cell recommended-items__block--vertical box--divider-bottom"}
+      %a{href: "#item-link"}
+        / ITEM TITLE
+        Dynamic Emails
+      %p{class: "text--caption cart__caption"}  
+        / ITEM DESCRIPTION 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+      %p{class: "cart--item-price"}
+        / ITEM PRICE 
+        $39.90
+      %a{class: "button button--secondary", href: "#apply-action"}
+        Buy
+
+    / REPEATED FOR STATIC DEMO, CAN BE REMOVED    
+    %div{class: "cart__cell recommended-items__block--vertical box--divider-bottom"}
+      %a{href: "#item-link"}
+        Company Profile 
+      %p{class: "text--caption cart__caption"}   
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum  arcu sed ultrices facilisis  arcu sed ultrices facilisis arcu sed ultrices facilisis.
+      %p{class: "cart--item-price"}
+        $10.00
+      %a{class: "button button--secondary", href: "#apply-action"}
+        Buy
+
+    / REPEATED FOR STATIC DEMO, CAN BE REMOVED 
+    // NO box--divider-bottom ON LAST ITEM
+    %div{class: "cart__cell recommended-items__block--vertical"}
+      %a{href: "#item-link"}
+        Dynamic Emails 
+      %p{class: "text--caption cart__caption"}   
+        Lorem ipsum dolor sit amet, corices facilisis.
+      %p{class: "cart--item-price"}
+        $99.99
+      %a{class: "button button--secondary", href: "#apply-action"}
+        Buy   
