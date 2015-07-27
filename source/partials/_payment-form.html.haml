@@ -1,0 +1,227 @@
+%form{class: "form--large"}
+
+  // Use div to indicate new row 
+  %div
+    %h2{class: "text--accent text--headline-2 alpha"}
+      %span{class: "box--circle-text"} 
+        %span 1
+      User Information
+
+  %div 
+    %label{class: "columns-5"}
+      First Name
+      %br 
+      %input{type: "text"}
+
+    %label{class: "columns-6 shift-1"}
+      Last Name
+      %br 
+      %input{type: "text"}
+  
+  %div
+    %label
+      Email Address
+      %br 
+      %input{type: "text"}
+
+  %div    
+    %label{class: "columns-12 omega"}
+      Your role in hiring process 
+      %span{class: "text--ghost"}
+        (optional)
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        
+        // allows non-answer after click
+        %option{value: ""} 
+        %option{value: "recruiter"}Recruiter
+
+  %div 
+    %h2{class: "text--accent text--headline-2"}
+      %span{class: "box--circle-text"} 
+        %span 2
+      Company Information    
+
+  %div
+    %label
+      Company Name
+      %br 
+      %input{type: "text"}   
+
+  %div     
+    %label
+      Company Address
+      %br 
+      %input{type: "text"}  
+
+  %div     
+    %label
+      Country
+      %br 
+      %input{type: "text"} 
+
+  %div
+    %label{class: "columns-6"}
+      City
+      %br 
+      %input{type: "text"} 
+
+    %label{class: "columns-3"}
+      State
+      %br 
+      %select
+
+    %label{class: "columns-3"}
+      Zip code
+      %br 
+      %input{type: "text"} 
+
+  %div{class: "box--divider-bottom columns-12", style: "margin-bottom: 32px;"}
+
+  %div    
+    %label{class: "columns-12 alpha"}
+      Industry
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "recruiter"}Online Advertising
+
+  %div 
+    %label{class: "columns-5"}
+      Number of Employees
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "recruiter"}100
+
+    %label{class: "columns-6 shift-1"}
+      Annual Revenue
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "recruiter"}100
+
+  %div{class: "columns-12 omega"}
+    %label{class: "columns-5"}
+      \# of Locations
+      %span{class: "text--ghost"}Optional
+      %br 
+      %input{type: "text"}
+
+    %label{class: "columns-6 shift-1"}
+      Company Phone 
+      %br 
+      %input{type: "text"}      
+
+  %div
+    %h2{class: "text--accent text--headline-2 alpha"}
+      %span{class: "box--circle-text"} 
+        %span 3
+      Payment Information
+
+  %div
+    %label{class: "columns-4"} 
+      Payment Type
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "recruiter"}100
+    %div{class: "columns-7 shift-1"} 
+      %img{src: "assets/images/icon--credit-cards.png", style: "position: relative; top: 25px;"}
+
+  %div
+    %label{class: "columns-12"}
+      Cardholder's Name 
+      %br 
+      %input{type: "text"}  
+
+  %div
+    %label{class: "columns-7"}
+      Card Number 
+      %br 
+      %input{type: "text"}  
+
+    %label{class: "columns-4 shift-1"}
+      Expiration Date
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          Month
+        %option{value: "january"}January      
+      %select 
+        %option{value: "", selected: true, style: "display: none;"}
+          Year
+        %option{value: "2015"}2015    
+
+  %div
+    %label{class: "columns-3"}
+      Security Code
+      %br 
+      %input{type: "password"}  
+
+    %div{class: "columns-6"}
+      %a{href: "#security-code", class: "text--smaller", style: "position: relative; top: 30px;"}
+        What is this?
+
+  %div{class: "form--large__divider-line box--divider-bottom"}
+
+  %div       
+    %label{class: "columns-12 form--large__trailing-label alpha"}
+      %input{type: "checkbox"} 
+      %span{class: "text--thin"} Use Company Address (From Above) 
+
+  %div
+    %label{class: "columns-12"}
+      Billing Address 1
+      %br 
+      %input{type: "text"}  
+
+  %div
+    %label{class: "columns-12"}
+      Billing Address 2
+      %br 
+      %input{type: "text"}  
+
+  %div     
+    %label{class: "columns-12"}
+      Country
+      %br 
+      %select
+        %option{value: "", selected: true, style: "display: none;"}
+          \--- Select One ---
+        %option{value: "Bolivia"}Bolivia
+
+  %div
+    %label{class: "columns-6"}
+      City
+      %br 
+      %input{type: "text"} 
+
+    %label{class: "columns-3"}
+      State
+      %br 
+      %select
+
+    %label{class: "columns-3 omega"}
+      Zip code
+      %br 
+      %input{type: "text"} 
+
+  %div{class: "columns-12"}
+    %h3{class: "text--headline-3"}
+      Accept Terms and Conditions
+
+  %div       
+    %label{class: "columns-12 form--large__trailing-label alpha omega"}
+      %input{type: "checkbox"} 
+      %span{class: "text--thin"} 
+        I agree to CareerBuilder's 
+        %a{href: "#terms"} Terms and Conditions
+
+  %div{class: "columns-12"} 
+    %submit{class: "button button--primary" }
+      Complete Purchase         

@@ -1,5 +1,31 @@
 ---
 title: Order Confirmation
+layout: layout
 ---
 
-%h1 Order Confirmation
+/ thin-header 
+= partial 'partials/header-thin', :locals => {:headline => "Order Confirmation"}    
+
+%div{class: "container text--body"} 
+
+  %section{class: "columns-12 medium-screen-down checkout-summary"} 
+    %div{class: "confirmation__message"} 
+      = partial '/partials/confirmation-message'
+
+    %a{class: "button button--primary confirmation__button", href: "#post-job"}
+      Post Your Job Now
+
+    = partial '/partials/checkout-summary' 
+
+%div{class: "container text--body"} 
+  %section{class: "columns-8 large-screen-only checkout-summary"}
+    %div{class: "confirmation__message"} 
+      = partial '/partials/confirmation-message'
+
+    %a{class: "button button--primary confirmation__button", href: "#post-job"}
+      Post Your Job Now
+
+    = partial '/partials/checkout-summary' 
+
+  %aside{class: "large-screen-only columns-4"}
+    = partial 'partials/recommended-items-vertical' 

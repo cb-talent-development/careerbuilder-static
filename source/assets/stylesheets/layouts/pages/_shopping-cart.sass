@@ -1,7 +1,6 @@
 .helper-text 
   +span-columns(12)
   margin-bottom: 20px
-  padding-top: 20px
 
 .items-in-cart
   +span-columns(12)
@@ -15,8 +14,18 @@
   +span-columns(12)  
   margin-bottom: 20px
 
+.cart__row.cart__row--tight 
+  margin-bottom: 0px
+
 .cart__cell 
   padding: 10px
+
+.cart__cell.alpha
+  padding-left: 0
+
+.cart__cell.omega
+  padding-right: 0
+  text-align: right   
 
 .cart__item-title
   line-height: 120%  
@@ -61,11 +70,23 @@
 
 // 
 
-.recommended-items
-  +span-columns(8) 
+.recommended-items 
+
+.recommended-items--vertical .box--header-row
+  margin-bottom: 0px
+
+.cart__cell.recommended-items--vertical__header
+  padding-left: 0
+  padding-right: 0  
 
 .recommended-items__block
   +span-columns(4)
+
+.recommended-items__block--vertical
+  +span-columns(12)
+  padding: 24px 0
+
+
 
 // 
 
