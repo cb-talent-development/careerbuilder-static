@@ -3,7 +3,7 @@ title: Product Page
 layout: layout
 ---
 
-/ large-header 
+// large-header 
 = partial 'partials/header-large', :locals => {headline: "Product Title", subhead: "Placeholder Reach more candidates in less time with a product description", image: "placeholder--product-image.png"}  
 
 %div{class: "container text--body"}
@@ -11,14 +11,14 @@ layout: layout
     = partial 'partials/product-subnav'
 
   // overview
-  %section{class: "product-detail box--divider-bottom"}
+  %section{class: "product-detail box--divider-bottom", id: "overview"}
     %h2{class: "product-detail__headline text--headline-2"}
       Overview
     %div{class: "product-detail__body"}   
       = partial 'partials/placeholder'
 
   // white papers 
-  %section{class: "product-detail box--divider-bottom"}
+  %section{class: "product-detail box--divider-bottom", id: "white-papers"}
     %h2{class: "product-detail__headline text--headline-2"}
       White Papers
     %div{class: "product-detail__body text--link-list"}
@@ -37,7 +37,7 @@ layout: layout
             Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say. 
 
   // features 
-  %section{class: "product-detail box--divider-bottom"}
+  %section{class: "product-detail box--divider-bottom", id: "features"}
     %h2{class: "product-detail__headline text--headline-2"}
       Features
     %div{class: "product-detail__body"}  
@@ -74,7 +74,7 @@ layout: layout
         %a{class: "button button--secondary", href: "4"} Learn More
 
   // videos 
-  %section{class: "product-detail box--divider-bottom"}
+  %section{class: "product-detail box--divider-bottom", id:"videos"}
     %h2{class: "product-detail__headline text--headline-2"}
       Videos
     %div{class: "product-detail__body"}  
@@ -82,11 +82,19 @@ layout: layout
         // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
         = image_tag "placeholder-video.png"
         %h4 Video Title About How To Get More Cowbell
+
       %div{class: "video-block"}
         = image_tag "placeholder-video.png"
         %h4 Updog Video     
+
       %div{class: "video-block"}
         = image_tag "placeholder-video.png"
         %h4 Video Title About 50% Higher Conversion with More Cowbell 
 
-          
+  // request a demo 
+  %section{class: "product-detail", id:"demo"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      Request a Demo
+    %div{class: "product-detail__body"}  
+      = partial "/partials/form--request-demo"
+      
