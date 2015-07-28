@@ -1,1 +1,0 @@
-jQuery(function(){console.log("site-ef8ef290.js working"),mobileMenuLink=document.getElementById("mobile-menu-link"),mobileMenu=document.getElementById("mobile-menu"),mobileMenu.hidden=!0,mobileMenuLink.onclick=function(){mobileMenu.hidden=!mobileMenu.hidden,1==mobileMenu.hidden?$(mobileMenu).addClass("hidden"):$(mobileMenu).removeClass("hidden")}});

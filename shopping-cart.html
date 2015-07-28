@@ -11,7 +11,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Shopping Cart | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/stylesheets/site-52841fec.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/site-7e254622.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='shopping-cart base-background'>
     <header class='top-bar'>
@@ -82,8 +82,8 @@
         </li>
       </ul>
     </nav>
-    <!-- header -->
-    <header class='header'>
+    <!-- header-large -->
+    <header class='header header--large'>
       <div class='container'>
         <!-- header__subnav -->
         <nav class='header__subnav text--white text--subnav medium-screen-up'>
@@ -110,17 +110,19 @@
           Your Cart
         </h1>
         <!-- header__progress-bar -->
+        <!-- / WORK IN PROGRESS -->
+        <!-- / Final form will be clickable, text and circle will be hot area -->
         <div class='header__progress-bar box--progress-bar text--white large-screen-only'>
           <ul>
             <!-- / Displays line behind circles -->
             <div class='box--progress-bar__line'></div>
-            <li class='completed'>
+            <li class='box--progress-bar--completed'>
               <!-- / STEP NUMBER -->
               1
               <!-- / STEP LABEL -->
               <label>Summary</label>
             </li>
-            <li>
+            <li class='box--progress-bar--current'>
               2
               <label>Sign In</label>
             </li>
@@ -138,12 +140,14 @@
     </header>
     <div class='container text--body'>
       <!-- Rescue prompt -->
-      <p class='helper-text'>
-        Need help? Call
-        <a href='#unknown-link'>800-891-8880</a>
-        or
-        <a href='#email-us-link'>Email Us.</a>
-      </p>
+      <div class='helper-text'>
+        <div class='email-us-link'>
+          Need help? Call
+          <a href='#unknown-link'>800-891-8880</a>
+          or
+          <a href='#email-us-link' id='email-us-link'>Email Us</a>
+        </div>
+      </div>
       <!-- cart -->
       <section class='cart items-in-cart'>
         <!-- cart__header-row -->
@@ -222,82 +226,94 @@
             $300.00
           </div>
         </div>
+        <!-- Promo code link -->
         <div class='cart__row medium-screen-up'>
-          <a class='cart__cell text--caption' href='#apply-promo-code'>
+          <a class='cart__cell text--caption cart__apply-discount-link' href='#apply-promo-code'>
             Have a promo code? Click here to apply it to your order.
           </a>
         </div>
         <div class='cart__row small-screen-only'>
-          <a class='cart__cell text--caption' href='#apply-promo-code'>
+          <a class='cart__cell text--caption cart__apply-discount-link' href='#apply-promo-code'>
             Apply promo code.
           </a>
         </div>
+        <!-- Promo code modal -->
+        <div class='box--pop-out box--quick-submit box--yellow apply-discount hidden' id='apply-discount'>
+          <!-- SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC -->
+          <input class='box--quick-submit__input' type='text'>
+          <button class='button button--primary box--quick-submit__button'>
+            Apply Promo
+          </button>
+        </div>
       </section>
       <!-- Recommended for you -->
-      <section class='cart recommended-items large-screen-only'>
-        <div class='cart__row box--header-row'>
-          <div class='cart__cell cart__cell--recommended'>
-            Recommended for you
+      <section class='large-screen-only columns-8'>
+        <div class='cart recommended-items'>
+          <div class='cart__row box--header-row'>
+            <div class='cart__cell cart__cell--recommended'>
+              Recommended for you
+            </div>
+            <div class='cart__cell cart__cell--product-link text--smaller'>
+              <a href='#all-products'>
+                View All Products
+              </a>
+            </div>
           </div>
-          <div class='cart__cell cart__cell--product-link text--smaller'>
-            <a href='#all-products'>
-              View All Products
-            </a>
-          </div>
-        </div>
-        <div class='cart__row'>
-          <div class='cart__cell recommended-items__block .box--divider-right'>
-            <a href='#item-link'>
-              <!-- ITEM TITLE -->
-              Dynamic Emails
-            </a>
-            <p class='text--caption cart__caption'>
-              <!-- ITEM DESCRIPTION -->
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-            </p>
-            <p class='cart--item-price'>
-              <!-- ITEM PRICE -->
-              $39.90
-            </p>
-            <a class='button button--secondary' href='#apply-action'>
-              Apply
-            </a>
-          </div>
-          <!-- REPEATED FOR STATIC DEMO, CAN BE REMOVED -->
-          <div class='cart__cell recommended-items__block .box--divider-right'>
-            <a href='#item-link'>
-              Company Profile
-            </a>
-            <p class='text--caption cart__caption'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-            </p>
-            <p class='cart--item-price'>
-              $10.00
-            </p>
-            <a class='button button--secondary' href='#apply-action'>
-              Apply
-            </a>
-          </div>
-          <!-- REPEATED FOR STATIC DEMO, CAN BE REMOVED -->
-          <div class='cart__cell recommended-items__block .box--divider-right'>
-            <a href='#item-link'>
-              Dynamic Emails
-            </a>
-            <p class='text--caption cart__caption'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-            </p>
-            <p class='cart--item-price'>
-              $99.99
-            </p>
-            <a class='button button--secondary' href='#apply-action'>
-              Apply
-            </a>
+          <div class='cart__row'>
+            <div class='cart__cell recommended-items__block .box--divider-right'>
+              <a href='#item-link'>
+                <!-- ITEM TITLE -->
+                Dynamic Emails
+              </a>
+              <p class='text--caption cart__caption'>
+                <!-- ITEM DESCRIPTION -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+              </p>
+              <p class='cart--item-price'>
+                <!-- ITEM PRICE -->
+                $39.90
+              </p>
+              <a class='button button--secondary' href='#apply-action'>
+                Apply
+              </a>
+            </div>
+            <!-- REPEATED FOR STATIC DEMO, CAN BE REMOVED -->
+            <div class='cart__cell recommended-items__block .box--divider-right'>
+              <a href='#item-link'>
+                Company Profile
+              </a>
+              <p class='text--caption cart__caption'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+              </p>
+              <p class='cart--item-price'>
+                $10.00
+              </p>
+              <a class='button button--secondary' href='#apply-action'>
+                Apply
+              </a>
+            </div>
+            <!-- REPEATED FOR STATIC DEMO, CAN BE REMOVED -->
+            <div class='cart__cell recommended-items__block .box--divider-right'>
+              <a href='#item-link'>
+                Dynamic Emails
+              </a>
+              <p class='text--caption cart__caption'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+              </p>
+              <p class='cart--item-price'>
+                $99.99
+              </p>
+              <a class='button button--secondary' href='#apply-action'>
+                Apply
+              </a>
+            </div>
           </div>
         </div>
       </section>
       <!-- Checkout -->
       <section class='checkout'>
         <div class='box--pop-out'>
+          <!-- subtotal -->
           <div class='cart__row checkout__subtotal text--smaller'>
             <div class='cart__cell checkout__item--left'>
               Subtotal:
@@ -306,14 +322,26 @@
               $99.99
             </div>
           </div>
+          <!-- promo code (if applied) -->
+          <div class='cart__row checkout__subtotal text--smaller'>
+            <div class='cart__cell checkout__item--left'>
+              Promo code:
+              <br>TROGDOR -- (10% off)</br>
+            </div>
+            <div class='cart__cell checkout__item--right text--success'>
+              -$9.99
+            </div>
+          </div>
+          <!-- tax -->
           <div class='cart__row checkout__subtotal text--smaller'>
             <div class='cart__cell checkout__item--left'>
               Tax:
             </div>
             <div class='cart__cell checkout__item--right'>
-              $9.99
+              $8.99
             </div>
           </div>
+          <!-- total -->
           <div class='cart__row checkout__total text--larger'>
             <div class='cart__cell checkout__item--left'>
               Order Total:
@@ -387,6 +415,6 @@
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-ef8ef290.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-71d05b95.js" type="text/javascript"></script>
   </body>
 </html>
