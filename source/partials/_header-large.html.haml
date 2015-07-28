@@ -1,5 +1,7 @@
+= add_class = "" unless add_class
+
 / header-large 
-%header{class: "header header--large"}
+%header{class: "header header--large" + " " + add_class}
   %div{class: "container"}
 
     = partial 'partials/header-subnav'

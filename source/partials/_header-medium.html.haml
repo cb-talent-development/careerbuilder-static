@@ -1,5 +1,7 @@
+= add_class = "" unless add_class
+
 / header-medium 
-%header{class: "header header--medium"}
+%header{class: "header header--medium" + " " + add_class}
   %div{class: "container"}
 
     / header__subnav
