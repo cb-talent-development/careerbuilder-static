@@ -1,3 +1,32 @@
+.product-subnav
+  +outer-container
+  margin: 32px 0px 64px 0px
+  
+.product-subnav__left
+  +span-columns(8)
+
+.product-subnav__right
+  +span-columns(4)
+  text-align: right
+
+.product-subnav ul 
+  margin: 0
+  padding: 0
+
+.product-subnav li
+  list-style: none
+  padding: 10px 40px 30px 0px
+  display: inline-block
+
+.product-subnav li a
+  display: inline-block  
+
+.product-subnav li a
+  border-bottom: 2px solid transparent
+
+.product-subnav li a:hover  
+  border-bottom: 2px solid $hover-link-color
+
 .product-detail
   +outer-container
   display: block

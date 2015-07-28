@@ -1,8 +1,19 @@
-
 // four links across top 
-LINK LINK LINK 
+%div{class: "product-subnav text--subnav"}
+  
+  %div{class: "product-subnav__left"}
+    %ul
+      %li
+        %a{href: "#overview"} Overview
+      %li 
+        %a{href: "#white-papers"} White Papers 
+      %li 
+        %a{href: "#features"} Features
+      %li 
+        %a{href: "#videos"} Videos
 
-// demo button on right side 
-%a{class: "button button-primary", href: "#foo"}
-  Button text 
 
+  // demo button on right side 
+  %div{class: "product-subnav__right"}
+    %a{class: "button button--primary", href: "#demo"}
+      Request a Demo
