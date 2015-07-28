@@ -1,3 +1,5 @@
+// product-subnav
+
 .product-subnav
   +outer-container
   margin: 32px 0px 64px 0px
@@ -7,7 +9,14 @@
 
 .product-subnav__right
   +span-columns(4)
+  padding-top: 5px
   text-align: right
+
+@media only screen and (max-width: $small-screen-max)
+  .product-subnav__right
+    +span-columns(12)
+    text-align: center
+    padding-top: 20px
 
 .product-subnav ul 
   margin: 0
@@ -27,17 +36,37 @@
 .product-subnav li a:hover  
   border-bottom: 2px solid $hover-link-color
 
+// product-detail 
+
 .product-detail
   +outer-container
   display: block
   margin-bottom: 80px
   padding-bottom: 80px
 
+@media only screen and (max-width: $medium-screen-max)
+  .product-detail
+    margin-bottom: 64px
+    padding-bottom: 64px
+
+@media only screen and (max-width: $small-screen-max)
+  .product-detail
+    margin-bottom: 32px
+    padding-bottom: 32px
+
 .product-detail__headline
   +span-columns(3)
 
 .product-detail__body
   +span-columns(9)
+
+@media only screen and (max-width: $small-screen-max)
+  .product-detail__headline
+    +span-columns(12)
+
+  .product-detail__body
+    +span-columns(12)
+
 
 .product-detail__arrow 
   display: block
@@ -46,11 +75,11 @@
   top: 5px
   left: 150px
 
+// feature-block
+
 .feature-block
   +span-columns(3) 
   text-align: center 
-
-.feature-block 
 
 .feature-block img 
   margin-bottom: 20px
@@ -65,16 +94,51 @@
   margin-bottom: 32px
   padding: 0 20px
 
-.product-detail .video-block   
+@media only screen and (max-width: $medium-screen-max)
+  .feature-block
+    +span-columns(9) 
+    +shift(3)
+    text-align: left
+    margin-top: 32px
+
+  .feature-block img
+    float: left 
+    margin: 0 32px 32px 0px
+
+  .feature-block p
+    margin-bottom: 10px
+
+@media only screen and (max-width: $small-screen-max)
+  .feature-block
+    +span-columns(12) 
+    +shift(0)
+
+// video block 
+
+.product-detail__video-block   
   +span-columns(4)
 
-.product-detail .video-block img 
+.product-detail__video-block img 
   max-width: 240px
 
-.product-detail .video-block h4
+.product-detail__video-block h4
   margin-top: 10px
   margin-bottom: 0
   line-height: 140%
 
+@media only screen and (max-width: $medium-screen-max)
+  .product-detail__video-block
+    +span-columns(12)
+    margin-bottom: 32px
+    text-align: left
+
+  .product-detail__video-block h4
+    margin-top: 0px
+
 .request-demo
   +span-columns(8)
+
+@media only screen and (max-width: $medium-screen-max)
+  .request-demo
+    +span-columns(12)
+

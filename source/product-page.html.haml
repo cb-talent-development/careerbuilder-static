@@ -42,52 +42,48 @@ layout: layout
       Features
     %div{class: "product-detail__body"}  
 
-    %div 
+    // features - desktop 
+
+    %div
       %div{class: "feature-block"}
         = image_tag "placeholder-circle-1.png"
         %h4 True Grit 
         %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+        %a{class: "button button--secondary", href: "1"} Learn More 
 
       %div{class: "feature-block"}
         = image_tag "placeholder-circle-2.png"
         %h4 Makes Own Gravy 
-        %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl, eu graaaaaaaaaaaavida eros congue ac.   
+        %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl, eu graaaaaaaaaaaavida eros congue ac.
+        %a{class: "button button--secondary", href: "2"} Learn More   
 
       %div{class: "feature-block"}
         = image_tag "placeholder-circle-2.png"
         %h4 Suddenly, 20% More Cowbell Even if Line Wraps 
         %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-        
+        %a{class: "button button--secondary", href: "2"} Learn More
+
       %div{class: "feature-block"}
         = image_tag "placeholder-circle-3.png"
         %h4 Updog 
         %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-
-    %div{class: "clear-fix"}
-      %div{class: "feature-block"}
-        %a{class: "button button--secondary", href: "1"} Learn More   
-      %div{class: "feature-block"}
-        %a{class: "button button--secondary", href: "2"} Learn More     
-      %div{class: "feature-block"}
-        %a{class: "button button--secondary", href: "3"} Learn More
-      %div{class: "feature-block"}
-        %a{class: "button button--secondary", href: "4"} Learn More
+        %a{class: "button button--secondary", href: "2"} Learn More
 
   // videos 
   %section{class: "product-detail box--divider-bottom", id:"videos"}
     %h2{class: "product-detail__headline text--headline-2"}
       Videos
     %div{class: "product-detail__body"}  
-      %div{class: "video-block"}
+      %div{class: "product-detail__video-block"}
         // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
         = image_tag "placeholder-video.png"
         %h4 Video Title About How To Get More Cowbell
 
-      %div{class: "video-block"}
+      %div{class: "product-detail__video-block"}
         = image_tag "placeholder-video.png"
         %h4 Updog Video     
 
-      %div{class: "video-block"}
+      %div{class: "product-detail__video-block"}
         = image_tag "placeholder-video.png"
         %h4 Video Title About 50% Higher Conversion with More Cowbell 
 
