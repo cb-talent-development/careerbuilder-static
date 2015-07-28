@@ -90,6 +90,9 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 // LAYOUT UTILITIES
 // positioning only, no display
 
+.clear-fix
+  clear: both
+
 .half-page-medium-up
   +span-columns(6)
 
@@ -196,6 +199,12 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--white, .text--white a, .text--white a:hover
   color: $white
 
+.text--grey
+  color: $grey-darker
+
+.text-white .text-grey 
+  color: $grey-lighter
+
 .text--accent, .text--accent a, .text--accent a:hover
   color: $accent-primary
 
@@ -256,6 +265,12 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   font-family: $Lato
   font-weight: 400
 
+.text--details
+  font-family: $Lato
+  font-weight: 300
+  font-size: 12pt
+  line-height: 140%  
+
 .text--smaller
   font-size: 80%
 
@@ -277,6 +292,29 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--white .text--ghost
   color: $grey-lighter
 
+.text--link-list ul 
+  padding: 0
+  margin: 0
+
+.text--link-list li
+  list-style: none
+  padding: 30px 160px 30px 0
+  border-bottom: 1px solid $grey-lighter
+  line-height: 130%
+
+.text--link-list a 
+  display: block
+
+.text--link-list li.alpha
+
+.text--link-list li.omega
+  border-bottom: none
+
+.text--link-list__arrow
+  font-size: 60px
+  font-weight: 100
+  +transform(scaleX(.6))
+  color: $grey-lighter
 
 // BOXES
 // display only, no positioning
@@ -548,7 +586,6 @@ button:action
   padding-top: 20px
   padding-right: 30px
   float: right  
-
 
 // HEADER
 

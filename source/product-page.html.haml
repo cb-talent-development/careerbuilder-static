@@ -10,9 +10,83 @@ layout: layout
   %nav 
     = partial 'partials/product-subnav'
 
+  // overview
   %section{class: "product-detail box--divider-bottom"}
-
     %h2{class: "product-detail__headline text--headline-2"}
       Overview
     %div{class: "product-detail__body"}   
       = partial 'partials/placeholder'
+
+  // white papers 
+  %section{class: "product-detail box--divider-bottom"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      White Papers
+    %div{class: "product-detail__body text--link-list"}
+      %ul
+        %li{class: "alpha"}
+          %a{href: "#white-paper"}
+            %div{class: "text--link-list__arrow product-detail__arrow"} >          
+            Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
+        %li   
+          %a{href: "#white-paper"}
+            %div{class: "text--link-list__arrow product-detail__arrow"} >
+            Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
+        %li{class: "omega"}
+          %a{href: "#white-paper"}
+            %div{class: "text--link-list__arrow product-detail__arrow"} >
+            Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say. 
+
+  // features 
+  %section{class: "product-detail box--divider-bottom"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      Features
+    %div{class: "product-detail__body"}  
+
+    %div 
+      %div{class: "feature-block"}
+        = image_tag "placeholder-circle-1.png"
+        %h4 True Grit 
+        %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+
+      %div{class: "feature-block"}
+        = image_tag "placeholder-circle-2.png"
+        %h4 Makes Own Gravy 
+        %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl, eu graaaaaaaaaaaavida eros congue ac.   
+
+      %div{class: "feature-block"}
+        = image_tag "placeholder-circle-2.png"
+        %h4 Suddenly, 20% More Cowbell Even if Line Wraps 
+        %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+        
+      %div{class: "feature-block"}
+        = image_tag "placeholder-circle-3.png"
+        %h4 Updog 
+        %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+
+    %div{class: "clear-fix"}
+      %div{class: "feature-block"}
+        %a{class: "button button--secondary", href: "1"} Learn More   
+      %div{class: "feature-block"}
+        %a{class: "button button--secondary", href: "2"} Learn More     
+      %div{class: "feature-block"}
+        %a{class: "button button--secondary", href: "3"} Learn More
+      %div{class: "feature-block"}
+        %a{class: "button button--secondary", href: "4"} Learn More
+
+  // videos 
+  %section{class: "product-detail box--divider-bottom"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      Videos
+    %div{class: "product-detail__body"}  
+      %div{class: "video-block"}
+        // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
+        = image_tag "placeholder-video.png"
+        %h4 Video Title About How To Get More Cowbell
+      %div{class: "video-block"}
+        = image_tag "placeholder-video.png"
+        %h4 Updog Video     
+      %div{class: "video-block"}
+        = image_tag "placeholder-video.png"
+        %h4 Video Title About 50% Higher Conversion with More Cowbell 
+
+          
