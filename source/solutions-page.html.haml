@@ -3,12 +3,12 @@ title: Solutions Page
 ---
 
 // large-header 
-= # IMAGES IN THIS HEADER MUST BE MATTED VERY CAREFULLY
+= # IMAGES IN THIS HEADER MUST BE MATTED CAREFULLY
 = # BECAUSE THEY COVER DARK AND WHITE BACKGROUNDS
 = partial 'partials/header-large-alternate', :locals => {headline: "Is <strong>your recruitment</strong> too complex and time intensive?", image: "placeholder-470.png", add_class: "no-bottom-margin"}  
 
 %div{class: "container text--body"}
-  %div{class: "solution__intro-text"}
+  %div{class: "product__intro-text"}
     %h2{class: "text--headline-2 text--accent"}
       Simplify & Expidite Recruitment
 
@@ -17,12 +17,9 @@ title: Solutions Page
 
     %p Phasellus pellentesque et dui sed accumsan. Morbi accumsan consequat pellentesque. Integer venenatis commodo orci id varius. Vestibulum tempus luctus diam, eget sollicitudin dui cursus quis. Sed sed vestibulum ipsum. Curabitur vitae arcu libero.
 
-
-
-
 %div{class: "container text--body"}
   %nav 
-    = partial 'partials/product-subnav'
+    = partial 'partials/solutions-subnav'
 
   // overview
   %section{class: "product-detail box--divider-bottom", id: "overview"}
@@ -49,3 +46,38 @@ title: Solutions Page
           %a{href: "#white-paper"}
             %div{class: "text--link-list__arrow product-detail__arrow"} >
             Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say. 
+
+
+  // product list
+  %section{class: "product-detail box--divider-bottom", id: "products"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      Products
+    %div{class: "product-detail__body"}  
+      %div{class: "text--link-list"}
+        %ul
+          %li{class: "alpha"}
+            %a{href: "#product1"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >          
+              %h3{style: "text--headline-3 text--accent"} Career Builder        
+            %p Hellentesque faucibus arcu eu.  
+
+          %li   
+            %a{href: "#product2"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >          
+              %h3{style: "text--headline-3 text--accent"} Product Title        
+            %p Hellentesque sagittis condimentum, conveniently unnamed sources say. 
+
+          %li{class: "omega"}
+            %a{href: "#product3"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >          
+              %h3{style: "text--headline-3 text--accent"} Career Builder Product Title, Type 34      
+            %p Arcu eu sagittis condimentum, conveniently unnamed sources say.
+      %a{class: "button button--secondary", style: "margin-top: 10px"} More Products                 
+
+  // request a demo 
+  %section{class: "product-detail", id:"demo"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      Request a Demo
+    %div{class: "product-detail__body"}  
+      = partial "/partials/form--request-demo"
+      

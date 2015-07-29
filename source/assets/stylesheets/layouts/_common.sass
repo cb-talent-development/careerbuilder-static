@@ -316,6 +316,12 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--link-list li.omega
   border-bottom: none
 
+.text--link-list p 
+  margin: 5px 0
+
+.text--link-list h3 
+  margin: 5px 0
+
 .text--link-list__arrow
   font-size: 60px
   font-weight: 100
@@ -667,11 +673,9 @@ button:action
   padding-top: 64px
   padding-bottom: 64px
 
-
-
 .header--large-alternate__headline
-  +span-columns(7)
-  padding-right: 54px
+  +span-columns(8)
+  padding-right: 0px
   padding-top: 0px
   padding-bottom: 54px
 
@@ -683,6 +687,7 @@ button:action
   position: absolute
   +shift(6)
   top: 180px
+  text-align: right
 
 .header--large-alternate__image img
   max-width: 470px
