@@ -1,0 +1,60 @@
+.reading 
+  +span-columns(8)
+  +shift(2)
+
+@media only screen and (max-width: $medium-screen-max)
+  .reading 
+    +span-columns(12)
+    +shift(0)
+
+.reading .text--headline-4  
+  margin-top: 40px
+  margin-bottom: 10px  
+
+.reading__section
+  +span_columns(12) 
+  margin-bottom: 64px
+  padding-bottom: 64px
+
+.reading .reading__section .reading__subhead
+  margin: 0 0 32px 0
+
+.reading__image-grid
+
+.reading__image-block
+  +span-columns(3)
+
+.reading__image-container
+  height: 160px  
+  overflow: hidden
+
+.reading__image-container img
+  min-height: 160px
+  min-width: 160px 
+  clip: rect(auto,auto,auto,auto)
+
+.reading__image-block .caption
+  margin-top: 12px
+
+.reading__image-block p
+  margin: 0
+  padding: 0
+  line-height: 150%
+
+.reading .product-detail__headline 
+  font-size: 18px 
+  padding-top: 18px
+
+.reading__contact
+  margin-bottom: 32px
+  line-height: 120%
+
+.reading__contact.omega
+  margin-bottom: 0
+
+.reading__contact__name
+  color: $accent-primary
+
+.reading__contact__detail   
+  color: $grey-dark
+  font-weight: 100

@@ -1,0 +1,15 @@
+// initializes optional parameters
+= add_class = "" unless add_class
+
+/ header-medium 
+%header{class: "header header--medium header--reading" + " " + add_class}
+  %div{class: "container"}
+
+    / header__subnav
+    %div{class: "header--reading__subnav"}
+      = partial 'partials/header-subnav'
+    
+    / header__headline 
+    %h1{class: "header__headline text--headline text--white header--reading__headline"}
+      = headline
+    

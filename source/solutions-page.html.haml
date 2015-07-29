@@ -47,32 +47,7 @@ title: Solutions Page
             %div{class: "text--link-list__arrow product-detail__arrow"} >
             Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say. 
 
-
-  // product list
-  %section{class: "product-detail box--divider-bottom", id: "products"}
-    %h2{class: "product-detail__headline text--headline-2"}
-      Products
-    %div{class: "product-detail__body"}  
-      %div{class: "text--link-list"}
-        %ul
-          %li{class: "alpha"}
-            %a{href: "#product1"}
-              %div{class: "text--link-list__arrow product-detail__arrow"} >          
-              %h3{style: "text--headline-3 text--accent"} Career Builder        
-            %p Hellentesque faucibus arcu eu.  
-
-          %li   
-            %a{href: "#product2"}
-              %div{class: "text--link-list__arrow product-detail__arrow"} >          
-              %h3{style: "text--headline-3 text--accent"} Product Title        
-            %p Hellentesque sagittis condimentum, conveniently unnamed sources say. 
-
-          %li{class: "omega"}
-            %a{href: "#product3"}
-              %div{class: "text--link-list__arrow product-detail__arrow"} >          
-              %h3{style: "text--headline-3 text--accent"} Career Builder Product Title, Type 34      
-            %p Arcu eu sagittis condimentum, conveniently unnamed sources say.
-      %a{class: "button button--secondary", style: "margin-top: 10px"} More Products                 
+  = partial 'partials/products'               
 
   // request a demo 
   %section{class: "product-detail", id:"demo"}

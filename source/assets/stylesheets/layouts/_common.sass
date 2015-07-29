@@ -249,6 +249,18 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   font-size: 26px
   text-decoration: none
 
+.text--headline-3, .text--headline-3 a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 20px
+  text-decoration: none
+
+.text--headline-4, .text--headline-4 a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 18px
+  text-decoration: none
+
 .text--subhead
   font-family: $Lato
   font-weight: 100
@@ -623,10 +635,33 @@ button:action
 .header--thin
   height: 168px
 
-@media (max-width: $small-screen-max)  
+@media only screen and (max-width: $small-screen-max)  
   .header--medium, .header--thin
     height: 120px
     background-image: none
+
+.header--reading__subnav
+  +span_columns(8)
+  +shift(2)
+  
+.header__headline.header--reading__headline
+  +span_columns(8)
+  +shift(2)
+
+@media only screen and (max-width: $medium-screen-max) 
+  .header--reading__subnav
+    +span_columns(12)
+    +shift(0)
+    
+  .header__headline.header--reading__headline
+    +span_columns(12)
+    +shift(0)
+
+@media only screen and (max-width: $small-screen-max)
+  .header__headline.header--reading__headline
+    font-size: 28px
+    padding-top: 38px
+
 
 .header__subnav
   +span-columns(12)
