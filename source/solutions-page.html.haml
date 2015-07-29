@@ -2,4 +2,50 @@
 title: Solutions Page
 ---
 
-<h1>Solutions Page</h1>
+// large-header 
+= # IMAGES IN THIS HEADER MUST BE MATTED VERY CAREFULLY
+= # BECAUSE THEY COVER DARK AND WHITE BACKGROUNDS
+= partial 'partials/header-large-alternate', :locals => {headline: "Is <strong>your recruitment</strong> too complex and time intensive?", image: "placeholder-470.png", add_class: "no-bottom-margin"}  
+
+%div{class: "container text--body"}
+  %div{class: "solution__intro-text"}
+    %h2{class: "text--headline-2 text--accent"}
+      Simplify & Expidite Recruitment
+
+    = # Layout works best with about this much text.   
+    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ante sem, at dictum nibh imperdiet ut. Sed a elit at justo pulvinar molestie. 
+
+    %p Phasellus pellentesque et dui sed accumsan. Morbi accumsan consequat pellentesque. Integer venenatis commodo orci id varius. Vestibulum tempus luctus diam, eget sollicitudin dui cursus quis. Sed sed vestibulum ipsum. Curabitur vitae arcu libero.
+
+
+
+
+%div{class: "container text--body"}
+  %nav 
+    = partial 'partials/product-subnav'
+
+  // overview
+  %section{class: "product-detail box--divider-bottom", id: "overview"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      Overview
+    %div{class: "product-detail__body"}   
+      = partial 'partials/placeholder'
+
+  // white papers 
+  %section{class: "product-detail box--divider-bottom", id: "white-papers"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      White Papers
+    %div{class: "product-detail__body text--link-list"}
+      %ul
+        %li{class: "alpha"}
+          %a{href: "#white-paper"}
+            %div{class: "text--link-list__arrow product-detail__arrow"} >          
+            Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
+        %li   
+          %a{href: "#white-paper"}
+            %div{class: "text--link-list__arrow product-detail__arrow"} >
+            Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
+        %li{class: "omega"}
+          %a{href: "#white-paper"}
+            %div{class: "text--link-list__arrow product-detail__arrow"} >
+            Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say. 

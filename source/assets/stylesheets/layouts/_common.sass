@@ -607,6 +607,10 @@ button:action
 .header.no-bottom-margin
   margin-bottom: 0
 
+.header.header--large-alternate .text--headline
+  font-weight: 100
+  font-size: 40px
+
 .header--medium
   height: 220px
 
@@ -663,11 +667,38 @@ button:action
   padding-top: 64px
   padding-bottom: 64px
 
+
+
+.header--large-alternate__headline
+  +span-columns(7)
+  padding-right: 54px
+  padding-top: 0px
+  padding-bottom: 54px
+
+.header--large-alternate__image-container
+  +outer-container
+
+.header--large-alternate__image
+  background-color: transparent
+  position: absolute
+  +shift(6)
+  top: 180px
+
+.header--large-alternate__image img
+  max-width: 470px
+  max-height: 470px
+
 @media (max-width: $medium-screen-max)
   .header--large__headline
     +span-columns(12)
     padding-right: 0
     padding-top: 32px
+    padding-bottom: 32px
+
+  .header--large-alternate__headline
+    +span-columns(12)
+    padding-right: 0px
+    padding-top: 0px
     padding-bottom: 32px
 
 .header__subnav ul
