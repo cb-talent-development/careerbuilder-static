@@ -3,29 +3,8 @@ title: Shopping Cart
 layout: layout
 ---
 
-/ header-large 
-%header{class: "header header--large"}
-  %div{class: "container"}
-
-    / header__subnav
-    %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
-      %ul 
-        %a{href: "#products"}
-          %li 
-            Products
-        %a{href: "#cart"} 
-          %li 
-            Resources
-        %a{href: "#contact"}
-          %li 
-            About Us
-    
-    / header__headline 
-    %h1{class: "header__headline text--headline text--white"}
-      Your Cart
-    
-    / header__progress-bar
-    = partial 'partials/progress-bar'
+/ thin-header 
+= partial 'partials/header-medium', :locals => {:headline => "Your Cart"}   
 
 %div{class: "container text--body"}
 

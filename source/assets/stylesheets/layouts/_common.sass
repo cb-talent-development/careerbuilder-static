@@ -90,6 +90,9 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 // LAYOUT UTILITIES
 // positioning only, no display
 
+.clear-fix
+  clear: both
+
 .half-page-medium-up
   +span-columns(6)
 
@@ -196,6 +199,12 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--white, .text--white a, .text--white a:hover
   color: $white
 
+.text--grey
+  color: $grey-darker
+
+.text-white .text-grey 
+  color: $grey-lighter
+
 .text--accent, .text--accent a, .text--accent a:hover
   color: $accent-primary
 
@@ -240,6 +249,14 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   font-size: 26px
   text-decoration: none
 
+.text--subhead
+  font-family: $Lato
+  font-weight: 100
+  font-size: 24px
+
+.text--subhead a  
+  text-decoration: none
+
 .text--caption
   font-family: $Lato
   font-weight: 300
@@ -249,6 +266,12 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--caption a, a.text--caption
   font-family: $Lato
   font-weight: 400
+
+.text--details
+  font-family: $Lato
+  font-weight: 300
+  font-size: 12pt
+  line-height: 140%  
 
 .text--smaller
   font-size: 80%
@@ -271,6 +294,37 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--white .text--ghost
   color: $grey-lighter
 
+.text--link-list ul 
+  padding: 0
+  margin: 0
+
+.text--link-list li
+  list-style: none
+  padding: 30px 160px 30px 0
+  border-bottom: 1px solid $grey-lighter
+  line-height: 130%
+
+@media only screen and (max-width: $small-screen-max)
+  .text--link-list li
+    padding: 30px 0px 30px 0
+
+.text--link-list a 
+  display: block
+
+.text--link-list li.alpha
+
+.text--link-list li.omega
+  border-bottom: none
+
+.text--link-list__arrow
+  font-size: 60px
+  font-weight: 100
+  +transform(scaleX(.6))
+  color: $grey-lighter
+
+@media only screen and (max-width: $small-screen-max)
+  .text--link-list__arrow 
+    display: none
 
 // BOXES
 // display only, no positioning
@@ -442,6 +496,20 @@ button:action
   background-color: $secondary-active-button-color
   color: $secondary-active-button-text-color
 
+.button.button--secondary.text--white 
+  border: 2px solid $white
+  background: none
+  color: $white
+
+.button.button--secondary:hover
+  border: 2px solid $primary-hover-button-color
+  background-color: $primary-hover-button-color
+  color: $primary-hover-button-text-color
+
+.button.button--secondary:active
+  background-color: $secondary-active-button-color
+  color: $secondary-active-button-text-color
+
 .button--large
   width: 100%
   padding: 12px
@@ -529,7 +597,6 @@ button:action
   padding-right: 30px
   float: right  
 
-
 // HEADER
 
 .header 
@@ -537,14 +604,17 @@ button:action
   background-image: url('/assets/images/placeholder-background-facets.png')
   margin-bottom: 64px 
 
-.header--large
-  height: 220px
+.header.no-bottom-margin
+  margin-bottom: 0
 
 .header--medium
+  height: 220px
+
+.header--thin
   height: 168px
 
 @media (max-width: $small-screen-max)  
-  .header--large, .header--medium
+  .header--medium, .header--thin
     height: 120px
     background-image: none
 
@@ -565,18 +635,40 @@ button:action
   padding: 0
   margin: 20px 25px 10px 0px
 
-.header__headline
+.header__headline, .header__subhead
   +span-columns(6)
   margin-top: 0px
 
 @media (max-width: $medium-screen-max)  
-  .header__headline
+  .header__headline, .header__subhead
     +span-columns(12)
 
 @media (max-width: $small-screen-max)  
   .header__headline
     margin-top: 0px
     padding-top: 30px
+
+.header--large__image
+  +span-columns(6)
+  text-align: center
+  vertical-align: bottom
+
+.header--large__image img
+  display: block  
+  max-width: 520px
+
+.header--large__headline
+  +span-columns(6)
+  padding-right: 64px
+  padding-top: 64px
+  padding-bottom: 64px
+
+@media (max-width: $medium-screen-max)
+  .header--large__headline
+    +span-columns(12)
+    padding-right: 0
+    padding-top: 32px
+    padding-bottom: 32px
 
 .header__subnav ul
   display: block
