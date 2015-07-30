@@ -3,10 +3,22 @@ title: Home Page
 layout: layout
 ---
 
-%section
-  %h1 Home Page
-  %p Foobar
+/ header-large 
+%header{class: "header header--home"}
+  %div{class: "container"}
 
-%section
-  %aside{class: "sidebar"} What is it about?
-  %article{class: "main-area"} Words are symbols that convey the most basic component of an idea.
+    = partial 'partials/header-subnav'
+
+    / header__headline 
+    %div{class: "header--large__headline"}
+
+      %h1{class: "text--headline text--white"}
+        headline text
+
+      %h2{class: "text--subhead text--white"}
+        Subhead text
+
+    / product image 
+    %div{class: "header--large__image large-screen-only"}  
+      = image_tag 'carosel--laptop.png'
+
