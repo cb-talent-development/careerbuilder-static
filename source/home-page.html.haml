@@ -3,7 +3,7 @@ title: Home Page
 layout: layout
 ---
 
-/ header-large 
+/ header--home
 %header{class: "header header--home"}
   %div{class: "container"}
 
@@ -19,24 +19,30 @@ layout: layout
           %li
             %a{href: "#contact"} 
               About Us
-      %div{class: 'columns-2 shift-1'} 
+      %div{class: 'columns-2 shift-1 header--home__top-nav'} 
         %a{href: "#foo", class: "button button--primary button--large button--sucess"} 
           Post a Job
 
-      %div{class: 'columns-3'} 
+      %div{class: 'columns-3 header--home__top-nav'} 
         %a{href: "#bar", class: "button button--primary button--large"} 
           Search Candidates    
 
     / header__headline 
-    %div{class: "header--large__headline"}
+    %div{class: "header--home__headline"}
 
       %h1{class: "text--headline text--white"}
-        headline text
+        A CareerBuilder Product
 
       %h2{class: "text--subhead text--white"}
-        Subhead text
+        Find the right business solutions for your company
 
-    / product image 
-    %div{class: "header--large__image large-screen-only"}  
-      = image_tag 'carosel--laptop.png'
+      %a{class: "header--home__button button button--secondary button--large text--white"}
+        Learn More  
+
+/ product image 
+%div{class: "carosel--container large-screen-only"}  
+  %div{class: "carosel--frame-image"}
+    = image_tag 'carosel--laptop.png'
+
+
 
