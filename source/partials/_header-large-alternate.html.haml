@@ -1,0 +1,29 @@
+// initializes optional parameters
+= add_class = "" unless add_class
+= subhead = "" unless subhead
+
+/ header-large 
+%header{class: "header header--large-alternate" + " " + add_class}
+  %div{class: "container"}
+
+    = partial 'partials/header-subnav'
+
+    / header__headline 
+    %div{class: "header--large-alternate__headline"}
+
+      %h1{class: "text--headline text--white"}
+        = headline
+
+      %h2{class: "text--subhead text--white"}
+        = subhead
+
+/ solution image 
+= # IMAGES IN THIS HEADER MUST BE MATTED CAREFULLY
+= # BECAUSE THEY COVER DARK AND WHITE BACKGROUNDS
+%div{class: ".header--large-alternate__image-container"}
+  %div{class: "header--large-alternate__image large-screen-only"}  
+    = image_tag image
+
+
+
+

@@ -249,6 +249,18 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   font-size: 26px
   text-decoration: none
 
+.text--headline-3, .text--headline-3 a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 20px
+  text-decoration: none
+
+.text--headline-4, .text--headline-4 a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 18px
+  text-decoration: none
+
 .text--subhead
   font-family: $Lato
   font-weight: 100
@@ -315,6 +327,12 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 
 .text--link-list li.omega
   border-bottom: none
+
+.text--link-list p 
+  margin: 5px 0
+
+.text--link-list h3 
+  margin: 5px 0
 
 .text--link-list__arrow
   font-size: 60px
@@ -607,16 +625,43 @@ button:action
 .header.no-bottom-margin
   margin-bottom: 0
 
+.header.header--large-alternate .text--headline
+  font-weight: 100
+  font-size: 40px
+
 .header--medium
   height: 220px
 
 .header--thin
   height: 168px
 
-@media (max-width: $small-screen-max)  
+@media only screen and (max-width: $small-screen-max)  
   .header--medium, .header--thin
     height: 120px
     background-image: none
+
+.header--reading__subnav
+  +span_columns(8)
+  +shift(2)
+  
+.header__headline.header--reading__headline
+  +span_columns(8)
+  +shift(2)
+
+@media only screen and (max-width: $medium-screen-max) 
+  .header--reading__subnav
+    +span_columns(12)
+    +shift(0)
+    
+  .header__headline.header--reading__headline
+    +span_columns(12)
+    +shift(0)
+
+@media only screen and (max-width: $small-screen-max)
+  .header__headline.header--reading__headline
+    font-size: 28px
+    padding-top: 38px
+
 
 .header__subnav
   +span-columns(12)
@@ -663,11 +708,37 @@ button:action
   padding-top: 64px
   padding-bottom: 64px
 
+.header--large-alternate__headline
+  +span-columns(8)
+  padding-right: 0px
+  padding-top: 0px
+  padding-bottom: 54px
+
+.header--large-alternate__image-container
+  +outer-container
+
+.header--large-alternate__image
+  background-color: transparent
+  position: absolute
+  +shift(6)
+  top: 180px
+  text-align: right
+
+.header--large-alternate__image img
+  max-width: 470px
+  max-height: 470px
+
 @media (max-width: $medium-screen-max)
   .header--large__headline
     +span-columns(12)
     padding-right: 0
     padding-top: 32px
+    padding-bottom: 32px
+
+  .header--large-alternate__headline
+    +span-columns(12)
+    padding-right: 0px
+    padding-top: 0px
     padding-bottom: 32px
 
 .header__subnav ul

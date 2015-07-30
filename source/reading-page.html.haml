@@ -2,4 +2,93 @@
 title: Reading Page
 ---
 
-<h1>Reading Page</h1>
+
+// reading-header 
+= # Reading page titles should be ~40 chars max length or it wraps
+= partial 'partials/header-medium-reading', :locals => {headline: "H1 Reading Page Title"}  
+
+%div{class: "container text--body"}
+  %div{class: "reading"}
+
+    // main text 
+    %section{class: "reading__section box--divider-bottom"}
+
+      %h2{class: "text--accent text--headline-2"}
+        Headline 2 style
+      = partial 'partials/placeholder'
+
+      %h4{class: "text--headline-4"}
+        Headline 4 style
+      = partial 'partials/placeholder'
+      %ul
+        %li List Item
+        %li List Item  
+        %li List Item 
+
+      %p
+        %a{href: "#link"} Link text here
+      %div{class: "columns-5"}
+        %a{class: "button button--primary button--large"} Read More   
+      %p 
+        %a{class: "button button--secondary"} Read More  
+
+    // image grid
+    = # images are 150x150 and will CROP left/lower side     
+    %section{class: "reading__image-grid reading__section box--divider-bottom"}
+      %h4{class: "text--headline-4 reading__subhead"}
+        Image Grid
+     
+      %div{class: "reading__image-block"}
+        %div{class: "reading__image-container"}
+          = image_tag "placeholder--headshot-1.jpg"
+        %div{class: "caption"}
+          %p Kaylee Frye 
+          %p{class: "text--ghost"} Director of Engineering
+  
+      %div{class: "reading__image-block"}
+        %div{class: "reading__image-container"}  
+          = image_tag "placeholder--headshot-2.jpg" 
+        %div{class: "caption"} 
+          %p Another Headshot
+          %p{class: "text--ghost"} Sales Manager
+  
+      %div{class: "reading__image-block"}
+        %div{class: "reading__image-container"}
+          = image_tag "placeholder--headshot-1.jpg"
+        %div{class: "caption"}
+          %p Kaylee Frye 
+          %p{class: "text--ghost"} Director of Engineering
+      
+      %div{class: "reading__image-block"}
+        %div{class: "reading__image-container"}  
+          = image_tag "placeholder--headshot-2.jpg" 
+        %div{class: "caption"} 
+          %p Another Headshot
+          %p{class: "text--ghost"} Sales Manager    
+
+    // products    
+    %section
+      = partial 'partials/products'
+
+    // contact us   
+    %section{class: "reading__section"}
+      %h4{class: "text--headline-4 reading__subhead"}
+        Contact Us
+      %p Qui nostrud exercitation ullamco laboris nisis ut aliquiop.
+
+
+      %div{class: "reading__contact"}
+        %div{class: "reading__contact__name"} Michael Erwin
+        %div{class: "reading__contact__detail"} phone: 773-555-1164
+        %div{class: "reading__contact__detail"} email: jennifer.grasz@careerbuilder.com
+
+      %div{class: "reading__contact"}
+        %div{class: "reading__contact__name"} Michael Erwin
+        %div{class: "reading__contact__detail"} phone: 773-555-1164
+        %div{class: "reading__contact__detail"} email: jennifer.grasz@careerbuilder.com
+
+      %div{class: "reading__contact omega"}
+        %div{class: "reading__contact__name"} Michael Erwin
+        %div{class: "reading__contact__detail"} phone: 773-555-1164
+        %div{class: "reading__contact__detail"} email: jennifer.grasz@careerbuilder.com
+
