@@ -491,14 +491,17 @@ button:action
 .button.button--primary
   background-color: $primary-button-color
   color: $primary-button-text-color
+  border: 1px solid $primary-button-border-color
 
 .button.button--primary:hover
   background-color: $primary-hover-button-color
   color: $primary-hover-button-text-color
+  border: 1px solid $primary-hover-button-border-color
 
 .button.button--primary:active
   background-color: $primary-active-button-color
   color: $primary-active-button-text-color
+  border: 1px solid $primary-active-button-border-color
 
 .button.button--secondary
   border: 2px solid $accent-primary
@@ -528,10 +531,25 @@ button:action
   background-color: $secondary-active-button-color
   color: $secondary-active-button-text-color
 
-.button--large
+.button.button--large
   width: 100%
   padding: 12px
   font-size: 110%
+
+.button.button--sucess
+  background-color: $success-button-color
+  color: $success-button-text-color
+  border: 1px solid $success-button-border-color
+
+.button.button--sucess:hover
+  background-color: $success-hover-button-color
+  color: $success-hover-button-text-color
+  border: 1px solid $success-hover-button-border-color
+
+.button.button--sucess:active
+  background-color: $success-active-button-color
+  color: $success-active-button-text-color
+  border: 1px solid $success-active-button-border-color
 
 // TOP BAR
 
@@ -622,6 +640,7 @@ button:action
   background-image: url('/assets/images/placeholder-background-facets.png')
   margin-bottom: 64px 
 
+// Options can be passed as parameters to partial 
 .header.no-bottom-margin
   margin-bottom: 0
 
@@ -639,6 +658,8 @@ button:action
   .header--medium, .header--thin
     height: 120px
     background-image: none
+
+.header--reading 
 
 .header--reading__subnav
   +span_columns(8)
@@ -661,7 +682,6 @@ button:action
   .header__headline.header--reading__headline
     font-size: 28px
     padding-top: 38px
-
 
 .header__subnav
   +span-columns(12)
@@ -692,6 +712,8 @@ button:action
   .header__headline
     margin-top: 0px
     padding-top: 30px
+
+.header--large 
 
 .header--large__image
   +span-columns(6)

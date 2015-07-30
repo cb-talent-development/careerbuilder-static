@@ -3,10 +3,52 @@ title: Home Page
 layout: layout
 ---
 
-%section
-  %h1 Home Page
-  %p Foobar
+/ header--home
+%header{class: "header header--home"}
+  %div{class: "container"}
 
-%section
-  %aside{class: "sidebar"} What is it about?
-  %article{class: "main-area"} Words are symbols that convey the most basic component of an idea.
+    %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
+      %div{class: 'columns-6'} 
+        %ul 
+          %li 
+            %a{href: "#products"}
+              Products
+          %li
+            %a{href: "#cart"}  
+              Resources
+          %li
+            %a{href: "#contact"} 
+              About Us
+      %div{class: 'columns-2 shift-1 header--home__top-nav'} 
+        %a{href: "#foo", class: "button button--primary button--large button--sucess"} 
+          Post a Job
+
+      %div{class: 'columns-3 header--home__top-nav'} 
+        %a{href: "#bar", class: "button button--primary button--large"} 
+          Search Candidates    
+
+    / header__headline 
+    %div{class: "header--home__headline"}
+
+      %h1{class: "text--headline text--white"}
+        A CareerBuilder Product
+
+      %h2{class: "text--subhead text--white"}
+        Find the right business solutions for your company
+
+      %a{class: "header--home__button button button--secondary button--large text--white"}
+        Learn More  
+
+/ product image 
+%div{class: "carosel--container large-screen-only"}  
+  %div{class: "carosel--frame-image"}
+    = image_tag 'carosel--laptop.png'
+
+
+
+%div{class: "container text--body"}
+
+  %div{class: "columns-12"}
+    WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! 
+
+
