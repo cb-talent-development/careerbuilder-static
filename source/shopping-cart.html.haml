@@ -19,10 +19,12 @@ layout: layout
     %div{class: "cart__row medium-screen-up"}
       %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Have a promo code? Click here to apply it to your order.
+        %div{class: "arrow--down promo-code-arrow"}
 
     %div{class: "cart__row small-screen-only"}
       %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Apply promo code.
+        %div{class: "arrow--down promo-code-arrow"}
 
     / Promo code modal  
     %div{id: "apply-discount", class: "box--quick-submit box--quick-submit apply-discount hidden" }
