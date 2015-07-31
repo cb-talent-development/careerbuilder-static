@@ -1,6 +1,6 @@
 // initializes optional parameters
-= add_class = "" unless add_class
-= subhead = "" unless subhead
+- add_class = "" unless add_class
+- subhead = "" unless subhead
 
 / header-large 
 %header{class: "header header--large-alternate" + " " + add_class}
@@ -23,7 +23,3 @@
 %div{class: ".header--large-alternate__image-container"}
   %div{class: "header--large-alternate__image large-screen-only"}  
     = image_tag image
-
-
-
-
