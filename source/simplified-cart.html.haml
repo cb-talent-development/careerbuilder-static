@@ -8,23 +8,23 @@ layout: layout
 
 %div{class: "container text--body"}
 
-  / cart  
+  / left columns - items in cart, promo, billing info
   %section{class: "cart items-in-cart cart--simplified"} 
     / cart__header-row
     %div{class: "cart__row box--divider-bottom"}
       %div{class: "cart__cell cart__cell--title"}
-        %span{class: "text--headline-2", style: "padding-right: 20px;"} 
+        %span{class: "text--headline-2"} 
           Shopping Cart
-        %a{href: "#edit-link"} Edit 
+        %a{href: "#edit-link", class: "text--edit-link"} Edit 
 
     / cart__row 
     %div{class: "cart__row box--divider-bottom"}
 
       %div{class: "cart__cell cart--simplified__cell--title"}
         /  ITEM TITLE 
-        US Priority Job Posting 
+        TITLE US Priority Job Posting TITLE
         / ITEM QUANTITY
-        ( 2 )
+        (&nbsp;NUMBER&nbsp;)
 
       %div{class: "cart__cell cart--simplified__cell--total", style: "text-align: right"}   
         / UNIT PRICE * QUANTITY  
@@ -38,29 +38,120 @@ layout: layout
         /  ITEM TITLE 
         = lorem.words 15 
         / ITEM QUANTITY
-        ( 999 )
+        (&nbsp;2&nbsp;)
 
       %div{class: "cart__cell cart--simplified__cell--total", style: "text-align: right"}   
         / UNIT PRICE * QUANTITY  
         $9999999999.00
 
+    / promo box    
+    %div{class: "cart__row"}
+      %div{class: "cart__row medium-screen-up"}
+      %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
+        Have a promo code? Click here to apply it to your order.
+
+    / promo box - alternate text   
+    %div{class: "cart__row small-screen-only"}
+      %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
+        Apply promo code.
+
+    / Promo code modal  
+    %div{id: "apply-discount", class: "box--quick-submit box--quick-submit--narrow apply-discount hidden" }
+
+      / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
+      %input{type: "text", class: "box--quick-submit__input"}
+      %div{class: "box--quick-submit__button-container"}
+        %button{class: "button button--secondary box--quick-submit__button"}
+          Apply
+
+    / billing info section - header-row
+    %div{class: "cart__row", style: "margin-top: 32px"}
+      %div{class: "cart__cell cart__cell--title"}
+        %span{class: "text--headline-2", style: "padding-right: 20px;"} 
+          Billing Info
+
+    / billing info - data row
+    %div{class: "cart__row"} 
+      %address{class: "cart__cell columns-6 text--address-block"}
+        %div{class: "text--address-block__header-row"}
+          %span{class: "text--strong"} Company Address
+          %span
+            %a{href: "#edit-link", class: "text--edit-link"} Change 
+        %div 
+          Address line
+        %div
+          Address line
+        %div
+          Address line
+        %div
+          PHONE NUMBER line
+
+      %address{class: "cart__cell columns-6 text--address-block"}
+        %div{class: "text--address-block__header-row"}
+          %span{class: "text--strong"} Billing Address
+          %span
+            %a{href: "#edit-link", class: "text--edit-link"} Change 
+        %div 
+          Address line
+        %div
+          Address line
+        %div
+          Address line
+        %div
+          PHONE NUMBER line
 
 
 
-%div{class: "container text--body"}
-  / Promo code link     
-  %div{class: "cart__row medium-screen-up"}
-    %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
-      Have a promo code? Click here to apply it to your order.
 
-  %div{class: "cart__row small-screen-only"}
-    %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
-      Apply promo code.
 
-  / Promo code modal  
-  %div{id: "apply-discount", class: "box--pop-out box--quick-submit box--yellow apply-discount hidden" }
+  / right columns - checkout summary       
+  %section{class: "checkout--simplified"}
+    %div{class: "box--pop-out"}
 
-    / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
-    %input{type: "text", class: "box--quick-submit__input"}
-    %button{class: "button button--primary box--quick-submit__button"}
-      Apply Promo
+      /subtotal
+      %div{class: "cart__row checkout--simplified__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Subtotal:
+        %div{class: "cart__cell checkout__item--right"}
+          $99.99
+    
+      /promo code (if applied)
+      %div{class: "cart__row checkout--simplified__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Promo code: 
+          %br 
+            TROGDOR 
+            &nbsp;
+            %a{href: "#remove-promo-code", class: "text--delete-button"} remove
+            
+        %div{class: "cart__cell checkout__item--right text--success"}
+          %br
+          \-$9.99     
+      
+      /tax
+      %div{class: "cart__row checkout--simplified__subtotal text--smaller"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Tax:
+        %div{class: "cart__cell checkout__item--right"}
+          $8.99
+      
+      /total     
+      %div{class: "cart__row checkout--simplified__total"} 
+        %div{class: "cart__cell checkout__item--left"}
+          Order Total:
+        %div{class: "cart__cell checkout__item--right"}
+          $109.98
+
+      %form      
+        %label{class: "columns-2 form--large__trailing-label alpha", style: "margin-bottom: 20px"}
+          %input{type: "checkbox"} 
+          %span{class: "checkout__terms-label-container text--thin text--smaller"} 
+        %label{class: "columns-10 form--large__trailing-label omega checkout__terms-label", style: "margin-bottom: 20px"}
+          I agree to CareerBuilder's
+          %a{href: "#terms"} Terms and Conditions   
+
+      %a{class: "button button--primary", style: "width: 100%", href: "#checkout"}
+        Complete Purchase
+
+    %div{class: "checkout__security-image"}
+      %img{src: "assets/images/placeholder--security-image.png"}  

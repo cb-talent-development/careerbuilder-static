@@ -25,12 +25,13 @@ layout: layout
         Apply promo code.
 
     / Promo code modal  
-    %div{id: "apply-discount", class: "box--pop-out box--quick-submit box--yellow apply-discount hidden" }
+    %div{id: "apply-discount", class: "box--quick-submit box--quick-submit apply-discount hidden" }
 
       / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
       %input{type: "text", class: "box--quick-submit__input"}
-      %button{class: "button button--primary box--quick-submit__button"}
-        Apply Promo
+      %div{class: "box--quick-submit__button-container"}
+        %button{class: "button button--secondary box--quick-submit__button"}
+          Apply
 
   / Recommended for you
   %section{class: "large-screen-only columns-8"}
@@ -52,8 +53,12 @@ layout: layout
       %div{class: "cart__row checkout__subtotal text--smaller"} 
         %div{class: "cart__cell checkout__item--left"}
           Promo code: 
-          %br TROGDOR -- (10% off)
+          %br 
+            TROGDOR
+            &nbsp;
+            %a{href: "#remove-promo-code", class: "text--delete-button"} remove
         %div{class: "cart__cell checkout__item--right text--success"}
+          %br
           \-$9.99     
       
       /tax

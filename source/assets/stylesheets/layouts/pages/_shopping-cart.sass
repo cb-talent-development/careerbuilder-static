@@ -119,12 +119,31 @@
 
 .checkout__item--left
   +span-columns(8)
+  padding-left: 0
 
 .checkout__item--right
   +span-columns(4)
   text-align: right
+  padding-right: 0
 
 .checkout__security-image
 
 .checkout__security-image img 
   width: 120px  
+
+.checkout__terms-label
+  font-size: 80%
+  line-height: 140%
+// 
+
+.checkout--simplified
+  +span-columns(4)
+  margin-bottom: 20px
+
+.checkout--simplified .checkout--simplified__subtotal 
+  margin-bottom: 0
+  padding-bottom: 0px
+
+.checkout--simplified .checkout--simplified__subtotal .cart__cell
+  padding-bottom: 0px
+  padding-top: 0px

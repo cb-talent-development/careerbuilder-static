@@ -41,6 +41,14 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   padding-left: 20px
   padding-right: 20px
 
+.debug
+  background-color: pink
+
+// Extra resets 
+
+address
+  font-style: inherit  
+
 // MOBILE DISPLAY RULES
 
 // large screen 
@@ -297,6 +305,9 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--thin
   font-weight: 100  
 
+.text--strong
+  font-weight: 900
+
 .text--ghost
   font-weight: 100
   font-style: italic
@@ -306,6 +317,20 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .text--white .text--ghost
   color: $grey-lighter
 
+a.text--delete-button
+  font-size: 80%
+  color: $accent-danger
+  font-weight: 900
+
+a.text--delete-button:hover
+  color: $accent-danger-light
+
+a.text--delete-button:active
+  color: $accent-danger-dark
+
+// TEXT + POSITIONING
+
+// link list
 .text--link-list ul 
   padding: 0
   margin: 0
@@ -343,6 +368,23 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 @media only screen and (max-width: $small-screen-max)
   .text--link-list__arrow 
     display: none
+
+// address 
+.text--address-block div
+  display: block
+  clear: right
+  margin: 0
+  padding: 0
+  line-height: 140%
+  font-size: 14px
+
+.text--address-block .text--address-block__header-row
+  font-size: 16px
+  margin-bottom: 10px
+
+.text--edit-link
+  padding-left: 14px
+  font-size: 13px
 
 // BOXES
 // display only, no positioning
@@ -455,23 +497,42 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 
 // Quick Submit
 .box--quick-submit 
+  +span-columns(6)
+  +outer-container
+  display: block
+  background-color: $panel-primary
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  border: 1px solid $grey-lighter
+  margin-bottom: 20px 
+
+.box--quick-submit.box--quick-submit--narrow
   +span-columns(8)
-  +shift(2)
 
 .box--quick-submit__input 
-  height: 30px 
+  padding: 15px 15px 0px 15px 
+  height: 100% 
   font-size: 18px
-  margin-top: 8px
   +span-columns(8)
+  border: none
+
+.box--quick-submit__input:focus
+  outline: 0
+
+.box--quick-submit__button-container
+  padding: 5px
+  text-align: right
+  +span-columns(4) 
 
 .box--quick-submit__button
-  margin-top: 5px 
-  +span-columns(4)  
+  padding: 5px 
 
 @media only screen and (max-width: $medium-screen-max)
   .box--quick-submit
     +span-columns(12)
-    +shift(0) 
+
+  .box--quick-submit.box--quick-submit--narrow
+    +span-columns(12)   
 
 // BUTTONS (can be extracted to employer-style-base later, note: Sass vs SCSS)
 
@@ -505,7 +566,7 @@ button:action
 
 .button.button--secondary
   border: 2px solid $accent-primary
-  background-color: $secondary-button-color
+  background-color: transparent
   color: $secondary-button-text-color
 
 .button.button--secondary:hover
@@ -611,7 +672,6 @@ button:action
 .top-bar__mobile-menu ul 
   padding: 0
   margin: 0
-  // border-bottom: 3px solid $white
 
 .top-bar__mobile-menu a
   margin-top: 0
@@ -828,6 +888,7 @@ button:action
 .form--large__trailing-label span
   position: relative
   top: 1px  
+  line-height: 140%
 
 .form--large submit, .form--large button, .form--large .button 
   font-size: 16px
