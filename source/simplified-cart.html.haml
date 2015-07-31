@@ -8,3 +8,59 @@ layout: layout
 
 %div{class: "container text--body"}
 
+  / cart  
+  %section{class: "cart items-in-cart cart--simplified"} 
+    / cart__header-row
+    %div{class: "cart__row box--divider-bottom"}
+      %div{class: "cart__cell cart__cell--title"}
+        %span{class: "text--headline-2", style: "padding-right: 20px;"} 
+          Shopping Cart
+        %a{href: "#edit-link"} Edit 
+
+    / cart__row 
+    %div{class: "cart__row box--divider-bottom"}
+
+      %div{class: "cart__cell cart--simplified__cell--title"}
+        /  ITEM TITLE 
+        US Priority Job Posting 
+        / ITEM QUANTITY
+        ( 2 )
+
+      %div{class: "cart__cell cart--simplified__cell--total", style: "text-align: right"}   
+        / UNIT PRICE * QUANTITY  
+        $500.00
+
+    / cart__row 
+    / SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED
+    %div{class: "cart__row box--divider-bottom"}
+
+      %div{class: "cart__cell cart--simplified__cell--title"}
+        /  ITEM TITLE 
+        = lorem.words 15 
+        / ITEM QUANTITY
+        ( 999 )
+
+      %div{class: "cart__cell cart--simplified__cell--total", style: "text-align: right"}   
+        / UNIT PRICE * QUANTITY  
+        $9999999999.00
+
+
+
+
+%div{class: "container text--body"}
+  / Promo code link     
+  %div{class: "cart__row medium-screen-up"}
+    %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
+      Have a promo code? Click here to apply it to your order.
+
+  %div{class: "cart__row small-screen-only"}
+    %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
+      Apply promo code.
+
+  / Promo code modal  
+  %div{id: "apply-discount", class: "box--pop-out box--quick-submit box--yellow apply-discount hidden" }
+
+    / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
+    %input{type: "text", class: "box--quick-submit__input"}
+    %button{class: "button button--primary box--quick-submit__button"}
+      Apply Promo
