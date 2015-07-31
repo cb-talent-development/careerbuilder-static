@@ -14,12 +14,12 @@ window.interact.watchApplyDiscount = function() {
   links.click( function() {
     panel.hidden = !panel.hidden
     if (panel.hidden == true) {
-      panel.hide()
+      panel.slideUp("fast")
       arrows.removeClass('arrow--up')
       arrows.addClass('arrow--down')
     }
     else {
-      panel.slideDown(150)
+      panel.slideDown("fast")
       arrows.removeClass('arrow--down')
       arrows.addClass('arrow--up')
     }

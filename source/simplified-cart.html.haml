@@ -9,7 +9,7 @@ layout: layout
 %div{class: "container text--body"}
 
   / left columns - items in cart, promo, billing info
-  %section{class: "cart items-in-cart cart--simplified"} 
+  %section{class: "cart cart--simplified cart--simplified__main-column"} 
     / cart__header-row
     %div{class: "cart__row box--divider-bottom"}
       %div{class: "cart__cell cart__cell--title"}
@@ -45,8 +45,7 @@ layout: layout
         $9999999999.00
 
     / promo box    
-    %div{class: "cart__row"}
-      %div{class: "cart__row medium-screen-up"}
+    %div{class: "cart__row medium-screen-up"}
       %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Have a promo code? Click here to apply it to your order.
         %div{class: "arrow--down promo-code-arrow"}
@@ -63,7 +62,7 @@ layout: layout
       / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
       %input{type: "text", class: "box--quick-submit__input"}
       %div{class: "box--quick-submit__button-container"}
-        %button{class: "button button--secondary box--quick-submit__button"}
+        %button{class: "button button--secondary box--quick-submit__button cart__apply-discount-link"}
           Apply
 
     / billing info section - header-row
@@ -88,26 +87,35 @@ layout: layout
         %div
           PHONE NUMBER line
 
-      %address{class: "cart__cell columns-6 text--address-block"}
-        %div{class: "text--address-block__header-row"}
-          %span{class: "text--strong"} Billing Address
-          %span
-            %a{href: "#edit-link", class: "text--edit-link"} Change 
-        %div 
-          Address line
-        %div
-          Address line
-        %div
-          Address line
-        %div
-          PHONE NUMBER line
+      %div{class: "columns-6"}
+        %address{class: "cart__cell text--address-block"}
+          %div{class: "text--address-block__header-row"}
+            %span{class: "text--strong"} Billing Address
+            %span
+              %a{href: "#edit-link", class: "text--edit-link"} Change 
+          %div 
+            Address line
+          %div
+            Address line
+          %div
+            Address line
+          %div
+            PHONE NUMBER line
+
+        %div{class: "simplified-cart__card-container"}
+          - # provide classes 'visa' 'discover' 'amex' 'mastercard'
+          %div{class: "simplified-cart__card visa"}
+          - # provide last-four-digits of card, replaces 1234
+          %div{class: "simplified-cart__card-caption"} Ending in 1234
+
+
 
 
 
 
 
   / right columns - checkout summary       
-  %section{class: "checkout--simplified"}
+  %section{class: "checkout--simplified cart--simplified__secondary-column"}
     %div{class: "box--pop-out"}
 
       /subtotal
