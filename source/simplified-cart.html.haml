@@ -8,8 +8,15 @@ layout: layout
 %div{class: "modal__positioning"}
   %div{class: "modal__container text--body"}
 
-    // #modal-change-payment
+    // #modal--change-billing-address
+    = partial 'partials/modal--change-billing-address'
+
+    // #modal--change-billing-address
+    = partial 'partials/modal--change-company-address'
+
+    // #modal--change-billing
     = partial 'partials/modal--change-payment'
+
 
 / thin-header 
 = partial 'partials/header-thin', :locals => {:headline => "Your Cart", :show_progress_bar => false}  
@@ -85,7 +92,8 @@ layout: layout
         %div{class: "text--address-block__header-row"}
           %span{class: "text--strong"} Company Address
           %span
-            %a{href: "#edit-link", class: "text--edit-link"} Change 
+            - # link to #top-bar is important; moves browser to top of page, which is where the modal is.  
+            %a{href: "#top-bar", class: "text--edit-link modal-open--change-company-address"} Change 
         %div 
           Address line
         %div
@@ -100,7 +108,8 @@ layout: layout
           %div{class: "text--address-block__header-row"}
             %span{class: "text--strong"} Billing Address
             %span
-              %a{href: "#edit-link", class: "text--edit-link"} Change 
+              - # link to #top-bar is important; moves browser to top of page, which is where the modal is.
+              %a{href: "#top-bar", class: "text--edit-link modal-open--change-billing-address"} Change 
           %div 
             Address line
           %div

@@ -1,0 +1,47 @@
+%div{class: "modal__box box--pop-out hidden", id: "modal--change-company-address"}
+  = partial 'partials/modal--close-button'
+
+  %h2{class: "text--headline-2 text--accent alpha"}
+    Change company address
+
+  %form{class: "modal__form"}
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Billing Address 
+      %input{class: "modal__form-right", type: "text"} 
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Country 
+      %select{class: "modal__form-right"}
+        %option{value: "", selected: true, style: "display: none;"} 
+
+        %option placeholder 
+        %option placeholder 2
+        %option placeholder 3
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        State 
+      %select{class: "modal__form-right"}
+        %option{value: "", selected: true, style: "display: none;"} 
+
+        %option placeholder 
+        %option placeholder 2
+        %option placeholder 3
+ 
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        City 
+      %input{class: "modal__form-right", type: "text"}
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Zip 
+      %input{class: "modal__form-right", type: "text"}
+
+    %div{class: "modal__form-row omega"}  
+
+    %div{class: "modal__form-row"} 
+      %submit{class: "button button--primary modal__form-submit close-modal"}
+        Save and Close

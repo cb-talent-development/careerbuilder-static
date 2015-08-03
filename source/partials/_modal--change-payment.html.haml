@@ -1,4 +1,4 @@
-%div{class: "modal__box box--pop-out", id: "modal-change-payment"}
+%div{class: "modal__box box--pop-out hidden", id: "modal--change-payment"}
   = partial 'partials/modal--close-button'
 
   %h2{class: "text--headline-2 text--accent alpha"}
@@ -84,5 +84,5 @@
     %div{class: "modal__form-row omega"}  
 
     %div{class: "modal__form-row"} 
-      %submit{class: "button button--primary modal__form-submit"}
+      %submit{class: "button button--primary modal__form-submit close-modal"}
         Save and Close
