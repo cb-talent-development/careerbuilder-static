@@ -7,16 +7,21 @@ window.interact.watchApplyDiscount = function() {
 
   panel = $('#apply-discount')
   links = $('.cart__apply-discount-link')
+  arrows = $('.promo-code-arrow')
   panel.hidden = true;
   panel.hide();
   panel.removeClass('hidden');
   links.click( function() {
     panel.hidden = !panel.hidden
     if (panel.hidden == true) {
-      panel.hide()
+      panel.slideUp("fast")
+      arrows.removeClass('arrow--up')
+      arrows.addClass('arrow--down')
     }
     else {
-      panel.slideDown(150)
+      panel.slideDown("fast")
+      arrows.removeClass('arrow--down')
+      arrows.addClass('arrow--up')
     }
   });
 };

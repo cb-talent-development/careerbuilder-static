@@ -1,0 +1,72 @@
+// initializes optional parameters
+- add_class = "" unless add_class 
+
+/ cart  
+%section{class: "cart items-in-cart"} 
+  / cart__header-row
+  %div{class: "cart__row box--header-row"}
+    %div{class: "cart__cell cart__cell--title"}
+      Items in your cart 
+    %div{class: "cart__cell cart__cell--quantity"}
+      Quantity 
+    %div{class: "cart__cell cart__cell--remove"}
+
+    %div{class: "cart__cell cart__cell--price large-screen-only"}
+      Price
+    %div{class: "cart__cell cart__cell--total"}
+      Total
+  / cart__row 
+  %div{class: "cart__row box--divider-bottom"}
+
+    %div{class: "cart__cell cart__cell--title"}
+      %a{href: "#item-title-link"} 
+        /  ITEM TITLE 
+        US Priority Job Posting 
+      %p{class: "text--caption cart__caption medium-screen-up"}  
+        / ITEM DESCRIPTION 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+
+    %div{class: "cart__cell cart__cell--quantity"} 
+
+      / Input type Number falls back to text field in IE8, IE9
+      / http://html5please.com/#number
+
+      / ITEM QUANTITY IN VALUE FIELD
+      %input{type: "number", value: 2}  
+
+    %div{class: "cart__cell cart__cell--remove text--smaller"} 
+      %a{href: "#remove-from-cart", class: "medium-screen-up" } 
+        Remove
+
+    %div{class: "cart__cell cart__cell--price large-screen-only"} 
+      / SINGLE UNIT PRICE   
+      $250.00
+
+    %div{class: "cart__cell cart__cell--total"}   
+      / UNIT PRICE * QUANTITY  
+      $500.00
+
+  / cart__row 
+  / SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED
+  %div{class: "cart__row box--divider-bottom"}
+
+    %div{class: "cart__cell cart__cell--title"}
+      %a{class: "cart__item-title", href: "#item-title-link"}
+        Second Job Posting 
+      %p{class: "text--caption medium-screen-up"}   
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+
+    %div{class: "cart__cell cart__cell--quantity"} 
+      %input{type: "number", value: 1}  
+
+    %div{class: "cart__cell cart__cell--remove text--smaller"} 
+      %a{href: "#remove-from-cart", class: "medium-screen-up"} 
+        Remove
+
+    %div{class: "cart__cell cart__cell--price large-screen-only"} 
+      / SINGLE PRICE HERE  
+      $300.00
+
+    %div{class: "cart__cell cart__cell--total"}   
+      / PRICE * QUANTITY HERE 
+      $300.00

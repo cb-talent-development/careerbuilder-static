@@ -12,7 +12,7 @@
   
 .cart__row
   +span-columns(12)  
-  margin-bottom: 20px
+  margin-bottom: 10px
 
 .cart__row.cart__row--tight 
   margin-bottom: 0px
@@ -36,7 +36,7 @@
 .cart__cell--title
   +span-columns(5)
 
-@media (min-width: $small-screen-max) and (max-width: $medium-screen-max)
+@media only screen and (min-width: $small-screen-max) and (max-width: $medium-screen-max)
   .cart__cell--title
     +span-columns(7)  
 
@@ -67,6 +67,74 @@
   +span-columns(3) 
 
 .cart__apply-discount-link  
+
+// 
+
+.cart--simplified__cell--title
+  +span-columns(8)
+
+.cart--simplified__cell--total
+  +span-columns(4)
+
+.cart.cart--simplified__main-column
+  +span-columns(8)
+
+.cart--simplified__secondary-column
+  +span-columns(4)
+  margin-bottom: 20px
+
+@media only screen and (max-width: $medium-screen-max)
+
+  .cart.cart--simplified__main-column
+    +span-columns(12)  
+
+@media only screen and (min-width: $small-screen-max) and (max-width: $medium-screen-max)
+
+  .cart--simplified__secondary-column
+    +span-columns(6)
+    +shift(3)
+
+@media only screen and (max-width: $small-screen-max) 
+
+  .cart--simplified__secondary-column
+    +span-columns(12)
+    +shift(0)
+
+.simplified-cart__card-container
+  +outer-container
+
+.simplified-cart__card
+  margin-left: 8px
+  display: inline-block
+  height: 35px
+  width: 59px
+  background-image: url("/assets/images/icon--credit-cards.png")
+  background-repeat: no-repeat
+  background-position: 62px 0px
+  border: 1px solid $grey-lighter
+  +border-top-radius(4px)
+  +border-bottom-radius(4px)
+
+.simplified-cart__card
+
+.simplified-cart__card.visa 
+  background-position: 0px 0px
+
+.simplified-cart__card.mastercard
+  background-position: -64px 0px
+
+.simplified-cart__card.amex
+  background-position: -128px 0px
+
+.simplified-cart__card.discover
+  background-position: -192px 0px
+
+.simplified-cart__card-caption
+  display: inline-block 
+  position: relative
+  top: -15px
+  margin-left: 5px 
+  font-size: 14px
 
 // 
 
@@ -108,12 +176,29 @@
 
 .checkout__item--left
   +span-columns(8)
+  padding-left: 0
 
 .checkout__item--right
   +span-columns(4)
   text-align: right
+  padding-right: 0
 
 .checkout__security-image
 
 .checkout__security-image img 
   width: 120px  
+
+.checkout__terms-label
+  font-size: 80%
+  line-height: 140%
+// 
+
+.checkout--simplified
+
+.checkout--simplified .checkout--simplified__subtotal 
+  margin-bottom: 0
+  padding-bottom: 0px
+
+.checkout--simplified .checkout--simplified__subtotal .cart__cell
+  padding-bottom: 0px
+  padding-top: 0px

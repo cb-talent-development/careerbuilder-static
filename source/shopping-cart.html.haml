@@ -1,5 +1,5 @@
 ---
-title: Shopping Cart
+title: Your Cart
 layout: layout
 ---
 
@@ -12,98 +12,33 @@ layout: layout
   %div{class: "helper-text"} 
     = partial 'partials/email-us-link' 
 
-  / cart  
-  %section{class: "cart items-in-cart"} 
-    / cart__header-row
-    %div{class: "cart__row box--header-row"}
-      %div{class: "cart__cell cart__cell--title"}
-        Items in your cart 
-      %div{class: "cart__cell cart__cell--quantity"}
-        Quantity 
-      %div{class: "cart__cell cart__cell--remove"}
-
-      %div{class: "cart__cell cart__cell--price large-screen-only"}
-        Price
-      %div{class: "cart__cell cart__cell--total"}
-        Total
-    / cart__row 
-    %div{class: "cart__row box--divider-bottom"}
-
-      %div{class: "cart__cell cart__cell--title"}
-        %a{href: "#item-title-link"} 
-          /  ITEM TITLE 
-          US Priority Job Posting 
-        %p{class: "text--caption cart__caption medium-screen-up"}  
-          / ITEM DESCRIPTION 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-
-      %div{class: "cart__cell cart__cell--quantity"} 
-
-        / Input type Number falls back to text field in IE8, IE9
-        / http://html5please.com/#number
-
-        / ITEM QUANTITY IN VALUE FIELD
-        %input{type: "number", value: 2}  
-
-      %div{class: "cart__cell cart__cell--remove text--smaller"} 
-        %a{href: "#remove-from-cart", class: "medium-screen-up" } 
-          Remove
-
-      %div{class: "cart__cell cart__cell--price large-screen-only"} 
-        / SINGLE UNIT PRICE   
-        $250.00
-
-      %div{class: "cart__cell cart__cell--total"}   
-        / UNIT PRICE * QUANTITY  
-        $500.00
-
-    / cart__row 
-    / SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED
-    %div{class: "cart__row box--divider-bottom"}
-
-      %div{class: "cart__cell cart__cell--title"}
-        %a{class: "cart__item-title", href: "#item-title-link"}
-          Second Job Posting 
-        %p{class: "text--caption medium-screen-up"}   
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-
-      %div{class: "cart__cell cart__cell--quantity"} 
-        %input{type: "number", value: 1}  
-
-      %div{class: "cart__cell cart__cell--remove text--smaller"} 
-        %a{href: "#remove-from-cart", class: "medium-screen-up"} 
-          Remove
-
-      %div{class: "cart__cell cart__cell--price large-screen-only"} 
-        / SINGLE PRICE HERE  
-        $300.00
-
-      %div{class: "cart__cell cart__cell--total"}   
-        / PRICE * QUANTITY HERE 
-        $300.00
-
-
+    / cart  
+    = partial 'partials/cart--your-items'
 
     / Promo code link     
     %div{class: "cart__row medium-screen-up"}
       %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Have a promo code? Click here to apply it to your order.
+        %div{class: "arrow--down promo-code-arrow"}
 
     %div{class: "cart__row small-screen-only"}
       %a{class: "cart__cell text--caption cart__apply-discount-link", href: "#apply-promo-code"}
         Apply promo code.
+        %div{class: "arrow--down promo-code-arrow"}
 
     / Promo code modal  
-    %div{id: "apply-discount", class: "box--pop-out box--quick-submit box--yellow apply-discount hidden" }
+    %div{id: "apply-discount", class: "box--quick-submit box--quick-submit apply-discount hidden" }
 
       / SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC  
       %input{type: "text", class: "box--quick-submit__input"}
-      %button{class: "button button--primary box--quick-submit__button"}
-        Apply Promo
+      %div{class: "box--quick-submit__button-container"}
+        %button{class: "button button--secondary box--quick-submit__button cart__apply-discount-link"}
+          Apply
 
   / Recommended for you
   %section{class: "large-screen-only columns-8"}
     = partial 'partials/recommended-items'
+
 
   / Checkout
   %section{class: "checkout"}
@@ -120,8 +55,12 @@ layout: layout
       %div{class: "cart__row checkout__subtotal text--smaller"} 
         %div{class: "cart__cell checkout__item--left"}
           Promo code: 
-          %br TROGDOR -- (10% off)
+          %br 
+            TROGDOR
+            &nbsp;
+            %a{href: "#remove-promo-code", class: "text--delete-button"} remove
         %div{class: "cart__cell checkout__item--right text--success"}
+          %br
           \-$9.99     
       
       /tax
@@ -141,4 +80,4 @@ layout: layout
         Checkout
 
     %div{class: "checkout__security-image"}
-      %img{src: "assets/images/placeholder--security-image.png"}      
+      %img{src: "assets/images/placeholder--security-image.png"}  

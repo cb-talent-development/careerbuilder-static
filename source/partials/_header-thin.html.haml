@@ -1,5 +1,6 @@
 // initializes optional parameters
-= add_class = "" unless add_class
+- add_class = "" unless add_class 
+- show_progress_bar = false unless show_progress_bar
 
 / header 
 
@@ -9,5 +10,8 @@
     %h1{class: "header__headline text--headline text--white"}
       = headline
 
-    / header__progress-bar
-    = partial 'partials/progress-bar'    
+
+    - if show_progress_bar
+
+      / header__progress-bar
+      = partial 'partials/progress-bar'    
