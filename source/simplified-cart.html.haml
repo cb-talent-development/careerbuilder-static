@@ -3,6 +3,10 @@ title: Your Cart
 layout: layout
 ---
 
+
+// Start modal code
+
+
 / thin-header 
 = partial 'partials/header-thin', :locals => {:headline => "Your Cart", :show_progress_bar => false}  
 
@@ -108,12 +112,6 @@ layout: layout
           - # provide last-four-digits of card, replaces 1234
           %div{class: "simplified-cart__card-caption"} Ending in 1234
 
-
-
-
-
-
-
   / right columns - checkout summary       
   %section{class: "checkout--simplified cart--simplified__secondary-column"}
     %div{class: "box--pop-out"}
@@ -165,3 +163,9 @@ layout: layout
 
     %div{class: "checkout__security-image"}
       %img{src: "assets/images/placeholder--security-image.png"}  
+
+
+
+
+
+
