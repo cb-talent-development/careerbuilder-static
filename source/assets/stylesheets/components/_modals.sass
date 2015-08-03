@@ -11,9 +11,9 @@
   z-index: 1000001
 
 .modal__container
-  +outer-container
   margin-top: 120px
 
+// main box
 .modal__box
   +span-columns(6)
   +shift(3)
@@ -21,6 +21,20 @@
 .modal__box h2.alpha
   margin-top: 0  
 
+@media only screen and (min-width: $medium-screen-min) and (max-width: $medium-screen-max)
+  .modal__box
+    +span-columns(10)
+    +shift(1)
+
+@media only screen and (max-width: $small-screen-max)
+  .modal__container
+    margin-top: 20px
+
+  .modal__box
+    +span-columns(12)
+    +shift(0)
+
+// close button
 .modal__close-button
   text-align: right
   float: right
@@ -36,16 +50,33 @@
   margin: 0
   text-decoration: none
 
+// two-column form 
+.modal__form
+  font-size: 16px 
 
-@media only screen and (min-width: $medium-screen-min) and (max-width: $medium-screen-max)
-  .modal__box
-    +span-columns(10)
-    +shift(1)
+.modal__form-row
+  +outer-container
+  display: block
+  margin-bottom: 10px
 
-@media only screen and (max-width: $small-screen-max)
-  .modal__container
-    margin-top: 20px
+.modal__form-row.omega
+  margin-bottom: 0
+  margin-top: 60px
 
-  .modal__box
-    +span-columns(12)
-    +shift(0)
+.modal__form-left
+  +span-columns(5)
+  margin-top: 14px
+
+.modal__form-right
+  +span-columns(7)
+  
+.modal__form input, .modal__form select
+  height: 40px
+  padding: 0 10px 
+  border: 1px solid $grey-lighter
+  background-color: transparent
+
+.modal__form-submit 
+  +span-columns(7)
+  +shift(5)
+
