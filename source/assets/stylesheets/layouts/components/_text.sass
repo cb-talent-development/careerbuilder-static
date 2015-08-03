@@ -1,0 +1,196 @@
+// TEXT
+// display only, no positioning
+
+.text--body
+  font-family: $Lato
+  font-weight: 400
+  line-height: 175%
+
+.text--body a
+  text-decoration: none
+  color: $base-link-color
+
+.text--body a:hover
+  color: $hover-link-color
+
+.text--white, .text--white a, .text--white a:hover
+  color: $white
+
+.text--grey
+  color: $grey-darker
+
+.text-white .text-grey 
+  color: $grey-lighter
+
+.text--accent, .text--accent a, .text--accent a:hover
+  color: $accent-primary
+
+.text--top-bar-link, .text--top-bar-link a
+  font-family: $Lato
+  font-weight: 300
+  font-size: 9pt
+  text-decoration: none
+
+.text--top-bar-helper 
+  font-family: $Lato
+  font-weight: 300
+  font-size: 11pt
+
+.text--top-bar-helper a  
+  color: $accent-primary 
+  font-weight: 400
+  text-decoration: none 
+
+.text--top-bar-helper a:hover
+  text-decoration: none
+  color: $accent-primary  
+
+.text--top-bar-helper a:active
+  color: $accent-primary-dark 
+
+.text--subnav, .text--subnav a
+  font-family: $Lato
+  font-weight: 300
+  font-size: 11pt
+  text-decoration: none
+
+.text--headline, .text--headline a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 40px
+  text-decoration: none
+
+.text--headline-2, .text--headline-2 a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 26px
+  text-decoration: none
+
+.text--headline-3, .text--headline-3 a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 20px
+  text-decoration: none
+
+.text--headline-4, .text--headline-4 a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 18px
+  text-decoration: none
+
+.text--subhead
+  font-family: $Lato
+  font-weight: 100
+  font-size: 24px
+
+.text--subhead a  
+  text-decoration: none
+
+.text--caption
+  font-family: $Lato
+  font-weight: 300
+  font-size: 10pt
+  line-height: 140%
+
+.text--caption a, a.text--caption
+  font-family: $Lato
+  font-weight: 400
+
+.text--details
+  font-family: $Lato
+  font-weight: 300
+  font-size: 12pt
+  line-height: 140%  
+
+.text--smaller
+  font-size: 80%
+
+.text--larger
+  font-size: 120%
+
+.text--success
+  color: $accent-success  
+
+.text--thin
+  font-weight: 100  
+
+.text--strong
+  font-weight: 900
+
+.text--ghost
+  font-weight: 100
+  font-style: italic
+  font-size: 90%
+  color: $grey-darker  
+
+.text--white .text--ghost
+  color: $grey-lighter
+
+a.text--delete-button
+  font-size: 80%
+  color: $accent-danger
+  font-weight: 900
+
+a.text--delete-button:hover
+  color: $accent-danger-light
+
+a.text--delete-button:active
+  color: $accent-danger-dark
+
+// TEXT + POSITIONING
+
+// link list
+.text--link-list ul 
+  padding: 0
+  margin: 0
+
+.text--link-list li
+  list-style: none
+  padding: 30px 160px 30px 0
+  border-bottom: 1px solid $grey-lighter
+  line-height: 130%
+
+@media only screen and (max-width: $small-screen-max)
+  .text--link-list li
+    padding: 30px 0px 30px 0
+
+.text--link-list a 
+  display: block
+
+.text--link-list li.alpha
+
+.text--link-list li.omega
+  border-bottom: none
+
+.text--link-list p 
+  margin: 5px 0
+
+.text--link-list h3 
+  margin: 5px 0
+
+.text--link-list__arrow
+  font-size: 60px
+  font-weight: 100
+  +transform(scaleX(.6))
+  color: $grey-lighter
+
+@media only screen and (max-width: $small-screen-max)
+  .text--link-list__arrow 
+    display: none
+
+// address 
+.text--address-block div
+  display: block
+  clear: right
+  margin: 0
+  padding: 0
+  line-height: 140%
+  font-size: 14px
+
+.text--address-block .text--address-block__header-row
+  font-size: 16px
+  margin-bottom: 10px
+
+.text--edit-link
+  padding-left: 14px
+  font-size: 13px
