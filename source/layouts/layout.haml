@@ -21,6 +21,11 @@
 
   %body{ class: page_classes + " base-background" }
   
+
+    %div{class: "modal__background", id: "modal-background"}
+
+      = lorem.words 500
+
     = partial 'partials/top-bar' 
 
     = yield 
