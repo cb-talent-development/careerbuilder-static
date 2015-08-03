@@ -4,7 +4,16 @@ layout: layout
 ---
 
 
-// Start modal code
+/ modals
+%div{class: "modal__positioning"}
+  %div{class: "modal__container"}
+
+    // #modal-change-payment
+    %div{class: "modal__box box--pop-out", id: "modal-change-payment"}
+      = partial 'partials/modal--close-button'
+      %h2{class: "text--headline-2 text--accent alpha"}
+        Change payment method
+
 
 
 / thin-header 
