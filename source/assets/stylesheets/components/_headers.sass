@@ -4,6 +4,7 @@
   height: $top-bar--height
   background-color: $primary-darker
   border-bottom: 1px solid $grey-darkest
+  overflow: visible
 
 .top-bar__logo
   float: left
@@ -16,35 +17,12 @@
   display: block
   background-color: $base-active-button-color  
 
-.top-bar__links
-  float: right
+.top-bar__helper-text
+  padding-top: 20px
+  padding-right: 30px
+  text-align: right    
 
-.top-bar__links ul
-  margin-top: 0px
-  height: $top-bar--height
-  display: flex
-
-.top-bar__links a
-  display: inline-block
-  height: $top-bar--height
-
-.top-bar__links a:hover
-  background-color: $primary-light
-
-.top-bar__links a:active
-  background-color: $base-active-button-color  
-
-.top-bar__links li
-  list-style: none
-  border-right: 0
-  border-left: 1px solid $primary-light
-  height: $top-bar--height
-  padding: 22px 30px
-
-.top-bar__links img, .top-bar__mobile-menu img
-  padding-right: 5px
-  height: 12px
-
+// Mobile menu 
 .top-bar__mobile-menu-link
   padding: 15px
 
@@ -74,10 +52,89 @@
   display: block
   list-style: none
 
-.top-bar__helper-text
-  padding-top: 20px
-  padding-right: 30px
-  float: right  
+// top-bar dropdown
+
+.flyout ul 
+  text-align: left
+  display: inline
+  margin: 0
+  padding: 10px 4px 17px 0
+  list-style: none
+
+.flyout ul li 
+  height: $top-bar--height
+  display: inline-block
+  margin-right: -4px
+  position: relative
+  cursor: pointer
+  +transition(all 0.2s)
+
+.flyout ul li ul
+  z-index: 2000
+  padding: 0
+  position: absolute
+  top: $top-bar--height
+  left: -2px
+  width: 100%
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  display: none
+  opacity: 0
+  visibility: hidden
+  +transition(opacity 0.2s)
+
+.flyout ul li ul li 
+  display: block 
+
+.flyout ul li:hover ul
+  display: block
+  visibility: visible
+  opacity: 1
+
+.top-bar__links
+  float: right
+  padding-right: 20px 
+  background-color: $primary-darker
+
+.top-bar__links img, .top-bar__mobile-menu img
+  padding-right: 5px
+  height: 12px
+
+.top-bar__links ul li 
+  padding: 22px 32px 8px 32px
+  border-left: 1px solid $primary-light
+
+.top-bar__links ul li:hover
+  background-color: $primary-light
+
+.top-bar__links ul li ul li, .header__subnav ul li ul li
+  background-color: $primary-dark
+  text-shadow: 0 -1px 0 #000
+  border-bottom: 1px solid $primary-light
+  border-left: 1px solid $primary-light
+
+.top-bar__links ul li ul li:hover 
+  background: $primary-darker
+
+.header__subnav ul
+  display: block
+  padding: 0
+  margin: 0px
+  height: 40px
+
+.header__subnav ul li
+  display: inline-block
+  list-style: none
+  padding: 20px 40px 10px 10px
+
+.header__subnav ul li ul li
+  padding: 10px
+  height: auto
+  width: 250px
+
+.header__subnav ul li:hover
+  background-color: $primary-light
 
 // HEADER
 
@@ -133,18 +190,6 @@
   +span-columns(12)
   display: block
   margin-bottom: 60px
-
-.header__subnav ul
-  display: block
-  padding: 0
-  margin: 0px
-  height: 40px
-
-.header__subnav li
-  display: inline-block
-  list-style: none
-  padding: 0
-  margin: 20px 25px 10px 0px
 
 .header__headline, .header__subhead
   +span-columns(6)
