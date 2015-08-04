@@ -1,0 +1,154 @@
+
+// BOXES
+// display of box only, no positioning outside of box
+
+.box--header-row
+  display: block
+  background-color: $grey-lighter
+  +border-top-radius(5px)
+
+.box--pop-out
+  +outer-container
+  display: block
+  background-color: $panel-primary
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  border: 1px solid $grey-lighter
+  border-bottom: 3px solid $grey-lighter
+  padding: 32px
+  margin-bottom: 20px  
+
+.box--pop-out.box--yellow
+  background-color: $light-yellow
+
+.box--pop-out.box--pop-out__top
+  // allows --pop-out to have sections
+  margin-bottom: 0px 
+  border-bottom: 1px solid $grey-lighter
+  +border-bottom-radius(0) 
+  padding-bottom: 10px
+
+.box--pop-out.box--pop-out__bottom
+  padding-top: 10px
+  +border-top-radius(0px)
+  border-top: 0
+  margin-top: 0
+
+.box--divider-bottom
+  border-bottom: 1px solid $grey-lighter
+  padding-bottom: 10px
+
+.box--divider-right
+  border-right: 1px solid $grey-lighter
+  // ^ This is not working as expected.
+
+// Progress Bar 
+.box--progress-bar li
+  position: relative
+  z-index: 1001
+  display: inline-block
+  width: 24px
+  height: 24px
+  +border-top-radius(12px)
+  +border-bottom-radius(12px)
+  background-color: $primary-darker
+  font-size: 9pt
+  text-align: center
+  padding-top: 5px
+  margin-right: 80px
+
+.box--progress-bar li label
+  position: relative
+  display: block
+  top: 20px
+  left: -26px
+  text-align: center
+  width: 80px
+
+.box--progress-bar--current
+  background-color: $accent-active !important
+
+.box--progress-bar--current label
+  color: $accent-active
+
+.box--progress-bar--completed
+  background-color: $grey-darker !important
+
+.box--progress-bar--completed label
+  color: $grey-dark  
+
+.box--progress-bar__line
+  z-index: 1000
+  position: relative
+  background-color: $primary-darker
+  height: 5px
+  // adjust width for numbers of steps
+  // ~ 20px + (100 * (steps - 1))
+  width: 320px
+  top: 15px
+  margin-left: 12px
+  margin-right: 70px
+
+.box--circle-text
+  display: inline-block
+  font-size: 12px
+  font-weight: 400 
+  width: 24px
+  height: 24px
+  text-align: center
+  vertical-align: middle
+  margin-bottom: 5px
+  margin-right: 10px
+  +border-top-radius(12px)
+  +border-bottom-radius(12px)
+  background-color: $accent-primary
+  color: $base-background-color
+
+.box--circle-text span
+  position: relative 
+  top: -.15em
+
+// Quick Submit
+.box--quick-submit 
+  +span-columns(6)
+  +outer-container
+  display: block
+  background-color: $panel-primary
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  border: 1px solid $grey-lighter
+  margin-bottom: 20px 
+
+.box--quick-submit.box--quick-submit--narrow
+  +span-columns(8)
+
+.box--quick-submit__input 
+  padding: 15px 15px 0px 15px 
+  height: 100% 
+  font-size: 18px
+  +span-columns(8)
+  border: none
+
+.box--quick-submit__input:focus
+  outline: 0
+
+.box--quick-submit__button-container
+  padding: 5px
+  text-align: right
+  +span-columns(4) 
+
+.box--quick-submit__button
+  padding: 5px 
+
+@media only screen and (max-width: $medium-screen-max)
+  .box--quick-submit
+    +span-columns(12)
+
+  .box--quick-submit.box--quick-submit--narrow
+    +span-columns(12)  
+
+  .box--quick-submit__button-container
+    +span-columns(6)  
+
+  .box--quick-submit__input
+    +span-columns(6)    

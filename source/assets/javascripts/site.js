@@ -44,9 +44,48 @@ window.interact.watchMobileMenu = function() {
   });
 }; 
 
+window.interact.modal = function(modalName, openLink) {
+  
+  openLinks = $('.' + openLink);
+  closeLinks = $('.close-modal');
+  modalBack = $('#modal-background');
+  modalForm = $('#' + modalName); 
+  // modals start with '.hidden' in HTML to prevent load order race between HTML/JS
+  modalForm.hide();
+  modalBack.hide();
+  modalForm.removeClass('hidden');
+  modalBack.removeClass('hidden');
+  
+  closeLinks.click(function() { 
+    // binding to all close links; click on one modal hides all modals 
+    // console.log("modal close: " + modalName);
+    modalForm.hide();
+    modalBack.hide();
+  });
+
+  openLinks.click(function() { 
+    // console.log("modal open: " + modalName);
+    
+    // required
+    modalForm = $('#' + modalName); 
+    // guards against showing background when modal not found 
+    if (modalForm.length >= 1) {
+      modalBack.show();
+      modalForm.show(); 
+      }
+    else {
+      console.log("ERROR: link asked for a modal named #" + modalName + " but it wasn't found on the page.")  
+    };
+  });
+}; 
+
 jQuery(function(){
   console.log('site.js working');
 
+  // modals must be added manually, this is a likely refactor if this gets hard
+  // arguements are ( 'my-modal-id' , 'class-on-links-to-open' ) just like that.
+  window.interact.modal('modal--change-billing-address', 'modal-open--change-billing-address')
+  window.interact.modal('modal--change-company-address', 'modal-open--change-company-address')
   window.interact.watchMobileMenu();
   window.interact.watchApplyDiscount();
 })

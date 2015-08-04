@@ -20,7 +20,9 @@
     = stylesheet_link_tag :site 
 
   %body{ class: page_classes + " base-background" }
-  
+
+    %div{class: "modal__background hidden", id: "modal-background"}
+
     = partial 'partials/top-bar' 
 
     = yield 

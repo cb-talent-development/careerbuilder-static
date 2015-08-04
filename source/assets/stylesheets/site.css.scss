@@ -20,3 +20,7 @@
 @import 'layouts/common';     // Common Layout Blocks
 @import 'layouts/document';   // Document Layouts
 @import 'layouts/pages/*';    // Page-Specific Layouts
+
+//-----------  Components  -----------//
+
+@import 'components/*';     // Gadgets (ex: modals, headers)

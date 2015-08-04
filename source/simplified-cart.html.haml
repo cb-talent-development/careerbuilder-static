@@ -3,6 +3,17 @@ title: Your Cart
 layout: layout
 ---
 
+
+/ modals
+%div{class: "modal__positioning"}
+  %div{class: "modal__container text--body"}
+
+    // #modal--change-billing-address
+    = partial 'partials/modal--change-billing-address'
+
+    // #modal--change-company-address
+    = partial 'partials/modal--change-company-address'
+
 / thin-header 
 = partial 'partials/header-thin', :locals => {:headline => "Your Cart", :show_progress_bar => false}  
 
@@ -12,7 +23,7 @@ layout: layout
   %section{class: "cart cart--simplified cart--simplified__main-column"} 
     / cart__header-row
     %div{class: "cart__row box--divider-bottom"}
-      %div{class: "cart__cell cart__cell--title"}
+      %div{class: "cart__cell cart__cell--title cart--simplified__cell--headline"}
         %span{class: "text--headline-2"} 
           Shopping Cart
         %a{href: "#edit-link", class: "text--edit-link"} Edit 
@@ -42,7 +53,7 @@ layout: layout
 
       %div{class: "cart__cell cart--simplified__cell--total", style: "text-align: right"}   
         / UNIT PRICE * QUANTITY  
-        $9999999999.00
+        $99999.00
 
     / promo box    
     %div{class: "cart__row medium-screen-up"}
@@ -77,7 +88,8 @@ layout: layout
         %div{class: "text--address-block__header-row"}
           %span{class: "text--strong"} Company Address
           %span
-            %a{href: "#edit-link", class: "text--edit-link"} Change 
+            - # link to #top-bar is important; moves browser to top of page, which is where the modal is.  
+            %a{href: "#top-bar", class: "text--edit-link modal-open--change-company-address"} Change 
         %div 
           Address line
         %div
@@ -92,7 +104,8 @@ layout: layout
           %div{class: "text--address-block__header-row"}
             %span{class: "text--strong"} Billing Address
             %span
-              %a{href: "#edit-link", class: "text--edit-link"} Change 
+              - # link to #top-bar is important; moves browser to top of page, which is where the modal is.
+              %a{href: "#top-bar", class: "text--edit-link modal-open--change-billing-address"} Change 
           %div 
             Address line
           %div
@@ -107,12 +120,6 @@ layout: layout
           %div{class: "simplified-cart__card visa"}
           - # provide last-four-digits of card, replaces 1234
           %div{class: "simplified-cart__card-caption"} Ending in 1234
-
-
-
-
-
-
 
   / right columns - checkout summary       
   %section{class: "checkout--simplified cart--simplified__secondary-column"}
@@ -165,3 +172,9 @@ layout: layout
 
     %div{class: "checkout__security-image"}
       %img{src: "assets/images/placeholder--security-image.png"}  
+
+
+
+
+
+
