@@ -4,6 +4,7 @@
   height: $top-bar--height
   background-color: $primary-darker
   border-bottom: 1px solid $grey-darkest
+  overflow: visible
 
 .top-bar__logo
   float: left
@@ -18,28 +19,7 @@
 
 .top-bar__links
   float: right
-
-.top-bar__links ul
-  margin-top: 0px
-  height: $top-bar--height
-  display: flex
-
-.top-bar__links a
-  display: inline-block
-  height: $top-bar--height
-
-.top-bar__links a:hover
-  background-color: $primary-light
-
-.top-bar__links a:active
-  background-color: $base-active-button-color  
-
-.top-bar__links li
-  list-style: none
-  border-right: 0
-  border-left: 1px solid $primary-light
-  height: $top-bar--height
-  padding: 22px 30px
+  padding-right: 20px 
 
 .top-bar__links img, .top-bar__mobile-menu img
   padding-right: 5px
@@ -82,7 +62,65 @@
 
 // top-bar dropdown
 
+.flyout ul 
+  background-color: $primary-darker
+  text-align: left
+  display: inline
+  margin: 0
+  padding: 10px 4px 17px 0
+  list-style: none
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
 
+.flyout ul li 
+  height: $top-bar--height
+  display: inline-block
+  margin-right: -4px
+  position: relative
+  padding: 22px 32px 8px 32px
+  cursor: pointer
+  -webkit-transition: all 0.2s
+  -moz-transition: all 0.2s
+  -ms-transition: all 0.2s
+  -o-transition: all 0.2s
+  transition: all 0.2s
+  border-left: 1px solid $primary-light
+
+.flyout ul li:hover
+  background-color: $primary-light
+
+.flyout ul li ul
+  z-index: 2000
+  padding: 0
+  position: absolute
+  top: $top-bar--height
+  left: -2px
+  width: 100%
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  display: none
+  opacity: 0
+  visibility: hidden
+  +transition(opacity 0.2s)
+
+
+.flyout ul li ul li 
+  background-color: $primary-dark
+  display: block 
+  color: #fff
+  text-shadow: 0 -1px 0 #000
+  border-bottom: 1px solid $primary-light
+  border-left: 1px solid $primary-light
+
+.flyout ul li ul li:hover 
+  background: $primary-darker
+
+.flyout ul li:hover ul
+  display: block
+  visibility: visible
+  opacity: 1
 
 // HEADER
 

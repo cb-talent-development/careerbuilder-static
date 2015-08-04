@@ -6,19 +6,30 @@
       // low-fi image of logo for positioning, needs to be updated  
       %img{src: "assets/images/placeholder-logo.png"}
 
-  %nav{class: "top-bar__links text--white text--top-bar-link medium-screen-up"}
+  %nav{class: "flyout top-bar__links text--white text--top-bar-link medium-screen-up"}
     %ul 
-      %a{href: "#account"}
-        %li 
+      %li
+        %a{href: "#account"}
           %img{src: "assets/images/icon--account.png"}
           My Account
-      %a{href: "#cart"} 
-        %li 
+        %ul
+          %li 
+            %a{href: "#"} Menu item 1
+          %li 
+            %a{href: "#"} Menu item 2
+          %li 
+            %a{href: "#"} Menu item 3
+
+      %li
+        %a{href: "#cart"} 
           %img{src: "assets/images/icon--cart.png"}
           $1337.00 Cart
-      %a{href: "#contact"}
-        %li 
+
+      %li
+        %a{href: "#contact"}
           Contact Us
+     
+
 
   %nav{class: "top-bar__links small-screen-only top-bar__mobile-menu-link", id: "mobile-menu-link" }  
     %img{src: "assets/images/icon--mobile-menu.png"}
