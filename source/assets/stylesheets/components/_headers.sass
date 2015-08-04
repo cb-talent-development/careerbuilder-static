@@ -17,14 +17,6 @@
   display: block
   background-color: $base-active-button-color  
 
-.top-bar__links
-  float: right
-  padding-right: 20px 
-
-.top-bar__links img, .top-bar__mobile-menu img
-  padding-right: 5px
-  height: 12px
-
 .top-bar__helper-text
   padding-top: 20px
   padding-right: 30px
@@ -63,32 +55,19 @@
 // top-bar dropdown
 
 .flyout ul 
-  background-color: $primary-darker
   text-align: left
   display: inline
   margin: 0
   padding: 10px 4px 17px 0
   list-style: none
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
 
 .flyout ul li 
   height: $top-bar--height
   display: inline-block
   margin-right: -4px
   position: relative
-  padding: 22px 32px 8px 32px
   cursor: pointer
-  -webkit-transition: all 0.2s
-  -moz-transition: all 0.2s
-  -ms-transition: all 0.2s
-  -o-transition: all 0.2s
-  transition: all 0.2s
-  border-left: 1px solid $primary-light
-
-.flyout ul li:hover
-  background-color: $primary-light
+  +transition(all 0.2s)
 
 .flyout ul li ul
   z-index: 2000
@@ -105,22 +84,57 @@
   visibility: hidden
   +transition(opacity 0.2s)
 
-
 .flyout ul li ul li 
-  background-color: $primary-dark
   display: block 
-  color: #fff
-  text-shadow: 0 -1px 0 #000
-  border-bottom: 1px solid $primary-light
-  border-left: 1px solid $primary-light
-
-.flyout ul li ul li:hover 
-  background: $primary-darker
 
 .flyout ul li:hover ul
   display: block
   visibility: visible
   opacity: 1
+
+.top-bar__links
+  float: right
+  padding-right: 20px 
+  background-color: $primary-darker
+
+.top-bar__links img, .top-bar__mobile-menu img
+  padding-right: 5px
+  height: 12px
+
+.top-bar__links ul li 
+  padding: 22px 32px 8px 32px
+  border-left: 1px solid $primary-light
+
+.top-bar__links ul li:hover
+  background-color: $primary-light
+
+.top-bar__links ul li ul li, .header__subnav ul li ul li
+  background-color: $primary-dark
+  text-shadow: 0 -1px 0 #000
+  border-bottom: 1px solid $primary-light
+  border-left: 1px solid $primary-light
+
+.top-bar__links ul li ul li:hover 
+  background: $primary-darker
+
+.header__subnav ul
+  display: block
+  padding: 0
+  margin: 0px
+  height: 40px
+
+.header__subnav ul li
+  display: inline-block
+  list-style: none
+  padding: 20px 40px 10px 10px
+
+.header__subnav ul li ul li
+  padding: 10px
+  height: auto
+  width: 250px
+
+.header__subnav ul li:hover
+  background-color: $primary-light
 
 // HEADER
 
@@ -176,18 +190,6 @@
   +span-columns(12)
   display: block
   margin-bottom: 60px
-
-.header__subnav ul
-  display: block
-  padding: 0
-  margin: 0px
-  height: 40px
-
-.header__subnav li
-  display: inline-block
-  list-style: none
-  padding: 0
-  margin: 20px 25px 10px 0px
 
 .header__headline, .header__subhead
   +span-columns(6)
