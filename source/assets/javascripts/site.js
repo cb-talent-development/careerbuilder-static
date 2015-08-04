@@ -70,6 +70,8 @@ window.interact.modal = function(modalName, openLink) {
     modalForm = $('#' + modalName); 
     // guards against showing background when modal not found 
     if (modalForm.length >= 1) {
+      // modals can scroll, but located at the top of the page
+      window.scrollTo(0, 0);
       modalBack.show();
       modalForm.show(); 
       }
