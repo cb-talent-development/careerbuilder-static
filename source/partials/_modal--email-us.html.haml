@@ -1,0 +1,28 @@
+%div{class: "modal__box box--pop-out hidden", id: "modal--email-us"}
+  = partial 'partials/modal--close-button'
+
+  %h2{class: "text--headline-2 text--accent alpha"}
+    Contact Us
+
+  %form{class: "modal__form"}
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Your Name
+      %input{class: "modal__form-right", type: "text"} 
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Your Email
+      %input{class: "modal__form-right", type: "text"} 
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Your Message 
+      %textarea{class: "modal__form-right", rows: 6}
+
+    %div{class: "modal__form-row omega"}  
+
+    %div{class: "modal__form-row"} 
+      %submit{class: "button button--primary modal__form-submit close-modal"}
+        Send Message and Close

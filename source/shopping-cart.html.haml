@@ -3,6 +3,11 @@ title: Your Cart
 layout: layout
 ---
 
+/ modals
+%div{class: "modal__positioning"}
+  %div{class: "modal__container text--body"}  
+    = partial 'partials/modal--email-us'
+
 / thin-header 
 = partial 'partials/header-medium', :locals => {:headline => "Your Cart"}   
 

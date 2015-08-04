@@ -86,6 +86,7 @@ jQuery(function(){
 
   // modals must be added manually, this is a likely refactor if this gets hard
   // arguements are ( 'my-modal-id' , 'class-on-links-to-open' ) just like that.
+  window.interact.modal('modal--email-us', 'modal-open--email-us')
   window.interact.modal('modal--change-billing-address', 'modal-open--change-billing-address')
   window.interact.modal('modal--change-company-address', 'modal-open--change-company-address')
   window.interact.watchMobileMenu();
