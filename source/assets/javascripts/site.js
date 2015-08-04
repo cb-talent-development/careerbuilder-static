@@ -58,13 +58,14 @@ window.interact.modal = function(modalName, openLink) {
   
   closeLinks.click(function() { 
     // binding to all close links; click on one modal hides all modals 
-    console.log("modal close: " + modalName);
+    // console.log("modal close: " + modalName);
     modalForm.hide();
     modalBack.hide();
   });
 
   openLinks.click(function() { 
-    console.log("modal open: " + modalName);
+    // console.log("modal open: " + modalName);
+    
     // required
     modalForm = $('#' + modalName); 
     // guards against showing background when modal not found 
