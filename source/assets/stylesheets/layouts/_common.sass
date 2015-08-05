@@ -3,28 +3,37 @@
 
 // Quickstart for Sass syntax:
 
-// Take everything in your CSS inside the {}, delete the {} and indent it.
-// Delete the closing ; and instead user a newline.
-// @include foo (alt syntax is +foo), $blue, etc are instructions to the Sass precompiler.
-// Coments are full line. /* this passes through to CSS */ but // doesn't.
-// Otherwise, it's just CSS.
+  // Take everything in your CSS inside the {}, delete the {} and indent it.
+  // Delete the closing ; and instead user a newline.
+  // @include foo (alt syntax is +foo), $blue, etc are instructions to the Sass precompiler.
+  // Coments are full line. /* this passes through to CSS */ but // doesn't.
+  // Otherwise, it's just CSS.
 
 // Quickstart for Block__Element--Modifier class naming:
 
-// .block is the higher level of an abstraction or component.
-// .block__element is a descendent of .block that helps form .block as a whole.
-// .block--modifier is a different state or version of .block.
-// This works best when applied to layout concerns.
-// http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+  // .block is the higher level of an abstraction or component.
+  // .block__element is a descendent of .block that helps form .block as a whole.
+  // .block--modifier is a different state or version of .block.
+  // This works best when applied to layout concerns.
+  // http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 
 // Quickstart for modular CSS:
 
-// Use small-scope classes, rather than mega class + nesting, to keep definitions reusable.
-// The namespaces "text--" and "box--" handle presentation of words and rectangles.
-// Never blend presentation (".text--subhead"), layout (".popover"), and meaning (".box--alert-red")
-// Even in BEM, that's a ".popover" with a ".text--subhead .box--alert-red" inside it.
-// Avoid .popover__subhead or .subhead--alert-red unless it's a werid, non-resusable layout.
-// https://vimeo.com/70115794
+  // Use small-scope classes, rather than mega class + nesting, to keep definitions reusable.
+  // The namespaces "text--" and "box--" handle presentation of words and rectangles.
+  // Never blend presentation (".text--subhead"), layout (".popover"), and meaning (".box--alert-red")
+  // Even in BEM, that's a ".popover" with a ".text--subhead .box--alert-red" inside it.
+  // Avoid .popover__subhead or .subhead--alert-red unless it's a werid, non-resusable layout.
+  // https://vimeo.com/70115794
+
+// Z-index conventions: 
+
+  // Modals ~ 1 000 000 
+  // dropdown menu in .flyout ~ 7000
+  // headers over .sticky-nav ~ 6000
+  // sticky nav bars .sticky-nav ~ 5000 
+  // dropdown menus below sticky-nav ~ 4000
+  // Page layouts ~ 1000   
 
 // END COMMENTS - START ACTUAL CODE
 
@@ -259,6 +268,18 @@ address
   // use on div with .box--divider-bottom  
   +span-columns(12)
   margin-bottom: 32px  
+
+// Sticky navigation 
+
+.sticky-nav
+  display: block
+  z-index: 5000 
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  border-bottom: 1px solid $grey-lighter
+  background-color: $base-background-color
 
 
 // TRICKY STUFF

@@ -1,6 +1,8 @@
 // TOP BAR
 
 .top-bar
+  position: relative
+  z-index: 7000
   height: $top-bar--height
   background-color: $primary-darker
   border-bottom: 1px solid $grey-darkest
@@ -54,6 +56,8 @@
 
 // top-bar dropdown
 
+.flyout  
+
 .flyout ul 
   text-align: left
   display: inline
@@ -70,7 +74,6 @@
   +transition(all 0.2s)
 
 .flyout ul li ul
-  z-index: 2000
   padding: 0
   position: absolute
   top: $top-bar--height
@@ -139,6 +142,8 @@
 // HEADER
 
 .header 
+  position: relative
+  z-index: 6000
   background-color: $header-background-color
   background-image: url('/assets/images/placeholder-background-facets.png')
   margin-bottom: 64px 
