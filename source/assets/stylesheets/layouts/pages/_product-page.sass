@@ -3,6 +3,12 @@
 .product-subnav
   +outer-container
   margin: 32px 0px 64px 0px
+
+.sticky-nav .product-subnav 
+  margin-top: 0
+  margin-bottom: 0
+  padding-top: 10px
+  padding-bottom: 10px
   
 .product-subnav__left
   +span-columns(8)
@@ -26,6 +32,7 @@
   list-style: none
   padding: 10px 40px 30px 0px
   display: inline-block
+  padding-bottom: 10px
 
 .product-subnav li a
   display: inline-block  
@@ -38,7 +45,7 @@
 
 // product-detail 
 
-.product-detail
+.product-detail, .product-detail.box--divider-bottom
   +outer-container
   display: block
   margin-bottom: 80px

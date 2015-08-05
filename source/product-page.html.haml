@@ -6,8 +6,14 @@ layout: layout
 // large-header 
 = partial 'partials/header-large', :locals => {headline: "Product Title", subhead: "Placeholder Reach more candidates in less time with a product description", image: "placeholder--product-image.png", add_class: "no-bottom-margin"}  
 
-%div{class: "container text--body"}
-  %nav 
+// fixed, hidden until scroll
+%div{class: "sticky-nav text--body"}        
+  %nav{class: "container"}
+    = partial 'partials/product-subnav' 
+
+%div{class: "container text--body", id: "overview-link-anchor"}
+  // displays in page flow
+  %nav
     = partial 'partials/product-subnav'
 
   // overview
@@ -16,6 +22,7 @@ layout: layout
       Overview
     %div{class: "product-detail__body"}   
       = partial 'partials/placeholder'
+      %span{id: "white-papers-link-anchor"}
 
   // white papers 
   %section{class: "product-detail box--divider-bottom", id: "white-papers"}
@@ -34,10 +41,11 @@ layout: layout
         %li{class: "omega"}
           %a{href: "#white-paper"}
             %div{class: "text--link-list__arrow product-detail__arrow"} >
-            Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say. 
+            Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
+            %span{id: "features-link-anchor"} 
 
   // features 
-  %section{class: "product-detail box--divider-bottom", id: "features"}
+  %section{class: "product-detail box--divider-bottom"}
     %h2{class: "product-detail__headline text--headline-2"}
       Features
     %div{class: "product-detail__body"}  
@@ -68,6 +76,7 @@ layout: layout
         %h4 Updog 
         %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
         %a{class: "button button--secondary", href: "2"} Learn More
+        %span{id: "videos-link-anchor"}
 
   // videos 
   %section{class: "product-detail box--divider-bottom", id:"videos"}
@@ -85,12 +94,12 @@ layout: layout
 
       %div{class: "product-detail__video-block"}
         = image_tag "placeholder-video.png"
-        %h4 Video Title About 50% Higher Conversion with More Cowbell 
+        %h4 Video Title About 50% Higher Conversion with More Cowbell
+        %span{id: "demo-link-anchor"} 
 
   // request a demo 
   %section{class: "product-detail", id:"demo"}
     %h2{class: "product-detail__headline text--headline-2"}
       Request a Demo
     %div{class: "product-detail__body"}  
-      = partial "/partials/form--request-demo"
-      
+      = partial "/partials/form--request-demo"     
