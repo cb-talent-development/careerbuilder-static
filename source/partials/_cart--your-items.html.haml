@@ -28,11 +28,8 @@
 
     %div{class: "cart__cell cart__cell--quantity"} 
 
-      / Input type Number falls back to text field in IE8, IE9
-      / http://html5please.com/#number
-
       / ITEM QUANTITY IN VALUE FIELD
-      %input{type: "number", value: 2}  
+      %input{type: "text", value: 2}  
 
     %div{class: "cart__cell cart__cell--remove text--smaller"} 
       %a{href: "#remove-from-cart", class: "medium-screen-up" } 
@@ -57,7 +54,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
 
     %div{class: "cart__cell cart__cell--quantity"} 
-      %input{type: "number", value: 1}  
+      %input{type: "text", value: 1}  
 
     %div{class: "cart__cell cart__cell--remove text--smaller"} 
       %a{href: "#remove-from-cart", class: "medium-screen-up"} 
