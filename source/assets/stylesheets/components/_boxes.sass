@@ -166,25 +166,45 @@
 .box--alert i
   padding-right: 5px
 
+.box--alert a
+  color: $primary-darkest 
+  float: right
+  text-align: right
+  height: 100%
+  width: 30px
+
+.box--alert a i
+  padding-right: 0px
+  color: inherit
+
 .box--alert--info
-  color: $primary
   background-color: $primary-lightest
   border: 2px solid $primary-darkest
 
+.box--alert--info, .box--alert--info a i
+  color: $primary
+
 .box--alert--success
-  color: $accent-success-dark
   background-color: $accent-success-light
   border: 2px solid $accent-success-dark
 
+.box--alert--success, .box--alert--success a i
+  color: $accent-success-dark
+
 .box--alert--caution
-  color: $accent-warning-dark
   background-color: $accent-warning-light
   border: 2px solid $accent-warning-dark
 
+.box--alert--caution, .box--alert--caution a i
+  color: $accent-warning-dark
+
 .box--alert--danger
-  color: $accent-danger-dark
   background-color: $accent-danger-light
   border: 2px solid $accent-danger-dark
+
+.box--alert--danger, .box--alert--danger a i
+  color: $accent-danger-dark
+
 
 // creates an alert box with a 'speech bubble' type arrow on top
 // default styling is 'danger' colors
