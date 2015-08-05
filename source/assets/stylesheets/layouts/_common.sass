@@ -267,7 +267,12 @@ address
 .form--large__divider-line
   // use on div with .box--divider-bottom  
   +span-columns(12)
-  margin-bottom: 32px  
+  margin-bottom: 32px
+
+.form__error
+  margin-top: 18px
+  padding: 15px   
+  clear: both !important 
 
 // Sticky navigation 
 
@@ -281,9 +286,9 @@ address
   border-bottom: 1px solid $grey-lighter
   background-color: $base-background-color
 
-
 // TRICKY STUFF
 
+// creates a solid color triangle, useful for flyout toggle links
 .arrow--up 
   display: inline-block
   margin: 0 5px
