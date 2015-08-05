@@ -24,14 +24,26 @@
 .reading__image-block
   +span-columns(3)
 
+@media only screen and (max-width: $small-screen-max)
+  .reading__image-block 
+    +span-columns(6)
+    padding-bottom: 32px
+
+  .reading__image-block.two-column-omega  
+    +omega()
+
 .reading__image-container
+  position: relative
   height: 160px  
   overflow: hidden
+  max-width: 160px
 
 .reading__image-container img
-  min-height: 160px
-  min-width: 160px 
-  clip: rect(auto,auto,auto,auto)
+  position: absolute            
+  top: 50%                 
+  left: 50%
+  margin-right: -50%
+  +transform(translate(-50%, -50%))
 
 .reading__image-block .caption
   margin-top: 12px

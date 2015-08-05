@@ -36,7 +36,6 @@
 
 .box--divider-bottom
   border-bottom: 1px solid $grey-lighter
-  padding-bottom: 10px
 
 .box--divider-right
   border-right: 1px solid $grey-lighter
@@ -151,4 +150,106 @@
     +span-columns(6)  
 
   .box--quick-submit__input
-    +span-columns(6)    
+    +span-columns(6) 
+
+// Alert boxes
+
+.box--alert 
+  padding: 10px 20px 10px 20px
+  color: $primary-darkest 
+  border: 2px solid $primary-darkest
+  background-color: $grey-lighter
+  margin-bottom: 32px
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+
+.box--alert i
+  padding-right: 5px
+
+.box--alert a
+  color: $primary-darkest 
+  float: right
+  text-align: right
+  height: 100%
+  width: 30px
+
+.box--alert a i
+  padding-right: 0px
+  color: inherit
+
+.box--alert--info
+  background-color: $primary-lightest
+  border: 2px solid $primary-darkest
+
+.box--alert--info, .box--alert--info a i
+  color: $primary
+
+.box--alert--success
+  background-color: $accent-success-light
+  border: 2px solid $accent-success-dark
+
+.box--alert--success, .box--alert--success a i
+  color: $accent-success-dark
+
+.box--alert--caution
+  background-color: $accent-warning-light
+  border: 2px solid $accent-warning-dark
+
+.box--alert--caution, .box--alert--caution a i
+  color: $accent-warning-dark
+
+.box--alert--danger
+  background-color: $accent-danger-light
+  border: 2px solid $accent-danger-dark
+
+.box--alert--danger, .box--alert--danger a i
+  color: $accent-danger-dark
+
+
+// creates an alert box with a 'speech bubble' type arrow on top
+// default styling is 'danger' colors
+
+.box--arrow 
+  position: relative
+  background: $accent-danger-light
+  border: 2px solid $accent-danger
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  color: $accent-danger-dark
+  line-height: 140%
+
+.box--arrow:after, .box--arrow:before 
+  bottom: 100%
+  left: 50px
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.box--arrow:after 
+  border-color: rgba(213, 124, 79, 0)
+  border-bottom-color: $accent-danger-light
+  border-width: 10px
+  margin-left: -10px
+
+.box--arrow:before 
+  border-color: rgba(245, 29, 29, 0)
+  border-bottom-color: $accent-danger
+  border-width: 13px
+  margin-left: -13px
+
+.box--arrow--caution 
+  background: $accent-warning-light
+  border: 2px solid $accent-warning
+  color: $accent-warning-dark
+
+.box--arrow--caution:after 
+  border-color: rgba(213, 124, 79, 0)
+  border-bottom-color: $accent-warning-light
+
+.box--arrow--caution:before 
+  border-color: rgba(245, 29, 29, 0)
+  border-bottom-color: $accent-warning  
+
