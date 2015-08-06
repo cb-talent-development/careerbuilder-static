@@ -11,35 +11,48 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Order Confirmation | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/stylesheets/site-37bc85fd.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-f02a17ca.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='order-confirmation base-background'>
-    <header class='top-bar'>
+    <div class='modal__background hidden' id='modal-background'></div>
+    <header class='top-bar' id='top-bar'>
       <div class='top-bar__logo'>
         <a href='/'>
           <!-- / low-fi image of logo for positioning, needs to be updated -->
           <img src='assets/images/placeholder-logo-e2d254a1.png'>
         </a>
       </div>
-      <nav class='top-bar__links text--white text--top-bar-link medium-screen-up'>
+      <nav class='flyout top-bar__links text--white text--top-bar-link medium-screen-up'>
         <ul>
-          <a href='#account'>
-            <li>
+          <li>
+            <a href='#account'>
               <img src='assets/images/icon--account-8b7208ff.png'>
               My Account
-            </li>
-          </a>
-          <a href='#cart'>
-            <li>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>Menu item 1</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 2</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#cart'>
               <img src='assets/images/icon--cart-69058b39.png'>
               $1337.00 Cart
-            </li>
-          </a>
-          <a href='#contact'>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href='#contact'>
               Contact Us
-            </li>
-          </a>
+            </a>
+          </li>
         </ul>
       </nav>
       <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
@@ -329,29 +342,34 @@
       </div>
       <div class='footer__logo-row'>
         <div class='footer__logo'>
-          LOGO
+          <img src="assets/images/placeholder--footer-logo-92c66024.png" />
         </div>
         <div class='footer__share-links footer__subnav text--subnav'>
           <ul>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-facebook-7ba66a79.png" />
               </a>
             </li>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-twitter-21674135.png" />
               </a>
             </li>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-linkedin-4bc6b03f.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-youtube-74ed5770.png" />
               </a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-42f567c4.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-4a092ebc.js" type="text/javascript"></script>
   </body>
 </html>
