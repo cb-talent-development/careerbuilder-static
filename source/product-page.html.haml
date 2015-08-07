@@ -3,19 +3,22 @@ title: Product Page
 layout: layout
 ---
 
-// large-header 
-= partial 'partials/header-large', :locals => {headline: "Product Title", subhead: "Placeholder Reach more candidates in less time with a product description", image: "placeholder--product-image.png", add_class: "no-bottom-margin"}  
-
 // fixed, hidden until scroll
-%div{class: "sticky-nav text--body"}        
+%div{class: "sticky-nav text--body large-screen-only"}        
   %nav{class: "container"}
     = partial 'partials/product-subnav' 
 
-%div{class: "container text--body", id: "overview-link-anchor"}
-  // displays in page flow
-  %nav
-    = partial 'partials/product-subnav'
+// layer over sticky nav, scrolls away
+%div{class: "sticky-nav__top-container"}
+  // large-header 
+  = partial 'partials/header-large', :locals => {headline: "Product Title", subhead: "Placeholder Reach more candidates in less time with a product description", image: "placeholder--product-image.png", add_class: "no-bottom-margin"}  
 
+  %div{class: "container text--body", id: "overview-link-anchor"}
+    // displays in page flow
+    %nav
+      = partial 'partials/product-subnav'
+
+%div{class: "container text--body"}
   // overview
   %section{class: "product-detail box--divider-bottom", id: "overview"}
     %h2{class: "product-detail__headline text--headline-2"}

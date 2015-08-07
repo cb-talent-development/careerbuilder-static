@@ -164,7 +164,7 @@
   +border-bottom-radius(5px)
 
 .box--alert i
-  padding-right: 5px
+  padding-right: 8px
 
 .box--alert a
   color: $primary-darkest 
@@ -204,7 +204,6 @@
 
 .box--alert--danger, .box--alert--danger a i
   color: $accent-danger-dark
-
 
 // creates an alert box with a 'speech bubble' type arrow on top
 // default styling is 'danger' colors
@@ -252,4 +251,48 @@
 .box--arrow--caution:before 
   border-color: rgba(245, 29, 29, 0)
   border-bottom-color: $accent-warning  
+
+// 
+
+
+// creates an alert box with a 'speech bubble' type arrow on top
+// default styling is 'danger' colors
+
+.box--arrow-helper 
+  position: absolute
+  +shift(4)
+  margin-top: -90px
+  background: $primary
+  border: 2px solid $primary
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+
+  color: $white
+  font-size: 12px
+  line-height: 150%
+
+.box--arrow-helper ul
+  padding-left: 20px  
+
+.box--arrow-helper:after, .box--arrow-helper:before 
+  right: 100%
+  top: 50%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.box--arrow-helper:after 
+  border-color: rgba(136, 183, 213, 0)
+  border-right-color: $primary
+  border-width: 10px
+  margin-top: -10px
+
+.box--arrow-helper:before 
+  border-color: rgba(0, 0, 0, 0)
+  border-right-color: $primary
+  border-width: 13px
+  margin-top: -13px
 

@@ -58,7 +58,6 @@ window.interact.modal = function(modalName, openLink) {
   
   closeLinks.click(function() { 
     // binding to all close links; click on one modal hides all modals 
-    // console.log("modal close: " + modalName);
     modalForm.hide();
     modalBack.hide();
   });
@@ -81,6 +80,54 @@ window.interact.modal = function(modalName, openLink) {
   });
 }; 
 
+window.interact.showOnFocus = function (target,payload) {
+  $(payload).hide();
+  $(payload).removeClass("hidden");
+
+  $(target).focus(function() {
+    $(payload).fadeIn("fast");
+  });
+
+  $(target).blur(function() {
+    $(payload).hide();
+  });    
+};
+
+window.interact.securityCodeHelper = function (target, payload) {
+  var input, visa, mastercard, amex, discover
+  
+  visa = /^4[0-9]{6,}/
+  mastercard = /^5[1-5][0-9]{5,}/
+  amex = /^3[47][0-9]{5,}/
+  discover = /^6(?:011|5[0-9]{2})[0-9]{3,}/
+
+  $(payload).hide()
+  $(payload).removeClass("hidden");
+
+  $(target).keyup(function() {
+    input = $(target).val()
+    // remove whitespace chars
+    input = input.replace(/\s+/g, '');
+    input = input.replace(/-+/g, '');
+
+    if (visa.test(input) || discover.test(input) || mastercard.test(input)) {
+      $(payload + " #amex").hide();
+      $(payload + " #visa").show();
+      $(payload + " div").text("3 digit code on back of card.");
+      $(payload).fadeIn("fast"); 
+      }
+    else if (amex.test(input)) {
+      $(payload + " #amex").show();
+      $(payload + " #visa").hide();
+      $(payload + " div").text("4 digit code on front of card.");
+      $(payload).fadeIn("fast"); 
+      }
+    else {
+      $(payload).hide()
+    };  
+  });
+};
+
 jQuery(function(){
   console.log('site.js working');
 
@@ -91,4 +138,7 @@ jQuery(function(){
   window.interact.modal('modal--change-company-address', 'modal-open--change-company-address')
   window.interact.watchMobileMenu();
   window.interact.watchApplyDiscount();
+  window.interact.showOnFocus("#password-field", "#password-helper");
+  window.interact.securityCodeHelper("#card-number-field", "#security-code-helper");
+
 })

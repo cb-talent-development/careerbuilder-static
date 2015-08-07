@@ -2,31 +2,41 @@
 title: Solutions Page
 ---
 
-// large-header 
-= # IMAGES IN THIS HEADER MUST BE MATTED CAREFULLY
-= # BECAUSE THEY COVER DARK AND WHITE BACKGROUNDS
-= partial 'partials/header-large-alternate', :locals => {headline: "Is <strong>your recruitment</strong> too complex and time intensive?", image: "placeholder-470.png", add_class: "no-bottom-margin"}  
+// fixed, hidden until scroll
+%div{class: "sticky-nav text--body large-screen-only"}        
+  %nav{class: "container"}
+    = partial 'partials/solutions-subnav' 
 
-%div{class: "container text--body"}
-  %div{class: "product__intro-text"}
-    %h2{class: "text--headline-2 text--accent"}
-      Simplify & Expidite Recruitment
+// layer over sticky nav, scrolls away
+%div{class: "sticky-nav__top-container"}
 
-    = # Layout works best with about this much text.   
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ante sem, at dictum nibh imperdiet ut. Sed a elit at justo pulvinar molestie. 
+  // large-header 
+  // IMAGES IN THIS HEADER MUST BE MATTED CAREFULLY
+  // BECAUSE THEY COVER DARK AND WHITE BACKGROUNDS
+  = partial 'partials/header-large-alternate', :locals => {headline: "Is <strong>your recruitment</strong> too complex and time intensive?", image: "placeholder-470.png", add_class: "no-bottom-margin"}  
 
-    %p Phasellus pellentesque et dui sed accumsan. Morbi accumsan consequat pellentesque. Integer venenatis commodo orci id varius. Vestibulum tempus luctus diam, eget sollicitudin dui cursus quis. Sed sed vestibulum ipsum. Curabitur vitae arcu libero.
+  %div{class: "container text--body "}
+    %div{class: "product__intro-text"}
+      %h2{class: "text--headline-2 text--accent"}
+        Simplify & Expidite Recruitment
 
-%div{class: "container text--body"}
-  %nav 
-    = partial 'partials/solutions-subnav'
+      = # Layout works best with about this much text.   
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ante sem, at dictum nibh imperdiet ut. Sed a elit at justo pulvinar molestie. 
 
+      %p Phasellus pellentesque et dui sed accumsan. Morbi accumsan consequat pellentesque. Integer venenatis commodo orci id varius. Vestibulum tempus luctus diam, eget sollicitudin dui cursus quis. Sed sed vestibulum ipsum. Curabitur vitae arcu libero.
+
+  %div{class: "container text--body sticky-nav__above base-background"}
+    %nav{id: "overview-link-anchor"} 
+      = partial 'partials/solutions-subnav'
+
+%div{class: "container text--body "}
   // overview
   %section{class: "product-detail box--divider-bottom", id: "overview"}
     %h2{class: "product-detail__headline text--headline-2"}
       Overview
     %div{class: "product-detail__body"}   
       = partial 'partials/placeholder'
+      %span{id: "white-papers-link-anchor"} 
 
   // white papers 
   %section{class: "product-detail box--divider-bottom", id: "white-papers"}
@@ -46,8 +56,10 @@ title: Solutions Page
           %a{href: "#white-paper"}
             %div{class: "text--link-list__arrow product-detail__arrow"} >
             Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say. 
+        %span{id: "products-link-anchor"} 
 
   = partial 'partials/products'               
+  %span{id: "demo-link-anchor"} 
 
   // request a demo 
   %section{class: "product-detail", id:"demo"}

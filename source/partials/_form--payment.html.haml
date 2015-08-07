@@ -6,7 +6,6 @@
       %i{class: "fa fa-times fa-lg"} 
     This is an example alert box. This is an example alert box. This is an example alert box example alert box alert box alert box alert box alert box.
 
-
   %div{class: "box--alert box--alert--info"}
     %a{href: "#close-alert"} 
       %i{class: "fa fa-times fa-lg"} 
@@ -48,6 +47,23 @@
       %br 
       %input{type: "text"}
   
+  // CONTEXTUAL TO USER, SEE SPECS
+  %div{class: "clear-fix"}
+    %label
+      Choose a Password
+      %br 
+      %input{type: "text", id: "password-field"}
+
+      // Password helper appears on any field to CREATE NEW PASSWORD (not login)
+      %div{class: "large-screen-only"}
+        %div{class: "form__error box--arrow-helper hidden", id: "password-helper"}  
+          Password Must Contain
+          %ul
+            %li 8 to 15 charecters
+            %li 1 uppercase letter
+            %li 1 lowercase letter
+            %li 1 letter or symbol
+
   %div{class: "clear-fix"}
     %label
       Email Address
@@ -78,25 +94,33 @@
     %label
       Company Name
       %br 
-      %input{type: "text"}   
+      %input{type: "text", class: "form__field--success"} 
+      %div{class: "form__subtext text--success"} 
+        This is an example of subtext success message. 
 
   %div{class: "clear-fix"}     
     %label
       Company Address
       %br 
-      %input{type: "text"}  
+      %input{type: "text", class: "form__field--danger"}  
+      %div{class: "form__subtext text--danger"} 
+        This is an example of subtext warning type. This is an example of subtext warning type.
 
   %div{class: "clear-fix"}     
     %label
       Country
       %br 
       %input{type: "text"} 
+      %div{class: "form__error box--arrow box--arrow--caution clear-fix"}  
+        This is an example 'caution' style error message.  
 
   %div{class: "clear-fix"}
     %label{class: "columns-6"}
       City
       %br 
       %input{type: "text"} 
+      %div{class: "form__error box--arrow clear-fix"}  
+        This is an example 'alert' style error message.
 
     %label{class: "columns-3"}
       State
@@ -169,17 +193,12 @@
       Cardholder's Name 
       %br 
       %input{type: "text"}  
-      %div{class: "form__error box--arrow clear-fix"}  
-        This is an example 'alert' style error message.
-
 
   %div{class: "clear-fix"}
     %label{class: "columns-7"}
       Card Number 
       %br 
-      %input{type: "text"}  
-      %div{class: "form__error box--arrow box--arrow--caution clear-fix"}  
-        This is an example 'caution' style error message.  
+      %input{type: "text", id: "card-number-field"}  
 
     %label{class: "columns-4 shift-1"}
       Expiration Date
@@ -198,9 +217,11 @@
       %br 
       %input{type: "password"}  
 
-    %div{class: "columns-6"}
-      %a{href: "#security-code", class: "text--input-helper", style: "position: relative; top: 30px;"}
-        What's this?
+    %div{class: "columns-9"}
+      %div{class: "form__security-code-helper simplified-cart__card-container", id: "security-code-helper"} 
+        = image_tag 'icon--card-visa-helper.png', {id: "visa"}   
+        = image_tag 'icon--card-amex-helper.png', {id: "amex"}
+        %div 
 
   %div{class: "form--large__divider-line box--divider-bottom"}
 
