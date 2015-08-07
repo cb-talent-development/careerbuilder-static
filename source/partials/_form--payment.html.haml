@@ -54,13 +54,16 @@
       Choose a Password
       %br 
       %input{type: "text", id: "password-field"}
-      %div{class: "form__error box--arrow-helper hidden", id: "password-helper"}  
-        Password Must Contain
-        %ul
-          %li 8 to 15 charecters
-          %li 1 uppercase letter
-          %li 1 lowercase letter
-          %li 1 letter or symbol
+
+      // Password helper appears on any field to CREATE NEW PASSWORD (not login)
+      %div{class: "large-screen-only"}
+        %div{class: "form__error box--arrow-helper hidden", id: "password-helper"}  
+          Password Must Contain
+          %ul
+            %li 8 to 15 charecters
+            %li 1 uppercase letter
+            %li 1 lowercase letter
+            %li 1 letter or symbol
 
 
   %div{class: "clear-fix"}
