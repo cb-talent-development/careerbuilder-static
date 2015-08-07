@@ -81,6 +81,23 @@ window.interact.modal = function(modalName, openLink) {
   });
 }; 
 
+window.interact.showOnFocus = function (target,payload) {
+  console.log("show on focus runs");
+  $(payload).hide();
+  $(payload).removeClass("hidden");
+
+  console.log($(payload));
+
+  $(target).focus(function() {
+    $(payload).fadeIn("fast");
+  });
+
+  $(target).blur(function() {
+    $(payload).hide();
+  });
+    
+}
+
 jQuery(function(){
   console.log('site.js working');
 
@@ -91,4 +108,5 @@ jQuery(function(){
   window.interact.modal('modal--change-company-address', 'modal-open--change-company-address')
   window.interact.watchMobileMenu();
   window.interact.watchApplyDiscount();
+  window.interact.showOnFocus("#password-field", "#password-helper")
 })
