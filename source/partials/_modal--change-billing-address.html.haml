@@ -58,7 +58,7 @@
     %label{class: "modal__form-row"}  
       %div{class: "modal__form-left"} 
         Card Number 
-      %input{class: "modal__form-right", type: "text"}
+      %input{class: "modal__form-right", type: "text", id: "card-number-field"}
 
     %label{class: "modal__form-row"}  
       %div{class: "modal__form-left"} 
@@ -76,10 +76,13 @@
     %label{class: "modal__form-row"}  
       %div{class: "modal__form-left"} 
         Security Code 
-      %input{class: "columns-2", type: "password"}
-      %div{class: "columns-5"}
-        %a{href: "#security-code", class: "text--whats-this", style: "position: relative; top: 5px"}
-          What's this?    
+      %div{class: "modal__form-right"}  
+        %input{class: "columns-4", type: "password"}
+        %div{class: "columns-8"}
+          %div{class: "form__security-code-helper simplified-cart__card-container", id: "security-code-helper"} 
+            = image_tag 'icon--card-visa-helper.png', {id: "visa"}   
+            = image_tag 'icon--card-amex-helper.png', {id: "amex"}
+            %div    
 
     %div{class: "modal__form-row omega"}  
 
