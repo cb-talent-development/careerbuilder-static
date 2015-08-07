@@ -65,7 +65,6 @@
             %li 1 lowercase letter
             %li 1 letter or symbol
 
-
   %div{class: "clear-fix"}
     %label
       Email Address
@@ -96,13 +95,18 @@
     %label
       Company Name
       %br 
-      %input{type: "text"}   
+      %input{type: "text", class: "form__field--success"} 
+      %div{class: "form__subtext text--success"} 
+        This is an example of subtext success message. 
 
   %div{class: "clear-fix"}     
     %label
       Company Address
       %br 
-      %input{type: "text"}  
+      %input{type: "text", class: "form__field--danger"}  
+      %div{class: "form__subtext text--danger"} 
+        This is an example of subtext warning type. This is an example of subtext warning type.
+
 
   %div{class: "clear-fix"}     
     %label
