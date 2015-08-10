@@ -53,9 +53,13 @@
   padding: 0
   line-height: 150%
 
-.reading .product-detail__headline 
-  font-size: 18px 
+.reading-page .reading .product-detail__headline 
+  font-size: 20px 
   padding-top: 18px
+  +span-columns(12)
+
+.reading-page .reading .product-detail__body
+  +span-columns(12)
 
 .reading__contact
   margin-bottom: 32px
@@ -66,7 +70,8 @@
 
 .reading__contact__name
   color: $accent-primary
+  font-weight: 800
 
 .reading__contact__detail   
   color: $grey-dark
-  font-weight: 100
+  font-weight: 400
