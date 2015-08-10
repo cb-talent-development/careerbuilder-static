@@ -12,7 +12,7 @@
     <title>Your Cart | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
-    <link href="assets/stylesheets/site-f02a17ca.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/site-4f712e2d.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='simplified-cart base-background'>
     <div class='modal__background hidden' id='modal-background'></div>
@@ -55,10 +55,12 @@
           </li>
         </ul>
       </nav>
+      <!-- / mobile menu open link -->
       <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
-        <img src='assets/images/icon--mobile-menu-8d85d6da.png'>
+        <i class='fa fa-bars fa-2x'></i>
       </nav>
     </header>
+    <!-- / mobile menu -->
     <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
       <ul>
         <li>
@@ -111,13 +113,13 @@
           <form class='modal__form'>
             <label class='modal__form-row'>
               <div class='modal__form-left'>
-                Billing Address
+                Cardholder's Name
               </div>
               <input class='modal__form-right' type='text'>
             </label>
             <label class='modal__form-row'>
               <div class='modal__form-left'>
-                Country
+                Select Payment Type
               </div>
               <select class='modal__form-right'>
                 <option selected style='display: none;' value=''></option>
@@ -125,6 +127,50 @@
                 <option>placeholder 2</option>
                 <option>placeholder 3</option>
               </select>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Card Number
+              </div>
+              <input class='modal__form-right' id='card-number-field' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Expiration Date
+              </div>
+              <select class='columns-2'>
+                <option selected style='display: none;' value=''>
+                  Month
+                </option>
+                <option value='01'>01</option>
+              </select>
+              <select class='columns-2'>
+                <option selected style='display: none;' value=''>
+                  Year
+                </option>
+                <option value='2015'>2015</option>
+              </select>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Security Code
+              </div>
+              <div class='modal__form-right'>
+                <input class='columns-4' type='password'>
+                <div class='columns-8'>
+                  <div class='form__security-code-helper simplified-cart__card-container' id='security-code-helper'>
+                    <img id="visa" src="assets/images/icon--card-visa-helper-9e1ce60b.png" />
+                    <img id="amex" src="assets/images/icon--card-amex-helper-d9b33908.png" />
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Billing Address
+              </div>
+              <input class='modal__form-right' type='text'>
             </label>
             <label class='modal__form-row'>
               <div class='modal__form-left'>
@@ -151,7 +197,7 @@
             </label>
             <label class='modal__form-row'>
               <div class='modal__form-left'>
-                Select Payment Type
+                Country
               </div>
               <select class='modal__form-right'>
                 <option selected style='display: none;' value=''></option>
@@ -159,46 +205,6 @@
                 <option>placeholder 2</option>
                 <option>placeholder 3</option>
               </select>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Cardholder's Name
-              </div>
-              <input class='modal__form-right' type='text'>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Card Number
-              </div>
-              <input class='modal__form-right' type='text'>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Expiration Date
-              </div>
-              <select class='columns-2'>
-                <option selected style='display: none;' value=''>
-                  Month
-                </option>
-                <option value='01'>01</option>
-              </select>
-              <select class='columns-2'>
-                <option selected style='display: none;' value=''>
-                  Year
-                </option>
-                <option value='2015'>2015</option>
-              </select>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Security Code
-              </div>
-              <input class='columns-2' type='password'>
-              <div class='columns-5'>
-                <a class='text--whats-this' href='#security-code' style='position: relative; top: 5px'>
-                  What's this?
-                </a>
-              </div>
             </label>
             <div class='modal__form-row omega'></div>
             <div class='modal__form-row'>
@@ -310,7 +316,7 @@
         <div class='cart__row box--divider-bottom'>
           <div class='cart__cell cart--simplified__cell--title'>
             <!-- ITEM TITLE -->
-            incidunt odio praesentium quos voluptas molestiae possimus vitae error expedita laudantium quas sit iure deleniti
+            sed repudiandae quisquam et id in ad et quo neque culpa dolores maiores aut mollitia
             <!-- ITEM QUANTITY -->
             (&nbsp;2&nbsp;)
           </div>
@@ -395,7 +401,9 @@
               </div>
             </address>
             <div class='simplified-cart__card-container'>
+              <!-- / provide classes 'visa' 'discover' 'amex' 'mastercard' -->
               <div class='simplified-cart__card visa'></div>
+              <!-- / provide last-four-digits of card, replaces 1234 -->
               <div class='simplified-cart__card-caption'>Ending in 1234</div>
             </div>
           </div>
@@ -526,6 +534,6 @@
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-4a092ebc.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
   </body>
 </html>

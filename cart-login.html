@@ -12,7 +12,7 @@
     <title>Cart Login | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
-    <link href="assets/stylesheets/site-f02a17ca.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/site-4f712e2d.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='cart-login base-background'>
     <div class='modal__background hidden' id='modal-background'></div>
@@ -31,7 +31,48 @@
           <a class='modal-open--email-us' href='javascript:void(0)'>Email Us</a>
         </div>
       </div>
+      <!-- / mobile menu open link -->
+      <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
+        <i class='fa fa-bars fa-2x'></i>
+      </nav>
     </header>
+    <!-- / mobile menu -->
+    <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
+      <ul>
+        <li>
+          <a href='#menu'>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Resources
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--account-8b7208ff.png'>
+            My Account
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--cart-69058b39.png'>
+            $1337.00 Cart
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
     <!-- modals -->
     <div class='modal__positioning'>
       <div class='modal__container text--body'>
@@ -98,10 +139,63 @@
     </div>
     <!-- thin-header -->
     <!-- / initializes optional parameters -->
-    <!-- header -->
-    <header class='header header--thin '>
+    <!-- header-medium -->
+    <header class='header header--medium '>
       <div class='container'>
-        <div class='header__subnav medium-screen-up'></div>
+        <!-- header__subnav -->
+        <nav class='flyout header__subnav text--white text--subnav medium-screen-up'>
+          <ul>
+            <li>
+              <a href='#products'>
+                Products
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='#cart'>
+                Resources
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='#contact'>
+                About Us
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- header__headline -->
         <h1 class='header__headline text--headline text--white'>
           Sign in
         </h1>
@@ -255,6 +349,6 @@
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-4a092ebc.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
   </body>
 </html>
