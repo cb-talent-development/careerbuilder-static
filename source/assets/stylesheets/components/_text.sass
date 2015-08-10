@@ -54,15 +54,30 @@
   font-size: 16px
   text-decoration: none
 
+.text--subnav.product-subnav, .text--subnav.product-subnav a
+  font-weight: 800  
+
 .text--headline, .text--headline a
   font-family: $Lato
   font-weight: 800
   font-size: 40px
   text-decoration: none
 
+.text--headline, .text--headline a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 40px
+  text-decoration: none
+
+.header--large .text--headline, .header--large .text--headline a 
+  font-size: 42px
+
 @media only screen and (max-width: $small-screen-max)
   .text--headline, .text--headline a
-    font-size: 26px
+    font-size: 26px 
+
+  .header--large .text--headline, .header--large .text--headline a 
+    font-size: 36px
 
 .text--headline-2, .text--headline-2 a
   font-family: $Lato
@@ -112,7 +127,7 @@
 
 .text--details
   font-family: $Lato
-  font-weight: 300
+  font-weight: 400
   font-size: 16px
   line-height: 140%  
 
@@ -206,6 +221,9 @@ a.text--delete-button:active
 @media only screen and (max-width: $small-screen-max)
   .text--link-list__arrow 
     display: none
+
+.product-detail .text--link-list a 
+  font-weight: 800
 
 // address 
 .text--address-block div
