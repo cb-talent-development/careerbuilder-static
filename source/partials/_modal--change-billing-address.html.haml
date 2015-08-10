@@ -5,39 +5,10 @@
     Change Payment Method
 
   %form{class: "modal__form"}
-    %label{class: "modal__form-row"}  
-      %div{class: "modal__form-left"} 
-        Billing Address 
-      %input{class: "modal__form-right", type: "text"} 
 
     %label{class: "modal__form-row"}  
       %div{class: "modal__form-left"} 
-        Country 
-      %select{class: "modal__form-right"}
-        %option{value: "", selected: true, style: "display: none;"} 
-
-        %option placeholder 
-        %option placeholder 2
-        %option placeholder 3
-
-    %label{class: "modal__form-row"}  
-      %div{class: "modal__form-left"} 
-        State 
-      %select{class: "modal__form-right"}
-        %option{value: "", selected: true, style: "display: none;"} 
-
-        %option placeholder 
-        %option placeholder 2
-        %option placeholder 3
- 
-    %label{class: "modal__form-row"}  
-      %div{class: "modal__form-left"} 
-        City 
-      %input{class: "modal__form-right", type: "text"}
-
-    %label{class: "modal__form-row"}  
-      %div{class: "modal__form-left"} 
-        Zip 
+        Cardholder's Name 
       %input{class: "modal__form-right", type: "text"}
 
     %label{class: "modal__form-row"}  
@@ -49,11 +20,6 @@
         %option placeholder 
         %option placeholder 2
         %option placeholder 3
-
-    %label{class: "modal__form-row"}  
-      %div{class: "modal__form-left"} 
-        Cardholder's Name 
-      %input{class: "modal__form-right", type: "text"}
 
     %label{class: "modal__form-row"}  
       %div{class: "modal__form-left"} 
@@ -83,6 +49,41 @@
             = image_tag 'icon--card-visa-helper.png', {id: "visa"}   
             = image_tag 'icon--card-amex-helper.png', {id: "amex"}
             %div    
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Billing Address 
+      %input{class: "modal__form-right", type: "text"} 
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        State 
+      %select{class: "modal__form-right"}
+        %option{value: "", selected: true, style: "display: none;"} 
+
+        %option placeholder 
+        %option placeholder 2
+        %option placeholder 3
+ 
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        City 
+      %input{class: "modal__form-right", type: "text"}
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Zip 
+      %input{class: "modal__form-right", type: "text"}
+
+    %label{class: "modal__form-row"}  
+      %div{class: "modal__form-left"} 
+        Country 
+      %select{class: "modal__form-right"}
+        %option{value: "", selected: true, style: "display: none;"} 
+
+        %option placeholder 
+        %option placeholder 2
+        %option placeholder 3  
 
     %div{class: "modal__form-row omega"}  
 
