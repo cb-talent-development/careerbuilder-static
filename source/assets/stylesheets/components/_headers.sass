@@ -159,7 +159,7 @@
   font-size: 40px
 
 .header--medium
-  height: 220px
+  height: 240px
 
 .header--thin
   height: 168px
@@ -169,7 +169,8 @@
     height: 95px
     background-image: none
 
-.header--reading 
+.header.header--reading 
+  margin-bottom: 30px
 
 .header--reading__subnav
   +span_columns(8)
@@ -178,6 +179,8 @@
 .header__headline.header--reading__headline
   +span_columns(8)
   +shift(2)
+  padding-top: 50px
+
 
 @media only screen and (max-width: $medium-screen-max) 
   .header--reading__subnav
