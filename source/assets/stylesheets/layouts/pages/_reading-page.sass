@@ -9,7 +9,7 @@
 
 .reading .text--headline-4  
   margin-top: 40px
-  margin-bottom: 10px  
+  margin-bottom: 0px  
 
 .reading__section
   +span_columns(12) 
@@ -48,14 +48,14 @@
 .reading__image-block .caption
   margin-top: 12px
 
-.reading__image-block p
+.reading .reading__image-block p
   margin: 0
   padding: 0
   line-height: 150%
 
 .reading-page .reading .product-detail__headline 
   font-size: 20px 
-  padding-top: 18px
+  padding-top: 0px
   +span-columns(12)
 
 .reading-page .reading .product-detail__body
@@ -71,7 +71,18 @@
 .reading__contact__name
   color: $accent-primary
   font-weight: 800
+  line-height: 24px
 
 .reading__contact__detail   
   color: $grey-dark
   font-weight: 400
+  line-height: 24px
+
+.reading p 
+  margin: 5px 0 20px 0
+  line-height: 24px
+  color: $grey-darkest
+
+.reading ul
+  padding-left: 24px
+  margin: 5px 0
