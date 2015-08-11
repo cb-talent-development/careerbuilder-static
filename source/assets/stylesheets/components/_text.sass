@@ -54,17 +54,45 @@
   font-size: 16px
   text-decoration: none
 
+.text--subnav.product-subnav, .text--subnav.product-subnav a
+  font-weight: 800  
+
 .text--headline, .text--headline a
   font-family: $Lato
   font-weight: 800
   font-size: 40px
   text-decoration: none
 
+.text--headline, .text--headline a
+  font-family: $Lato
+  font-weight: 800
+  font-size: 40px
+  text-decoration: none
+
+.header--large .text--headline, .header--large .text--headline a 
+  font-size: 42px
+
+@media only screen and (max-width: $small-screen-max)
+  .text--headline, .text--headline a
+    font-size: 26px 
+
+  .header--large .text--headline, .header--large .text--headline a 
+    font-size: 36px
+
 .text--headline-2, .text--headline-2 a
   font-family: $Lato
   font-weight: 800
-  font-size: 26px
+  font-size: 24px
   text-decoration: none
+
+.checkout-summary .text--headline-2 
+  font-size: 20px
+
+.product__intro-text .text--headline-2
+  font-size: 32px
+
+.reading .text--headline-2
+  font-size: 32px
 
 .text--headline-3, .text--headline-3 a
   font-family: $Lato
@@ -77,6 +105,9 @@
   font-weight: 800
   font-size: 18px
   text-decoration: none
+
+.reading .text--headline-4
+  font-size: 20px
 
 .text--subhead
   font-family: $Lato
@@ -92,21 +123,34 @@
   font-size: 14px
   line-height: 140%
 
+.text--caption.cart__caption 
+  font-size: 12px
+
+.text--caption.cart__apply-discount-link
+  font-size: 12px
+  font-weight: 400
+
 .text--caption a, a.text--caption
   font-family: $Lato
   font-weight: 400
 
 .text--details
   font-family: $Lato
-  font-weight: 300
+  font-weight: 400
   font-size: 16px
   line-height: 140%  
 
 .text--smaller
   font-size: 80%
 
+.text--smaller.checkout__subtotal
+  font-size: 12px
+
 .text--larger
   font-size: 120%
+
+.text--larger.checkout__total
+  font-size: 16px
 
 .text--success
   color: $accent-success  
@@ -176,6 +220,7 @@ a.text--delete-button:active
 
 .text--link-list h3 
   margin: 5px 0
+  font-size: 20px
 
 .text--link-list__arrow
   font-size: 60px
@@ -186,6 +231,9 @@ a.text--delete-button:active
 @media only screen and (max-width: $small-screen-max)
   .text--link-list__arrow 
     display: none
+
+.product-detail .text--link-list a 
+  font-weight: 800
 
 // address 
 .text--address-block div
@@ -213,4 +261,10 @@ a.text--delete-button:active
   font-weight: 300
   +transform(scaleX(1.2))
   color: $grey-darker
+
+.email-us-link
+
+@media only screen and (max-width: $small-screen-max)  
+  .email-us-link
+    font-size: 80%
 
