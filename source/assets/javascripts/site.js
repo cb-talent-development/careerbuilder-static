@@ -20,4 +20,6 @@ jQuery(function(){
   window.interact.showOnFocus("#password-field", "#password-helper");
 
   window.interact.securityCodeHelper("#card-number-field", "#security-code-helper");
+
+  window.interact.smoothScroll(".product-subnav a[href*=#]:not([href=#])");
 });

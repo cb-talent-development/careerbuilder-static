@@ -1,10 +1,3 @@
-/*
-* @Author: Manske
-* @Date:   2015-08-12 11:14:25
-* @Last Modified by:   Manske
-* @Last Modified time: 2015-08-12 11:41:31
-*/
-
 'use strict';
 if(typeof window.interact === 'undefined') { window.interact = {} }
 

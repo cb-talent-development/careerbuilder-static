@@ -1,13 +1,28 @@
-/*
-* @Author: Manske
-* @Date:   2015-08-12 11:27:48
-* @Last Modified by:   Manske
-* @Last Modified time: 2015-08-12 11:33:04
+/**
+* Attaches click/touch listener for in-page links
+* to facilitate smooth scrolling
+*
+* @method smoothScroll
+* @param {String} targets - jQuery element selection string
 */
 
 'use strict';
 if(typeof window.interact === 'undefined') { window.interact = {} }
 
-window.interact.smoothScroll = function (target) {
+window.interact.smoothScroll = function (targets) {
 
+  $(targets).on('click touchend', function(event) {
+    event.preventDefault()
+
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 750);
+        return false;
+      }
+    }
+  })
 };
