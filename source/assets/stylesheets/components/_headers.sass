@@ -97,6 +97,84 @@
   visibility: visible
   opacity: 1
 
+//
+
+.flyout.header__subnav.text--white ul li ul li a
+  color: $primary 
+
+.flyout.header__subnav ul
+
+.flyout.header__subnav ul li
+  +transition(all 0.2s)
+  padding-bottom: 30px
+  height: auto
+  display: inline-block
+  margin-right: 0
+
+.flyout.header__subnav ul li:hover
+  background: none  
+
+.flyout.header__subnav ul li ul
+  +transition(all 0.2s)  
+  padding: 20px
+  background-color: $white
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  width: auto
+  height: auto
+
+.flyout.header__subnav ul li ul li, .flyout.header__subnav ul li ul li:hover 
+  background-color: $white
+  width: 250px
+  padding: 12px
+
+.flyout.header__subnav ul li:hover ul
+  background-color: $white
+
+.flyout.header__subnav ul li ul 
+  position: absolute
+  top: 70px
+  left: -10px
+  background: #ffffff
+  border: 1px solid #cccccc
+
+.flyout.header__subnav ul li ul:after, .flyout.header__subnav ul li ul:before 
+  bottom: 100%
+  left: 15%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.flyout.header__subnav ul li ul:after 
+  border-color: rgba(255, 255, 255, 0)
+  border-bottom-color: #ffffff
+  border-width: 10px
+  margin-left: -10px
+
+.flyout.header__subnav ul li ul:before 
+  border-color: rgba(204, 204, 204, 0)
+  border-bottom-color: #cccccc
+  border-width: 11px
+  margin-left: -11px
+
+.header__subnav ul li
+  display: inline-block
+  list-style: none
+  padding: 32px 40px 10px 0px
+
+.header__subnav ul li ul li
+  padding: 10px
+  height: auto
+  width: 350px
+
+.header__subnav ul li:hover
+  background-color: $primary-light
+
+//
+
 .top-bar__links
   float: right
   padding-right: 20px 
@@ -113,7 +191,7 @@
 .top-bar__links ul li:hover
   background-color: $primary-light
 
-.top-bar__links ul li ul li, .header__subnav ul li ul li
+.top-bar__links ul li ul li
   background-color: $primary-dark
   text-shadow: 0 -1px 0 #000
   border-bottom: 1px solid $primary-light
@@ -121,25 +199,6 @@
 
 .top-bar__links ul li ul li:hover 
   background: $primary-darker
-
-.header__subnav ul
-  display: block
-  padding: 0
-  margin: 0px
-  height: 40px
-
-.header__subnav ul li
-  display: inline-block
-  list-style: none
-  padding: 32px 40px 10px 0px
-
-.header__subnav ul li ul li
-  padding: 10px
-  height: auto
-  width: 250px
-
-.header__subnav ul li:hover
-  background-color: $primary-light
 
 // HEADER
 
@@ -280,12 +339,6 @@
     padding-right: 0px
     padding-top: 0px
     padding-bottom: 32px
-
-.header__subnav ul
-  display: block
-  padding: 0
-  margin: 0px
-  height: 40px
 
 .header__progress-bar ul
   margin-top: 0
