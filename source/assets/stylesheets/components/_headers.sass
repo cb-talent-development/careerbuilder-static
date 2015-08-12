@@ -96,8 +96,9 @@
   display: block
   visibility: visible
   opacity: 1
+  +transition(opacity 0.2s)
 
-//
+// Subnav flyout menu
 
 .flyout.header__subnav.text--white ul li ul li a
   color: $primary 
@@ -105,7 +106,6 @@
 .flyout.header__subnav ul
 
 .flyout.header__subnav ul li
-  +transition(all 0.2s)
   padding-bottom: 30px
   height: auto
   display: inline-block
@@ -114,8 +114,7 @@
 .flyout.header__subnav ul li:hover
   background: none  
 
-.flyout.header__subnav ul li ul
-  +transition(all 0.2s)  
+.flyout.header__subnav ul li ul 
   padding: 20px
   background-color: $white
   +border-top-radius(5px)
@@ -125,8 +124,8 @@
 
 .flyout.header__subnav ul li ul li, .flyout.header__subnav ul li ul li:hover 
   background-color: $white
-  width: 250px
-  padding: 12px
+  width: 200px
+  padding: 10px
 
 .flyout.header__subnav ul li:hover ul
   background-color: $white
@@ -134,13 +133,13 @@
 .flyout.header__subnav ul li ul 
   position: absolute
   top: 70px
-  left: -10px
+  left: -32px
   background: #ffffff
-  border: 1px solid #cccccc
+  border: 1px solid #cccccc 
 
 .flyout.header__subnav ul li ul:after, .flyout.header__subnav ul li ul:before 
   bottom: 100%
-  left: 15%
+  left: 25%
   border: solid transparent
   content: " "
   height: 0
@@ -170,8 +169,11 @@
   height: auto
   width: 350px
 
-.header__subnav ul li:hover
-  background-color: $primary-light
+.header__subnav ul li:hover ul li:hover a
+  color: $primary-lightest
+
+.header__subnav ul li:hover ul li a:active
+  color: $accent-primary
 
 //
 
@@ -221,7 +223,7 @@
   height: 216px
 
 .header--medium .header__subnav
-  margin-bottom: 64px
+  margin-bottom: 15px
 
 .header--thin
   height: 168px
