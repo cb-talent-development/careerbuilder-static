@@ -96,6 +96,86 @@
   display: block
   visibility: visible
   opacity: 1
+  +transition(opacity 0.2s)
+
+// Subnav flyout menu
+
+.flyout.header__subnav.text--white ul li ul li a
+  color: $primary 
+
+.flyout.header__subnav ul
+
+.flyout.header__subnav ul li
+  padding-bottom: 30px
+  height: auto
+  display: inline-block
+  margin-right: 0
+
+.flyout.header__subnav ul li:hover
+  background: none  
+
+.flyout.header__subnav ul li ul 
+  padding: 20px
+  background-color: $white
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  width: auto
+  height: auto
+
+.flyout.header__subnav ul li ul li, .flyout.header__subnav ul li ul li:hover 
+  background-color: $white
+  width: 200px
+  padding: 10px
+
+.flyout.header__subnav ul li:hover ul
+  background-color: $white
+
+.flyout.header__subnav ul li ul 
+  position: absolute
+  top: 70px
+  left: -32px
+  background: #ffffff
+  border: 1px solid #cccccc 
+
+.flyout.header__subnav ul li ul:after, .flyout.header__subnav ul li ul:before 
+  bottom: 100%
+  left: 25%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.flyout.header__subnav ul li ul:after 
+  border-color: rgba(255, 255, 255, 0)
+  border-bottom-color: #ffffff
+  border-width: 10px
+  margin-left: -10px
+
+.flyout.header__subnav ul li ul:before 
+  border-color: rgba(204, 204, 204, 0)
+  border-bottom-color: #cccccc
+  border-width: 11px
+  margin-left: -11px
+
+.header__subnav ul li
+  display: inline-block
+  list-style: none
+  padding: 32px 40px 10px 0px
+
+.header__subnav ul li ul li
+  padding: 10px
+  height: auto
+  width: 350px
+
+.header__subnav ul li:hover ul li:hover a
+  color: $primary-lightest
+
+.header__subnav ul li:hover ul li a:active
+  color: $accent-primary
+
+//
 
 .top-bar__links
   float: right
@@ -113,7 +193,7 @@
 .top-bar__links ul li:hover
   background-color: $primary-light
 
-.top-bar__links ul li ul li, .header__subnav ul li ul li
+.top-bar__links ul li ul li
   background-color: $primary-dark
   text-shadow: 0 -1px 0 #000
   border-bottom: 1px solid $primary-light
@@ -121,25 +201,6 @@
 
 .top-bar__links ul li ul li:hover 
   background: $primary-darker
-
-.header__subnav ul
-  display: block
-  padding: 0
-  margin: 0px
-  height: 40px
-
-.header__subnav ul li
-  display: inline-block
-  list-style: none
-  padding: 20px 40px 10px 10px
-
-.header__subnav ul li ul li
-  padding: 10px
-  height: auto
-  width: 250px
-
-.header__subnav ul li:hover
-  background-color: $primary-light
 
 // HEADER
 
@@ -159,7 +220,10 @@
   font-size: 40px
 
 .header--medium
-  height: 220px
+  height: 216px
+
+.header--medium .header__subnav
+  margin-bottom: 15px
 
 .header--thin
   height: 168px
@@ -169,7 +233,9 @@
     height: 95px
     background-image: none
 
-.header--reading 
+.header.header--reading 
+  margin-bottom: 30px
+  height: 236px
 
 .header--reading__subnav
   +span_columns(8)
@@ -178,6 +244,7 @@
 .header__headline.header--reading__headline
   +span_columns(8)
   +shift(2)
+  padding-top: 50px
 
 @media only screen and (max-width: $medium-screen-max) 
   .header--reading__subnav
@@ -211,31 +278,39 @@
     margin-top: 0px
     padding-top: 30px
 
-.header--large 
+.header--large
 
 .header--large__image
-  +span-columns(6)
+  +span-columns(7)
   text-align: center
   vertical-align: bottom
+  position: relative
 
 .header--large__image img
   display: block  
-  max-width: 520px
+  max-width: 600px
 
 .header--large__headline
-  +span-columns(6)
-  padding-right: 64px
-  padding-top: 64px
-  padding-bottom: 64px
+  +span-columns(5)
+  padding-right: 20px
+  padding-top: 50px
+  padding-bottom: 134px
+
+.header--large__headline h1 
+  margin-bottom: 15px
+
+.header--large__headline h2 
+  margin-top: 15px
 
 .header--large-alternate__headline
   +span-columns(8)
   padding-right: 0px
   padding-top: 0px
-  padding-bottom: 54px
+  padding-bottom: 44px
   position: relative
   // layers above image
   z-index: 6200
+  margin-top: -45px
 
 .header--large-alternate__image-container
   +outer-container
@@ -265,12 +340,6 @@
     padding-right: 0px
     padding-top: 0px
     padding-bottom: 32px
-
-.header__subnav ul
-  display: block
-  padding: 0
-  margin: 0px
-  height: 40px
 
 .header__progress-bar ul
   margin-top: 0

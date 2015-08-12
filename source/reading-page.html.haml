@@ -13,21 +13,29 @@ title: Reading Page
     // main text 
     %section{class: "reading__section box--divider-bottom"}
 
+      = partial 'partials/placeholder'
+
       %h2{class: "text--accent text--headline-2"}
         Headline 2 style
-      = partial 'partials/placeholder'
 
       %h4{class: "text--headline-4"}
         Headline 4 style
       = partial 'partials/placeholder'
-      %ul
-        %li List Item
-        %li List Item  
-        %li List Item 
+
+      %p 
+        %strong
+          %a{href:"#foo"} Link text here
+
+      %p  
+        Hello text is here. Duis congue id nibh eget laoreet. Etiam tincidunt tellus magna, vitae finibus justo pharetra sit amet. Pellentesque faucibus arcu eu sagittis condimentum. Donec hendrerit venenatis massa sit amet elementum.   
+        %ul
+          %li List Item
+          %li List Item  
+          %li List Item 
 
       %p
         %a{href: "#link"} Link text here
-      %div{class: "columns-5"}
+      %div{class: "columns-4"}
         %a{class: "button button--primary button--large"} Read More   
       %p 
         %a{class: "button button--secondary"} Read More  
@@ -80,15 +88,15 @@ title: Reading Page
       %div{class: "reading__contact"}
         %div{class: "reading__contact__name"} Michael Erwin
         %div{class: "reading__contact__detail"} phone: 773-555-1164
-        %div{class: "reading__contact__detail"} email: jennifer.grasz@careerbuilder.com
+        %div{class: "reading__contact__detail"} email: foo.email@careerbuilder.com
 
       %div{class: "reading__contact"}
-        %div{class: "reading__contact__name"} Michael Erwin
+        %div{class: "reading__contact__name"} Stephenie Smith
         %div{class: "reading__contact__detail"} phone: 773-555-1164
-        %div{class: "reading__contact__detail"} email: jennifer.grasz@careerbuilder.com
+        %div{class: "reading__contact__detail"} email: foo.email@careerbuilder.com
 
       %div{class: "reading__contact omega"}
-        %div{class: "reading__contact__name"} Michael Erwin
+        %div{class: "reading__contact__name"} Abdullah Jones
         %div{class: "reading__contact__detail"} phone: 773-555-1164
-        %div{class: "reading__contact__detail"} email: jennifer.grasz@careerbuilder.com
+        %div{class: "reading__contact__detail"} email: foo.email@careerbuilder.com
 

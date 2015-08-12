@@ -270,6 +270,11 @@ address
   // use on div with .box--divider-bottom  
   +span-columns(12)
   margin-bottom: 32px
+  margin-top: 10px
+
+.form--large h3 
+  margin-top: 0
+  margin-bottom: 14px
 
 .form__error
   margin-top: 18px
@@ -298,6 +303,14 @@ address
 .form__security-code-helper img, .form__security-code-helper div
   vertical-align: middle
 
+.cart-login .form--large label:first-child 
+  margin-bottom: 18px
+
+@media only screen and (max-width: $small-screen-max) 
+  .cart-login .form--large submit
+    width: 100%
+    margin-bottom: 10px
+
 // Sticky navigation 
 
 .sticky-nav
@@ -316,7 +329,7 @@ address
   position: relative
 
 .sticky-nav__top-container
-  margin-bottom: 64px
+  margin-bottom: 88px
   background-color: $base-background-color
   position: relative
   z-index: 5100
