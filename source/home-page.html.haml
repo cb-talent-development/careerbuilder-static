@@ -45,16 +45,36 @@ layout: layout
     = image_tag 'carousel--laptop.png'
 
   %div{class: "carousel__image-container"}
-    = image_tag 'carousel--home-top-1.png', {class: "carousel__image"} 
-    = image_tag 'carousel--home-top-2.png', {class: "carousel__image"} 
-    = image_tag 'carousel--home-top-3.png', {class: "carousel__image"} 
-    = image_tag 'carousel--home-top-4.png', {class: "carousel__image"} 
-    = image_tag 'carousel--home-top-5.png', {class: "carousel__image"} 
+    / width is 600px x number of images in section
+    %div{style: "width: 3100px;", id: "top-carousel-images"}
+      = image_tag 'carousel--home-top-1.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-2.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-3.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-4.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-5.png', {class: "carousel__image"} 
 
+  %div{class: "carousel__clickable"}
+    %a{href:"#", id: "carousel-top--1", class: "active"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--2"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--3"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--4"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--5"} <i class="fa fa-circle"></i>    
 
 %div{class: "container text--body"}
 
-  %div{class: "columns-12"}
-    WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! 
+  %div{class: "home__product-block"}
+    %h2 Candidate Marketplace
+    %p Connecting you to the best candidates through online and offline sourcing channels.
+    %a{class: "button button--secondary", href: "#"} View Products  
 
+  %div{class: "home__product-block"}
+    %h2 Sourcing Software
+    %p Moving candidates from aquire to hire while removing the complexity from your process.
+    %a{class: "button button--secondary", href: "#"} View Products  
 
+  %div{class: "home__product-block omega"}
+    %h2 Recruitment Analytics
+    %p Making recruitment data actionable, helping you set expectations, measure and grow.
+    %a{class: "button button--secondary", href: "#"} View Products  
+
+%div{class: "container text--body debug"}

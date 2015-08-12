@@ -28,9 +28,43 @@
 .header .header--home__button  
   width: 180px
 
+//
+
+.home__product-block  
+  // homerolling grid system to place border lines 
+  // between grid columns
+  width: 33%
+  float: left
+  text-align: center
+  padding: 0 34px
+  border-right: $base-border
+  margin: 0 0 110px 0
+
+.home__product-block.omega
+  border-right: none
+  margin-right: none
+  padding-right: 24px
+
+.home__product-block h2
+  font-size: 21px
+  margin-bottom: 24px
+  margin-top: 0px
+
+.home__product-block p 
+  font-size: 14px
+  margin-top: 0px
+  margin-bottom: 24px
+  color: $grey-darker
+  
+.home__product-block a.button.button--secondary
+  font-size: 14px
+  padding: 5px 18px
+
+//
+
 .carousel__container  
   position: relative
-  height: 185px
+  height: 295px
   margin-bottom: 80px
   width: 100%
   text-align: center
@@ -42,14 +76,31 @@
   z-index: 8000
 
 .carousel__image-container
-  max-height: 375px
-  max-width: 600px
-  position: absolute
-  top: -250px // guesstimate
+  height: 375px
+  width: 600px
+  position: relative
+  top: -250px 
+  margin: 0 auto
   z-index: 7900
   overflow: hidden
+  display: inline-block
 
 .carousel__image
+  float: left
   display: inline-block
   padding: 0
   margin: 0
+
+.carousel__clickable  
+  position: absolute
+  top: 230px
+  width: 100%
+
+.carousel__clickable a
+  display: inline-block
+  margin: 16px
+  color: $grey-lighter
+  font-size: 14px
+
+.carousel__clickable a.active
+  color: $grey-darker  
