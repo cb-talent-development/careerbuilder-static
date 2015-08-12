@@ -46,7 +46,7 @@ layout: layout
 
   %div{class: "carousel__image-container"}
     / width is 600px x number of images in section
-    %div{style: "width: 3100px;", id: "top-carousel-images"}
+    %div{style: "width: 3001px;", id: "top-carousel-images"}
       = image_tag 'carousel--home-top-1.png', {class: "carousel__image"} 
       = image_tag 'carousel--home-top-2.png', {class: "carousel__image"} 
       = image_tag 'carousel--home-top-3.png', {class: "carousel__image"} 
@@ -77,4 +77,9 @@ layout: layout
     %p Making recruitment data actionable, helping you set expectations, measure and grow.
     %a{class: "button button--secondary", href: "#"} View Products  
 
-%div{class: "container text--body debug"}
+
+%div{class: "home__background-cover text--body", style: "background-image: url('assets/images/placeholder--home-mobile.png'); height: 660px"}
+  %div{class: "home__background-overlay-right"}
+  %div{class: "container text--body"}
+
+
