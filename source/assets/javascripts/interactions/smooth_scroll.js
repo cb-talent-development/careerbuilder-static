@@ -19,7 +19,8 @@ window.interact.smoothScroll = function (targets) {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top
+          // pixels added to prevent landing on displeasing scroll-nav/fixed-nav transition point 
+          scrollTop: (target.offset().top - 50)
         }, 750);
         return false;
       }
