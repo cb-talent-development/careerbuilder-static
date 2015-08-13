@@ -40,7 +40,7 @@ layout: layout
         Learn More  
 
 / product image 
-%div{class: "carousel__container large-screen-only home__top-carousel"}  
+%aside{class: "carousel__container large-screen-only home__top-carousel"}  
   %div{class: "carousel__frame-image"}
     = image_tag 'carousel--laptop.png'
 
@@ -60,7 +60,7 @@ layout: layout
     %a{href:"#", id: "carousel-top--4"} <i class="fa fa-circle"></i>
     %a{href:"#", id: "carousel-top--5"} <i class="fa fa-circle"></i>    
 
-%div{class: "container text--body"}
+%section{class: "container text--body"}
 
   %div{class: "home__product-block"}
     %h2 Candidate Marketplace
@@ -79,8 +79,8 @@ layout: layout
 
 
 %div{class: "home__background-cover text--body", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
-  %div{class: "home__background-overlay-right"}
-  %div{class: "container text--body"}
+  %div{class: "home__background-overlay-right home__overlay--green"}
+  %section{class: "container text--body"}
     %div{class: "home__half-page-right text--white"}
       %h2 Products and Solutions for Every Step of the Recruiter Journey
       %p Whether you need to post a single job or build a comprehensive recruitment program, we have you covered.
@@ -95,7 +95,7 @@ layout: layout
       %div{class: "home__icon-row__subtext"} Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure
 
 %div{class: "home__background-cover", style: "background-color: #fff"}
-  %div{class: "container text--body home__logo-grid__title"}
+  %section{class: "container text--body home__logo-grid__title"}
     %div 
       %span{class: "light"} Featured
       %span{class: "heavy"} Customers
@@ -120,3 +120,69 @@ layout: layout
     %div 
       %a{href:"#"}
         = image_tag 'logo--testimonial--novo.png'
+
+%div{class: "home__background-cover", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
+  %div{class: "home__background-overlay-all home__overlay--blue"}
+  %section{class: "container text--body text--white"}
+    %div{class: "home__lower-carousel"}
+      %h2
+        %span{class: "light"} Customer
+        %span{class: "heavy"} Success Stories
+      %p
+        “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+      %a{class: "button button--secondary text--white", href: "#"} More Stories  
+
+      %div{class: "home__lower-carousel__clickable"}
+        %a{href:"#", id: "carousel-top--1", class: "active"} <i class="fa fa-circle"></i>
+        %a{href:"#", id: "carousel-top--2"} <i class="fa fa-circle"></i>
+        %a{href:"#", id: "carousel-top--3"} <i class="fa fa-circle"></i>
+       
+%div{class: "container text--body"}
+  %section{class: "home__blog"}
+    %h2 
+      %span{class: "light"} Recent
+      %span{class: "heavy"} Blog Articles
+
+    %article{class: "home__blog__article"}
+      %h3
+        %a{href:"#"} 46% of Employers Plan to Hire Temporary or Contract Workers in 2015   
+      %time March 28, 2015
+
+    %article{class: "home__blog__article"}
+      %h3
+        %a{href:"#"} 10 Metros With a Temp Workforce of 45-150% Larger Than the US Average   
+      %time March 28, 2015
+
+    %article{class: "home__blog__article"}
+      %h3
+        %a{href:"#"} Senior Management More Susceptible to March Madness   
+      %time March 28, 2015
+
+    %a{href: "#", class: "button button--secondary"} Visit Blog
+
+  %section{class: "home__events"}
+    %h2 
+      %span{class: "light"} Upcoming
+      %span{class: "heavy"} Events
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} Empower 2015: Register Today!
+      %time March, 10 - 13, 2015
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} NJSA National Executive Leadership Conference
+      %time March, 10 - 13, 2015
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} Techserve Annual Conference
+      %time March, 10 - 13, 2015
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} NYSA Super Seminar Day
+      %time March, 10 - 13, 2015  
+
+    %a{href: "#", class: "button button--secondary"} More Events  
