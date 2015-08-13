@@ -9,18 +9,9 @@ layout: layout
 
     %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
       %div{class: 'columns-6'} 
-        %ul 
-          %li 
-            %a{href: "#products"}
-              Products
-          %li
-            %a{href: "#cart"}  
-              Resources
-          %li
-            %a{href: "#contact"} 
-              About Us
+        = partial 'partials/header-subnav'
       %div{class: 'columns-2 shift-1 header--home__top-nav'} 
-        %a{href: "#foo", class: "button button--primary button--large button--sucess"} 
+        %a{href: "#foo", class: "button button--primary button--large button--success"} 
           Post a Job
 
       %div{class: 'columns-3 header--home__top-nav'} 
@@ -31,24 +22,158 @@ layout: layout
     %div{class: "header--home__headline"}
 
       %h1{class: "text--headline text--white"}
-        A CareerBuilder Product
+        Kiss Your Tedious Recruitment Process Goodbye
 
-      %h2{class: "text--subhead text--white"}
-        Find the right business solutions for your company
+      %h2{class: "text--subhead text--white columns-12 clear-fix"}
+        Go from acquire to hire with Talent Stream Technologies, CareerBuilder’s recruitment sofware solution that brings advertising, data and technology into one pre-hire platform.
 
       %a{class: "header--home__button button button--secondary button--large text--white"}
         Learn More  
 
 / product image 
-%div{class: "carosel--container large-screen-only"}  
-  %div{class: "carosel--frame-image"}
-    = image_tag 'carosel--laptop.png'
+%aside{class: "carousel__container large-screen-only home__top-carousel"}  
+  %div{class: "carousel__frame-image"}
+    = image_tag 'carousel--laptop.png'
+
+  %div{class: "carousel__image-container"}
+    / width is 600px x number of images in section
+    %div{style: "width: 3001px;", id: "top-carousel-images"}
+      = image_tag 'carousel--home-top-1.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-2.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-3.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-4.png', {class: "carousel__image"} 
+      = image_tag 'carousel--home-top-5.png', {class: "carousel__image"} 
+
+  %div{class: "carousel__clickable"}
+    %a{href:"#", id: "carousel-top--1", class: "active"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--2"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--3"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--4"} <i class="fa fa-circle"></i>
+    %a{href:"#", id: "carousel-top--5"} <i class="fa fa-circle"></i>    
+
+%section{class: "container text--body"}
+
+  %div{class: "home__product-block"}
+    %h2 Candidate Marketplace
+    %p Connecting you to the best candidates through online and offline sourcing channels.
+    %a{class: "button button--secondary", href: "#"} View Products  
+
+  %div{class: "home__product-block"}
+    %h2 Sourcing Software
+    %p Moving candidates from aquire to hire while removing the complexity from your process.
+    %a{class: "button button--secondary", href: "#"} View Products  
+
+  %div{class: "home__product-block omega"}
+    %h2 Recruitment Analytics
+    %p Making recruitment data actionable, helping you set expectations, measure and grow.
+    %a{class: "button button--secondary", href: "#"} View Products  
 
 
+%div{class: "home__background-cover text--body", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
+  %div{class: "home__background-overlay-right home__overlay--green"}
+  %section{class: "container text--body"}
+    %div{class: "home__half-page-right text--white"}
+      %h2 Products and Solutions for Every Step of the Recruiter Journey
+      %p Whether you need to post a single job or build a comprehensive recruitment program, we have you covered.
 
+      %div{class: "home__icon-row clear-fix"}
+        = image_tag 'icon--home-row-1.png'
+        = image_tag 'icon--home-row-2.png'
+        = image_tag 'icon--home-row-3.png'
+        = image_tag 'icon--home-row-4.png'
+        = image_tag 'icon--home-row-5.png'
+
+      %div{class: "home__icon-row__subtext"} Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure
+
+%div{class: "home__background-cover", style: "background-color: #fff"}
+  %section{class: "container text--body home__logo-grid__title"}
+    %div 
+      %span{class: "light"} Featured
+      %span{class: "heavy"} Customers
+
+  %div{class: "container text--body home__logo-grid"}
+    %div 
+      %a{href:"#"}
+        = image_tag 'logo--testimonial--sports.png'
+    %div 
+      %a{href:"#"}
+        = image_tag 'logo--testimonial--wynn.png'
+    %div 
+      %a{href:"#"}
+        = image_tag 'logo--testimonial--nucor.png'
+  %div{class: "container text--body home__logo-grid omega-row"}
+    %div 
+      %a{href:"#"}
+        = image_tag 'logo--testimonial--vitamin.png'
+    %div 
+      %a{href:"#"}
+        = image_tag 'logo--testimonial--rockwater.png'
+    %div 
+      %a{href:"#"}
+        = image_tag 'logo--testimonial--novo.png'
+
+%div{class: "home__background-cover", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
+  %div{class: "home__background-overlay-all home__overlay--blue"}
+  %section{class: "container text--body text--white"}
+    %div{class: "home__lower-carousel"}
+      %h2
+        %span{class: "light"} Customer
+        %span{class: "heavy"} Success Stories
+      %p
+        “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+      %a{class: "button button--secondary text--white", href: "#"} More Stories  
+
+      %div{class: "home__lower-carousel__clickable"}
+        %a{href:"#", id: "carousel-top--1", class: "active"} <i class="fa fa-circle"></i>
+        %a{href:"#", id: "carousel-top--2"} <i class="fa fa-circle"></i>
+        %a{href:"#", id: "carousel-top--3"} <i class="fa fa-circle"></i>
+       
 %div{class: "container text--body"}
+  %section{class: "home__blog"}
+    %h2 
+      %span{class: "light"} Recent
+      %span{class: "heavy"} Blog Articles
 
-  %div{class: "columns-12"}
-    WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! 
+    %article{class: "home__blog__article"}
+      %h3
+        %a{href:"#"} 46% of Employers Plan to Hire Temporary or Contract Workers in 2015   
+      %time March 28, 2015
 
+    %article{class: "home__blog__article"}
+      %h3
+        %a{href:"#"} 10 Metros With a Temp Workforce of 45-150% Larger Than the US Average   
+      %time March 28, 2015
 
+    %article{class: "home__blog__article"}
+      %h3
+        %a{href:"#"} Senior Management More Susceptible to March Madness   
+      %time March 28, 2015
+
+    %a{href: "#", class: "button button--secondary"} Visit Blog
+
+  %section{class: "home__events"}
+    %h2 
+      %span{class: "light"} Upcoming
+      %span{class: "heavy"} Events
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} Empower 2015: Register Today!
+      %time March, 10 - 13, 2015
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} NJSA National Executive Leadership Conference
+      %time March, 10 - 13, 2015
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} Techserve Annual Conference
+      %time March, 10 - 13, 2015
+
+    %div{class: "home__events__item"}
+      %h3
+        %a{href:"#"} NYSA Super Seminar Day
+      %time March, 10 - 13, 2015  
+
+    %a{href: "#", class: "button button--secondary"} More Events  

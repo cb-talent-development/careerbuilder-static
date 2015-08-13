@@ -1,7 +1,17 @@
-.header--home 
+.home-page .light 
+  font-weight: 100
+
+.home-page .heavy 
+  font-weight: 800
+
+//
+
+.header.header--home 
+  background-image: url('/assets/images/placeholder--home-background.png')
+  background-position: center center
 
 .header--home__top-nav
-  margin-top: 10px
+  margin-top: 20px
 
 .header--home__headline
   +span-columns(12)
@@ -18,18 +28,255 @@
   margin-bottom: 36px
   margin-top: 0px
 
+.header--home__headline a.button.button--large 
+  width: 150px
+  font-size: 16px
+  font-weight: 800
+
 .header .header--home__button  
   width: 180px
 
-.carosel--container 
-  +span-columns(12)  
-  text-align: center
-  position: relative
-  height: 185px
-  margin-bottom: 80px
+//
 
-.carosel--frame-image 
+.home__product-block  
+  // homerolling grid system to place border lines 
+  // between grid columns
+  width: 33%
+  float: left
+  text-align: center
+  padding: 0 34px
+  border-right: $base-border
+  margin: 0 0 110px 0
+
+.home__product-block.omega
+  border-right: none
+  margin-right: none
+  padding-right: 24px
+
+.home__product-block h2
+  font-size: 21px
+  margin-bottom: 24px
+  margin-top: 0px
+
+.home__product-block p 
+  font-size: 14px
+  margin-top: 0px
+  margin-bottom: 24px
+  color: $grey-darker
+  
+.home__product-block a.button.button--secondary
+  font-size: 14px
+  padding: 5px 18px
+
+//
+
+.carousel__container  
+  position: relative
+  height: 295px
+  margin-bottom: 80px
+  width: 100%
+  text-align: center
+
+.carousel__frame-image 
   position: absolute
-  margin: 0 auto
   width: 100%
   top: -280px
+  z-index: 8000
+
+.carousel__image-container
+  height: 375px
+  width: 600px
+  position: relative
+  top: -250px 
+  margin: 0 auto
+  z-index: 7900
+  overflow: hidden
+  display: inline-block
+
+.carousel__image
+  float: left
+  display: inline-block
+  padding: 0
+  margin: 0
+
+.carousel__clickable  
+  position: absolute
+  top: 230px
+  width: 100%
+
+.carousel__clickable a
+  display: inline-block
+  margin: 16px
+  color: $grey-lighter
+  font-size: 14px
+
+.carousel__clickable a.active
+  color: $grey-darker  
+
+// 
+
+.home__background-cover 
+  background-position: center top 
+  height: 660px
+  position: relative
+  z-index: 0
+
+.home__background-overlay-right
+  width: 50%
+  position: absolute
+  left: 50%
+  display: block
+  height: 660px
+  z-index: 100
+
+.home__background-overlay-all
+  position: absolute
+  display: block
+  height: 660px
+  width: 100%
+  z-index: 100
+
+.home__overlay--green
+  background-color: rgba(0, 155, 116, 0.8)
+
+.home__overlay--blue
+  background-color: rgba(40, 121, 184, 0.8)
+
+.home__half-page-right
+  +span-columns(5)
+  +shift(7)
+  position: relative
+  z-index: 1000
+  margin-top: 120px
+
+.home__half-page-right h2
+  font-size: 28px
+  line-height: 36px
+  font-weight: 800
+
+.home__half-page-right p 
+  font-size: 24px 
+  line-height: 28px
+  font-weight: 100  
+
+.home__icon-row
+  position: relative
+  left: -7px
+
+.home__icon-row img 
+  float: left
+  margin-top: 40px
+  margin-bottom: 16px
+  margin-right: 6px
+
+.home__icon-row img:last-child
+  margin-right: -5px
+
+.home__icon-row__subtext
+  font-size: 18.8px 
+  line-height: 28px
+  font-weight: 100
+
+
+// 
+
+.home__logo-grid__title
+  +span-columns(12)
+  text-align: center
+  font-size: 32px
+  margin-top: 80px
+  margin-bottom: 80px
+
+.home__logo-grid
+  padding: 20px 50px 0 50px 
+
+.home__logo-grid div
+  width: 33%
+  display: block
+  float: left 
+  text-align: center
+  
+.home__logo-grid.omega-row
+  margin-bottom: 160px
+
+//
+
+.home__lower-carousel
+  +span-columns(12)
+  +outer-container
+  position: relative
+  z-index: 1000
+  text-align: center
+  margin-top: 180px
+  margin-bottom: 80px
+
+.home__lower-carousel h2
+  margin-top: 0
+  font-size: 32px
+  line-height: 36px
+  font-weight: 800
+
+.home__lower-carousel p
+  +span-columns(8)
+  +shift(2)
+  margin-top: 10px
+  font-size: 32px
+  line-height: 42px
+  font-weight: 400
+
+.home__lower-carousel a
+  margin-top: 20px
+
+.home__lower-carousel__clickable
+  margin-top: 10px
+  opacity: 0.7
+
+.home__lower-carousel__clickable a
+  display: inline-block
+  margin: 16px
+  color: $primary-lighter !important
+  font-size: 14px
+
+.home__lower-carousel__clickable a.active
+  color: $primary-darker !important
+
+//   
+
+.home__blog
+  margin-top: 140px
+  +span-columns(6)
+
+.home__blog h2, .home__events h2
+  font-size: 32px
+  margin-bottom: 70px
+
+.home__events
+  margin-top: 140px
+  +span-columns(5)
+  +shift(1)
+
+.home__blog__article h3, .home__blog__article h3 a
+  font-size: 21px
+  font-weight: 800
+  margin-bottom: 0px
+
+.home__blog__article time, .home__events__item time
+  display: block
+  font-style: italic
+  font-weight: 100
+  color: #8b92a0
+  font-size: 14px
+  margin-top: 5px
+
+.home__blog__article
+  margin-bottom: 40px
+  padding-bottom: 40px
+  border-bottom: $base-border
+
+.home__events__item  
+  margin-bottom: 40px
+
+.home__events__item h3, .home__events__item h3 a
+  font-size: 18px
+  font-weight: 800
+  margin-bottom: 0px  
