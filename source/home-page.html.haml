@@ -3,6 +3,17 @@ title: Home Page
 layout: layout
 ---
 
+/ modals
+%div{class: "modal__positioning"}
+  %div{class: "modal__container text--body"}
+
+    = partial 'partials/modal--video-sports'
+    = partial 'partials/modal--video-wynn'
+    = partial 'partials/modal--video-nucor'
+    = partial 'partials/modal--video-vitamin'
+    = partial 'partials/modal--video-rockwater'
+    = partial 'partials/modal--video-novo'
+
 / header--home
 %header{class: "header header--home"}
   %div{class: "container"}
@@ -93,23 +104,23 @@ layout: layout
 
   %div{class: "container text--body home__logo-grid"}
     %div 
-      %a{href:"#"}
+      %a{href:"#", class: "modal-open--video-sports"}
         = image_tag 'logo--testimonial--sports.png'
     %div 
-      %a{href:"#"}
+      %a{href:"#", class: "modal-open--video-wynn"}
         = image_tag 'logo--testimonial--wynn.png'
     %div 
-      %a{href:"#"}
+      %a{href:"#", class: "modal-open--video-nucor"}
         = image_tag 'logo--testimonial--nucor.png'
   %div{class: "container text--body home__logo-grid omega-row"}
     %div 
-      %a{href:"#"}
+      %a{href:"#", class: "modal-open--video-vitamin"}
         = image_tag 'logo--testimonial--vitamin.png'
     %div 
-      %a{href:"#"}
+      %a{href:"#", class: "modal-open--video-rockwater"}
         = image_tag 'logo--testimonial--rockwater.png'
     %div 
-      %a{href:"#"}
+      %a{href:"#", class: "modal-open--video-novo"}
         = image_tag 'logo--testimonial--novo.png'
 
 %div{class: "home__background-cover", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
