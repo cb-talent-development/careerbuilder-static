@@ -1,0 +1,14 @@
+%div{class: "modal__box box--pop-out hidden modal--video", id: "modal--video-nucor"}
+  = partial 'partials/modal--close-button'
+
+  %h2{class: "text--headline-2 text--accent alpha"}
+    %span{class: "light"}Featured Customer: 
+    %span{class: "heavy"}Nucor
+
+    :plain
+      <iframe id="video" width="100%" height="497" src="https://www.youtube.com/embed/VML7WlBLTiU?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+    // video embed here
+
+  %submit{class: "button button--primary close-modal columns-4 shift-4"}
+    Close

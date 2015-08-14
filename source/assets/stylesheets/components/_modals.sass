@@ -7,6 +7,8 @@
 
 .modal__positioning
   position: absolute
+  top: 20px
+  left: 0
   width: 100%
   z-index: 1000001
 
@@ -85,3 +87,13 @@
   +span-columns(7)
   +shift(5)
 
+// 
+
+.modal--video
+  +span-columns(8)
+  +shift(2)
+  text-align: center
+  position: fixed !important
+
+.modal--video iframe
+  width: 100%
