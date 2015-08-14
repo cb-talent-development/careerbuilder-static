@@ -7,8 +7,14 @@ window.interact.watchMobileMenu = function() {
   var mobileMenu     = $('#mobile-menu');
 
   mobileMenu.hidden = true;
+
   mobileMenu.hide();
   mobileMenu.removeClass('hidden');
+
+  $(window).resize(function() {
+    mobileMenu.hidden = true;
+    mobileMenu.hide();
+  });
 
   mobileMenuLink.click(function() {
     mobileMenu.hidden = !mobileMenu.hidden;
