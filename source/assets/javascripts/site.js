@@ -24,9 +24,12 @@ jQuery(function(){
 
   window.interact.watchApplyDiscount();
 
-  window.interact.showOnFocus("#password-field", "#password-helper");
+  window.interact.showOnFocus('#password-field', '#password-helper');
 
-  window.interact.securityCodeHelper("#card-number-field", "#security-code-helper");
+  window.interact.securityCodeHelper('card-number-field', '#security-code-helper');
 
-  window.interact.smoothScroll(".product-subnav a[href*=#]:not([href=#])");
+  window.interact.smoothScroll('.product-subnav a[href*=#]:not([href=#])');
+
+  window.interact.objectCarousel('.home__stories-carousel');
+  window.interact.objectCarousel('.header--home, .home__top-carousel');
 });

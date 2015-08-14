@@ -1,4 +1,4 @@
-!!! 5 
+!!! 5
 
 %html
   %head
@@ -12,24 +12,24 @@
     / placeholder
     %script{type: "text/javascript", src: "http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js"}
 
-    / Use title if it's in the page YAML frontmatter 
-    %title= current_page.data.title + ' | CareerBuilder' 
+    / Use title if it's in the page YAML frontmatter
+    %title= current_page.data.title + ' | CareerBuilder'
 
     %link{ href: '//fonts.googleapis.com/css?family=Lato:300,400,700', rel: 'stylesheet', type: 'text/css' }
-    
-    - # This may want to move to a file hosted on CareerBuilder's stack 
+
+    - # This may want to move to a file hosted on CareerBuilder's stack
     %link{ rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"}
 
-    = stylesheet_link_tag :site 
+    = stylesheet_link_tag :site
 
   %body{ class: page_classes + " base-background" }
 
     %div{class: "modal__background hidden", id: "modal-background"}
 
-    = partial 'partials/top-bar' 
+    = partial 'partials/top-bar'
 
-    = yield 
+    = yield
 
-    = partial 'partials/footer' 
+    = partial 'partials/footer'
 
-    = javascript_include_tag :site 
+    = javascript_include_tag :site

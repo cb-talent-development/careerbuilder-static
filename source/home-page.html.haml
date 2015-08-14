@@ -8,65 +8,107 @@ layout: layout
   %div{class: "container"}
 
     %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
-      %div{class: 'columns-6'} 
+      %div{class: 'columns-6'}
         = partial 'partials/header-subnav'
-      %div{class: 'columns-2 shift-1 header--home__top-nav'} 
-        %a{href: "#foo", class: "button button--primary button--large button--success"} 
+      %div{class: 'columns-2 shift-1 header--home__top-nav'}
+        %a{href: "#foo", class: "button button--primary button--large button--success"}
           Post a Job
 
-      %div{class: 'columns-3 header--home__top-nav'} 
-        %a{href: "#bar", class: "button button--primary button--large"} 
-          Search Candidates    
+      %div{class: 'columns-3 header--home__top-nav'}
+        %a{href: "#bar", class: "button button--primary button--large"}
+          Search Candidates
 
-    / header__headline 
-    %div{class: "header--home__headline"}
+    %a{class: "carousel__arrow carousel__arrow--left"}
+      %i{class: "fa fa-chevron-left"}
 
-      %h1{class: "text--headline text--white"}
-        Kiss Your Tedious Recruitment Process Goodbye
+    %a{class: "carousel__arrow carousel__arrow--right"}
+      %i{class: "fa fa-chevron-right"}
 
-      %h2{class: "text--subhead text--white columns-12 clear-fix"}
-        Go from acquire to hire with Talent Stream Technologies, CareerBuilder’s recruitment sofware solution that brings advertising, data and technology into one pre-hire platform.
+    / header__headline
+    %div{class: "carousel__placeholder carousel__placeholder--headline"}
 
-      %a{class: "header--home__button button button--secondary button--large text--white"}
-        Learn More  
+      %div{class: "carousel__grouping carousel__grouping--headline"}
 
-/ product image 
-%aside{class: "carousel__container large-screen-only home__top-carousel"}  
-  %div{class: "carousel__frame-image"}
-    = image_tag 'carousel--laptop.png'
+        %div{class: "carousel__object carousel__object--headline active"}
+          %h1{class: "text--headline text--white"}
+            First Headline
+          %h2{class: "text--subhead text--white columns-12 clear-fix"}
+            Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+          %a{class: "header--home__button button button--secondary button--large text--white"}
+            Learn More
 
-  %div{class: "carousel__image-container"}
-    / width is 600px x number of images in section
-    %div{style: "width: 3001px;", id: "top-carousel-images"}
-      = image_tag 'carousel--home-top-1.png', {class: "carousel__image"} 
-      = image_tag 'carousel--home-top-2.png', {class: "carousel__image"} 
-      = image_tag 'carousel--home-top-3.png', {class: "carousel__image"} 
-      = image_tag 'carousel--home-top-4.png', {class: "carousel__image"} 
-      = image_tag 'carousel--home-top-5.png', {class: "carousel__image"} 
+        %div{class: "carousel__object carousel__object--headline hidden"}
+          %h1{class: "text--headline text--white"}
+            Second Headline
+          %h2{class: "text--subhead text--white columns-12 clear-fix"}
+            Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+          %a{class: "header--home__button button button--secondary button--large text--white"}
+            Learn More
+
+        %div{class: "carousel__object carousel__object--headline hidden"}
+          %h1{class: "text--headline text--white"}
+            Third Headline
+          %h2{class: "text--subhead text--white columns-12 clear-fix"}
+            Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+          %a{class: "header--home__button button button--secondary button--large text--white"}
+            Learn More
+
+        %div{class: "carousel__object carousel__object--headline hidden"}
+          %h1{class: "text--headline text--white"}
+            Fourth Headline
+          %h2{class: "text--subhead text--white columns-12 clear-fix"}
+            Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+          %a{class: "header--home__button button button--secondary button--large text--white"}
+            Learn More
+
+        %div{class: "carousel__object carousel__object--headline hidden"}
+          %h1{class: "text--headline text--white"}
+            Fifth Headline
+          %h2{class: "text--subhead text--white columns-12 clear-fix"}
+            Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+          %a{class: "header--home__button button button--secondary button--large text--white"}
+            Learn More
+
+/ product image
+%aside{class: "carousel__container medium-screen-up home__top-carousel"}
+  %div{class: "carousel__placeholder carousel__placeholder--screenshot"}
+    = image_tag 'carousel--laptop.png', {class: "carousel__laptop"}
+
+    %div{class: "carousel__grouping carousel__grouping--screenshot"}
+      = image_tag 'carousel--home-top-1.png', {class: "carousel__object carousel__object--screenshot active"}
+      = image_tag 'carousel--home-top-2.png', {class: "carousel__object carousel__object--screenshot hidden"}
+      = image_tag 'carousel--home-top-3.png', {class: "carousel__object carousel__object--screenshot hidden"}
+      = image_tag 'carousel--home-top-4.png', {class: "carousel__object carousel__object--screenshot hidden"}
+      = image_tag 'carousel--home-top-5.png', {class: "carousel__object carousel__object--screenshot hidden"}
 
   %div{class: "carousel__clickable"}
-    %a{href:"#", id: "carousel-top--1", class: "active"} <i class="fa fa-circle"></i>
-    %a{href:"#", id: "carousel-top--2"} <i class="fa fa-circle"></i>
-    %a{href:"#", id: "carousel-top--3"} <i class="fa fa-circle"></i>
-    %a{href:"#", id: "carousel-top--4"} <i class="fa fa-circle"></i>
-    %a{href:"#", id: "carousel-top--5"} <i class="fa fa-circle"></i>    
+    %a{href:"#", class: "carousel__dot active"}
+      %i{class: "fa fa-circle"}
+    %a{href:"#", class: "carousel__dot"}
+      %i{class: "fa fa-circle"}
+    %a{href:"#", class: "carousel__dot"}
+      %i{class: "fa fa-circle"}
+    %a{href:"#", class: "carousel__dot"}
+      %i{class: "fa fa-circle"}
+    %a{href:"#", class: "carousel__dot"}
+      %i{class: "fa fa-circle"}
 
 %section{class: "container text--body"}
 
   %div{class: "home__product-block"}
     %h2 Candidate Marketplace
     %p Connecting you to the best candidates through online and offline sourcing channels.
-    %a{class: "button button--secondary", href: "#"} View Products  
+    %a{class: "button button--secondary", href: "#"} View Products
 
   %div{class: "home__product-block"}
     %h2 Sourcing Software
     %p Moving candidates from aquire to hire while removing the complexity from your process.
-    %a{class: "button button--secondary", href: "#"} View Products  
+    %a{class: "button button--secondary", href: "#"} View Products
 
   %div{class: "home__product-block omega"}
     %h2 Recruitment Analytics
     %p Making recruitment data actionable, helping you set expectations, measure and grow.
-    %a{class: "button button--secondary", href: "#"} View Products  
+    %a{class: "button button--secondary", href: "#"} View Products
 
 
 %div{class: "home__background-cover text--body", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
@@ -89,72 +131,95 @@ layout: layout
 
 %div{class: "home__background-cover", style: "background-color: #fff"}
   %section{class: "container text--body home__logo-grid__title"}
-    %div 
+    %div
       %span{class: "light"} Featured
       %span{class: "heavy"} Customers
 
   %div{class: "container text--body home__logo-grid"}
-    %div 
+    %div
       %a{href:"#", class: "modal-open--video-sports"}
         = image_tag 'logo--testimonial--sports.png'
-    %div 
+    %div
       %a{href:"#", class: "modal-open--video-wynn"}
         = image_tag 'logo--testimonial--wynn.png'
-    %div 
+    %div
       %a{href:"#", class: "modal-open--video-nucor"}
         = image_tag 'logo--testimonial--nucor.png'
   %div{class: "container text--body home__logo-grid omega-row"}
-    %div 
+    %div
       %a{href:"#", class: "modal-open--video-vitamin"}
         = image_tag 'logo--testimonial--vitamin.png'
-    %div 
+    %div
       %a{href:"#", class: "modal-open--video-rockwater"}
         = image_tag 'logo--testimonial--rockwater.png'
-    %div 
+    %div
       %a{href:"#", class: "modal-open--video-novo"}
         = image_tag 'logo--testimonial--novo.png'
 
-%div{class: "home__background-cover", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
+%div{class: "home__background-cover home__stories", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
   %div{class: "home__background-overlay-all home__overlay--blue"}
   %section{class: "container text--body text--white"}
-    %div{class: "home__lower-carousel"}
-      %h2
-        %span{class: "light"} Customer
-        %span{class: "heavy"} Success Stories
-      %p
-        “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
-      %a{class: "button button--secondary text--white", href: "#"} More Stories  
 
-      %div{class: "home__lower-carousel__clickable"}
-        %a{href:"#", id: "carousel-top--1", class: "active"} <i class="fa fa-circle"></i>
-        %a{href:"#", id: "carousel-top--2"} <i class="fa fa-circle"></i>
-        %a{href:"#", id: "carousel-top--3"} <i class="fa fa-circle"></i>
-       
+    %div{class: "carousel__placeholder carousel__placeholder--stories"}
+
+    %div{class: "carousel__grouping carousel__grouping--stories"}
+      %div{class: "carousel__object carousel__object--stories active"}
+        %h2
+          %span{class: "light"} Customer
+          %span{class: "heavy"} Success Stories
+        %p
+          “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+        %a{class: "button button--secondary text--white", href: "#"} More Stories
+
+      %div{class: "carousel__object carousel__object--stories hidden"}
+        %h2
+          %span{class: "light"} Employer
+          %span{class: "heavy"} Success Stories
+        %p
+          “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+        %a{class: "button button--secondary text--white", href: "#"} More Stories
+
+      %div{class: "carousel__object carousel__object--stories hidden"}
+        %h2
+          %span{class: "light"} Personal
+          %span{class: "heavy"} Success Stories
+        %p
+          “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+        %a{class: "button button--secondary text--white", href: "#"} More Stories
+
+    %div{class: "carousel__clickable"}
+      %a{href:"#", class: "carousel__dot active"}
+        %i{class: "fa fa-circle"}
+      %a{href:"#", class: "carousel__dot"}
+        %i{class: "fa fa-circle"}
+      %a{href:"#", class: "carousel__dot"}
+        %i{class: "fa fa-circle"}
+
 %div{class: "container text--body"}
   %section{class: "home__blog"}
-    %h2 
+    %h2
       %span{class: "light"} Recent
       %span{class: "heavy"} Blog Articles
 
     %article{class: "home__blog__article"}
       %h3
-        %a{href:"#"} 46% of Employers Plan to Hire Temporary or Contract Workers in 2015   
+        %a{href:"#"} 46% of Employers Plan to Hire Temporary or Contract Workers in 2015
       %time March 28, 2015
 
     %article{class: "home__blog__article"}
       %h3
-        %a{href:"#"} 10 Metros With a Temp Workforce of 45-150% Larger Than the US Average   
+        %a{href:"#"} 10 Metros With a Temp Workforce of 45-150% Larger Than the US Average
       %time March 28, 2015
 
     %article{class: "home__blog__article"}
       %h3
-        %a{href:"#"} Senior Management More Susceptible to March Madness   
+        %a{href:"#"} Senior Management More Susceptible to March Madness
       %time March 28, 2015
 
     %a{href: "#", class: "button button--secondary"} Visit Blog
 
   %section{class: "home__events"}
-    %h2 
+    %h2
       %span{class: "light"} Upcoming
       %span{class: "heavy"} Events
 
@@ -176,9 +241,9 @@ layout: layout
     %div{class: "home__events__item"}
       %h3
         %a{href:"#"} NYSA Super Seminar Day
-      %time March, 10 - 13, 2015  
+      %time March, 10 - 13, 2015
 
-    %a{href: "#", class: "button button--secondary"} More Events  
+    %a{href: "#", class: "button button--secondary"} More Events
 
 / modals
 %div{class: "modal__positioning"}
@@ -190,5 +255,4 @@ layout: layout
     = partial 'partials/modal--video-vitamin'
     = partial 'partials/modal--video-rockwater'
     = partial 'partials/modal--video-novo'
-    
-    
+

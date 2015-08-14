@@ -13,28 +13,75 @@
 .header--home__top-nav
   margin-top: 20px
 
-.header--home__headline
+.header .header--home__button
+  width: 180px
+
+//
+
+.home__top-carousel
+  width: 100%
+  position: relative
+  text-align: center
+  margin-bottom: 80px
+
+.carousel__placeholder--headline
+  height: 745px
+  position: relative
+
+.carousel__placeholder--screenshot
+  width: 100%
+  z-index: 6000
+  position: relative
+  margin: -280px auto 100px
+
+.carousel__grouping--headline
+  top: 200px
+  position: relative
+
+.carousel__grouping--headline .carousel__object.active
+  display: block
+
+.carousel__grouping--screenshot
+  top: 6.1%
+  width: 600px !important
+  height: 375px
+  overflow: hidden
+  position: relative
+  margin: -455px auto 0
+  background-color: white
+
+.carousel__laptop
+  z-index: 8000
+  position: relative
+
+.carousel__grouping--screenshot .carousel__object
+  top: 0
+  left: 0
+
+.carousel__grouping--screenshot .carousel__object.active
+  display: inline-block
+
+//
+
+.carousel__object--headline
   +span-columns(12)
   text-align: center
   margin-top: 50px
   margin-bottom: 280px
   padding-bottom: 20px
 
-.header--home__headline h1
+.carousel__object--headline h1
   margin-bottom: 10px
   margin-top: 0px
 
-.header--home__headline h2
+.carousel__object--headline h2
   margin-bottom: 36px
   margin-top: 0px
 
-.header--home__headline a.button.button--large
+.carousel__object--headline a.button.button--large
   width: 150px
   font-size: 16px
   font-weight: 800
-
-.header .header--home__button
-  width: 180px
 
 //
 
@@ -67,51 +114,6 @@
 .home__product-block a.button.button--secondary
   font-size: 14px
   padding: 5px 18px
-
-//
-
-.carousel__container
-  position: relative
-  height: 295px
-  margin-bottom: 80px
-  width: 100%
-  text-align: center
-
-.carousel__frame-image
-  position: absolute
-  width: 100%
-  top: -280px
-  z-index: 8000
-
-.carousel__image-container
-  height: 375px
-  width: 600px
-  position: relative
-  top: -250px
-  margin: 0 auto
-  z-index: 7900
-  overflow: hidden
-  display: inline-block
-
-.carousel__image
-  float: left
-  display: inline-block
-  padding: 0
-  margin: 0
-
-.carousel__clickable
-  position: absolute
-  top: 230px
-  width: 100%
-
-.carousel__clickable a
-  display: inline-block
-  margin: 16px
-  color: $grey-lighter
-  font-size: 14px
-
-.carousel__clickable a.active
-  color: $grey-darker
 
 //
 
