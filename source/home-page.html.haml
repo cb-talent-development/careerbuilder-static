@@ -3,17 +3,6 @@ title: Home Page
 layout: layout
 ---
 
-/ modals
-%div{class: "modal__positioning"}
-  %div{class: "modal__container text--body"}
-
-    = partial 'partials/modal--video-sports'
-    = partial 'partials/modal--video-wynn'
-    = partial 'partials/modal--video-nucor'
-    = partial 'partials/modal--video-vitamin'
-    = partial 'partials/modal--video-rockwater'
-    = partial 'partials/modal--video-novo'
-
 / header--home
 %header{class: "header header--home"}
   %div{class: "container"}
@@ -95,6 +84,8 @@ layout: layout
         = image_tag 'icon--home-row-5.png'
 
       %div{class: "home__icon-row__subtext"} Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure
+
+// featured customers
 
 %div{class: "home__background-cover", style: "background-color: #fff"}
   %section{class: "container text--body home__logo-grid__title"}
@@ -188,3 +179,16 @@ layout: layout
       %time March, 10 - 13, 2015  
 
     %a{href: "#", class: "button button--secondary"} More Events  
+
+/ modals
+%div{class: "modal__positioning"}
+  %div{class: "modal__container text--body"}
+
+    = partial 'partials/modal--video-sports'
+    = partial 'partials/modal--video-wynn'
+    = partial 'partials/modal--video-nucor'
+    = partial 'partials/modal--video-vitamin'
+    = partial 'partials/modal--video-rockwater'
+    = partial 'partials/modal--video-novo'
+    
+    
