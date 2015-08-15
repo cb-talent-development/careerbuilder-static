@@ -16,6 +16,9 @@ window.interact.objectCarousel = function(parent){
   var carouselArrows   = $('.carousel__arrow', carousel);
   var carouselObjects  = $('.carousel__grouping', carousel);
 
+  var objectClass      = '.carousel__object';
+  var leftArrowClass   = 'carousel__arrow--left';
+
   var duration         = 500;
   var pauseTiming      = 5000;
   var isAnimating      = false;
@@ -83,7 +86,7 @@ window.interact.objectCarousel = function(parent){
     var marginLeft = ('left' == direction) ? '100%' : '-100%';
 
     $.each(carouselObjects, function(index, wrapper){
-      var objBlock = $('.carousel__object', $(wrapper)).eq(currentState);
+      var objBlock = $(objectClass, $(wrapper)).eq(currentState);
       $(objBlock).animate({marginLeft: marginLeft, opacity: 0}, duration, function(){
         $(this).addClass('hidden').removeClass('active').removeAttr('style');
       });
@@ -102,7 +105,7 @@ window.interact.objectCarousel = function(parent){
     var marginLeft = ('left' == direction) ? '-100%' : '100%';
 
     $.each(carouselObjects, function(index, wrapper){
-      var objBlock = $('.carousel__object', $(wrapper)).eq(nextState);
+      var objBlock = $(objectClass, $(wrapper)).eq(nextState);
       $(objBlock).css({marginLeft: marginLeft, opacity: 0}).addClass('active').removeClass('hidden');
       $(objBlock).animate({marginLeft: 0, opacity: 1}, duration, function(){
         $(this).removeAttr('style');
@@ -146,7 +149,7 @@ window.interact.objectCarousel = function(parent){
     console.log(carouselArrows);
     console.log(carouselObjects);
 
-    if ($(this).hasClass('carousel__arrow--left')){
+    if ($(this).hasClass(leftArrowClass)){
       animateNextState('left', nextStateLeft);
     }
     else {

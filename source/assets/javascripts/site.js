@@ -30,6 +30,6 @@ jQuery(function(){
 
   window.interact.smoothScroll('.product-subnav a[href*=#]:not([href=#])');
 
-  window.interact.objectCarousel('.home__stories-carousel');
   window.interact.objectCarousel('.header--home, .home__top-carousel');
+  window.interact.objectCarousel('.home__background-cover.home__stories');
 });
