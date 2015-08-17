@@ -20,6 +20,10 @@
     - # This may want to move to a file hosted on CareerBuilder's stack
     %link{ rel: "stylesheet", href: "//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"}
 
+    / Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery!
+    /[if lte IE 8] <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js">
+    /[if lte IE 8] <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js">
+
     = stylesheet_link_tag :site
 
   %body{ class: page_classes + " employer-scope" }
