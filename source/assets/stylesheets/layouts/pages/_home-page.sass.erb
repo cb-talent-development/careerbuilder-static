@@ -13,28 +13,77 @@
 .header--home__top-nav
   margin-top: 20px
 
-.header--home__headline
+.header .header--home__button
+  width: 180px
+
+//
+
+.home__top-carousel
+  width: 100%
+  position: relative
+  text-align: center
+  margin-bottom: 100px
+
+.carousel__placeholder--headline
+  height: 745px
+  position: relative
+
+.carousel__placeholder--screenshot
+  width: 100%
+  z-index: 6000
+  position: relative
+  margin: -280px auto 100px
+
+.carousel__grouping--headline
+  top: 200px
+  position: relative
+
+.carousel__grouping--headline .carousel__object.active
+  display: block
+
+.carousel__grouping--screenshot
+  top: 6.1%
+  width: 600px !important
+  height: 375px
+  overflow: hidden
+  position: relative
+  margin: -455px auto 0
+  background-color: white
+
+.carousel__laptop
+  z-index: 8000
+  position: relative
+
+.carousel__grouping--screenshot .carousel__object
+  top: 0
+  left: 0
+
+.carousel__grouping--screenshot .carousel__object.active
+  display: inline-block
+
+//
+
+.carousel__object--headline
   +span-columns(12)
   text-align: center
   margin-top: 50px
   margin-bottom: 280px
   padding-bottom: 20px
 
-.header--home__headline h1
-  margin-bottom: 10px
+.carousel__object--headline h1
+  margin-bottom: 15px
   margin-top: 0px
 
-.header--home__headline h2
-  margin-bottom: 36px
-  margin-top: 0px
+.carousel__object--headline .text--subhead
+  width: 100%
+  max-width: 975px
+  padding: 0 30px
+  margin: 0 auto 36px
 
-.header--home__headline a.button.button--large
+.carousel__object--headline a.button.button--large
   width: 150px
   font-size: 16px
   font-weight: 800
-
-.header .header--home__button
-  width: 180px
 
 //
 
@@ -70,51 +119,6 @@
 
 //
 
-.carousel__container
-  position: relative
-  height: 295px
-  margin-bottom: 80px
-  width: 100%
-  text-align: center
-
-.carousel__frame-image
-  position: absolute
-  width: 100%
-  top: -280px
-  z-index: 8000
-
-.carousel__image-container
-  height: 375px
-  width: 600px
-  position: relative
-  top: -250px
-  margin: 0 auto
-  z-index: 7900
-  overflow: hidden
-  display: inline-block
-
-.carousel__image
-  float: left
-  display: inline-block
-  padding: 0
-  margin: 0
-
-.carousel__clickable
-  position: absolute
-  top: 230px
-  width: 100%
-
-.carousel__clickable a
-  display: inline-block
-  margin: 16px
-  color: $grey-lighter
-  font-size: 14px
-
-.carousel__clickable a.active
-  color: $grey-darker
-
-//
-
 .home__background-cover
   background-position: center top
   height: 660px
@@ -127,14 +131,14 @@
   left: 50%
   display: block
   height: 660px
-  z-index: 100
+  z-index: 0
 
 .home__background-overlay-all
   position: absolute
   display: block
   height: 660px
   width: 100%
-  z-index: 100
+  z-index: 0
 
 .home__overlay--green
   background-color: rgba(0, 155, 116, 0.8)
@@ -201,43 +205,50 @@
 
 //
 
-.home__lower-carousel
-  +span-columns(12)
-  +outer-container
-  position: relative
-  z-index: 1000
-  text-align: center
-  margin-top: 180px
-  margin-bottom: 80px
 
-.home__lower-carousel h2
+.carousel__grouping--stories
+  top: 0
+  z-index: 1000
+  padding: 125px 0
+  position: relative
+  margin-bottom: 200px
+
+.carousel__object--stories
+  +span-columns(12)
+  margin-top: 50px
+  text-align: center
+  margin-bottom: 280px
+  padding-bottom: 20px
+
+.carousel__object--stories h2
   margin-top: 0
   font-size: 32px
   line-height: 36px
   font-weight: 800
 
-.home__lower-carousel p
-  +span-columns(8)
-  +shift(2)
-  margin-top: 10px
+.carousel__object--stories p
+  width: 100%
+  max-width: 760px
+  padding: 0 30px
   font-size: 32px
   line-height: 42px
   font-weight: 400
+  margin: 10px auto 0
 
-.home__lower-carousel a
+.carousel__object--stories a
   margin-top: 20px
 
-.home__lower-carousel__clickable
-  margin-top: 10px
+.home__stories .carousel__clickable
   opacity: 0.7
+  z-index: 100
 
-.home__lower-carousel__clickable a
-  display: inline-block
+.home__stories .carousel__clickable .carousel__dot
   margin: 16px
-  color: $primary-lighter !important
   font-size: 14px
+  display: inline-block
+  color: $primary-lighter !important
 
-.home__lower-carousel__clickable a.active
+.home__stories .carousel__clickable .carousel__dot.active
   color: $primary-darker !important
 
 //
