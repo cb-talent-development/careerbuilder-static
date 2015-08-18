@@ -26,14 +26,14 @@
   // Avoid .popover__subhead or .subhead--alert-red unless it's a werid, non-resusable layout.
   // https://vimeo.com/70115794
 
-// Z-index conventions: 
+// Z-index conventions:
 
-  // Modals ~ 1 000 000 
+  // Modals ~ 1 000 000
   // dropdown menu in .flyout ~ 7000
   // headers over .sticky-nav ~ 6000
-  // sticky nav bars .sticky-nav ~ 5000 
+  // sticky nav bars .sticky-nav ~ 5000
   // dropdown menus below sticky-nav ~ 4000
-  // Page layouts ~ 1000   
+  // Page layouts ~ 1000
 
 // END COMMENTS - START ACTUAL CODE
 
@@ -45,7 +45,7 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
 .base-background
   background-color: $base-background-color
 
-.container 
+.container
   +outer-container
   padding-left: 20px
   padding-right: 20px
@@ -54,14 +54,14 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha
   background-color: pink
   min-height: 100px
 
-// Extra resets 
+// Extra resets
 
 address
-  font-style: inherit  
+  font-style: inherit
 
 // MOBILE DISPLAY RULES
 
-// large screen 
+// large screen
 .small-screen-only
   display: none !important
 
@@ -100,9 +100,9 @@ address
     display: none !important
 
   .medium-screen-down
-    display: block !important 
+    display: block !important
 
-.hidden 
+.hidden
   display: none !important
 
 // LAYOUT UTILITIES
@@ -130,18 +130,18 @@ address
 // In most cases "columns-6" should work
 // but if another class is overriding try
 // asking more nicely: "columns-6 pretty please"
-.columns-1, .columns-1.pretty.please 
-  +span-columns(1)  
+.columns-1, .columns-1.pretty.please
+  +span-columns(1)
 
 .columns-2, .columns-2.pretty.please
   +span-columns(2)
 
 .columns-3, .columns-3.pretty.please
   +span-columns(3)
-  
+
 .columns-4, .columns-4.pretty.please
   +span-columns(4)
-  
+
 .columns-5, .columns-5.pretty.please
   +span-columns(5)
 
@@ -179,7 +179,7 @@ address
   +shift(4)
 
 .shift-5
-  +shift(5)      
+  +shift(5)
 
 .shift-6
   +shift(6)
@@ -228,13 +228,13 @@ address
   text-align: right
 
 .footer__share-links li
-  margin-top: 5px 
-  margin-left: 20px  
+  margin-top: 5px
+  margin-left: 20px
   margin-right: 0
 
 // FORMS
 
-.form--large 
+.form--large
   +span-columns(11)
 
 .form--large label
@@ -242,7 +242,7 @@ address
   margin-bottom: 24px
 
 .form--large label.omega, .form--large div.omega
-  margin-bottom: 64px 
+  margin-bottom: 64px
 
 .form--large input, .form--large select
   +fill-parent
@@ -258,28 +258,28 @@ address
 
 .form--large__trailing-label span
   position: relative
-  top: 1px  
+  top: 1px
   line-height: 140%
 
-.form--large submit, .form--large button, .form--large .button 
+.form--large submit, .form--large button, .form--large .button
   font-size: 16px
   padding: 10px 40px
   margin-right: 20px
 
 .form--large__divider-line
-  // use on div with .box--divider-bottom  
+  // use on div with .box--divider-bottom
   +span-columns(12)
   margin-bottom: 32px
   margin-top: 10px
 
-.form--large h3 
+.form--large h3
   margin-top: 0
   margin-bottom: 14px
 
 .form__error
   margin-top: 18px
-  padding: 15px   
-  clear: both !important 
+  padding: 15px
+  clear: both !important
 
 .form__field--success
   border: 2px solid $accent-success
@@ -293,7 +293,7 @@ address
 
 .form__security-code-helper
   padding-top: 5px
-  
+
 .form__security-code-helper div
   display: inline-block
   width: 110px
@@ -303,28 +303,28 @@ address
 .form__security-code-helper img, .form__security-code-helper div
   vertical-align: middle
 
-.cart-login .form--large label:first-child 
+.cart-login .form--large label:first-child
   margin-bottom: 18px
 
-@media only screen and (max-width: $small-screen-max) 
+@media only screen and (max-width: $small-screen-max)
   .cart-login .form--large submit
     width: 100%
     margin-bottom: 10px
 
-// Sticky navigation 
+// Sticky navigation
 
 .sticky-nav
-  display: block
-  z-index: 5000 
-  position: fixed
   top: 0
   left: 0
   width: 100%
+  display: block
+  z-index: 5000
+  position: fixed
   border-bottom: 1px solid $grey-lighter
   background-color: $base-background-color
 
 .sticky-nav__above
-  z-index: 5100 
+  z-index: 5100
   display: block
   position: relative
 
@@ -335,20 +335,20 @@ address
   z-index: 5100
 
 // creates a solid color triangle, useful for flyout toggle links
-.arrow--up 
+.arrow--up
   display: inline-block
   margin: 0 5px
-  width: 0 
-  height: 0 
+  width: 0
+  height: 0
   border-left: 5px solid transparent
   border-right: 5px solid transparent
   border-bottom: 8px solid $accent-primary
 
-.arrow--down 
+.arrow--down
   display: inline-block
   margin: 0 5px
-  width: 0 
-  height: 0 
+  width: 0
+  height: 0
   border-left: 5px solid transparent
   border-right: 5px solid transparent
   border-top: 8px solid $accent-primary
@@ -356,7 +356,7 @@ address
 .arrow--right
   display: inline-block
   margin: 0 5px
-  width: 0 
+  width: 0
   height: 0
   border-top: 5px solid transparent
   border-bottom: 5px solid transparent
@@ -365,8 +365,8 @@ address
 .arrow--left
   display: inline-block
   margin: 0 5px
-  width: 0 
+  width: 0
   height: 0
   border-top: 5px solid transparent
-  border-bottom: 5px solid transparent 
+  border-bottom: 5px solid transparent
   border-right: 8px solid $accent-primary

@@ -12,7 +12,7 @@ jQuery(function(){
   window.interact.modal('modal--email-us', 'modal-open--email-us');
   window.interact.modal('modal--change-billing-address', 'modal-open--change-billing-address');
   window.interact.modal('modal--change-company-address', 'modal-open--change-company-address');
-  
+
   window.interact.modal('modal--video-sports', 'modal-open--video-sports');
   window.interact.modal('modal--video-wynn', 'modal-open--video-wynn');
   window.interact.modal('modal--video-nucor', 'modal-open--video-nucor');
@@ -32,4 +32,6 @@ jQuery(function(){
 
   window.interact.objectCarousel('.header--home, .home__top-carousel');
   window.interact.objectCarousel('.home__background-cover.home__stories');
+
+  window.interact.stickyHeader('.sticky-nav', '#overview-link-anchor nav');
 });
