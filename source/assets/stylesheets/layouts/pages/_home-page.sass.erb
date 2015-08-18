@@ -14,6 +14,10 @@
 
 .header--home__top-nav
   margin-top: 20px
+  text-align: right
+
+.header--home__top-nav .button
+  margin-left: 10px
 
 .header .header--home__button
   width: 180px
@@ -45,7 +49,7 @@
   margin-bottom: 100px
 
 .carousel__placeholder--headline
-  height: 745px
+  height: 675px
   position: relative
 
 .carousel__placeholder--screenshot
@@ -55,14 +59,14 @@
   margin: -280px auto 100px
 
 .carousel__grouping--headline
-  top: 200px
+  top: 175px
   position: relative
 
 .carousel__grouping--headline .carousel__object.active
   display: block
 
 .carousel__grouping--screenshot
-  top: 6.1%
+  top: -4px
   width: 600px !important
   height: 375px
   overflow: hidden
@@ -86,7 +90,6 @@
 .carousel__object--headline
   +span-columns(12)
   text-align: center
-  margin-top: 50px
   margin-bottom: 280px
   padding-bottom: 20px
 
@@ -133,14 +136,12 @@
   margin-bottom: 24px
   color: $grey-darker
 
-.home__product-block a.button.button--secondary
-  font-size: 14px
-  padding: 5px 18px
-
 //
 
 .home__background-cover
-  background-position: center top
+  background-size: cover
+  background-position: center center
+  background-color: $white
   height: 660px
   position: relative
   z-index: 0
@@ -159,6 +160,10 @@
   height: 660px
   width: 100%
   z-index: 0
+
+.home__icons
+  background-position: top center
+  background-image: url(<%= image_path 'placeholder--home-mobile.png' %>)
 
 .home__overlay--green
   background-color: rgba(0, 155, 116, 0.8)
@@ -225,6 +230,9 @@
 
 //
 
+.home__stories
+  background-position: top center
+  background-image: url(<%= image_path 'placeholder--home-mobile.png' %>)
 
 .carousel__grouping--stories
   top: 0
@@ -266,10 +274,10 @@
   margin: 16px
   font-size: 14px
   display: inline-block
-  color: $primary-lighter !important
+  color: rgba($primary, 0.25) !important
 
 .home__stories .carousel__clickable .carousel__dot.active
-  color: $primary-darker !important
+  color: rgba($primary, 1) !important
 
 //
 

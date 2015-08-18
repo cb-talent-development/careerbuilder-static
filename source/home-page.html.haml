@@ -10,12 +10,11 @@ layout: layout
     %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
       %div{class: 'columns-6'}
         = partial 'partials/header-subnav'
-      %div{class: 'columns-2 shift-1 header--home__top-nav'}
-        %a{href: "#foo", class: "button button--primary button--large button--success"}
-          Post a Job
 
-      %div{class: 'columns-3 header--home__top-nav'}
-        %a{href: "#bar", class: "button button--primary button--large"}
+      %div{class: 'columns-6 header--home__top-nav'}
+        %a{href: "#foo", class: "button button--primary button--tertiary"}
+          Post a Job
+        %a{href: "#bar", class: "button button--primary"}
           Search Candidates
 
     %a{class: "carousel__arrow carousel__arrow--left"}
@@ -34,7 +33,7 @@ layout: layout
             Kiss Your Tedious Recruitment Process Goodbye
           %h2{class: "text--subhead text--white"}
             Go from acquire to hire with Talent Stream Technologies, CareerBuilder’s recruitment sofware solution that brings advertising, data and technology into one pre-hire platform.
-          %a{class: "header--home__button button button--secondary button--large text--white"}
+          %a{class: "header--home__button button button--secondary text--white"}
             Learn More
 
         %div{class: "carousel__object carousel__object--headline hidden"}
@@ -42,7 +41,7 @@ layout: layout
             Second Headline
           %h2{class: "text--subhead text--white"}
             Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
-          %a{class: "header--home__button button button--secondary button--large text--white"}
+          %a{class: "header--home__button button button--secondary text--white"}
             Learn More
 
         %div{class: "carousel__object carousel__object--headline hidden"}
@@ -50,7 +49,7 @@ layout: layout
             Third Headline
           %h2{class: "text--subhead text--white"}
             Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
-          %a{class: "header--home__button button button--secondary button--large text--white"}
+          %a{class: "header--home__button button button--secondary text--white"}
             Learn More
 
         %div{class: "carousel__object carousel__object--headline hidden"}
@@ -58,7 +57,7 @@ layout: layout
             Fourth Headline
           %h2{class: "text--subhead text--white"}
             Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
-          %a{class: "header--home__button button button--secondary button--large text--white"}
+          %a{class: "header--home__button button button--secondary text--white"}
             Learn More
 
         %div{class: "carousel__object carousel__object--headline hidden"}
@@ -66,7 +65,7 @@ layout: layout
             Fifth Headline
           %h2{class: "text--subhead text--white"}
             Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
-          %a{class: "header--home__button button button--secondary button--large text--white"}
+          %a{class: "header--home__button button button--secondary text--white"}
             Learn More
 
   / background video
@@ -102,20 +101,20 @@ layout: layout
   %div{class: "home__product-block"}
     %h2 Candidate Marketplace
     %p Connecting you to the best candidates through online and offline sourcing channels.
-    %a{class: "button button--secondary", href: "#"} View Products
+    %a{class: "button button--secondary button--small", href: "#"} View Products
 
   %div{class: "home__product-block"}
     %h2 Sourcing Software
     %p Moving candidates from aquire to hire while removing the complexity from your process.
-    %a{class: "button button--secondary", href: "#"} View Products
+    %a{class: "button button--secondary button--small", href: "#"} View Products
 
   %div{class: "home__product-block omega"}
     %h2 Recruitment Analytics
     %p Making recruitment data actionable, helping you set expectations, measure and grow.
-    %a{class: "button button--secondary", href: "#"} View Products
+    %a{class: "button button--secondary button--small", href: "#"} View Products
 
 
-%div{class: "home__background-cover text--body", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
+%div{class: "home__background-cover home__icons text--body"}
   %div{class: "home__background-overlay-right home__overlay--green"}
   %section{class: "container text--body"}
     %div{class: "home__half-page-right text--white"}
@@ -133,7 +132,7 @@ layout: layout
 
 // featured customers
 
-%div{class: "home__background-cover", style: "background-color: #fff"}
+%div{class: "home__background-cover"}
   %section{class: "container text--body home__logo-grid__title"}
     %div
       %span{class: "light"} Featured
@@ -160,7 +159,7 @@ layout: layout
       %a{href:"#", class: "modal-open--video-novo"}
         = image_tag 'logo--testimonial--novo.png'
 
-%div{class: "home__background-cover home__stories", style: "background-image: url('assets/images/placeholder--home-mobile.png')"}
+%div{class: "home__background-cover home__stories"}
   %div{class: "home__background-overlay-all home__overlay--blue"}
   %section{class: "container text--body text--white"}
 

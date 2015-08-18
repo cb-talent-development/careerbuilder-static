@@ -12,13 +12,10 @@
 //-----------  Template Settings  -----------//
 
 @import 'settings/variables'; // Global Variables & Settings
-@import 'settings/mixins';    // Site-Specific Custom Mixins
-@import 'settings/fonts';     // Custom Font & Typeface Settings & Mixins
 
 //-----------  Page Layouts  -----------//
 
 @import 'layouts/common';     // Common Layout Blocks
-@import 'layouts/document';   // Document Layouts
 @import 'layouts/pages/*';    // Page-Specific Layouts
 
 //-----------  Components  -----------//

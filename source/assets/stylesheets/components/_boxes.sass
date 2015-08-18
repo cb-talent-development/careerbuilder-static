@@ -16,16 +16,16 @@
   border: 1px solid $grey-lighter
   border-bottom: 3px solid $grey-lighter
   padding: 32px
-  margin-bottom: 20px  
+  margin-bottom: 20px
 
 .box--pop-out.box--yellow
   background-color: $light-yellow
 
 .box--pop-out.box--pop-out__top
   // allows --pop-out to have sections
-  margin-bottom: 0px 
+  margin-bottom: 0px
   border-bottom: 1px solid $grey-lighter
-  +border-bottom-radius(0) 
+  +border-bottom-radius(0)
   padding-bottom: 10px
 
 .box--pop-out.box--pop-out__bottom
@@ -41,7 +41,7 @@
   border-right: 1px solid $grey-lighter
   // ^ This is not working as expected.
 
-// Progress Bar 
+// Progress Bar
 .box--progress-bar li
   position: relative
   z-index: 1001
@@ -50,7 +50,7 @@
   height: 24px
   +border-top-radius(12px)
   +border-bottom-radius(12px)
-  background-color: $primary-darker
+  background-color: $primary
   font-size: 9pt
   text-align: center
   padding-top: 5px
@@ -74,12 +74,12 @@
   background-color: $grey-darker !important
 
 .box--progress-bar--completed label
-  color: $grey-dark  
+  color: $grey-dark
 
 .box--progress-bar__line
   z-index: 1000
   position: relative
-  background-color: $primary-darker
+  background-color: $tertiary
   height: 5px
   // adjust width for numbers of steps
   // ~ 20px + (100 * (steps - 1))
@@ -91,7 +91,7 @@
 .box--circle-text
   display: inline-block
   font-size: 12px
-  font-weight: 400 
+  font-weight: 400
   width: 24px
   height: 24px
   text-align: center
@@ -100,15 +100,15 @@
   margin-right: 10px
   +border-top-radius(12px)
   +border-bottom-radius(12px)
-  background-color: $accent-primary
+  background-color: $accent
   color: $base-background-color
 
 .box--circle-text span
-  position: relative 
+  position: relative
   top: -.15em
 
 // Quick Submit
-.box--quick-submit 
+.box--quick-submit
   +span-columns(6)
   +outer-container
   display: block
@@ -116,14 +116,14 @@
   +border-top-radius(5px)
   +border-bottom-radius(5px)
   border: 1px solid $grey-lighter
-  margin-bottom: 20px 
+  margin-bottom: 20px
 
 .box--quick-submit.box--quick-submit--narrow
   +span-columns(8)
 
-.box--quick-submit__input 
-  padding: 15px 15px 0px 15px 
-  height: 100% 
+.box--quick-submit__input
+  padding: 15px 15px 0px 15px
+  height: 100%
   font-size: 18px
   +span-columns(8)
   border: none
@@ -134,30 +134,30 @@
 .box--quick-submit__button-container
   padding: 5px
   text-align: right
-  +span-columns(4) 
+  +span-columns(4)
 
 .box--quick-submit__button
-  padding: 5px 
+  padding: 5px
 
 @media only screen and (max-width: $medium-screen-max)
   .box--quick-submit
     +span-columns(12)
 
   .box--quick-submit.box--quick-submit--narrow
-    +span-columns(12)  
+    +span-columns(12)
 
   .box--quick-submit__button-container
-    +span-columns(6)  
+    +span-columns(6)
 
   .box--quick-submit__input
-    +span-columns(6) 
+    +span-columns(6)
 
 // Alert boxes
 
-.box--alert 
+.box--alert
   padding: 10px 20px 10px 20px
-  color: $primary-darkest 
-  border: 2px solid $primary-darkest
+  color: $primary
+  border: 2px solid $primary
   background-color: $grey-lighter
   margin-bottom: 32px
   +border-top-radius(5px)
@@ -167,7 +167,7 @@
   padding-right: 8px
 
 .box--alert a
-  color: $primary-darkest 
+  color: $grey-light
   float: right
   text-align: right
   height: 100%
@@ -178,8 +178,8 @@
   color: inherit
 
 .box--alert--info
-  background-color: $primary-lightest
-  border: 2px solid $primary-darkest
+  background-color: $accent
+  border: 2px solid $primary
 
 .box--alert--info, .box--alert--info a i
   color: $primary
@@ -208,7 +208,7 @@
 // creates an alert box with a 'speech bubble' type arrow on top
 // default styling is 'danger' colors
 
-.box--arrow 
+.box--arrow
   position: relative
   background: $accent-danger-light
   border: 2px solid $accent-danger
@@ -217,7 +217,7 @@
   color: $accent-danger-dark
   line-height: 140%
 
-.box--arrow:after, .box--arrow:before 
+.box--arrow:after, .box--arrow:before
   bottom: 100%
   left: 50px
   border: solid transparent
@@ -227,38 +227,38 @@
   position: absolute
   pointer-events: none
 
-.box--arrow:after 
+.box--arrow:after
   border-color: rgba(213, 124, 79, 0)
   border-bottom-color: $accent-danger-light
   border-width: 10px
   margin-left: -10px
 
-.box--arrow:before 
+.box--arrow:before
   border-color: rgba(245, 29, 29, 0)
   border-bottom-color: $accent-danger
   border-width: 13px
   margin-left: -13px
 
-.box--arrow--caution 
+.box--arrow--caution
   background: $accent-warning-light
   border: 2px solid $accent-warning
   color: $accent-warning-dark
 
-.box--arrow--caution:after 
+.box--arrow--caution:after
   border-color: rgba(213, 124, 79, 0)
   border-bottom-color: $accent-warning-light
 
-.box--arrow--caution:before 
+.box--arrow--caution:before
   border-color: rgba(245, 29, 29, 0)
-  border-bottom-color: $accent-warning  
+  border-bottom-color: $accent-warning
 
-// 
+//
 
 
 // creates an alert box with a 'speech bubble' type arrow on top
 // default styling is 'danger' colors
 
-.box--arrow-helper 
+.box--arrow-helper
   position: absolute
   +shift(4)
   margin-top: -90px
@@ -272,9 +272,9 @@
   line-height: 150%
 
 .box--arrow-helper ul
-  padding-left: 20px  
+  padding-left: 20px
 
-.box--arrow-helper:after, .box--arrow-helper:before 
+.box--arrow-helper:after, .box--arrow-helper:before
   right: 100%
   top: 50%
   border: solid transparent
@@ -284,13 +284,13 @@
   position: absolute
   pointer-events: none
 
-.box--arrow-helper:after 
+.box--arrow-helper:after
   border-color: rgba(136, 183, 213, 0)
   border-right-color: $primary
   border-width: 10px
   margin-top: -10px
 
-.box--arrow-helper:before 
+.box--arrow-helper:before
   border-color: rgba(0, 0, 0, 0)
   border-right-color: $primary
   border-width: 13px
