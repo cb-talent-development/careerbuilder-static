@@ -6,14 +6,17 @@ window.interact.modal = function(modalName, openLink) {
   var openLinks  = $('.' + openLink);
   var closeLinks = $('.close-modal');
   var modalBack  = $('#modal-background');
+  var modalWrapper = $('.modal__positioning');
   var modalForm  = $('#' + modalName);
   var video, videoSource;
 
   // modals start with '.hidden' in HTML to prevent load order race between HTML/JS
   modalForm.hide();
   modalBack.hide();
+  modalWrapper.hide();
   modalForm.removeClass('hidden');
   modalBack.removeClass('hidden');
+  modalWrapper.removeClass('hidden');
 
   // binding to all close links; click on one modal hides all modals
   closeLinks.click(function() {
@@ -31,7 +34,7 @@ window.interact.modal = function(modalName, openLink) {
 
     modalForm.hide();
     modalBack.hide();
-
+    modalWrapper.hide();
   });
 
   openLinks.click(function() {
@@ -43,7 +46,7 @@ window.interact.modal = function(modalName, openLink) {
 
     // guards against showing background when modal not found
     if (modalForm.length >= 1) {
-      
+
       // default modals can scroll, but located at the top of the page
       // .modal--video does not scroll, position fixed
       if (!modalForm.hasClass("modal--video")) {
@@ -52,6 +55,7 @@ window.interact.modal = function(modalName, openLink) {
 
       modalBack.show();
       modalForm.show();
+      modalWrapper.show();
     }
     else {
       console.log("ERROR: link asked for a modal named #" + modalName + " but it wasn't found on the page.");

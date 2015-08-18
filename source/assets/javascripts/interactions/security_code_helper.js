@@ -3,6 +3,7 @@ if(typeof window.interact === 'undefined') { window.interact = {} }
 
 window.interact.securityCodeHelper = function (target, payload) {
 
+  var input;
   var visa       = /^4[0-9]{6,}/;
   var mastercard = /^5[1-5][0-9]{5,}/;
   var amex       = /^3[47][0-9]{5,}/;
