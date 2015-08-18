@@ -14,6 +14,9 @@ window.interact.stickyHeader = function(fixedTarget, staticTarget){
 
   var fixedHeader     = $(fixedTarget);
   var staticHeader    = $(staticTarget);
+
+  if (!staticHeader.length) { return false; }
+
   var transitionStart = staticHeader.offset().top - 15;
 
   $(window).scroll(function(){
