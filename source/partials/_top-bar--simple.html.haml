@@ -3,43 +3,43 @@
   %div{class: "top-bar__logo"}
     %a{href: "/"}
 
-      // low-fi image of logo for positioning, needs to be updated  
+      // low-fi image of logo for positioning, needs to be updated
       %img{src: "assets/images/placeholder-logo.png"}
 
   %div{class: "top-bar__helper-text text--white text--top-bar-helper medium-screen-up"}
-    = partial 'partials/email-us-link' 
+    = partial 'partials/email-us-link'
 
 
 
-  // mobile menu open link        
-  %nav{class: "top-bar__links small-screen-only top-bar__mobile-menu-link", id: "mobile-menu-link" }  
+  // mobile menu open link
+  %nav{class: "top-bar__links small-screen-only top-bar__mobile-menu-link", id: "mobile-menu-link" }
     %i{class: "fa fa-bars fa-2x"}
 
 // mobile menu
 %nav{class: "top-bar__mobile-menu text--white text--subnav hidden", id: "mobile-menu"}
   %ul
-    %li 
+    %li
       %a{href: "#menu"}
         Products
-    %li 
+    %li
       %a{href: "#menu"}
         Resources
-    %li 
+    %li
       %a{href: "#menu"}
-        About Us    
-    %li 
+        About Us
+    %li
       %a{href: "#menu"}
         %img{src: "assets/images/icon--account.png"}
         My Account
-    %li  
+    %li
       %a{href: "#menu"}
         %img{src: "assets/images/icon--cart.png"}
-        $1337.00 Cart  
+        $1337.00 Cart
     %li
-      %a{href: "#menu"} 
-        Contact Us  
+      %a{href: "#menu"}
+        Contact Us
 
 / modals
-%div{class: "modal__positioning"}
-  %div{class: "modal__container text--body"}  
+%div{class: "modal__positioning hidden"}
+  %div{class: "modal__container text--body"}
     = partial 'partials/modal--email-us'

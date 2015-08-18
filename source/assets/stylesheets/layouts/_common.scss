@@ -64,6 +64,23 @@ address {
   font-style: inherit;
 }
 
+#{$all-text-inputs} {
+  @include border-top-radius(3px);
+  @include border-bottom-radius(3px);
+  box-shadow: none;
+  border: 1px solid $grey-lighter;
+  font-weight: 400;
+}
+
+select {
+  @include border-top-radius(3px);
+  @include border-bottom-radius(3px);
+  box-shadow: none;
+  border: 1px solid $grey-lighter;
+  height: 40px;
+  font-weight: 400;
+}
+
 // MOBILE DISPLAY RULES
 
 // large screen
@@ -287,6 +304,12 @@ address {
 
 .form--large {
   @include span-columns(11);
+}
+
+@media only screen and (max-width: $medium-screen-max) {
+  .form--large {
+    @include span-columns(12);
+  }
 }
 
 .form--large label {

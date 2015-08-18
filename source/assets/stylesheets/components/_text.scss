@@ -1,10 +1,26 @@
 // TEXT
 // display only, no positioning
 
-.text--body {
+body {
   font-family: $Lato;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+label {
+  font-weight: 800;
+}
+
+.text--body {
   font-weight: 400;
   line-height: 175%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text--body p {
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 .text--body a {
@@ -33,16 +49,18 @@
 }
 
 .text--top-bar-link, .text--top-bar-link a {
-  font-family: $Lato;
   font-weight: 400;
   font-size: 12px;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--top-bar-helper {
-  font-family: $Lato;
   font-weight: 300;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--top-bar-helper a {
@@ -61,10 +79,11 @@
 }
 
 .text--subnav, .text--subnav a {
-  font-family: $Lato;
   font-weight: 400;
   font-size: 16px;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--subnav.product-subnav, .text--subnav.product-subnav a {
@@ -72,17 +91,19 @@
 }
 
 .text--headline, .text--headline a {
-  font-family: $Lato;
   font-weight: 800;
   font-size: 40px;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--headline, .text--headline a {
-  font-family: $Lato;
   font-weight: 800;
   font-size: 40px;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .header--large .text--headline, .header--large .text--headline a {
@@ -99,10 +120,12 @@
 }
 
 .text--headline-2, .text--headline-2 a {
-  font-family: $Lato;
+
   font-weight: 800;
   font-size: 24px;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .checkout-summary .text--headline-2 {
@@ -119,14 +142,16 @@
 }
 
 .text--headline-3, .text--headline-3 a {
-  font-family: $Lato;
+
   font-weight: 800;
   font-size: 20px;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--headline-4, .text--headline-4 a {
-  font-family: $Lato;
+
   font-weight: 800;
   font-size: 18px;
   text-decoration: none;
@@ -140,9 +165,11 @@
 }
 
 .text--subhead {
-  font-family: $Lato;
+
   font-weight: 100;
   font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--subhead a {
@@ -150,14 +177,18 @@
 }
 
 .text--caption {
-  font-family: $Lato;
+
   font-weight: 300;
   font-size: 14px;
   line-height: 140%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--caption.cart__caption {
   font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--caption.cart__apply-discount-link {
@@ -166,15 +197,18 @@
 }
 
 .text--caption a, a.text--caption {
-  font-family: $Lato;
+
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--details {
-  font-family: $Lato;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text--smaller {
@@ -325,11 +359,12 @@ a.text--delete-button:active {
 
 .text--x-button {
   display: inline-block;
-  font-family: $Lato;
   font-size: 18px;
   font-weight: 300;
   @include transform(scaleX(1.2));
   color: $grey-darker;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media only screen and (max-width: $small-screen-max) {

@@ -10,6 +10,11 @@ window.interact.watchMobileMenu = function() {
   mobileMenu.hide();
   mobileMenu.removeClass('hidden');
 
+  $(window).resize(function() {
+    mobileMenu.hidden = true;
+    mobileMenu.hide();
+  });
+
   mobileMenuLink.click(function() {
     mobileMenu.hidden = !mobileMenu.hidden;
     if (mobileMenu.hidden == true) {
