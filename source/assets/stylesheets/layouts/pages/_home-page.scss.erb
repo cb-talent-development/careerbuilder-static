@@ -1,0 +1,379 @@
+.home-page .light {
+  font-weight: 100;
+}
+
+.home-page .heavy {
+  font-weight: 800;
+}
+
+//
+
+.header.header--home {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(<%= image_path 'placeholder--home-background.png' %>);
+}
+
+.header--home__top-nav {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.header--home__top-nav .button {
+  margin-left: 10px;
+}
+
+.header .header--home__button {
+  width: 180px;
+}
+
+.header--home .header__subnav {
+  z-index: 10;
+  position: relative;
+}
+
+.header__bg-video {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(<%= image_path 'placeholder--home-background.png' %>);
+}
+
+//
+
+.home__top-carousel {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.carousel__placeholder--headline {
+  height: 675px;
+  position: relative;
+}
+
+.carousel__placeholder--screenshot {
+  width: 100%;
+  z-index: 6000;
+  position: relative;
+  margin: -280px auto 100px;
+}
+
+.carousel__grouping--headline {
+  top: 175px;
+  position: relative;
+}
+
+.carousel__grouping--headline .carousel__object.active {
+  display: block;
+}
+
+.carousel__grouping--screenshot {
+  top: -4px;
+  width: 600px !important;
+  height: 375px;
+  overflow: hidden;
+  position: relative;
+  margin: -455px auto 0;
+  background-color: white;
+}
+
+.carousel__laptop {
+  z-index: 8000;
+  position: relative;
+}
+
+.carousel__grouping--screenshot .carousel__object {
+  top: 0;
+  left: 0;
+}
+
+.carousel__grouping--screenshot .carousel__object.active {
+  display: inline-block;
+}
+
+//
+
+.carousel__object--headline {
+  @include span-columns(12);
+  text-align: center;
+  margin-bottom: 280px;
+  padding-bottom: 20px;
+}
+
+.carousel__object--headline h1 {
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.carousel__object--headline .text--subhead {
+  width: 100%;
+  max-width: 975px;
+  padding: 0 30px;
+  margin: 0 auto 36px;
+}
+
+.carousel__object--headline a.button.button--large {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+//
+
+.home__product-block {
+  // homerolling grid system to place border lines
+  // between grid columns
+  width: 33%;
+  float: left;
+  text-align: center;
+  padding: 0 34px;
+  border-right: $base-border;
+  margin: 0 0 110px 0;
+}
+
+.home__product-block.omega {
+  border-right: none;
+  margin-right: none;
+  padding-right: 24px;
+}
+
+.home__product-block h2 {
+  font-size: 21px;
+  margin-bottom: 24px;
+  margin-top: 0px;
+}
+
+.home__product-block p {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  color: $grey-darker;
+}
+
+//
+
+.home__background-cover {
+  background-size: cover;
+  background-position: center center;
+  background-color: $white;
+  height: 660px;
+  position: relative;
+  z-index: 0;
+}
+
+.home__background-overlay-right {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  display: block;
+  height: 660px;
+  z-index: 0;
+}
+
+.home__background-overlay-all {
+  position: absolute;
+  display: block;
+  height: 660px;
+  width: 100%;
+  z-index: 0;
+}
+
+.home__icons {
+  background-position: top center;
+  background-image: url(<%= image_path 'placeholder--home-mobile.png' %>);
+}
+
+.home__overlay--green {
+  background-color: rgba(0, 155, 116, 0.8);
+}
+
+.home__overlay--blue {
+  background-color: rgba(40, 121, 184, 0.8);
+}
+
+.home__half-page-right {
+  @include span-columns(5);
+  @include shift(7);
+  position: relative;
+  z-index: 1000;
+  margin-top: 120px;
+}
+
+.home__half-page-right h2 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 800;
+}
+
+.home__half-page-right p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 100;
+}
+
+.home__icon-row {
+  position: relative;
+  left: -7px;
+}
+
+.home__icon-row img {
+  float: left;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+}
+
+.home__icon-row img:last-child {
+  margin-right: -5px;
+}
+
+.home__icon-row__subtext {
+  font-size: 18.8px;
+  line-height: 28px;
+  font-weight: 100;
+}
+
+//
+
+.home__logo-grid__title {
+  @include span-columns(12);
+  text-align: center;
+  font-size: 32px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.home__logo-grid {
+  padding: 20px 50px 0 50px;
+}
+
+.home__logo-grid div {
+  width: 33%;
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.home__logo-grid.omega-row {
+  margin-bottom: 160px;
+}
+
+//
+
+.home__stories {
+  background-position: top center;
+  background-image: url(<%= image_path 'placeholder--home-mobile.png' %>);
+}
+
+.carousel__grouping--stories {
+  top: 0;
+  z-index: 1000;
+  padding: 125px 0;
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.carousel__object--stories {
+  @include span-columns(12);
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 280px;
+  padding-bottom: 20px;
+}
+
+.carousel__object--stories h2 {
+  margin-top: 0;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 800;
+}
+
+.carousel__object--stories p {
+  width: 100%;
+  max-width: 760px;
+  padding: 0 30px;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 400;
+  margin: 10px auto 0;
+}
+
+.carousel__object--stories a {
+  margin-top: 20px;
+}
+
+.home__stories .carousel__clickable {
+  opacity: 0.7;
+  z-index: 100;
+}
+
+.home__stories .carousel__clickable .carousel__dot {
+  margin: 16px;
+  font-size: 14px;
+  display: inline-block;
+  color: rgba($primary, 0.25) !important;
+}
+
+.home__stories .carousel__clickable .carousel__dot.active {
+  color: rgba($primary, 1) !important;
+}
+
+//
+
+.home__blog {
+  margin-top: 140px;
+  @include span-columns(6);
+}
+
+.home__blog h2, .home__events h2 {
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+
+.home__events {
+  margin-top: 140px;
+  @include span-columns(5);
+  @include shift(1);
+}
+
+.home__blog__article h3, .home__blog__article h3 a {
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 0px;
+}
+
+.home__blog__article time, .home__events__item time {
+  display: block;
+  font-style: italic;
+  font-weight: 100;
+  color: #8b92a0;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.home__blog__article {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: $base-border;
+}
+
+.home__events__item {
+  margin-bottom: 40px;
+}
+
+.home__events__item h3, .home__events__item h3 a {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0px;
+}

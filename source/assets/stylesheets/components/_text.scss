@@ -1,0 +1,339 @@
+// TEXT
+// display only, no positioning
+
+.text--body {
+  font-family: $Lato;
+  font-weight: 400;
+  line-height: 175%;
+}
+
+.text--body a {
+  text-decoration: none;
+  color: $base-link-color;
+}
+
+.text--body a:hover {
+  color: $hover-link-color;
+}
+
+.text--white, .text--white a, .text--white a:hover {
+  color: $white;
+}
+
+.text--grey {
+  color: $grey-darker;
+}
+
+.text-white .text-grey {
+  color: $grey-lighter;
+}
+
+.text--accent, .text--accent a, .text--accent a:hover {
+  color: $accent;
+}
+
+.text--top-bar-link, .text--top-bar-link a {
+  font-family: $Lato;
+  font-weight: 400;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.text--top-bar-helper {
+  font-family: $Lato;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.text--top-bar-helper a {
+  color: $accent;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.text--top-bar-helper a:hover {
+  text-decoration: none;
+  color: $accent;
+}
+
+.text--top-bar-helper a:active {
+  color: $accent-dark;
+}
+
+.text--subnav, .text--subnav a {
+  font-family: $Lato;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.text--subnav.product-subnav, .text--subnav.product-subnav a {
+  font-weight: 800;
+}
+
+.text--headline, .text--headline a {
+  font-family: $Lato;
+  font-weight: 800;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.text--headline, .text--headline a {
+  font-family: $Lato;
+  font-weight: 800;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.header--large .text--headline, .header--large .text--headline a {
+  font-size: 42px;
+}
+
+@media only screen and (max-width: $small-screen-max) {
+  .text--headline, .text--headline a {
+    font-size: 26px;
+  }
+  .header--large .text--headline, .header--large .text--headline a {
+    font-size: 36px;
+  }
+}
+
+.text--headline-2, .text--headline-2 a {
+  font-family: $Lato;
+  font-weight: 800;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.checkout-summary .text--headline-2 {
+  font-size: 20px;
+}
+
+.product__intro-text .text--headline-2 {
+  font-size: 32px;
+}
+
+.reading .text--headline-2 {
+  font-size: 32px;
+  padding-top: 30px;
+}
+
+.text--headline-3, .text--headline-3 a {
+  font-family: $Lato;
+  font-weight: 800;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.text--headline-4, .text--headline-4 a {
+  font-family: $Lato;
+  font-weight: 800;
+  font-size: 18px;
+  text-decoration: none;
+  color: $grey-darkest;
+}
+
+.reading .text--headline-4 {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.text--subhead {
+  font-family: $Lato;
+  font-weight: 100;
+  font-size: 24px;
+}
+
+.text--subhead a {
+  text-decoration: none;
+}
+
+.text--caption {
+  font-family: $Lato;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.text--caption.cart__caption {
+  font-size: 12px;
+}
+
+.text--caption.cart__apply-discount-link {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.text--caption a, a.text--caption {
+  font-family: $Lato;
+  font-weight: 400;
+}
+
+.text--details {
+  font-family: $Lato;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.text--smaller {
+  font-size: 80%;
+}
+
+.text--smaller.checkout__subtotal {
+  font-size: 12px;
+}
+
+.text--larger {
+  font-size: 120%;
+}
+
+.text--larger.checkout__total {
+  font-size: 16px;
+}
+
+.text--success {
+  color: $accent-success;
+}
+
+.text--thin {
+  font-weight: 100;
+}
+
+.text--strong {
+  font-weight: 900;
+}
+
+.text--ghost {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 90%;
+  color: $grey-darker;
+}
+
+.text--white .text--ghost {
+  color: $grey-lighter;
+}
+
+.text--danger {
+  color: $accent-danger;
+}
+
+.text--success {
+  color: $accent-success;
+}
+
+a.text--delete-button {
+  font-size: 80%;
+  color: $accent-danger;
+  font-weight: 900;
+}
+
+a.text--delete-button:hover {
+  color: $accent-danger-light;
+}
+
+a.text--delete-button:active {
+  color: $accent-danger-dark;
+}
+
+.text--input-helper {
+  font-size: 14px;
+}
+
+// TEXT + POSITIONING
+
+// link list
+.text--link-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.text--link-list li {
+  list-style: none;
+  padding: 30px 160px 30px 0;
+  border-bottom: 1px solid $grey-lighter;
+  line-height: 130%;
+}
+
+@media only screen and (max-width: $small-screen-max) {
+  .text--link-list li {
+    padding: 30px 0px 30px 0;
+  }
+}
+
+.text--link-list a {
+  display: block;
+}
+
+.text--link-list li.alpha {
+  padding-top: 0px;
+}
+
+.text--link-list li.omega {
+  border-bottom: none;
+}
+
+.text--link-list p {
+  margin: 5px 0;
+}
+
+.text--link-list h3 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.text--link-list__arrow {
+  font-size: 60px;
+  font-weight: 100;
+  @include transform(scaleX(0.6));
+  color: $grey-lighter;
+}
+
+@media only screen and (max-width: $small-screen-max) {
+  .text--link-list__arrow {
+    display: none;
+  }
+}
+
+.product-detail .text--link-list a {
+  font-weight: 800;
+}
+
+// address
+.text--address-block div {
+  display: block;
+  clear: right;
+  margin: 0;
+  padding: 0;
+  line-height: 140%;
+  font-size: 14px;
+}
+
+.text--address-block .text--address-block__header-row {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.text--edit-link {
+  padding-left: 14px;
+  font-size: 13px;
+}
+
+// close button
+
+.text--x-button {
+  display: inline-block;
+  font-family: $Lato;
+  font-size: 18px;
+  font-weight: 300;
+  @include transform(scaleX(1.2));
+  color: $grey-darker;
+}
+
+@media only screen and (max-width: $small-screen-max) {
+  .email-us-link {
+    font-size: 80%;
+  }
+}
