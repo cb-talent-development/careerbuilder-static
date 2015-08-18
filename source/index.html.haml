@@ -2,39 +2,48 @@
 title: Styleguide
 ---
 
-
-%p 
-  = partial 'partials/navigation'   
+%nav
+  = link_to 'Styleguide', '/index.html'
+  = link_to 'Shopping Cart', '/shopping-cart.html'
+  = link_to 'Cart Login', '/cart-login.html'
+  = link_to 'Process Payment', '/process-payment.html'
+  = link_to 'Order Confirmation', '/order-confirmation.html'
+  = link_to 'Product Page', '/product-page.html'
+  = link_to 'Solutions Page', '/solutions-page.html'
+  = link_to 'Home Page', '/home-page.html'
+  = link_to 'Reading Page', '/reading-page.html'
+  = link_to 'Simplified Cart', '/simplified-cart.html'
+  = link_to '404', '/404.html'
 
 %h1 Styleguide
 
 .tutorial.hidden
   %h2 HAML Basics
   / The basics - http://haml.info/tutorial.html
-  
-  %p See this page's source code for a quickstart guide to writing HAML. 
+
+  %p See this page's source code for a quickstart guide to writing HAML.
 
   / HTML TAGS
 
   / HTML tags are prefaced with a %, don't use < > and the tags are not closed
-  / Like this: 
-  / %h1  
-  / %meta  
-  / %li 
+  / Like this:
+  / %h1
+  / %meta
+  / %li
 
-  / NESTING 
+  / NESTING
 
-  / Nesting inside elements uses tab-indent whitespace, or you can have content inside tag on the same line as tag.  
+  / Nesting inside elements uses tab-indent whitespace, or you can have content inside tag on the same line as tag.
   / Common error: You can't tab-indent content and also have content on the same line as the initial tag.
 
   / ATTRIBUTES IN TAGS
 
-  / Attributes inside a tag are added with a Ruby hash, like this: 
+  / Attributes inside a tag are added with a Ruby hash, like this:
   / %link{ :href => '//fonts.googleapis.com/css?family=Lato:300,400,700', :rel => 'stylesheet', :type => 'text/css' }
   / Compiles to <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  / Multiline hash is fine, but remember the commas: it's Ruby hash syntax. 
+  / Multiline hash is fine, but remember the commas: it's Ruby hash syntax.
   / Keys are either :symbols, or "strings" (use string if you have funky chars in key).
-  / (There is an alternate syntax with parens that looks more like HTML.) 
+  / (There is an alternate syntax with parens that looks more like HTML.)
 
 
 
