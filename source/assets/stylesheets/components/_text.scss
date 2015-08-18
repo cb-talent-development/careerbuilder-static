@@ -2,6 +2,7 @@
 // display only, no positioning
 
 body {
+  font-family: $Lato;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,7 +12,6 @@ label {
 }
 
 .text--body {
-  font-family: $Lato;
   font-weight: 400;
   line-height: 175%;
   -webkit-font-smoothing: antialiased;
@@ -49,7 +49,6 @@ label {
 }
 
 .text--top-bar-link, .text--top-bar-link a {
-  font-family: $Lato;
   font-weight: 400;
   font-size: 12px;
   text-decoration: none;
@@ -58,7 +57,6 @@ label {
 }
 
 .text--top-bar-helper {
-  font-family: $Lato;
   font-weight: 300;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -81,7 +79,6 @@ label {
 }
 
 .text--subnav, .text--subnav a {
-  font-family: $Lato;
   font-weight: 400;
   font-size: 16px;
   text-decoration: none;
@@ -94,7 +91,6 @@ label {
 }
 
 .text--headline, .text--headline a {
-  font-family: $Lato;
   font-weight: 800;
   font-size: 40px;
   text-decoration: none;
@@ -103,7 +99,6 @@ label {
 }
 
 .text--headline, .text--headline a {
-  font-family: $Lato;
   font-weight: 800;
   font-size: 40px;
   text-decoration: none;
@@ -125,7 +120,7 @@ label {
 }
 
 .text--headline-2, .text--headline-2 a {
-  font-family: $Lato;
+
   font-weight: 800;
   font-size: 24px;
   text-decoration: none;
@@ -147,7 +142,7 @@ label {
 }
 
 .text--headline-3, .text--headline-3 a {
-  font-family: $Lato;
+
   font-weight: 800;
   font-size: 20px;
   text-decoration: none;
@@ -156,7 +151,7 @@ label {
 }
 
 .text--headline-4, .text--headline-4 a {
-  font-family: $Lato;
+
   font-weight: 800;
   font-size: 18px;
   text-decoration: none;
@@ -170,7 +165,7 @@ label {
 }
 
 .text--subhead {
-  font-family: $Lato;
+
   font-weight: 100;
   font-size: 24px;
   -webkit-font-smoothing: antialiased;
@@ -182,7 +177,7 @@ label {
 }
 
 .text--caption {
-  font-family: $Lato;
+
   font-weight: 300;
   font-size: 14px;
   line-height: 140%;
@@ -202,14 +197,13 @@ label {
 }
 
 .text--caption a, a.text--caption {
-  font-family: $Lato;
+
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .text--details {
-  font-family: $Lato;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
@@ -365,7 +359,6 @@ a.text--delete-button:active {
 
 .text--x-button {
   display: inline-block;
-  font-family: $Lato;
   font-size: 18px;
   font-weight: 300;
   @include transform(scaleX(1.2));
