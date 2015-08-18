@@ -10,7 +10,7 @@
 
     / TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY
     / placeholder
-    %script{type: "text/javascript", src: "http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js"}
+    %script{type: "text/javascript", src: "//img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js"}
 
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title + ' | CareerBuilder'
@@ -18,7 +18,7 @@
     %link{ href: '//fonts.googleapis.com/css?family=Lato:300,400,700', rel: 'stylesheet', type: 'text/css' }
 
     - # This may want to move to a file hosted on CareerBuilder's stack
-    %link{ rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"}
+    %link{ rel: "stylesheet", href: "//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"}
 
     = stylesheet_link_tag :site
 
