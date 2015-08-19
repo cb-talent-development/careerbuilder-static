@@ -12,25 +12,22 @@
     <title>Home Page | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
-    <link href="assets/stylesheets/site-0f4af06f.css" media="screen" rel="stylesheet" type="text/css" />
-    <!-- Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery! -->
-    <!--[if lte IE 8]><script src="assets/javascripts/ie8-66df0019.js" type="text/javascript"></script>
-    <link href="assets/stylesheets/ie8-acae019a.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <link href="assets/stylesheets/site-5b9ac9ce.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='home-page employer-scope'>
     <div class='modal__background hidden' id='modal-background'></div>
-    <header class='top-bar' id='top-bar'>
+    <header class='top-bar top-bar--white' id='top-bar'>
       <div class='top-bar__logo'>
         <a href='/'>
           <!-- / low-fi image of logo for positioning, needs to be updated -->
           <img src='assets/images/placeholder-logo-e2d254a1.png'>
         </a>
       </div>
-      <nav class='flyout top-bar__links text--white text--top-bar-link medium-screen-up'>
+      <nav class='flyout top-bar__links text--top-bar-link medium-screen-up'>
         <ul>
           <li>
             <a href='#account'>
-              <img src='assets/images/icon--account-8b7208ff.png'>
+              <i class="fa fa-user fa-lg"></i>
               My Account
             </a>
             <ul>
@@ -47,7 +44,7 @@
           </li>
           <li>
             <a href='#cart'>
-              <img src='assets/images/icon--cart-69058b39.png'>
+              <i class="fa fa-shopping-cart fa-lg"></i>
               $1337.00 Cart
             </a>
           </li>
@@ -103,7 +100,7 @@
     <!-- header--home -->
     <header class='header header--home'>
       <div class='container'>
-        <nav class='header__subnav text--white text--subnav medium-screen-up'>
+        <nav class='header__subnav text--white text--subnav large-screen-only'>
           <div class='columns-6'>
             <nav class='flyout header__subnav text--white text--subnav medium-screen-up'>
               <ul>
@@ -229,12 +226,12 @@
         </div>
       </div>
       <!-- background video -->
-      <video autoplay class='header__bg-video' loop muted poster='data:image/gif,AAAA' preload>
-        <source src='assets/images/iStock_000014241093BigWeb.mp4' type='video/mp4'>
-      </video>
+      <div id='background-video-wrapper'>
+        <!-- background-video loads conditionally, see site.js -->
+      </div>
     </header>
     <!-- product image -->
-    <aside class='carousel__container medium-screen-up home__top-carousel'>
+    <aside class='carousel__container large-screen-only home__top-carousel'>
       <div class='carousel__placeholder carousel__placeholder--screenshot'>
         <img class="carousel__laptop" src="assets/images/carousel--laptop-cce908f6.png" />
         <a class='carousel__arrow carousel__arrow--left'>
@@ -269,6 +266,7 @@
         </a>
       </div>
     </aside>
+    <!-- / products row -->
     <section class='container text--body'>
       <div class='home__product-block'>
         <h2>Candidate Marketplace</h2>
@@ -286,9 +284,10 @@
         <a class='button button--secondary button--small' href='#'>View Products</a>
       </div>
     </section>
+    <!-- / text box -->
     <div class='home__background-cover home__icons text--body'>
       <div class='home__background-overlay-right home__overlay--green'></div>
-      <section class='container text--body'>
+      <section class='container text--body home__icons__section'>
         <div class='home__half-page-right text--white'>
           <h2>Products and Solutions for Every Step of the Recruiter Journey</h2>
           <p>Whether you need to post a single job or build a comprehensive recruitment program, we have you covered.</p>
@@ -299,19 +298,20 @@
             <img src="assets/images/icon--home-row-4-0363ee70.png" />
             <img src="assets/images/icon--home-row-5-0e213e1b.png" />
           </div>
-          <div class='home__icon-row__subtext'>Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure</div>
+          <div class='home__icon-row__subtext clear-fix'>Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure</div>
         </div>
       </section>
     </div>
     <!-- / featured customers -->
-    <div class='home__background-cover'>
+    <div class='home__background-cover home__logo-grid__container'>
       <section class='container text--body home__logo-grid__title'>
         <div>
           <span class='light'>Featured</span>
           <span class='heavy'>Customers</span>
         </div>
       </section>
-      <div class='container text--body home__logo-grid'>
+      <!-- / MEDIUM UP SCREEN VERSION -->
+      <div class='container text--body home__logo-grid large-screen-only'>
         <div>
           <!-- %a{href:"#", class: "modal-open--video-sports"} -->
           <img src="assets/images/logo--testimonial--sports-a2b1300d.png" />
@@ -327,7 +327,7 @@
           </a>
         </div>
       </div>
-      <div class='container text--body home__logo-grid omega-row'>
+      <div class='container text--body home__logo-grid omega-row large-screen-only'>
         <div>
           <a class='modal-open--video-vitamin' href='#'>
             <img src="assets/images/logo--testimonial--vitamin-7caffcc3.png" />
@@ -343,7 +343,43 @@
           </a>
         </div>
       </div>
+      <!-- / SMALL SCREEN VERSION -->
+      <div class='container text--body home__logo-grid medium-screen-down'>
+        <div>
+          <!-- %a{href:"#", class: "modal-open--video-sports"} -->
+          <img src="assets/images/logo--testimonial--sports-a2b1300d.png" />
+        </div>
+        <div>
+          <a href='https://www.youtube.com/embed/PVJ8XE3_5QM'>
+            <img src="assets/images/logo--testimonial--wynn-fcc1f41c.png" />
+          </a>
+        </div>
+      </div>
+      <div class='container text--body home__logo-grid medium-screen-down'>
+        <div>
+          <a href='https://www.youtube.com/embed/1adyGfKj-tM'>
+            <img src="assets/images/logo--testimonial--nucor-f2a0d427.png" />
+          </a>
+        </div>
+        <div>
+          <a href='https://www.youtube.com/embed/VML7WlBLTiU'>
+            <img src="assets/images/logo--testimonial--vitamin-7caffcc3.png" />
+          </a>
+        </div>
+      </div>
+      <div class='container text--body home__logo-grid omega-row medium-screen-down'>
+        <div>
+          <!-- %a{href:"#", class: "modal-open--video-rockwater"} -->
+          <img src="assets/images/logo--testimonial--rockwater-e03e859a.png" />
+        </div>
+        <div>
+          <a href='https://www.youtube.com/embed/z017dY3KAlM'>
+            <img src="assets/images/logo--testimonial--novo-f7a755bb.png" />
+          </a>
+        </div>
+      </div>
     </div>
+    <!-- / lower carousel -->
     <div class='home__background-cover home__stories'>
       <div class='home__background-overlay-all home__overlay--blue'></div>
       <section class='container text--body text--white'>
@@ -380,7 +416,7 @@
             <a class='button button--secondary text--white' href='#'>More Stories</a>
           </div>
         </div>
-        <div class='carousel__clickable'>
+        <div class='carousel__clickable large-screen-only'>
           <a class='carousel__dot active' href='#'>
             <i class='fa fa-circle'></i>
           </a>
@@ -452,7 +488,7 @@
       </section>
     </div>
     <!-- modals -->
-    <div class='modal__positioning'>
+    <div class='modal__positioning hidden'>
       <div class='modal__container text--body'>
         <div class='modal__box box--pop-out hidden modal--video' id='modal--video-sports'>
           <div class='modal__close-button'>
@@ -613,6 +649,6 @@
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-02feb2b0.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-464dcf16.js" type="text/javascript"></script>
   </body>
 </html>
