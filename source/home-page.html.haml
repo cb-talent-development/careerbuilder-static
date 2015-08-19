@@ -63,8 +63,8 @@ layout: layout
             Learn More
 
   / background video
-  %video{class: "header__bg-video large-screen-only", poster: "data:image/gif,AAAA", preload: true, autoplay: true, muted: true, loop: true}
-    %source{type: "video/mp4", src: image_path("iStock_000014241093BigWeb.mp4")}
+  %div{id: "background-video-wrapper"}
+    / background-video loads conditionally, see site.js
 
 / product image
 %aside{class: "carousel__container large-screen-only home__top-carousel"}
@@ -275,7 +275,7 @@ layout: layout
     %a{href: "#", class: "button button--secondary"} More Events
 
 / modals
-%div{class: "modal__positioning"}
+%div{class: "modal__positioning hidden"}
   %div{class: "modal__container text--body"}
 
     = partial 'partials/modal--video-sports'
