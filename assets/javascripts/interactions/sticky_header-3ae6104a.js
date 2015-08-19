@@ -1,1 +1,0 @@
-"use strict";"undefined"==typeof window.interact&&(window.interact={}),window.interact.stickyHeader=function(t,i){var n=$(t),c=$(i);if(!c.length)return!1;var o=c.offset().top-15;$(window).scroll(function(){$(window).scrollTop()>=o?(c.css({opacity:0}),n.css({opacity:1,zIndex:1e4})):(c.css({opacity:1}),n.css({opacity:0,zIndex:5e3}))})};

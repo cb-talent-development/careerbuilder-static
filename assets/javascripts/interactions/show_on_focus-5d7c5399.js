@@ -1,1 +1,0 @@
-"use strict";"undefined"==typeof window.interact&&(window.interact={}),window.interact.showOnFocus=function(n,i){$(i).hide(),$(i).removeClass("hidden"),$(n).focus(function(){$(i).fadeIn("fast")}),$(n).blur(function(){$(i).hide()})};

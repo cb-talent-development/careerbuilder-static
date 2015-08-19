@@ -1,1 +1,0 @@
-"use strict";"undefined"==typeof window.interact&&(window.interact={}),window.interact.watchMobileMenu=function(){var i=$("#mobile-menu-link"),e=$("#mobile-menu");e.hidden=!0,e.hide(),e.removeClass("hidden"),$(window).resize(function(){e.hidden=!0,e.hide()}),i.click(function(){e.hidden=!e.hidden,1==e.hidden?e.hide():e.show()})};
