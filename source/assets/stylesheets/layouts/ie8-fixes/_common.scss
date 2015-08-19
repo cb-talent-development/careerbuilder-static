@@ -1,11 +1,19 @@
+@mixin ie8-clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+// COMMON
+
 .flyout ul li {
   height: 30px;
 }
 
 .box--pop-out__bottom.box--pop-out {
   display: inline-block;
-}
-
-.product-page .sticky-nav__top-container {
-  background-color: $primary;
 }
