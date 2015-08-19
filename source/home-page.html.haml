@@ -1,13 +1,13 @@
 ---
 title: Home Page
-layout: layout
+layout: layout--white
 ---
 
 / header--home
 %header{class: "header header--home"}
   %div{class: "container"}
 
-    %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
+    %nav{class: "header__subnav text--white text--subnav large-screen-only"}
       %div{class: 'columns-6'}
         = partial 'partials/header-subnav'
 
@@ -63,11 +63,11 @@ layout: layout
             Learn More
 
   / background video
-  %video{class: "header__bg-video", poster: "data:image/gif,AAAA", preload: true, autoplay: true, muted: true, loop: true}
-    %source{type: "video/mp4", src: image_path("iStock_000014241093BigWeb.mp4")}
+  %div{id: "background-video-wrapper"}
+    / background-video loads conditionally, see site.js
 
 / product image
-%aside{class: "carousel__container medium-screen-up home__top-carousel"}
+%aside{class: "carousel__container large-screen-only home__top-carousel"}
   %div{class: "carousel__placeholder carousel__placeholder--screenshot"}
     = image_tag 'carousel--laptop.png', {class: "carousel__laptop"}
 
@@ -96,8 +96,8 @@ layout: layout
     %a{href:"#", class: "carousel__dot"}
       %i{class: "fa fa-circle"}
 
+// products row
 %section{class: "container text--body"}
-
   %div{class: "home__product-block"}
     %h2 Candidate Marketplace
     %p Connecting you to the best candidates through online and offline sourcing channels.
@@ -113,10 +113,10 @@ layout: layout
     %p Making recruitment data actionable, helping you set expectations, measure and grow.
     %a{class: "button button--secondary button--small", href: "#"} View Products
 
-
+// text box
 %div{class: "home__background-cover home__icons text--body"}
   %div{class: "home__background-overlay-right home__overlay--green"}
-  %section{class: "container text--body"}
+  %section{class: "container text--body home__icons__section"}
     %div{class: "home__half-page-right text--white"}
       %h2 Products and Solutions for Every Step of the Recruiter Journey
       %p Whether you need to post a single job or build a comprehensive recruitment program, we have you covered.
@@ -128,17 +128,17 @@ layout: layout
         = image_tag 'icon--home-row-4.png'
         = image_tag 'icon--home-row-5.png'
 
-      %div{class: "home__icon-row__subtext"} Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure
+      %div{class: "home__icon-row__subtext clear-fix"} Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure
 
 // featured customers
-
-%div{class: "home__background-cover"}
+%div{class: "home__background-cover home__logo-grid__container"}
   %section{class: "container text--body home__logo-grid__title"}
     %div
       %span{class: "light"} Featured
       %span{class: "heavy"} Customers
 
-  %div{class: "container text--body home__logo-grid"}
+  // MEDIUM UP SCREEN VERSION    
+  %div{class: "container text--body home__logo-grid large-screen-only"}
     %div
       / %a{href:"#", class: "modal-open--video-sports"}
       = image_tag 'logo--testimonial--sports.png'
@@ -148,7 +148,7 @@ layout: layout
     %div
       %a{href:"#", class: "modal-open--video-nucor"}
         = image_tag 'logo--testimonial--nucor.png'
-  %div{class: "container text--body home__logo-grid omega-row"}
+  %div{class: "container text--body home__logo-grid omega-row large-screen-only"}
     %div
       %a{href:"#", class: "modal-open--video-vitamin"}
         = image_tag 'logo--testimonial--vitamin.png'
@@ -159,6 +159,32 @@ layout: layout
       %a{href:"#", class: "modal-open--video-novo"}
         = image_tag 'logo--testimonial--novo.png'
 
+  // SMALL SCREEN VERSION 
+  %div{class: "container text--body home__logo-grid medium-screen-down"}
+    %div
+      / %a{href:"#", class: "modal-open--video-sports"}
+      = image_tag 'logo--testimonial--sports.png'
+    %div
+      %a{href:"https://www.youtube.com/embed/PVJ8XE3_5QM"}
+        = image_tag 'logo--testimonial--wynn.png'
+
+  %div{class: "container text--body home__logo-grid medium-screen-down"}
+    %div
+      %a{href:"https://www.youtube.com/embed/1adyGfKj-tM"}
+        = image_tag 'logo--testimonial--nucor.png'
+    %div
+      %a{href:"https://www.youtube.com/embed/VML7WlBLTiU"}
+        = image_tag 'logo--testimonial--vitamin.png'
+
+  %div{class: "container text--body home__logo-grid omega-row medium-screen-down"}
+    %div
+      / %a{href:"#", class: "modal-open--video-rockwater"}
+      = image_tag 'logo--testimonial--rockwater.png'
+    %div
+      %a{href:"https://www.youtube.com/embed/z017dY3KAlM"}
+        = image_tag 'logo--testimonial--novo.png'
+
+// lower carousel
 %div{class: "home__background-cover home__stories"}
   %div{class: "home__background-overlay-all home__overlay--blue"}
   %section{class: "container text--body text--white"}
@@ -190,7 +216,7 @@ layout: layout
           “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
         %a{class: "button button--secondary text--white", href: "#"} More Stories
 
-    %div{class: "carousel__clickable"}
+    %div{class: "carousel__clickable large-screen-only"}
       %a{href:"#", class: "carousel__dot active"}
         %i{class: "fa fa-circle"}
       %a{href:"#", class: "carousel__dot"}
@@ -249,7 +275,7 @@ layout: layout
     %a{href: "#", class: "button button--secondary"} More Events
 
 / modals
-%div{class: "modal__positioning"}
+%div{class: "modal__positioning hidden"}
   %div{class: "modal__container text--body"}
 
     = partial 'partials/modal--video-sports'

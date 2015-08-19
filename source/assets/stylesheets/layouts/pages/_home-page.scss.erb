@@ -146,6 +146,19 @@
   margin: 0 0 110px 0;
 }
 
+@media only screen and (max-width: $medium-screen-max) {
+  .home__product-block  {
+    width: 100%;
+    float: none;
+    border-right: none;
+    margin-bottom: 50px;
+  }
+
+  .home__product-block.omega {
+    margin-bottom: 80px;
+  }
+}
+
 .home__product-block.omega {
   border-right: none;
   margin-right: none;
@@ -193,9 +206,54 @@
   z-index: 0;
 }
 
+@media only screen and (max-width: $medium-screen-max) {
+  .home__background-cover {
+    min-height: 500px;
+    height: auto;
+  }
+
+  .home__background-cover .home__icons__section {
+    padding-bottom: 80px;
+  }
+
+  .home__background-overlay-right {
+    width: 100%;
+    left: 0;
+    min-height: 500px;
+  }
+
+  .home__background-overlay-all {
+    min-height: 500px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: $small-screen-max) {
+  .home__background-cover {
+    min-height: 400px;
+  }
+
+  .home__background-overlay-right {
+    width: 100%;
+    left: 0;
+    min-height: 400px;
+  }
+
+  .home__background-overlay-all {
+    min-height: 400px;
+  }
+}
+
 .home__icons {
   background-position: top center;
   background-image: url(<%= image_path 'placeholder--home-mobile.png' %>);
+}
+
+@media only screen and (max-width: $medium-screen-max) {
+  .home__icons {
+    background-image: none;
+    background-color: rgba(0, 155, 116, 1);
+  }
 }
 
 .home__overlay--green {
@@ -229,6 +287,7 @@
 .home__icon-row {
   position: relative;
   left: -7px;
+  display: inline-block;
 }
 
 .home__icon-row img {
@@ -246,6 +305,35 @@
   font-size: 18.8px;
   line-height: 28px;
   font-weight: 100;
+}
+
+@media only screen and (max-width: $medium-screen-max) {
+  .home__half-page-right {
+    @include span-columns(10);
+    @include shift(1);
+    position: relative;
+    z-index: 1000;
+    margin-top: 80px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: $small-screen-max) {
+  .home__half-page-right h2 {
+    font-size: 22px;
+  }
+
+  .home__half-page-right p {
+    font-size: 18px;
+  }
+
+  .home__icon-row img {
+    max-width: 18%;
+  }
+
+  .home__icon-row__subtext {
+    font-size: 12px;
+  }
 }
 
 //
@@ -273,11 +361,44 @@
   margin-bottom: 160px;
 }
 
+@media only screen and (max-width: $medium-screen-max) { 
+  
+  .home__background-cover.home__logo-grid__container {
+    height: auto;
+  }
+
+  .home__logo-grid div {
+    width: 50%;
+  }
+
+  .home__logo-grid.omega-row {
+    padding-bottom: 80px;
+    margin-bottom: 0px;
+  }
+
+  .home__logo-grid img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  .home__logo-grid__title {
+    margin-bottom: 40px;
+  }
+}
+
 //
 
 .home__stories {
   background-position: top center;
   background-image: url(<%= image_path 'placeholder--home-mobile.png' %>);
+}
+
+@media only screen and (max-width: $medium-screen-max) { 
+  .home__stories {
+    background-image: none;
+    background-color: rgba(40, 121, 184, 1);
+    min-height: 600px; 
+  }
 }
 
 .carousel__grouping--stories {
@@ -313,6 +434,17 @@
   margin: 10px auto 0;
 }
 
+@media only screen and (max-width: $medium-screen-max) { 
+  .carousel__object--stories p {
+    font-size: 20px;
+  }
+
+  .carousel__object--stories h2 {
+    font-size: 30px;
+  }
+}
+
+
 .carousel__object--stories a {
   margin-top: 20px;
 }
@@ -320,6 +452,7 @@
 .home__stories .carousel__clickable {
   opacity: 0.7;
   z-index: 100;
+  top: 40px;
 }
 
 .home__stories .carousel__clickable .carousel__dot {
@@ -340,15 +473,31 @@
   @include span-columns(6);
 }
 
-.home__blog h2, .home__events h2 {
-  font-size: 32px;
-  margin-bottom: 70px;
-}
 
 .home__events {
   margin-top: 140px;
   @include span-columns(5);
   @include shift(1);
+}
+
+.home__blog h2, .home__events h2 {
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+
+@media only screen and (max-width: $medium-screen-max) { 
+  .home__blog, .home__events {
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+  .home__blog h2, .home__events h2 {
+    font-size: 26px;
+  }
+
+  .home__events {
+    padding-bottom: 80px;
+  }
 }
 
 .home__blog__article h3, .home__blog__article h3 a {

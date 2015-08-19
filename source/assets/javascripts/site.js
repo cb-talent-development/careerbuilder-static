@@ -33,5 +33,8 @@ jQuery(function(){
   window.interact.objectCarousel('.header--home, .home__top-carousel');
   window.interact.objectCarousel('.home__background-cover.home__stories');
 
-  window.interact.stickyHeader('.sticky-nav', '#overview-link-anchor');
+  window.interact.stickyHeader('.sticky-nav', '#overview-link-anchor'); 
+
+  window.interact.loadExpensiveThings();
+
 });
