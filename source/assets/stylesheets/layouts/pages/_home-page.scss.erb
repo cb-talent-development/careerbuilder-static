@@ -314,6 +314,14 @@
   background-image: url(<%= image_path 'placeholder--home-mobile.png' %>);
 }
 
+@media only screen and (max-width: $medium-screen-max) { 
+  .home__stories {
+    background-image: none;
+    background-color: rgba(40, 121, 184, 1);
+  }
+}
+
+
 .carousel__grouping--stories {
   top: 0;
   z-index: 1000;
@@ -374,16 +382,26 @@
   @include span-columns(6);
 }
 
-.home__blog h2, .home__events h2 {
-  font-size: 32px;
-  margin-bottom: 70px;
-}
 
 .home__events {
   margin-top: 140px;
   @include span-columns(5);
   @include shift(1);
 }
+
+@media only screen and (max-width: $medium-screen-max) { 
+  .home__blog, .home__events {
+    @include span-columns(10);
+    @include shift(1);
+  }
+}
+
+.home__blog h2, .home__events h2 {
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+
+
 
 .home__blog__article h3, .home__blog__article h3 a {
   font-size: 21px;
