@@ -19,6 +19,8 @@
     "bourbon": "~4.2.3",
     "neat": "~1.7.2",
     "employer-style-base": "https://github.com/cb-talent-development/employer-style-base.git#mm/rectify-buttons",
-    "employer-style-grid": "https://github.com/cb-talent-development/employer-style-grid.git"
+    "employer-style-grid": "https://github.com/cb-talent-development/employer-style-grid.git",
+    "selectivizr": "~1.0.2",
+    "html5shiv": "~3.7.3"
   }
 }

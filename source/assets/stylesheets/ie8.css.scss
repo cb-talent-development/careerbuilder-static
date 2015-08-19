@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+//-----------  External Libraries  -----------//
+
+@import 'bourbon/app/assets/stylesheets/bourbon';   // Bourbon mixin library (http://bourbon.io)
+@import 'neat/app/assets/stylesheets/neat-helpers'; // Bourbon grid framework (http://neat.bourbon.io)
+@import 'employer-style-base/sass/base';            // CareerBuilder baseline styles (https://github.com/cb-talent-development/employer-style-base)
+@import 'employer-style-grid/sass/grid';            // CareerBuilder baseline grid (https://github.com/cb-talent-development/employer-style-grid)
+@import 'neat/app/assets/stylesheets/neat';         // Bourbon grid framework (http://neat.bourbon.io)
+
+//-----------  Page Layouts  -----------//
+
+@import 'layouts/ie8-fixes/*';                      // IE8 Specific Styling Fixes

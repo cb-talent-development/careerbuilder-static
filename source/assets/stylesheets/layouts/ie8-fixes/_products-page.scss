@@ -1,0 +1,16 @@
+.product-page .sticky-nav__top-container .header__subnav,
+.product-page .sticky-nav__top-container .header--large__headline,
+.product-page .sticky-nav__top-container .header--large__image {
+  float: none;
+}
+
+.product-page .sticky-nav__top-container .header--large__image {
+  right: 0px;
+  bottom: 0px;
+  width: 50%;
+  position: absolute;
+}
+
+.product-page .product-detail {
+  @include ie8-clearfix();
+}

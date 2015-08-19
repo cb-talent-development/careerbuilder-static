@@ -1,0 +1,25 @@
+.solutions-page .sticky-nav__top-container {
+  @include ie8-clearfix();
+}
+
+.solutions-page .sticky-nav__top-container .header__subnav,
+.solutions-page .sticky-nav__top-container .header--large-alternate__headline,
+.solutions-page .sticky-nav__top-container .header--large-alternate__image {
+  float: none;
+}
+
+.solutions-page .sticky-nav__top-container .header--large-alternate__image {
+  top: 50px;
+  right: 0px;
+  width: 50%;
+  position: absolute;
+}
+
+.solutions-page .product__intro-text {
+  float: none;
+  width: 50%;
+}
+
+.solutions-page .product-detail {
+  @include ie8-clearfix();
+}

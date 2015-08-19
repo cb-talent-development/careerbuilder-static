@@ -1,0 +1,46 @@
+@mixin ie8-clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+// COMMON
+
+.flyout ul li {
+  height: 30px;
+}
+
+.box--pop-out > .button {
+  width: 85%;
+}
+
+.box--pop-out__bottom.box--pop-out {
+  display: inline-block;
+}
+
+.cart__cell.columns-6 {
+  width: 45%;
+}
+
+.cart__cell.cart--simplified__cell--title,
+.cart__cell.checkout__item--left,
+.cart__cell.text--address-block {
+  width: 45%;
+  margin-right: 0;
+}
+
+.box--quick-submit.apply-discount {
+  display: block !important;
+  position: relative;
+}
+
+.box--quick-submit.apply-discount .box--quick-submit__button-container {
+  top: 0px;
+  right: 0px;
+  font-size: 70%;
+  position: absolute;
+}

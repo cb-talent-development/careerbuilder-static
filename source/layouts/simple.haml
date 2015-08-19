@@ -22,6 +22,11 @@
 
     = stylesheet_link_tag :site
 
+    / Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery!
+    = surround "<!--[if lte IE 8]>", "<![endif]-->" do
+      = javascript_include_tag :ie8
+      = stylesheet_link_tag :ie8
+
   %body{ class: page_classes + " employer-scope" }
 
     %div{class: "modal__background hidden", id: "modal-background"}

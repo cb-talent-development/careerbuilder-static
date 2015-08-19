@@ -1,0 +1,19 @@
+ .home-page > .container.text--body {
+  @include ie8-clearfix();
+ }
+
+.home-page > .container.text--body .home__product-block {
+  width: 27%;
+ }
+
+.home-page .home__background-overlay-right {
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC009B74',endColorstr='#CC009B74');
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC009B74',endColorstr='#CC009B74');
+  zoom: 1;
+}
+
+.home-page .home__background-overlay-all.home__overlay--blue {
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC2879B8',endColorstr='#CC2879B8');
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC2879B8',endColorstr='#CC2879B8');
+  zoom: 1;
+}
