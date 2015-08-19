@@ -146,9 +146,6 @@ window.interact.objectCarousel = function(parent){
     evt.preventDefault();
     if (isAnimating){ return false; }
 
-    console.log(carouselArrows);
-    console.log(carouselObjects);
-
     if ($(this).hasClass(leftArrowClass)){
       animateNextState('left', nextStateLeft);
     }

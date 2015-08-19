@@ -5,8 +5,6 @@
 if(typeof window.interact === 'undefined') { window.interact = {} }
 
 jQuery(function(){
-  console.log('site.js working');
-
   // modals must be added manually, this is a likely refactor if this gets hard
   // arguements are ( 'my-modal-id' , 'class-on-links-to-open' ) just like that.
   window.interact.modal('modal--email-us', 'modal-open--email-us');
@@ -33,7 +31,7 @@ jQuery(function(){
   window.interact.objectCarousel('.header--home, .home__top-carousel');
   window.interact.objectCarousel('.home__background-cover.home__stories');
 
-  window.interact.stickyHeader('.sticky-nav', '#overview-link-anchor'); 
+  window.interact.stickyHeader('.sticky-nav', '#overview-link-anchor');
 
   window.interact.loadExpensiveThings();
 
