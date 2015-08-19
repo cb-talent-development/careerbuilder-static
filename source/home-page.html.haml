@@ -7,7 +7,7 @@ layout: layout
 %header{class: "header header--home"}
   %div{class: "container"}
 
-    %nav{class: "header__subnav text--white text--subnav medium-screen-up"}
+    %nav{class: "header__subnav text--white text--subnav large-screen-only"}
       %div{class: 'columns-6'}
         = partial 'partials/header-subnav'
 
@@ -67,7 +67,7 @@ layout: layout
     %source{type: "video/mp4", src: image_path("iStock_000014241093BigWeb.mp4")}
 
 / product image
-%aside{class: "carousel__container medium-screen-up home__top-carousel"}
+%aside{class: "carousel__container large-screen-only home__top-carousel"}
   %div{class: "carousel__placeholder carousel__placeholder--screenshot"}
     = image_tag 'carousel--laptop.png', {class: "carousel__laptop"}
 
@@ -116,7 +116,7 @@ layout: layout
 // text box
 %div{class: "home__background-cover home__icons text--body"}
   %div{class: "home__background-overlay-right home__overlay--green"}
-  %section{class: "container text--body"}
+  %section{class: "container text--body home__icons__section"}
     %div{class: "home__half-page-right text--white"}
       %h2 Products and Solutions for Every Step of the Recruiter Journey
       %p Whether you need to post a single job or build a comprehensive recruitment program, we have you covered.
@@ -131,13 +131,14 @@ layout: layout
       %div{class: "home__icon-row__subtext clear-fix"} Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure
 
 // featured customers
-%div{class: "home__background-cover"}
+%div{class: "home__background-cover home__logo-grid__container"}
   %section{class: "container text--body home__logo-grid__title"}
     %div
       %span{class: "light"} Featured
       %span{class: "heavy"} Customers
 
-  %div{class: "container text--body home__logo-grid"}
+  // MEDIUM UP SCREEN VERSION    
+  %div{class: "container text--body home__logo-grid large-screen-only"}
     %div
       / %a{href:"#", class: "modal-open--video-sports"}
       = image_tag 'logo--testimonial--sports.png'
@@ -147,7 +148,7 @@ layout: layout
     %div
       %a{href:"#", class: "modal-open--video-nucor"}
         = image_tag 'logo--testimonial--nucor.png'
-  %div{class: "container text--body home__logo-grid omega-row"}
+  %div{class: "container text--body home__logo-grid omega-row large-screen-only"}
     %div
       %a{href:"#", class: "modal-open--video-vitamin"}
         = image_tag 'logo--testimonial--vitamin.png'
@@ -158,6 +159,32 @@ layout: layout
       %a{href:"#", class: "modal-open--video-novo"}
         = image_tag 'logo--testimonial--novo.png'
 
+  // SMALL SCREEN VERSION 
+  %div{class: "container text--body home__logo-grid medium-screen-down"}
+    %div
+      / %a{href:"#", class: "modal-open--video-sports"}
+      = image_tag 'logo--testimonial--sports.png'
+    %div
+      %a{href:"https://www.youtube.com/embed/PVJ8XE3_5QM"}
+        = image_tag 'logo--testimonial--wynn.png'
+
+  %div{class: "container text--body home__logo-grid medium-screen-down"}
+    %div
+      %a{href:"https://www.youtube.com/embed/1adyGfKj-tM"}
+        = image_tag 'logo--testimonial--nucor.png'
+    %div
+      %a{href:"https://www.youtube.com/embed/VML7WlBLTiU"}
+        = image_tag 'logo--testimonial--vitamin.png'
+
+  %div{class: "container text--body home__logo-grid omega-row medium-screen-down"}
+    %div
+      / %a{href:"#", class: "modal-open--video-rockwater"}
+      = image_tag 'logo--testimonial--rockwater.png'
+    %div
+      %a{href:"https://www.youtube.com/embed/z017dY3KAlM"}
+        = image_tag 'logo--testimonial--novo.png'
+
+// lower carousel
 %div{class: "home__background-cover home__stories"}
   %div{class: "home__background-overlay-all home__overlay--blue"}
   %section{class: "container text--body text--white"}
@@ -189,7 +216,7 @@ layout: layout
           “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
         %a{class: "button button--secondary text--white", href: "#"} More Stories
 
-    %div{class: "carousel__clickable"}
+    %div{class: "carousel__clickable large-screen-only"}
       %a{href:"#", class: "carousel__dot active"}
         %i{class: "fa fa-circle"}
       %a{href:"#", class: "carousel__dot"}
