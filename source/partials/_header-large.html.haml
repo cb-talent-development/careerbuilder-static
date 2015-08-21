@@ -12,14 +12,17 @@
     %div{class: "header--large__headline"}
 
       %h1{class: "text--headline text--white"}
-        = headline
+        %snippet{id: "product-headline__text"}
+          = headline
 
       %h2{class: "text--subhead text--white"}
-        = subhead
+        %snippet{id: "product-subhead__text"}
+          = subhead
 
     / product image 
-    %div{class: "header--large__image large-screen-only"}  
-      = image_tag image
+    %div{class: "header--large__image large-screen-only"}
+      %snippet{id: "product-header__image"}
+        = image_tag image
 
 
 
