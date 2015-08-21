@@ -22,69 +22,83 @@ layout: layout
   // overview
   %section{class: "product-detail box--divider-bottom", id: "overview"}
     %h2{class: "product-detail__headline text--headline-2"}
-      Overview
-    %div{class: "product-detail__body"}   
-      = partial 'partials/placeholder'
+      %snippet{id: "product-overview__text"}
+        Overview
+    %div{class: "product-detail__body"}
+      %snippet{id: "product-detail__body"}
+        = partial 'partials/placeholder'
       %span{id: "white-papers-link-anchor"}
 
   // white papers 
   %section{class: "product-detail box--divider-bottom", id: "white-papers"}
     %h2{class: "product-detail__headline text--headline-2"}
-      White Papers
+      %snippet{id: "product-white-papers__text"}
+        White Papers
     %div{class: "product-detail__body text--link-list"}
-      %ul
-        %li{class: "alpha"}
-          %a{href: "#white-paper"}
-            %div{class: "text--link-list__arrow product-detail__arrow"} >          
-            Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
-        %li   
-          %a{href: "#white-paper"}
-            %div{class: "text--link-list__arrow product-detail__arrow"} >
-            Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
-        %li{class: "omega"}
-          %a{href: "#white-paper"}
-            %div{class: "text--link-list__arrow product-detail__arrow"} >
-            Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
-            %span{id: "features-link-anchor"} 
+      %snippet{id: "product-white-papers__list"}
+        %ul
+          %li{class: "alpha"}
+            %a{href: "#white-paper"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >
+              Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
+          %li
+            %a{href: "#white-paper"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >
+              Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
+          %li{class: "omega"}
+            %a{href: "#white-paper"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >
+              Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
+              %span{id: "features-link-anchor"}
 
   // features 
   %section{class: "product-detail box--divider-bottom"}
     %h2{class: "product-detail__headline text--headline-2"}
-      Features
+      %script{:src => 'https://s3.amazonaws.com/cortex-content-snippets/content-snippets-view.js'}
+        Features
     %div{class: "product-detail__body"}  
 
     // features - desktop 
 
     %div
       %div{class: "feature-block"}
-        = image_tag "placeholder-circle-1.png"
-        %h4 True Grit 
-        %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-        %a{class: "button button--secondary", href: "1"} Learn More 
+        %snippet{id: "product-feature-block1__image"}
+          = image_tag "placeholder-circle-1.png"
+        %snippet{id: "product-feature-block1__body"}
+          %h4 True Grit
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          %a{class: "button button--secondary", href: "1"} Learn More
 
       %div{class: "feature-block"}
-        = image_tag "placeholder-circle-2.png"
-        %h4 Makes Own Gravy 
-        %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl.
-        %a{class: "button button--secondary", href: "2"} Learn More   
+        %snippet{id: "product-feature-block2__image"}
+          = image_tag "placeholder-circle-2.png"
+        %snippet{id: "product-feature-block2__body"}
+          %h4 Makes Own Gravy
+          %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl.
+          %a{class: "button button--secondary", href: "2"} Learn More
 
       %div{class: "feature-block"}
-        = image_tag "placeholder-circle-2.png"
-        %h4 Suddenly, 20% More Cowbell 
-        %p{class: "text--grey text--details"} Nunc laoreet dig lorem lorem lorem nissim nisl.
-        %a{class: "button button--secondary", href: "2"} Learn More
+        %snippet{id: "product-feature-block3__image"}
+          = image_tag "placeholder-circle-2.png"
+        %snippet{id: "product-feature-block3__body"}
+          %h4 Suddenly, 20% More Cowbell
+          %p{class: "text--grey text--details"} Nunc laoreet dig lorem lorem lorem nissim nisl.
+          %a{class: "button button--secondary", href: "2"} Learn More
 
       %div{class: "feature-block"}
-        = image_tag "placeholder-circle-3.png"
-        %h4 Updog 
-        %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-        %a{class: "button button--secondary", href: "2"} Learn More
-        %span{id: "videos-link-anchor"}
+        %snippet{id: "product-feature-block4__image"}
+          = image_tag "placeholder-circle-3.png"
+        %snippet{id: "product-feature-block4__body"}
+          %h4 Updog
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          %a{class: "button button--secondary", href: "2"} Learn More
+          %span{id: "videos-link-anchor"}
 
   // videos 
   %section{class: "product-detail box--divider-bottom", id:"videos"}
     %h2{class: "product-detail__headline text--headline-2"}
-      Videos
+      %snippet{id: "product-videos__text"}
+        Videos
     %div{class: "product-detail__body"}  
       %div{class: "product-detail__video-block"}
         // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
@@ -103,6 +117,7 @@ layout: layout
   // request a demo 
   %section{class: "product-detail", id:"demo"}
     %h2{class: "product-detail__headline text--headline-2"}
-      Request a Demo
+      %snippet{id: "product-demo__text"}
+        Request a Demo
     %div{class: "product-detail__body"}  
       = partial "/partials/form--request-demo"     

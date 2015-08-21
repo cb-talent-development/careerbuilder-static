@@ -2,17 +2,19 @@
 %div{class: "product-subnav text--subnav"}
   
   %div{class: "product-subnav__left medium-screen-up"}
-    %ul
-      %li
-        %a{href: "#overview-link-anchor"} Overview
-      %li 
-        %a{href: "#white-papers-link-anchor"} White Papers 
-      %li 
-        %a{href: "#features-link-anchor"} Features
-      %li 
-        %a{href: "#videos-link-anchor"} Videos
+    %snippet{id: "product-subnav__links"}
+      %ul
+        %li
+          %a{href: "#overview-link-anchor"} Overview
+        %li
+          %a{href: "#white-papers-link-anchor"} White Papers
+        %li
+          %a{href: "#features-link-anchor"} Features
+        %li
+          %a{href: "#videos-link-anchor"} Videos
 
   // demo button on right side 
   %div{class: "product-subnav__right"}
-    %a{class: "button button--primary", href: "#demo-link-anchor"}
-      Request a Demo
+    %snippet{id: "product-subnav__right__link"}
+      %a{class: "button button--primary", href: "#demo-link-anchor"}
+        Request a Demo
