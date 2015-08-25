@@ -1,0 +1,18 @@
+// initializes optional parameters
+- add_class = "" unless add_class
+
+/ header-medium 
+%header{class: "header header--medium" + " " + add_class}
+  %div{class: "container"}
+
+    / header__subnav
+    = partial 'partials/header-subnav'
+    
+    / header__headline 
+    %h1{class: "header__headline header--posting__headline text--headline text--white"}
+      = headline
+    
+    %div{class: "header__side-text text--white large-screen-only"}
+      %p Already Purchased Postings? 
+      %a{class: "button button--secondary text--white"}
+        Edit Job Postings
