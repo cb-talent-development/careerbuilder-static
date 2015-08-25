@@ -1,0 +1,123 @@
+---
+title: Product Page
+layout: layout--white
+---
+
+// fixed, hidden until scroll
+%div{class: "sticky-nav text--body large-screen-only"}        
+  %nav{class: "container"}
+    = partial 'partials/product-subnav'
+
+// layer over sticky nav, scrolls away
+%div{class: "sticky-nav__top-container"}
+  // large-header 
+  = partial 'partials/header-large', :locals => {headline: "Product Title", subhead: "Placeholder Reach more candidates in less time with a product description", image: "placeholder--product-image.png", add_class: "no-bottom-margin"}  
+
+  %div{class: "container text--body", id: "overview-link-anchor"}
+    // displays in page flow
+    %nav
+      = partial 'partials/product-subnav'
+
+%div{class: "container text--body"}
+  // overview
+  %section{class: "product-detail box--divider-bottom", id: "overview"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "product-overview__text"}
+        Overview
+    %div{class: "product-detail__body"}
+      %snippet{id: "product-detail__body"}
+        = partial 'partials/placeholder'
+      %span{id: "white-papers-link-anchor"}
+
+  // white papers 
+  %section{class: "product-detail box--divider-bottom", id: "white-papers"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "product-white-papers__text"}
+        White Papers
+    %div{class: "product-detail__body text--link-list"}
+      %snippet{id: "product-white-papers__list"}
+        %ul
+          %li{class: "alpha"}
+            %a{href: "#white-paper"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >
+              Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
+          %li
+            %a{href: "#white-paper"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >
+              Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
+          %li{class: "omega"}
+            %a{href: "#white-paper"}
+              %div{class: "text--link-list__arrow product-detail__arrow"} >
+              Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
+              %span{id: "features-link-anchor"}
+
+  // features 
+  %section{class: "product-detail box--divider-bottom"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "product-features__text"}
+        Features
+    %div{class: "product-detail__body"}  
+
+    // features - desktop 
+
+    %div
+      %div{class: "feature-block"}
+        %snippet{id: "product-feature-block1__image"}
+          = image_tag "placeholder-circle-1.png"
+        %snippet{id: "product-feature-block1__body"}
+          %h4 True Grit
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          %a{class: "button button--secondary", href: "1"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "product-feature-block2__image"}
+          = image_tag "placeholder-circle-2.png"
+        %snippet{id: "product-feature-block2__body"}
+          %h4 Makes Own Gravy
+          %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl.
+          %a{class: "button button--secondary", href: "2"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "product-feature-block3__image"}
+          = image_tag "placeholder-circle-2.png"
+        %snippet{id: "product-feature-block3__body"}
+          %h4 Suddenly, 20% More Cowbell
+          %p{class: "text--grey text--details"} Nunc laoreet dig lorem lorem lorem nissim nisl.
+          %a{class: "button button--secondary", href: "2"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "product-feature-block4__image"}
+          = image_tag "placeholder-circle-3.png"
+        %snippet{id: "product-feature-block4__body"}
+          %h4 Updog
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          %a{class: "button button--secondary", href: "2"} Learn More
+          %span{id: "videos-link-anchor"}
+
+  // videos 
+  %section{class: "product-detail box--divider-bottom", id:"videos"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "product-videos__text"}
+        Videos
+    %div{class: "product-detail__body"}  
+      %div{class: "product-detail__video-block"}
+        // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
+        = image_tag "placeholder-video.png"
+        %h4 Video Title About How To Get More Cowbell
+
+      %div{class: "product-detail__video-block"}
+        = image_tag "placeholder-video.png"
+        %h4 Updog Video     
+
+      %div{class: "product-detail__video-block"}
+        = image_tag "placeholder-video.png"
+        %h4 Video Title About 50% Higher Conversion with More Cowbell
+        %span{id: "demo-link-anchor"} 
+
+  // request a demo 
+  %section{class: "product-detail", id:"demo"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "product-demo__text"}
+        Request a Demo
+    %div{class: "product-detail__body"}  
+      = partial "/partials/form--request-demo"     
