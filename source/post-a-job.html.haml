@@ -1,0 +1,105 @@
+---
+title: Post a Job
+layout: layout--white
+---
+
+/ thin-header 
+= partial 'partials/header-medium-post', :locals => {:headline => "Post a Job"} 
+
+%div{class: "container text--body"} 
+  %section{class: "posting__main-column"}
+
+    %div{class: "posting__under-text columns-12 pretty please medium-screen-down"}
+      %p Already Purchased Postings? 
+      %a{class: "button button--secondary"}
+        Edit Job Postings
+
+
+    %div{class: "posting__top"}
+      %h2{class: "text--accent"} Get the most exposure for your job
+      %p 
+        Get in front of the best and brightest job candidates with CareerBuilder’s Job Postings. Quickly and easily make the right hire on the No. 1 recruitment site.
+
+    %h3 Price Per Posting  
+
+    / content box
+    %div{class: "posting__middle"}
+      %div{class: "box--pop-out box--pop-out__top"}
+        %h2{class: "text--headline-2 alpha"}
+          Content box headline
+      %div{class: "box--pop-out box--pop-out__bottom"}
+        = lorem.sentences 12
+
+    %form{class: "posting__form"}
+
+      %label{class: ""}  
+        %select{class: "columns-2"}
+          %option{value: 0} 0      
+          %option{value: 1} 1
+          %option{value: 2} 2
+          %option{value: 3} 3
+          %option{value: 4} 4
+          %option{value: 5} 5
+          %option{value: 6} 6
+          %option{value: 7} 7
+          %option{value: 8} 8
+          %option{value: 9} 9
+          %option{value: 10} 10
+          %option{value: 11} 11
+          %option{value: 12} 12
+          %option{value: 13} 13
+          %option{value: 14} 14
+          %option{value: 15} 15 
+          %option{value: 16} 16
+          %option{value: 17} 17
+          %option{value: 18} 18
+          %option{value: 19} 19
+          %option{value: 20} 20  
+          %option{value: 21} 21
+          %option{value: 22} 22
+          %option{value: 23} 23
+          %option{value: 24} 24
+          %option{value: 25} 25
+          %option{value: 26} 26 
+          %option{value: 27} 27
+          %option{value: 28} 28
+          %option{value: 29} 29
+          %option{value: 30} 30
+          %option{value: 31} 31 
+          %option{value: 32} 32
+          %option{value: 33} 33
+          %option{value: 34} 34
+          %option{value: 35} 35
+          %option{value: 36} 36
+          %option{value: 37} 37 
+          %option{value: 38} 38
+          %option{value: 39} 39
+          %option{value: 40} 40
+          %option{value: 41} 41
+          %option{value: 42} 42         
+          %option{value: 43} 43
+          %option{value: 44} 44
+          %option{value: 45} 45
+          %option{value: 46} 46
+          %option{value: 47} 47
+          %option{value: 48} 48 
+          %option{value: 49} 49
+          %option{value: 50} 50
+      %p{class: "columns-6"} 
+        %strong You save [###]
+        %br The more you buy the more you save
+      
+
+      %div{class: "clear-fix"} 
+        %submit{class: "button button--primary"}
+          Add to Cart
+
+  %aside{class: "posting__lesser-column"}
+    %h3 Features
+    %ul
+      %li 
+        = lorem.sentences 1
+      %li 
+        = lorem.sentences 1 
+      %li 
+        = lorem.sentences 1

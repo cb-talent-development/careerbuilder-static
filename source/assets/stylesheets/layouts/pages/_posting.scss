@@ -1,0 +1,75 @@
+.posting__main-column {
+  @include span-columns(8);
+}
+
+@media only screen and (max-width: $medium-screen-max) {
+  .posting__main-column {
+    @include span-columns(12);
+  }
+}
+
+.posting__lesser-column {
+  @include span-columns(4);
+}
+
+@media only screen and (max-width: $medium-screen-max) {
+  .posting__lesser-column {
+    @include span-columns(12);
+  }
+}
+
+.posting__under-text {
+  @include span-columns(12);
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.posting__under-text p {
+  display: inline-block;
+}
+
+.posting__under-text p {
+  display: inline-block; 
+  color: $secondary-light;
+  font-weight: 800
+}
+
+.posting__under-text a {
+  margin-top: 7px;
+  margin-left: 20px; 
+}
+
+
+.posting__lesser-column ul {
+  padding-left: 20px;
+}
+
+.posting__top {
+  margin-bottom: 64px;
+}
+
+.posting__middle {
+  margin-bottom: 64px; 
+}
+
+.posting__middle {
+  margin-bottom: 64px; 
+}
+
+.posting__form {
+  margin-bottom: 64px;
+}
+
+.posting__form p {
+  margin: -5px 0 0 32px;
+}
+
+.posting__form select {
+  background-color: $white;
+}
+
+.posting__form .button {
+  margin-top: 22px;
+  padding-left: 40px;
+  padding-right: 40px;
+}

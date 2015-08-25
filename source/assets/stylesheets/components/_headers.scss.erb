@@ -295,6 +295,16 @@
   padding-top: 50px;
 }
 
+.header__headline.header--posting__headline {
+  @include span_columns(3);
+}
+
+@media only screen and (max-width: $medium-screen-max) {
+  .header__headline.header--posting__headline {
+    @include span_columns(12);
+  }
+}
+
 @media only screen and (max-width: $medium-screen-max) {
   .header--reading__subnav {
     @include span_columns(12);
@@ -419,6 +429,21 @@
 
 .header__progress-bar li {}
 
+.header__side-text {
+  @include span-columns(5);
+  text-align: right;
+}
+
+.header__side-text p {
+  display: inline-block; 
+  color: $secondary-light;
+  font-weight: 800
+}
+
+.header__side-text a {
+  margin-top: 7px;
+  margin-left: 20px; 
+}
 
 // top-bar--white variant
 
