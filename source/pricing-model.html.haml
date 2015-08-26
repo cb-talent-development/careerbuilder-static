@@ -1,123 +1,92 @@
 ---
-title: Product Page
+title: Pricing
 layout: layout--white
 ---
 
 // fixed, hidden until scroll
-%div{class: "sticky-nav text--body large-screen-only"}        
-  %nav{class: "container"}
-    = partial 'partials/product-subnav'
+%div{class: "sticky-nav sticky-nav--pricing text--body large-screen-only"}        
+  %nav
+    = partial 'partials/pricing-menu--small'
 
 // layer over sticky nav, scrolls away
-%div{class: "sticky-nav__top-container"}
+%div{class: "sticky-nav__top-container sticky-nav--pricing"}
   // large-header 
-  = partial 'partials/header-large', :locals => {headline: "Product Title", subhead: "Placeholder Reach more candidates in less time with a product description", image: "placeholder--product-image.png", add_class: "no-bottom-margin"}  
+  = partial 'partials/header-large', :locals => {headline: "Pricing page", subhead: "Pricing page subheadline lorem ipsum lorem ipsum.", image: "placeholder--product-image.png", add_class: "no-bottom-margin"}  
 
-  %div{class: "container text--body", id: "overview-link-anchor"}
+  %div{class: "text--body", id: "overview-link-anchor"}
     // displays in page flow
     %nav
-      = partial 'partials/product-subnav'
+      // NEW PRICING GRID GOES HERE
+      = partial 'partials/pricing-menu--large'
 
-%div{class: "container text--body"}
-  // overview
-  %section{class: "product-detail box--divider-bottom", id: "overview"}
-    %h2{class: "product-detail__headline text--headline-2"}
-      %snippet{id: "product-overview__text"}
-        Overview
-    %div{class: "product-detail__body"}
-      %snippet{id: "product-detail__body"}
-        = partial 'partials/placeholder'
-      %span{id: "white-papers-link-anchor"}
+%div{class: "pricing__features"}
+  
+  %div{class: "pricing__row"}
 
-  // white papers 
-  %section{class: "product-detail box--divider-bottom", id: "white-papers"}
-    %h2{class: "product-detail__headline text--headline-2"}
-      %snippet{id: "product-white-papers__text"}
-        White Papers
-    %div{class: "product-detail__body text--link-list"}
-      %snippet{id: "product-white-papers__list"}
-        %ul
-          %li{class: "alpha"}
-            %a{href: "#white-paper"}
-              %div{class: "text--link-list__arrow product-detail__arrow"} >
-              Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
-          %li
-            %a{href: "#white-paper"}
-              %div{class: "text--link-list__arrow product-detail__arrow"} >
-              Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
-          %li{class: "omega"}
-            %a{href: "#white-paper"}
-              %div{class: "text--link-list__arrow product-detail__arrow"} >
-              Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
-              %span{id: "features-link-anchor"}
+    %div{class: "pricing__cell"}
+      %h4 Resume Database Access
+    %div{class: "pricing__cell"}
+      = partial 'partials/yes'
+    %div{class: "pricing__cell"} 
+      = partial 'partials/yes'
+    %div{class: "pricing__cell"}
+      = partial 'partials/yes'
 
-  // features 
-  %section{class: "product-detail box--divider-bottom"}
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Resume Actions
+    %div{class: "pricing__cell"}
+      %p 50/day
+    %div{class: "pricing__cell"}
+      %p 3000/month
+    %div{class: "pricing__cell"}
+      %p 3000/month
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Recreuitment Edge Access
+    %div{class: "pricing__cell"}
+      = partial 'partials/no'
+    %div{class: "pricing__cell"}
+      = partial 'partials/yes'     
+    %div{class: "pricing__cell"}
+      = partial 'partials/yes'
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Supply & Demand Access
+    %div{class: "pricing__cell"}
+      = partial 'partials/no'
+    %div{class: "pricing__cell"}
+      = partial 'partials/no'     
+    %div{class: "pricing__cell"}
+      = partial 'partials/yes'
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Placeholder expanded fuzzy search with realtime metrics
+    %div{class: "pricing__cell"}
+      %p Not available in some geographic regions, due to export restrictions
+    %div{class: "pricing__cell"}
+      = partial 'partials/yes'
+    %div{class: "pricing__cell"}
+      = partial 'partials/yes'   
+
+  %span{id: "demo-scroll-anchor"}
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Users
+    %div{class: "pricing__cell"}
+      %p 1 only
+    %div{class: "pricing__cell"}
+      %p 1 to 1000+
+    %div{class: "pricing__cell"}
+      %p 1 to 1000+
+
+%div{class: "container pricing__demo"}
+  %section{class: "product-detail"}
     %h2{class: "product-detail__headline text--headline-2"}
-      %snippet{id: "product-features__text"}
-        Features
+      Request a Demo
     %div{class: "product-detail__body"}  
-
-    // features - desktop 
-
-    %div
-      %div{class: "feature-block"}
-        %snippet{id: "product-feature-block1__image"}
-          = image_tag "placeholder-circle-1.png"
-        %snippet{id: "product-feature-block1__body"}
-          %h4 True Grit
-          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-          %a{class: "button button--secondary", href: "1"} Learn More
-
-      %div{class: "feature-block"}
-        %snippet{id: "product-feature-block2__image"}
-          = image_tag "placeholder-circle-2.png"
-        %snippet{id: "product-feature-block2__body"}
-          %h4 Makes Own Gravy
-          %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl.
-          %a{class: "button button--secondary", href: "2"} Learn More
-
-      %div{class: "feature-block"}
-        %snippet{id: "product-feature-block3__image"}
-          = image_tag "placeholder-circle-2.png"
-        %snippet{id: "product-feature-block3__body"}
-          %h4 Suddenly, 20% More Cowbell
-          %p{class: "text--grey text--details"} Nunc laoreet dig lorem lorem lorem nissim nisl.
-          %a{class: "button button--secondary", href: "2"} Learn More
-
-      %div{class: "feature-block"}
-        %snippet{id: "product-feature-block4__image"}
-          = image_tag "placeholder-circle-3.png"
-        %snippet{id: "product-feature-block4__body"}
-          %h4 Updog
-          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-          %a{class: "button button--secondary", href: "2"} Learn More
-          %span{id: "videos-link-anchor"}
-
-  // videos 
-  %section{class: "product-detail box--divider-bottom", id:"videos"}
-    %h2{class: "product-detail__headline text--headline-2"}
-      %snippet{id: "product-videos__text"}
-        Videos
-    %div{class: "product-detail__body"}  
-      %div{class: "product-detail__video-block"}
-        // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
-        = image_tag "placeholder-video.png"
-        %h4 Video Title About How To Get More Cowbell
-
-      %div{class: "product-detail__video-block"}
-        = image_tag "placeholder-video.png"
-        %h4 Updog Video     
-
-      %div{class: "product-detail__video-block"}
-        = image_tag "placeholder-video.png"
-        %h4 Video Title About 50% Higher Conversion with More Cowbell
-        %span{id: "demo-link-anchor"} 
-
-  // request a demo 
-  %section{class: "product-detail", id:"demo"}
-    %h2{class: "product-detail__headline text--headline-2"}
-      %snippet{id: "product-demo__text"}
-        Request a Demo
-    %div{class: "product-detail__body"}  
-      = partial "/partials/form--request-demo"     
+      = partial "/partials/form--request-demo"
