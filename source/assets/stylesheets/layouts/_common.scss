@@ -58,6 +58,19 @@ h1.alpha, h2.alpha, h3.alpha, h4.alpha {
   min-height: 100px;
 }
 
+// accessibility: fallback content visibily hidden but able to to be read by screen readers
+.sr-only {
+    // code from Bootstrap 3
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
 // Extra resets
 
 address {

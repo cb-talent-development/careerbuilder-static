@@ -1,0 +1,101 @@
+.sticky-nav--pricing {
+  border-bottom: none;
+}
+
+.pricing__menu {
+  @include outer-container;
+  color: $white;
+}
+
+.pricing__menu--large {
+  padding-top: 50px;
+}
+
+.pricing__menu--small {
+  text-align: center;
+}
+
+.pricing__menu-block {
+  @include span-columns(3);
+  padding: 0 32px 32px 32px;
+}
+
+.pricing__menu-block.pricing__1 {
+  color: $black;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.pricing__menu-block.pricing__2 {
+  background-color: $secondary-light;
+}
+
+.pricing__menu-block.pricing__3 {
+  background-color: $secondary;
+}
+
+.pricing__menu-block.pricing__4 {
+  background-color: $secondary-dark;
+}
+
+.pricing__features h4, .pricing__features p {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pricing__features .pricing__row {
+  @include outer-container;
+  margin-bottom: 2px;
+}
+
+.pricing__features .pricing__cell {
+  @include span-columns(3);
+  background-color: $white;
+  padding: 20px;
+  text-align: center;
+  height: 100px;
+}
+
+@media only screen and (max-width: $small-screen-max) {
+
+  .pricing__menu-block {
+    @include span-columns(12);
+    padding: 30px;
+  }
+  .pricing__features .pricing__cell {
+    @include span-columns(12);
+    background-color: $white;
+    padding: 20px 30px;
+    margin-bottom: 1px;
+  }
+
+  .pricing__features .pricing__cell:first-child {
+    margin-bottom: 2px;
+    background-color: $grey-lightest
+  }
+
+  .pricing__features .pricing__cell:last-child {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.pricing--yes {
+  color: $accent;
+}
+
+.pricing--no {
+  color: $grey-lighter;
+}
+
+.sticky-nav--pricing.sticky-nav__top-container {
+  margin-bottom: 28px;
+}
+
+.pricing__demo {
+  padding-top: 80px;
+  margin-top: 80px;
+
+}

@@ -1,0 +1,110 @@
+---
+title: Pricing
+layout: layout--white
+---
+
+// fixed, hidden until scroll
+%div{class: "sticky-nav sticky-nav--pricing sticky-nav--pricing__fixed text--body large-screen-only"}        
+  %nav{id: "pricing-nav-fixed"}
+    = partial 'partials/pricing-menu--small'
+
+// layer over sticky nav, scrolls away
+%div{class: "sticky-nav__top-container sticky-nav--pricing"}
+  // large-header 
+  = partial 'partials/header-large', :locals => {headline: "Pricing page", subhead: "Pricing page subheadline lorem ipsum lorem ipsum.", image: "placeholder--product-image.png", add_class: "no-bottom-margin"}  
+
+  %div{class: "text--body", id: "nav--pricing"}
+    // displays in page flow
+    %nav{}
+      // NEW PRICING GRID GOES HERE
+      = partial 'partials/pricing-menu--large'
+
+%div{class: "pricing__features"}
+  
+  %div{class: "pricing__row"}
+
+    %div{class: "pricing__cell"}
+      %h4 Resume Database Access
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Lite: 
+      = partial 'partials/yes'
+    %div{class: "pricing__cell"} 
+      %span{class: "small-screen-only text--strong"}Standard: 
+      = partial 'partials/yes'
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Pro:
+      = partial 'partials/yes'
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Resume Actions
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Lite:
+      %p 50/day
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Standard: 
+      %p 3000/month
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Pro:
+      %p 3000/month
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Recruitment Edge Access
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Lite: 
+      = partial 'partials/no'
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Standard: 
+      = partial 'partials/yes'     
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Pro:
+      = partial 'partials/yes'
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Supply & Demand Access
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Lite: 
+      = partial 'partials/no'
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Standard: 
+      = partial 'partials/no'     
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Pro:
+      = partial 'partials/yes'
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Placeholder expanded fuzzy search with realtime metrics
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Lite: 
+      %p Not available in some geographic regions, due to export restrictions
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Standard: 
+      = partial 'partials/yes'
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Pro:
+      = partial 'partials/yes'   
+
+  %span{id: "demo-scroll-anchor"}
+
+  %div{class: "pricing__row"}
+    %div{class: "pricing__cell"}
+      %h4 Users
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Lite: 
+      %p 1 only
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Standard:
+      %p 1 to 1000+
+    %div{class: "pricing__cell"}
+      %span{class: "small-screen-only text--strong"}Pro:
+      %p 1 to 1000+
+
+%div{class: "container pricing__demo"}
+  %section{class: "product-detail"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      Request a Demo
+    %div{class: "product-detail__body"}  
+      = partial "/partials/form--request-demo"
