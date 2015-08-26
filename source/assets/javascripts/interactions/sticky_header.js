@@ -10,16 +10,24 @@
 'use strict';
 if(typeof window.interact === 'undefined') { window.interact = {} }
 
-window.interact.stickyHeader = function(fixedTarget, staticTarget){
+window.interact.stickyHeader = function(fixedTarget, staticTarget, offsetValue){
+
+  console.log("stickyHeader loads");
 
   var fixedHeader     = $(fixedTarget);
   var staticHeader    = $(staticTarget);
 
   if (!staticHeader.length) { return false; }
 
-  var transitionStart = staticHeader.offset().top - 15;
+  var transitionStart = staticHeader.offset().top - offsetValue;
 
   $(window).scroll(function(){
+
+    if ($(window).width() <= 1100) { 
+      console.log("too narrow to stick");
+      return;
+    };
+ 
     if ($(window).scrollTop() >= transitionStart){
       staticHeader.css({opacity: 0});
       fixedHeader.css({opacity: 1, zIndex: 10000});
@@ -30,3 +38,5 @@ window.interact.stickyHeader = function(fixedTarget, staticTarget){
     }
   });
 };
+
+
