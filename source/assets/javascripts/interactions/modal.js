@@ -10,6 +10,8 @@ window.interact.modal = function(modalName, openLink) {
   var modalForm  = $(modalName);
   var video, videoSource;
 
+  if ($(modalName).length == 0) { return; };
+
   // modals start with '.hidden' in HTML to prevent load order race between HTML/JS
   modalForm.hide();
   modalBack.hide();
