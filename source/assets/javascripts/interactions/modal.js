@@ -3,11 +3,11 @@ if(typeof window.interact === 'undefined') { window.interact = {} }
 
 window.interact.modal = function(modalName, openLink) {
 
-  var openLinks  = $('.' + openLink);
+  var openLinks  = $(openLink);
   var closeLinks = $('.close-modal');
   var modalBack  = $('#modal-background');
   var modalWrapper = $('.modal__positioning');
-  var modalForm  = $('#' + modalName);
+  var modalForm  = $(modalName);
   var video, videoSource;
 
   // modals start with '.hidden' in HTML to prevent load order race between HTML/JS
@@ -21,8 +21,8 @@ window.interact.modal = function(modalName, openLink) {
   // binding to all close links; click on one modal hides all modals
   closeLinks.click(function() {
     event.preventDefault();
-
-    video = $('#' + modalName + " iframe")
+    console.log("close click event")
+    video = $(modalName + " iframe")
 
     if (video.length > 0) {
       // nukes (then restores) video source to stop playback
@@ -41,8 +41,8 @@ window.interact.modal = function(modalName, openLink) {
     event.preventDefault();
 
     // required
-    modalForm = $('#' + modalName);
-    video = $('#' + modalName + " iframe")
+    modalForm = $(modalName);
+    video = $(modalName + " iframe")
 
     // guards against showing background when modal not found
     if (modalForm.length >= 1) {
