@@ -23,8 +23,8 @@ window.interact.modal = function(modalName, openLink) {
   // binding to all close links; click on one modal hides all modals
   closeLinks.click(function() {
     event.preventDefault();
-    console.log("close click event")
-    video = $(modalName + " iframe")
+
+    video = $(modalName + " iframe");
 
     if (video.length > 0) {
       // nukes (then restores) video source to stop playback
