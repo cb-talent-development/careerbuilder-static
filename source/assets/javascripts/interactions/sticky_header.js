@@ -12,8 +12,6 @@ if(typeof window.interact === 'undefined') { window.interact = {} }
 
 window.interact.stickyHeader = function(fixedTarget, staticTarget, offsetValue){
 
-  console.log("stickyHeader loads");
-
   var fixedHeader     = $(fixedTarget);
   var staticHeader    = $(staticTarget);
 
@@ -24,7 +22,6 @@ window.interact.stickyHeader = function(fixedTarget, staticTarget, offsetValue){
   $(window).scroll(function(){
 
     if ($(window).width() <= 1100) { 
-      console.log("too narrow to stick");
       return;
     };
  
