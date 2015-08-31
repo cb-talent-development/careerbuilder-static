@@ -94,25 +94,25 @@ layout: layout
           %a{class: "button button--secondary", href: "2"} Learn More
           %span{id: "videos-link-anchor"}
 
-  // videos 
-  %section{class: "product-detail box--divider-bottom", id:"videos"}
-    %h2{class: "product-detail__headline text--headline-2"}
-      %snippet{id: "product-videos__text"}
+  // videos
+  %snippet{id: "product-videos"}
+    %section{class: "product-detail box--divider-bottom", id:"videos"}
+      %h2{class: "product-detail__headline text--headline-2"}
         Videos
-    %div{class: "product-detail__body"}  
-      %div{class: "product-detail__video-block"}
-        // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
-        = image_tag "placeholder-video.png"
-        %h4 Video Title About How To Get More Cowbell
+      %div{class: "product-detail__body"}
+        %div{class: "product-detail__video-block"}
+          // VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY
+          = image_tag "placeholder-video.png"
+          %h4 Video Title About How To Get More Cowbell
 
-      %div{class: "product-detail__video-block"}
-        = image_tag "placeholder-video.png"
-        %h4 Updog Video     
+        %div{class: "product-detail__video-block"}
+          = image_tag "placeholder-video.png"
+          %h4 Updog Video
 
-      %div{class: "product-detail__video-block"}
-        = image_tag "placeholder-video.png"
-        %h4 Video Title About 50% Higher Conversion with More Cowbell
-        %span{id: "demo-link-anchor"} 
+        %div{class: "product-detail__video-block"}
+          = image_tag "placeholder-video.png"
+          %h4 Video Title About 50% Higher Conversion with More Cowbell
+          %span{id: "demo-link-anchor"}
 
   // request a demo 
   %section{class: "product-detail", id:"demo"}
