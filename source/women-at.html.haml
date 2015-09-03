@@ -1,0 +1,180 @@
+---
+title: Women at CareerBuilder
+layout: layout--white
+---
+
+// fixed, hidden until scroll
+%div{class: "sticky-nav text--body large-screen-only"}        
+  %nav{class: "container"}
+    = partial 'partials/women-subnav'
+
+// layer over sticky nav, scrolls away
+%div{class: "sticky-nav__top-container"}
+  // large-header 
+  = partial 'partials/header-large', :locals => {headline: "Our Mission", subhead: "Empowering the women of CareerBuilder to reach their potential in an environmen that supports their growth through coaching, mentorship and education.", image: "board/Mission_Logo.png", add_class: "header--center-image"}  
+
+  %div{class: "container text--body", id: "overview-link-anchor"}
+    // displays in page flow
+    %nav
+      = partial 'partials/women-subnav'
+
+%div{class: "container text--body"}
+  // overview
+  %section{class: "product-detail box--divider-bottom", id: "overview"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "product-overview__text"}
+        Overview
+    %div{class: "product-detail__body"}
+      %snippet{id: "product-detail__body"}
+        = partial 'partials/placeholder'
+      %span{id: "board-link-anchor"}
+
+  // BOARD MEMEBERS 
+  %section{class: "product-detail"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "board__text"}
+        Board Members
+
+    // BOARD ROW 1    
+    %div{class: "columns-12", style: "margin-bottom: 15px; margin-top: 15px;"}  
+      %div{class: "feature-block"}
+        %snippet{id: "board-block1__image"}
+          = image_tag "board/Puja-headshot-124x139.png"
+        %snippet{id: "board-block1__body"}
+          %h4 Puja Rios
+          %p{class: "text--grey text--details"} CBHER Chair, CB Director of Sales, Enterprise
+          // %a{class: "button button--secondary", href: "1"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block2__image"}
+          = image_tag "board/jamie-womack.png"
+        %snippet{id: "board-block2__body"}
+          %h4 Jamie Womack
+          %p{class: "text--grey text--details"} CBHER Treasurer, CB VP Corporate Marketing & Branding
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block3__image"}
+          = image_tag "board/Hope-Gurion-headshot-124x139.png"
+        %snippet{id: "board-block3__body"}
+          %h4 Hope Gurion
+          %p{class: "text--grey text--details"} CBHER Board Member, CB Chief Product Officer
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block4__image"}
+          = image_tag "board/mary-delaney.jpg"
+        %snippet{id: "board-block4__body"}
+          %h4 Mary Delaney
+          %p{class: "text--grey text--details"} CBHER Board Member, CB President, Recruitment Software Solutions
+
+    // BOARD ROW 2   
+    %div{class: "columns-12", style: "margin-bottom: 15px; margin-top: 15px;"}  
+      %div{class: "feature-block"}
+        %snippet{id: "board-block5__image"}
+          = image_tag "board/Rosemary-Headshot_124x139.jpg"
+        %snippet{id: "board-block5__body"}
+          %h4 Rosemary Haefner
+          %p{class: "text--grey text--details"} CBHER Board Member, CB Chief Human Resources Officer
+          // %a{class: "button button--secondary", href: "1"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block6__image"}
+          = image_tag "board/Lindsey-Nelson_124x139.jpg"
+        %snippet{id: "board-block6__body"}
+          %h4 Lindsey Nelson
+          %p{class: "text--grey text--details"} CBHER Board Member, CB VP, Productivity & Talent Development
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block7__image"}
+          = image_tag "board/Leslie-Martin-headshot-124x139.png"
+        %snippet{id: "board-block7__body"}
+          %h4 Leslie Martin 
+          %p{class: "text--grey text--details"} CBHER Board Member, CB Sr. Director, Corporate Applications 
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block8__image"}
+          = image_tag "board/allison-fabella-headshot-124x139.png"
+        %snippet{id: "board-block8__body"}
+          %h4 Allison Fabella
+          %p{class: "text--grey text--details"} CBHER Board Member, CB Director, Global Search Engine Optimization
+
+    // BOARD ROW 3   
+    %div{class: "columns-12 box--divider-bottom", style: "margin-top: 15px; padding-bottom: 80px;"}  
+      %div{class: "feature-block"}
+        %snippet{id: "board-block9__image"}
+          = image_tag "board/Alyssa-DeMattos_124x139.jpg"
+        %snippet{id: "board-block9__body"}
+          %h4 Alyssa Demattos
+          %p{class: "text--grey text--details"} CBHER Board Member, CB National Account Executive, SRG
+          // %a{class: "button button--secondary", href: "1"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block10__image"}
+          = image_tag "board/Marquita-Hanus_124x139.jpg"
+        %snippet{id: "board-block10__body"}
+          %h4 Marquita Hanus
+          %p{class: "text--grey text--details"} CBHER Board Member, CB Sr. Manager, Sales
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block11__image"}
+          = image_tag "board/Laura-Lynn_124x139.jpg"
+        %snippet{id: "board-block11__body"}
+          %h4 Laura Lynn
+          %p{class: "text--grey text--details"} CBHER Board Member, CB National Account Executive, Enterprise
+
+      %div{class: "feature-block"}
+        %snippet{id: "board-block12__image"}
+          = image_tag "board/Monica-Skidmore_124x139.jpg"
+        %snippet{id: "board-block12__body"}
+          %h4 Monica Skidmore
+          %p{class: "text--grey text--details"} CBHER Board Member, CB Manager Applied Search Development
+          %span{id: "photo-gallery-link-anchor"}
+
+  // PHOTO GALERY 
+  %section{class: "product-detail photo-gallery box--divider-bottom"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "photo_gallery__text"}
+        Photo Gallery
+    %div{class: "product-detail__body"}  
+
+    %div
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block1__image"}
+          %a{href:"http://google.com"}
+            = image_tag "gallery/placeholder--gallery-1.jpg"
+        %snippet{id: "photo-gallery-block1__body"}
+          %h4 Photo Headline 1
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          // %a{class: "button button--secondary", href: "1"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block2__image"}
+          %a{href:"http://google.com"}
+            = image_tag "gallery/placeholder--gallery-2.jpg"
+        %snippet{id: "photo-gallery-block2__body"}
+          %h4 Photo Headline 2
+          %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl.
+
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block3__image"}
+          %a{href:"http://google.com"} 
+            = image_tag "gallery/placeholder--gallery-3.jpg"
+        %snippet{id: "photo-gallery-block3__body"}
+          %h4 Photo Headline 3
+          %p{class: "text--grey text--details"} Nunc laoreet dig lorem lorem lorem nissim nisl.
+
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block4__image"}
+          %a{href:"http://google.com"}
+            = image_tag "gallery/placeholder--gallery-4.jpg"
+        %snippet{id: "photo-gallery-block4__body"}
+          %h4 Photo Headline 4
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          %span{id: "contact-link-anchor"}
+
+  // CONTACT 
+  %section{class: "product-detail", id:"demo"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "product-demo__text"}
+        Contact
+    %div{class: "product-detail__body"}  
+      = partial "/partials/form--request-demo"     
