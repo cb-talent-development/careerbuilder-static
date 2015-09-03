@@ -1,0 +1,18 @@
+// four links across top 
+%div{class: "product-subnav text--subnav"}
+  
+  %div{class: "product-subnav__left medium-screen-up"}
+    %snippet{id: "product-subnav__links"}
+      %ul
+        %li
+          %a{href: "#overview-link-anchor"} Overview
+        %li
+          %a{href: "#board-link-anchor"} Board Members
+        %li
+          %a{href: "#photo-gallery-link-anchor"} Photo Gallery
+
+  // demo button on right side 
+  %div{class: "product-subnav__right"}
+    %snippet{id: "product-subnav__right__link"}
+      %a{class: "button button--primary", href: "#contact-link-anchor"}
+        Contact Us
