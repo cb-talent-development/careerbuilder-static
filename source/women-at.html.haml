@@ -19,45 +19,6 @@ layout: layout--white
         = partial 'partials/placeholder'
       %span{id: "white-papers-link-anchor"}
 
-  // PHOTO GALERY 
-  %section{class: "product-detail box--divider-bottom"}
-    %h2{class: "product-detail__headline text--headline-2"}
-      %snippet{id: "photo_gallery__text"}
-        Photo Gallery
-    %div{class: "product-detail__body"}  
-
-    %div
-      %div{class: "feature-block"}
-        %snippet{id: "photo-gallery-block1__image"}
-          = image_tag "placeholder-circle-1.png"
-        %snippet{id: "photo-gallery-block1__body"}
-          %h4 True Grit
-          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-          // %a{class: "button button--secondary", href: "1"} Learn More
-
-      %div{class: "feature-block"}
-        %snippet{id: "photo-gallery-block2__image"}
-          = image_tag "placeholder-circle-2.png"
-        %snippet{id: "photo-gallery-block2__body"}
-          %h4 Makes Own Gravy
-          %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl.
-
-      %div{class: "feature-block"}
-        %snippet{id: "photo-gallery-block3__image"}
-          = image_tag "placeholder-circle-2.png"
-        %snippet{id: "photo-gallery-block3__body"}
-          %h4 Suddenly, 20% More Cowbell
-          %p{class: "text--grey text--details"} Nunc laoreet dig lorem lorem lorem nissim nisl.
-
-      %div{class: "feature-block"}
-        %snippet{id: "photo-gallery-block4__image"}
-          = image_tag "placeholder-circle-3.png"
-        %snippet{id: "photo-gallery-block4__body"}
-          %h4 Updog
-          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
-          %span{id: "board-link-anchor"}
-
-
   // BOARD MEMEBERS 
   %section{class: "product-detail"}
     %h2{class: "product-detail__headline text--headline-2"}
@@ -156,6 +117,48 @@ layout: layout--white
         %snippet{id: "board-block12__body"}
           %h4 Monica Skidmore
           %p{class: "text--grey text--details"} CBHER Board Member, CB Manager Applied Search Development
+
+  // PHOTO GALERY 
+  %section{class: "product-detail photo-gallery box--divider-bottom"}
+    %h2{class: "product-detail__headline text--headline-2"}
+      %snippet{id: "photo_gallery__text"}
+        Photo Gallery
+    %div{class: "product-detail__body"}  
+
+    %div
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block1__image"}
+          %a{href:"http://google.com"}
+            = image_tag "gallery/placeholder--gallery-1.jpg"
+        %snippet{id: "photo-gallery-block1__body"}
+          %h4 Photo Headline 1
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          // %a{class: "button button--secondary", href: "1"} Learn More
+
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block2__image"}
+          %a{href:"http://google.com"}
+            = image_tag "gallery/placeholder--gallery-2.jpg"
+        %snippet{id: "photo-gallery-block2__body"}
+          %h4 Photo Headline 2
+          %p{class: "text--grey text--details"} Nuuuuuuuuuuuunc laoreet dignissim nisl.
+
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block3__image"}
+          %a{href:"http://google.com"} 
+            = image_tag "gallery/placeholder--gallery-3.jpg"
+        %snippet{id: "photo-gallery-block3__body"}
+          %h4 Photo Headline 3
+          %p{class: "text--grey text--details"} Nunc laoreet dig lorem lorem lorem nissim nisl.
+
+      %div{class: "feature-block"}
+        %snippet{id: "photo-gallery-block4__image"}
+          %a{href:"http://google.com"}
+            = image_tag "gallery/placeholder--gallery-4.jpg"
+        %snippet{id: "photo-gallery-block4__body"}
+          %h4 Photo Headline 4
+          %p{class: "text--grey text--details"} Nunc laoreet dignissim nisl, eu gravida eros congue ac.
+          %span{id: "board-link-anchor"}
 
   // CONTACT 
   %section{class: "product-detail", id:"demo"}
