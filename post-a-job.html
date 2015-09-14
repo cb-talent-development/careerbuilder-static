@@ -9,7 +9,7 @@
     <!-- placeholder -->
     <script src='//img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Cart Login | CareerBuilder</title>
+    <title>Post a Job | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
     <link href="assets/stylesheets/site-ca46c338.css" media="screen" rel="stylesheet" type="text/css" />
@@ -17,23 +17,47 @@
     <!--[if lte IE 8]><script src="assets/javascripts/ie8-49a9e3dc.js" type="text/javascript"></script>
     <link href="assets/stylesheets/ie8-acae019a.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
   </head>
-  <body class='cart-login employer-scope'>
+  <body class='post-a-job employer-scope'>
     <div class='modal__background hidden' id='modal-background'></div>
-    <header class='top-bar' id='top-bar'>
+    <header class='top-bar top-bar--white' id='top-bar'>
       <div class='top-bar__logo'>
         <a href='/'>
           <!-- / low-fi image of logo for positioning, needs to be updated -->
           <img src='assets/images/placeholder-logo-e2d254a1.png'>
         </a>
       </div>
-      <div class='top-bar__helper-text text--white text--top-bar-helper medium-screen-up'>
-        <div class='email-us-link'>
-          Need help? Call
-          <a href='tel:+1-800-891-8880'>800-891-8880</a>
-          or
-          <a class='modal-open--email-us' href='javascript:void(0)'>Email Us</a>
-        </div>
-      </div>
+      <nav class='flyout top-bar__links text--top-bar-link medium-screen-up'>
+        <ul>
+          <li>
+            <a href='#account'>
+              <i class="fa fa-user fa-lg"></i>
+              My Account
+            </a>
+            <ul>
+              <li>
+                <a href='#'>Menu item 1</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 2</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#cart'>
+              <i class="fa fa-shopping-cart fa-lg"></i>
+              $1337.00 Cart
+            </a>
+          </li>
+          <li>
+            <a href='#contact'>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
       <!-- / mobile menu open link -->
       <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
         <i class='fa fa-bars fa-2x'></i>
@@ -76,70 +100,6 @@
         </li>
       </ul>
     </nav>
-    <!-- modals -->
-    <div class='modal__positioning hidden'>
-      <div class='modal__container text--body'>
-        <div class='modal__box box--pop-out hidden' id='modal--email-us'>
-          <div class='modal__close-button'>
-            <a class='close-modal' href='javascript:void(0)'>
-              <span class='text--x-button'>X</span>
-            </a>
-          </div>
-          <h2 class='text--headline-2 text--accent alpha'>
-            Contact Us
-          </h2>
-          <form class='modal__form'>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Name
-                <span class='text--accent'>*</span>
-              </div>
-              <input class='modal__form-right' type='text'>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Email
-                <span class='text--accent'>*</span>
-              </div>
-              <input class='modal__form-right' type='text'>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Phone
-              </div>
-              <input class='modal__form-right' type='text'>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Subject
-                <span class='text--accent'>*</span>
-              </div>
-              <input class='modal__form-right' type='text'>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'>
-                Your Message
-                <span class='text--accent'>*</span>
-              </div>
-              <textarea class='modal__form-right' rows='6'></textarea>
-            </label>
-            <label class='modal__form-row'>
-              <div class='modal__form-left'></div>
-              <div class='modal__form-right'>
-                <span class='text--accent'>*</span>
-                Required Fields
-              </div>
-            </label>
-            <div class='modal__form-row omega'></div>
-            <div class='modal__form-row'>
-              <submit class='button button--primary modal__form-submit close-modal'>
-                Send Message and Close
-              </submit>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     <!-- thin-header -->
     <!-- / initializes optional parameters -->
     <!-- header-medium -->
@@ -199,97 +159,124 @@
           </ul>
         </nav>
         <!-- header__headline -->
-        <h1 class='header__headline text--headline text--white'>
-          Sign in
+        <h1 class='header__headline header--posting__headline text--headline text--white'>
+          Post a Job
         </h1>
-        <!-- header__progress-bar -->
-        <!-- / WORK IN PROGRESS -->
-        <!-- / Final form will be clickable, text and circle will be hot area -->
-        <div class='header__progress-bar box--progress-bar text--white large-screen-only'>
-          <ul>
-            <!-- / Displays line behind circles -->
-            <div class='box--progress-bar__line'></div>
-            <li class='box--progress-bar--completed'>
-              <!-- / STEP NUMBER -->
-              1
-              <!-- / STEP LABEL -->
-              <label>Summary</label>
-            </li>
-            <li class='box--progress-bar--current'>
-              2
-              <label>Sign In</label>
-            </li>
-            <li>
-              3
-              <label>Payment</label>
-            </li>
-            <li>
-              4
-              <label>Confirmation</label>
-            </li>
-          </ul>
+        <div class='header__side-text text--white large-screen-only'>
+          <p>Already Purchased Postings?</p>
+          <a class='button button--secondary text--white'>
+            Edit Job Postings
+          </a>
         </div>
       </div>
     </header>
-    <!-- main content -->
     <div class='container text--body'>
-      <div class='small-screen-only' style='margin-bottom: 64px'>
-        <div class='email-us-link'>
-          Need help? Call
-          <a href='tel:+1-800-891-8880'>800-891-8880</a>
-          or
-          <a class='modal-open--email-us' href='javascript:void(0)'>Email Us</a>
+      <section class='posting__main-column'>
+        <div class='posting__under-text columns-12 pretty please medium-screen-down'>
+          <p>Already Purchased Postings?</p>
+          <a class='button button--secondary'>
+            Edit Job Postings
+          </a>
         </div>
-      </div>
-      <!-- registered users form -->
-      <section class='half-page-medium-up'>
-        <h2 class='text--headline-2 alpha text--accent'>
-          Registered Users
-        </h2>
-        <form class='form--large'>
-          <label class='columns-11'>
-            Email Address
-            <br>
-            <input type='text'>
-          </label>
-          <label class='columns-11'>
-            Password
-            <br>
-            <input type='password'>
-          </label>
-          <label class='columns-12 form--large__trailing-label'>
-            <input type='checkbox'>
-            <span class='text--thin'>Remember Me</span>
-          </label>
-          <submit class='button button--primary'>
-            Sign In
-          </submit>
-          <a href='#forgot-password'>Forgot Password?</a>
-        </form>
-      </section>
-      <!-- new users form -->
-      <section class='half-page-medium-up'>
-        <h2 class='text--headline-2 alpha text--accent'>
-          New Customer
-        </h2>
-        <form class='form--large'>
-          <div>
-            <label>
-              Sign up now to enjoy all the benefits of Careerbuilder.com, including
-              <strong>job posting</strong>
-              optimizations,
-              <strong>search management</strong>
-              tools, and
-              <strong>candidate recommendations!</strong>
-            </label>
+        <div class='posting__top'>
+          <h2 class='text--accent'>Get the most exposure for your job</h2>
+          <p>
+            Get in front of the best and brightest job candidates with CareerBuilder’s Job Postings. Quickly and easily make the right hire on the No. 1 recruitment site.
+          </p>
+        </div>
+        <h3>Price Per Posting</h3>
+        <!-- content box -->
+        <div class='posting__middle'>
+          <div class='box--pop-out box--pop-out__top'>
+            <h2 class='text--headline-2 alpha'>
+              Content box headline
+            </h2>
           </div>
-          <div>
+          <div class='box--pop-out box--pop-out__bottom'>
+            Magnam qui quia atque quia eos illo eveniet excepturi hic voluptatem dolorem labore soluta. Autem ipsa nihil fuga. Temporibus magnam repudiandae magnam. Recusandae porro velit maxime pariatur ad quo eos. Est quas sed dolor quibusdam velit distinctio rerum id qui enim. Porro quia illum fugit nihil natus. Quisquam ut voluptates recusandae culpa delectus temporibus voluptatem est aliquid molestiae tempora adipisci officiis. Reprehenderit qui id rerum aut accusantium sit deleniti doloremque corrupti sed magni dolorem est. Rerum a eos in voluptatem eum ipsam sit fuga porro quibusdam tenetur ab. Voluptatem non veritatis molestiae ipsa amet dolor optio neque qui mollitia veniam. Nam ut aut dolor aliquid eligendi beatae. Et atque non sit et omnis repellat aliquid praesentium neque non ullam ratione
+          </div>
+        </div>
+        <form class='posting__form'>
+          <label class=''>
+            <select class='columns-2'>
+              <option value='0'>0</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+              <option value='6'>6</option>
+              <option value='7'>7</option>
+              <option value='8'>8</option>
+              <option value='9'>9</option>
+              <option value='10'>10</option>
+              <option value='11'>11</option>
+              <option value='12'>12</option>
+              <option value='13'>13</option>
+              <option value='14'>14</option>
+              <option value='15'>15</option>
+              <option value='16'>16</option>
+              <option value='17'>17</option>
+              <option value='18'>18</option>
+              <option value='19'>19</option>
+              <option value='20'>20</option>
+              <option value='21'>21</option>
+              <option value='22'>22</option>
+              <option value='23'>23</option>
+              <option value='24'>24</option>
+              <option value='25'>25</option>
+              <option value='26'>26</option>
+              <option value='27'>27</option>
+              <option value='28'>28</option>
+              <option value='29'>29</option>
+              <option value='30'>30</option>
+              <option value='31'>31</option>
+              <option value='32'>32</option>
+              <option value='33'>33</option>
+              <option value='34'>34</option>
+              <option value='35'>35</option>
+              <option value='36'>36</option>
+              <option value='37'>37</option>
+              <option value='38'>38</option>
+              <option value='39'>39</option>
+              <option value='40'>40</option>
+              <option value='41'>41</option>
+              <option value='42'>42</option>
+              <option value='43'>43</option>
+              <option value='44'>44</option>
+              <option value='45'>45</option>
+              <option value='46'>46</option>
+              <option value='47'>47</option>
+              <option value='48'>48</option>
+              <option value='49'>49</option>
+              <option value='50'>50</option>
+            </select>
+          </label>
+          <p class='columns-6'>
+            <strong>You save [###]</strong>
+            <br>The more you buy the more you save</br>
+          </p>
+          <div class='clear-fix'>
             <submit class='button button--primary'>
-              Sign Up
+              Add to Cart
             </submit>
           </div>
         </form>
       </section>
+      <aside class='posting__lesser-column'>
+        <h3>Features</h3>
+        <ul>
+          <li>
+            Quod iure fugit saepe qui at est dicta
+          </li>
+          <li>
+            Vel voluptas dolorem ullam dolor saepe commodi voluptatem
+          </li>
+          <li>
+            Optio quaerat distinctio eveniet quaerat vitae eius corrupti dolores laudantium ea
+          </li>
+        </ul>
+      </aside>
     </div>
     <!-- global footer -->
     <footer class='footer container text--body large-screen-only'>

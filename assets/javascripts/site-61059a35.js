@@ -251,12 +251,14 @@ if(typeof window.interact === 'undefined') { window.interact = {} }
 
 window.interact.modal = function(modalName, openLink) {
 
-  var openLinks  = $('.' + openLink);
+  var openLinks  = $(openLink);
   var closeLinks = $('.close-modal');
   var modalBack  = $('#modal-background');
   var modalWrapper = $('.modal__positioning');
-  var modalForm  = $('#' + modalName);
+  var modalForm  = $(modalName);
   var video, videoSource;
+
+  if ($(modalName).length == 0) { return; };
 
   // modals start with '.hidden' in HTML to prevent load order race between HTML/JS
   modalForm.hide();
@@ -270,7 +272,7 @@ window.interact.modal = function(modalName, openLink) {
   closeLinks.click(function() {
     event.preventDefault();
 
-    video = $('#' + modalName + " iframe")
+    video = $(modalName + " iframe");
 
     if (video.length > 0) {
       // nukes (then restores) video source to stop playback
@@ -289,8 +291,8 @@ window.interact.modal = function(modalName, openLink) {
     event.preventDefault();
 
     // required
-    modalForm = $('#' + modalName);
-    video = $('#' + modalName + " iframe")
+    modalForm = $(modalName);
+    video = $(modalName + " iframe")
 
     // guards against showing background when modal not found
     if (modalForm.length >= 1) {
@@ -407,16 +409,21 @@ window.interact.smoothScroll = function (targets) {
 'use strict';
 if(typeof window.interact === 'undefined') { window.interact = {} }
 
-window.interact.stickyHeader = function(fixedTarget, staticTarget){
+window.interact.stickyHeader = function(fixedTarget, staticTarget, offsetValue){
 
   var fixedHeader     = $(fixedTarget);
   var staticHeader    = $(staticTarget);
 
   if (!staticHeader.length) { return false; }
 
-  var transitionStart = staticHeader.offset().top - 15;
+  var transitionStart = staticHeader.offset().top - offsetValue;
 
   $(window).scroll(function(){
+
+    if ($(window).width() <= 1100) { 
+      return;
+    };
+ 
     if ($(window).scrollTop() >= transitionStart){
       staticHeader.css({opacity: 0});
       fixedHeader.css({opacity: 1, zIndex: 10000});
@@ -430,22 +437,24 @@ window.interact.stickyHeader = function(fixedTarget, staticTarget){
 
 
 
+
+
 'use strict';
 if(typeof window.interact === 'undefined') { window.interact = {} }
 
 jQuery(function(){
   // modals must be added manually, this is a likely refactor if this gets hard
-  // arguements are ( 'my-modal-id' , 'class-on-links-to-open' ) just like that.
-  window.interact.modal('modal--email-us', 'modal-open--email-us');
-  window.interact.modal('modal--change-billing-address', 'modal-open--change-billing-address');
-  window.interact.modal('modal--change-company-address', 'modal-open--change-company-address');
+  // arguements are ( '#my-modal-id' , '.class-on-links-to-open' ) or other JQuery selector.
+  window.interact.modal('#modal--email-us', '.modal-open--email-us');
+  window.interact.modal('#modal--change-billing-address', '.modal-open--change-billing-address');
+  window.interact.modal('#modal--change-company-address', '.modal-open--change-company-address');
 
-  window.interact.modal('modal--video-sports', 'modal-open--video-sports');
-  window.interact.modal('modal--video-wynn', 'modal-open--video-wynn');
-  window.interact.modal('modal--video-nucor', 'modal-open--video-nucor');
-  window.interact.modal('modal--video-vitamin', 'modal-open--video-vitamin');
-  window.interact.modal('modal--video-rockwater', 'modal-open--video-rockwater');
-  window.interact.modal('modal--video-novo', 'modal-open--video-novo');
+  window.interact.modal('#modal--video-sports', '.modal-open--video-sports');
+  window.interact.modal('#modal--video-wynn', '.modal-open--video-wynn');
+  window.interact.modal('#modal--video-nucor', '.modal-open--video-nucor');
+  window.interact.modal('#modal--video-vitamin', '.modal-open--video-vitamin');
+  window.interact.modal('#modal--video-rockwater', '.modal-open--video-rockwater');
+  window.interact.modal('#modal--video-novo', '.modal-open--video-novo');
 
   window.interact.watchMobileMenu();
 
@@ -453,14 +462,16 @@ jQuery(function(){
 
   window.interact.showOnFocus('#password-field', '#password-helper');
 
-  window.interact.securityCodeHelper('card-number-field', '#security-code-helper');
+  window.interact.securityCodeHelper('#card-number-field', '#security-code-helper');
 
   window.interact.smoothScroll('.product-subnav a[href*=#]:not([href=#])');
 
   window.interact.objectCarousel('.header--home, .home__top-carousel');
   window.interact.objectCarousel('.home__background-cover.home__stories');
 
-  window.interact.stickyHeader('.sticky-nav', '#overview-link-anchor');
+  window.interact.stickyHeader('.sticky-nav', '#overview-link-anchor',  15);
+
+  window.interact.stickyHeader('.sticky-nav--pricing__fixed', '#nav--pricing',  -150);
 
   window.interact.loadExpensiveThings();
 
